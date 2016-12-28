@@ -1,0 +1,38 @@
+@import url(http://fonts.googleapis.com/css?family=Tauri|Oxygen+Mono);
+body {
+  font-family: "Arial", sans-serif;
+  color: black;
+  background-color: white;
+}
+
+header {
+  margin-bottom: 10.5px;
+  border-bottom: solid thin black;
+}
+
+pre, code {
+  border-radius: 15px;
+  font-family: "Oxygen Mono", monospace;
+  background: #efe;
+}
+
+pre {
+  overflow: auto;
+  font-family: "Oxygen Mono", monospace;
+  margin-top: 1.125em;
+  padding: 10.5px 21px;
+}
+
+pre .line-numbers {
+  margin-right: 10.5px;
+}
+
+blockquote {
+  margin-top: 1.125em;
+  background: #eee;
+  color: #444;
+  padding: 0 21px 10.5px 21px;
+}
+
+
+
