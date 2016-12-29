@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Tauri|Oxygen+Mono);
 body {
   font-family: "Arial", sans-serif;
+  font-size: 16px;
   color: black;
   background-color: white;
 }
@@ -8,6 +9,21 @@ body {
 header {
   margin-bottom: 10.5px;
   border-bottom: solid thin black;
+}
+
+.main-title {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.article-title {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.article-date {
+ margin-bottom: 10px;
 }
 
 pre, code {
@@ -32,6 +48,11 @@ blockquote {
   background: #eee;
   color: #444;
   padding: 0 21px 10.5px 21px;
+}
+.section-header {
+  background: black;
+  color: white;
+  text-align: center;
 }
 
 

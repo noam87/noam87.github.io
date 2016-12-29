@@ -5,6 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Noam&#39;s Website About Software</title>
+
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script>
+    MathJax.Hub.Config({
+      preRemoveClass: "mj",
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+
+
 	
 	
 	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
@@ -15,27 +31,37 @@
 <body>
   <div class="container">
     <header>
-      <h1><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
+      <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
     </header>
 
 
 <div class="row">
-  <div class="col-md-6 col-sm-8">
-    <h3>About</h3>
+  <div class="col-sm-6">
+    <h3 class="section-header">About</h3>
 
     <p>
-      Hi, my name is Noam Gagliardi-Rabinovich and I like writing programs. I've
-      worked on small and large projects, and while I am "full stack", I have
-      the most fun working on the back end: I've worked on APIs, live
-      notification systems, recommendations, and various data processing
-      programs.
-
-      If you would like to send me a message, you can do so
-      <a href="https://noam87.wufoo.com/forms/contact-me/" target="blank">here</a>.
+      Hi, my name is Noam Gagliardi-Rabinovich and I like writing programs.
+      I've worked at a dev shop, a large company, an early stage AgTech startup,
+      and now I split my time between contract work / consulting and
+      learning about things I find interesting.
     </p>
+    <p>
+      This is a picture of me receiving a sock as a holiday gift:
+    </p>
+    <img src="/img/me.jpeg" alt="me" width="150px">
   </div>
-  <div class="col-md-6 col-sm-4">
-    <h3>Links</h3>
+  <div class="col-sm-6">
+    <h3 class="section-header">Articles</h3>
+    <ul>
+      
+        <li><a href="http://noamswebsite.com/post/hello/">Hello World</a></li>
+      
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <h3 class="section-header">Links</h3>
     <ul>
       
       <li><a href="/resume.pdf">Resume / CV (pdf)</a></li>
@@ -48,33 +74,48 @@
       
     </ul>
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-4">
-    <main>
-      
-      
-        	<article>
-		<h1><a href="http://noamswebsite.com/post/hello/">hello</a></h1>
-		<time>27.12.2016 17:06</time>
-		
-		<div>
-			Hello world!
-Here is some code I&rsquo;m going to write I hope you like what it says:
- def foo(bar) derp what foo. end def bar(foo) &quot;hello&quot; end  and here is a blockquote
- I am being quoted!
-And here too!
- And this is the end of my article. And this is the end of my article. And this is the end of my article.
-			
-		</div>
-	</article>
-      
-      <div>
+  <div class="col-sm-6">
+    <h3 class="section-header">Contract / Consulting Work</h3>
 
-1 of 1
+    <small><code>
+      Current availability: unavailable Dec-June.
+    </code></small>
 
-</div>
-    </main>
+    <p>
+      I focus on simple, stable code that is fully documented and tested.
+      I provide "full stack" solutions,
+      but my strength lies with the back end: I've worked on APIs, live
+      notification systems, recommendations, and various data processing
+      programs.
+    </p>
+    <p>
+      <strong>Technologies:</strong> Elixir, OTP, Phoenix, Ruby, Rails, Javascript, Node.js,
+      Postgres, MongoDB, React, Redis, Git, Linux.
+    </p>
+    <p>
+      <strong>My Focus:</strong>
+
+      <ul>
+        <li> Choose the right tools for the job. And no more tooling than is
+        needed.
+        <li> Simplicity and stability.
+        <li> Efficiency and predictability in process (Kanban).
+        <li> Break down projects into smallest deliverable chunks with
+             realistic timelines.
+      </ul>
+    </p>
+    <p>
+      <strong>Skills:</strong> delivering simple, robust software; setting up effective, no-bs
+      process for communication-implementation cycle;
+      work independently or within small team; cleaning up / refactoring
+      painful legacy codebases.
+    </p>
+    <p>
+      <strong>
+        See my resume <a href="/resume.pdf" target="blank">here</a> and contact me
+        <a href="https://noam87.wufoo.com/forms/contact-me/" target="blank">here</a>.
+      </strong>
+    </p>
   </div>
 </div>
 <div class="row">

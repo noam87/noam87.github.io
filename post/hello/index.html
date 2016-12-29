@@ -4,7 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>hello</title>
+	<title>Hello World</title>
+
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script>
+    MathJax.Hub.Config({
+      preRemoveClass: "mj",
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+
+
 	
 	
 	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
@@ -15,13 +31,15 @@
 <body>
   <div class="container">
     <header>
-      <h1><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
+      <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
     </header>
 
 	<main>
 		<article>
-			<h1>hello</h1>
-			<time>27.12.2016 17:06</time>
+			<h1 class="article-title">Hello World</h1>
+      <div class="article-date">
+        Published: <time>2016-12-27</time>
+      </div>
 			<div>
 				<p>Hello world!</p>
 
@@ -44,9 +62,13 @@
 <p>And here too!</p>
 </blockquote>
 
-<p>And this is the end of my article.
-And this is the end of my article.
-And this is the end of my article.</p>
+<p>And this is the end of my article.  And this is the end of my article.  And this is the end of my article.
+And now for some math, (oh by the way you can also inline math
+$2+2_3$):</p>
+
+<p>$$2 + 2_3$$</p>
+
+<p>The end!</p>
 
 			</div>
 			<div>

@@ -10,7 +10,7 @@
     <atom:link href="http://noamswebsite.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>hello</title>
+      <title>Hello World</title>
       <link>http://noamswebsite.com/post/hello/</link>
       <pubDate>Tue, 27 Dec 2016 17:06:10 -0500</pubDate>
       
@@ -36,9 +36,13 @@
 &lt;p&gt;And here too!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;And this is the end of my article.
-And this is the end of my article.
-And this is the end of my article.&lt;/p&gt;
+&lt;p&gt;And this is the end of my article.  And this is the end of my article.  And this is the end of my article.
+And now for some math, (oh by the way you can also inline math
+$2+2_3$):&lt;/p&gt;
+
+&lt;p&gt;$$2 + 2_3$$&lt;/p&gt;
+
+&lt;p&gt;The end!&lt;/p&gt;
 </description>
     </item>
     
