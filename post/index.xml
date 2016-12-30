@@ -384,10 +384,11 @@ website, or leaving, is always 100%. He must choose one of the two).&lt;/p&gt;
 &lt;p&gt;The state after the first month is&lt;/p&gt;
 
 &lt;p&gt;$$
-  \mathbf{ x^{ (1) } }
-    = P \mathbf{ x^{ (0) } }
-    = [(0.7 + 0.6)\times0.5, (0.3 + 0.4)\times0.5]
-    = [0.65, 0.35]
+  \begin{gather}
+    \mathbf{x^{ (1) }} = P \mathbf{ x^{ (0) } } \cr
+      = [(0.7 + 0.6)\times0.5, (0.3 + 0.4)\times0.5] \cr
+      = [0.65, 0.35] \cr
+  \end{gather}
 $$&lt;/p&gt;
 
 &lt;p&gt;So, after the first month, the second website will have only 35% of the global audience.&lt;/p&gt;
