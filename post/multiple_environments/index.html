@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Using The Same bashrc/zshrc Across Computers</title>
+
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script>
+    MathJax.Hub.Config({
+      preRemoveClass: "mj",
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      }
+    });
+  </script>
+
+
+	
+	
+	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="http://noamswebsite.com/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.18" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
+    </header>
+
+	<main>
+		<article>
+			<h1 class="article-title">Using The Same bashrc/zshrc Across Computers</h1>
+      <div class="article-date">
+        Published: <time>2013-04-06</time>
+      </div>
+			<div>
+				<p>Here is a simple method I use to share the same <code>.bashrc</code> / <code>.zshrc</code> /
+<code>.bash_profile</code> on multiple computers, while still retaining unique
+settings where I need them.</p>
+
+<p>Suppose you want some special setting to apply only to your linux laptop, but
+not to your mac laptop.</p>
+
+<pre><code>$ mkdir ~/configs
+$ touch ~/.is_linux
+</code></pre>
+
+<p>Next:</p>
+
+<pre><code>if [ -f '.is_linux' ]; then
+    echo &quot;This message only shows on my Linux laptops!&quot;
+fi
+</code></pre>
+
+<p>Now with different config files you can configure different environments from
+is single universal <code>*rc</code> file you keep in a
+<a href="https://github.com/noam87/DOTfiles">dotfiles</a> repo.</p>
+
+<p>That&rsquo;s it. It&rsquo;s not fancy, but it works.</p>
+
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
+	</main>
+    <footer>
+      <p>&copy; 2016 <a href="http://noamswebsite.com/">Noam
+      Gagliardi-Rabinovich</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Posts</title>
+	<title>Sorting By Relative Popularity</title>
 
   <script type="text/javascript"
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -25,7 +25,7 @@
 	
 	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="http://noamswebsite.com/css/style.css">
-	<link href="http://noamswebsite.com/post/index.xml" rel="feed" type="application/rss+xml" title="Noam&#39;s Website About Software">
+	
 	<meta name="generator" content="Hugo 0.18" />
 </head>
 <body>
@@ -35,14 +35,13 @@
     </header>
 
 	<main>
-		
-		
-				<article>
-		<h1><a href="http://noamswebsite.com/post/sorting_by_relative_popularity/">Sorting By Relative Popularity</a></h1>
-		<time>08.12.2015 17:45</time>
-		
-		<div>
-			<p>Hey, looks like I&rsquo;m sorting user content again! <a href="https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/">last time</a>, I sorted user posts by &ldquo;interestingness&rdquo;; this time around I&rsquo;ll be sorting players from a set of sports teams. Once again we&rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.</p>
+		<article>
+			<h1 class="article-title">Sorting By Relative Popularity</h1>
+      <div class="article-date">
+        Published: <time>2015-12-08</time>
+      </div>
+			<div>
+				<p>Hey, looks like I&rsquo;m sorting user content again! <a href="https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/">last time</a>, I sorted user posts by &ldquo;interestingness&rdquo;; this time around I&rsquo;ll be sorting players from a set of sports teams. Once again we&rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.</p>
 
 <h3 id="the-task">The Task</h3>
 
@@ -214,45 +213,116 @@ end
 <p>Here is the code used in these examples (working as of Julia 0.4.1). Our actual code at theScore is in Ruby.</p>
 
 <p></p>
-			
-				<a href="http://noamswebsite.com/post/sorting_by_relative_popularity/">Read more...</a>
-			
-		</div>
-	</article>
-		
-				<article>
-		<h1><a href="http://noamswebsite.com/post/eigengoogle/">Eigengoogle: How the Google PageRank Algorithm Works</a></h1>
-		<time>27.01.2014 18:06</time>
-		
-		<div>
-			While we&rsquo;re on the subject of sorting things online, we might as well talk about Google: the 93-billion dollar company whose main export is taking all the things ever and putting them in the right order. If there&rsquo;s one thing Google knows best, it&rsquo;s sorting stuff.
-I was curious how it all works, and it turned out really interesting, plus I got to learn a bit about Markov chains. It all starts with an algorithm called PageRank1.
-			
-				<a href="http://noamswebsite.com/post/eigengoogle/">Read more...</a>
-			
-		</div>
-	</article>
-		
-				<article>
-		<h1><a href="http://noamswebsite.com/post/multiple_environments/">Using The Same bashrc/zshrc Across Computers</a></h1>
-		<time>06.04.2013 17:14</time>
-		
-		<div>
-			Here is a simple method I use to share the same .bashrc / .zshrc / .bash_profile on multiple computers, while still retaining unique settings where I need them.
-Suppose you want some special setting to apply only to your linux laptop, but not to your mac laptop.
-$ mkdir ~/configs $ touch ~/.is_linux  Next:
-if [ -f '.is_linux' ]; then echo &quot;This message only shows on my Linux laptops!&quot; fi  Now with different config files you can configure different environments from is single universal *rc file you keep in a dotfiles repo.
-			
-				<a href="http://noamswebsite.com/post/multiple_environments/">Read more...</a>
-			
-		</div>
-	</article>
-		
-		<div>
 
-1 of 1
+<pre><code>module PlayerRecommender
+  export Team, Player, big_team_1, big_team_2, small_team
+  export naive_sort, sort
 
-</div>
+  type Player
+    subscribers::Int
+    team::AbstractString
+    recommendation_score::Float64
+
+    function Player(subscribers)
+      new(subscribers, &quot;&quot;, 0.0)
+    end
+  end
+
+  # Pretty print Player
+  function Base.show(io::IO, p::Player)
+    print(io, &quot;$(p.team) $(typeof(p)) | subscribers: $(p.subscribers) | score: $(p.recommendation_score)&quot;)
+  end
+
+  type Team
+    players::Array{Player}
+    std_dev::Float64
+    average::Float64
+    name::AbstractString
+
+    function Team(name, players)
+      for p in players
+        p.team = name
+      end
+
+      new(players, 0.0, 0.0, name)
+    end
+  end
+
+
+  function naive_sort(teams)
+    Base.sort(
+      [[team.players for team in teams]...],
+      by=x -&gt; x.subscribers,
+      rev=true
+    )[1:5]
+  end
+
+  function sort(teams)
+    map(set_subscriptions_avg, teams)
+    map(std_dev, teams)
+    map(recommend, teams)
+
+    Base.sort(
+      [[team.players for team in teams]...],
+      by=x -&gt; x.recommendation_score,
+      rev=true
+    )[1:5]
+  end
+
+  # Private
+
+  function average(xs)
+    reduce(+, xs) / length(xs)
+  end
+
+  function dev_from_average(xs, average)
+    map(x -&gt; x - average, xs)
+  end
+
+  function recommend(team)
+    map( x -&gt; recommend(x, team), team.players)
+  end
+
+  function recommend(player, team)
+    player_dev = player.subscribers - team.average
+    if player_dev == 0
+      player.recommendation_score = 0
+    else
+      player.recommendation_score = player_dev / team.std_dev
+    end
+  end
+
+  function set_subscriptions_avg(team)
+    team.average = average([p.subscribers for p in team.players])
+  end
+
+  function squares(xs)
+    map(x -&gt; x * x, xs)
+  end
+
+  function std_dev(team)
+    team.std_dev = std_dev([p.subscribers for p in team.players], team.average)
+  end
+
+  function std_dev(xs, average)
+    sqrt(reduce(+, squares(dev_from_average(xs, average))) / length(xs))
+  end
+
+  function subscriptions_avg(team)
+    team.average = average(float([x.subscribers for x in team.players]))
+  end
+end
+</code></pre>
+			</div>
+			<div>
+				<ul id="tags">
+					
+				</ul>
+			</div>
+			<div>
+				
+			</div>
+		</article>
 	</main>
     <footer>
       <p>&copy; 2016 <a href="http://noamswebsite.com/">Noam

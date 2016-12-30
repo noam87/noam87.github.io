@@ -11,6 +11,11 @@ header {
   border-bottom: solid thin black;
 }
 
+img {
+  margin: 20px auto;
+  display: block;
+}
+
 .main-title {
   font-size: 1em;
   font-weight: normal;
@@ -36,7 +41,7 @@ pre {
   overflow: auto;
   font-family: "Oxygen Mono", monospace;
   margin-top: 1.125em;
-  padding: 10.5px 21px;
+  padding: 10px;
 }
 
 pre .line-numbers {
@@ -44,16 +49,13 @@ pre .line-numbers {
 }
 
 blockquote {
-  margin-top: 1.125em;
+  margin: 0;
   background: #eee;
-  color: #444;
-  padding: 0 21px 10.5px 21px;
+  padding: 15px;
 }
+
 .section-header {
   background: black;
   color: white;
   text-align: center;
 }
-
-
-
