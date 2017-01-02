@@ -633,37 +633,5 @@ and primitive. Cool.&lt;/p&gt;
 </description>
     </item>
     
-    <item>
-      <title>Using The Same bashrc/zshrc Across Computers</title>
-      <link>http://noamswebsite.com/post/multiple_environments/</link>
-      <pubDate>Sat, 06 Apr 2013 17:14:21 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/post/multiple_environments/</guid>
-      <description>&lt;p&gt;Here is a simple method I use to share the same &lt;code&gt;.bashrc&lt;/code&gt; / &lt;code&gt;.zshrc&lt;/code&gt; /
-&lt;code&gt;.bash_profile&lt;/code&gt; on multiple computers, while still retaining unique
-settings where I need them.&lt;/p&gt;
-
-&lt;p&gt;Suppose you want some special setting to apply only to your linux laptop, but
-not to your mac laptop.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir ~/configs
-$ touch ~/.is_linux
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if [ -f &#39;.is_linux&#39; ]; then
-    echo &amp;quot;This message only shows on my Linux laptops!&amp;quot;
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now with different config files you can configure different environments from
-is single universal &lt;code&gt;*rc&lt;/code&gt; file you keep in a
-&lt;a href=&#34;https://github.com/noam87/DOTfiles&#34;&gt;dotfiles&lt;/a&gt; repo.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s it. It&amp;rsquo;s not fancy, but it works.&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
