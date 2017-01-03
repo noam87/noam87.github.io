@@ -44,7 +44,7 @@ ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF S
 DAMAGE.
 " />
 <link id="faviconLink" rel="shortcut icon" href="favicon.ico">
-<title>Computers — Wiki about programming and computer science stuff.</title>
+<title>Computers — http://noamswebsite.com</title>
 <!--~~ This is a Tiddlywiki file. The points of interest in the file are marked with this pattern ~~--><!--~~ Raw markup ~~-->
 
 </head>
@@ -8163,8 +8163,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20170101223954836" modified="20170101224018937" title="$:/SiteSubtitle">
-<pre>Wiki about programming and computer science stuff.</pre>
+<div created="20170101223954836" modified="20170103195352244" title="$:/SiteSubtitle">
+<pre>http://noamswebsite.com</pre>
 </div>
 <div created="20170101223951545" modified="20170101223952736" title="$:/SiteTitle">
 <pre>Computers</pre>
@@ -8175,16 +8175,16 @@ Error message and password prompt
 <div created="20170101232549902" modified="20170101232549902" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20170101225312654" modified="20170103191619938" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20170101225312654" modified="20170103195338259" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170101225453104" modified="20170103191610150" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20170101225453104" modified="20170103195144181" title="$:/state/tab/sidebar--1835078512">
+<pre>Home</pre>
 </div>
 <div created="20170101232714826" modified="20170101232718527" title="$:/state/tag-manager/sysadmin">
 <pre>closed</pre>
 </div>
-<div list="[[Separate Ecto From Phoenix In Umbrella App]]" title="$:/StoryList">
+<div list="Contents" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8712,7 +8712,7 @@ Stuff related to system administration, environment setup, etc.:
 <div color="#ff8000" created="20170103174425858" modified="20170103174425858" title="phoenix">
 <pre></pre>
 </div>
-<div created="20170103174127736" modified="20170103193840990" tags="elixir tutorial phoenix ecto hasQuestions" title="Separate Ecto From Phoenix In Umbrella App" type="text/x-markdown">
+<div created="20170103174127736" modified="20170103195507792" tags="elixir tutorial phoenix ecto hasQuestions" title="Separate Ecto From Phoenix In Umbrella App" type="text/x-markdown">
 <pre>First, create umbrella application:
 
     $ mix new --umbrella my_app
@@ -8769,7 +8769,7 @@ Uncomment the last line, or replace the contents of the file with:
     use Mix.Config
 
     config :db,
-      ecto_repos: [UdioDb.Repo]
+      ecto_repos: [Db.Repo]
 
     # Import environment specific config. This must remain at the bottom
     # of this file so it overrides the configuration defined above.
@@ -8817,7 +8817,7 @@ This will load environment-specific configs.
 
       defp deps do
         [{:phoenix_ecto, &quot;~&gt; 3.2.1&quot;},
-         {:udio_db, in_umbrella: true}]
+         {:db, in_umbrella: true}]
       end
 
 **`config/config.exs`**
