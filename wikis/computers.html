@@ -119,9 +119,17 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="http://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
+<li>$:/config/Navigation/UpdateAddressBar</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/permalink</li>
+
+<li>$:/config/WikiParserRules/Inline/wikilink</li>
 
 <li>$:/core</li>
 
@@ -271,7 +279,19 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla</li>
 
+<li>Always Nest API Results</li>
+
 <li>Contents</li>
+
+<li>ecto</li>
+
+<li>elixir</li>
+
+<li>hasQuestions</li>
+
+<li>phoenix</li>
+
+<li>Separate Ecto From Phoenix In Umbrella App</li>
 
 <li>sysadmin</li>
 
@@ -289,11 +309,23 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
+<div created="20170103191513914" modified="20170103191513914" title="$:/config/Navigation/UpdateAddressBar">
+<pre>permalink</pre>
+</div>
 <div created="20170101225454501" modified="20170101225454501" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
+<div created="20170103191406931" modified="20170103191409913" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/permaview">
+<pre>hide</pre>
+</div>
 <div created="20170101232620472" modified="20170101232620472" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/tag-manager">
 <pre>show</pre>
+</div>
+<div created="20170103191626850" modified="20170103191626850" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/permalink">
+<pre>show</pre>
+</div>
+<div created="20170103191437317" modified="20170103191437317" title="$:/config/WikiParserRules/Inline/wikilink">
+<pre>disable</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
 <pre>{
@@ -8143,16 +8175,16 @@ Error message and password prompt
 <div created="20170101232549902" modified="20170101232549902" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20170101225312654" modified="20170101232547474" title="$:/state/tab-1749438307">
+<div created="20170101225312654" modified="20170103191619938" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20170101225453104" modified="20170101232738336" title="$:/state/tab/sidebar--1835078512">
+<div created="20170101225453104" modified="20170103191610150" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20170101232714826" modified="20170101232718527" title="$:/state/tag-manager/sysadmin">
 <pre>closed</pre>
 </div>
-<div list="Contents" title="$:/StoryList">
+<div list="[[Separate Ecto From Phoenix In Umbrella App]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8620,12 +8652,192 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
     }
 }</pre>
 </div>
-<div created="20170101224023062" modified="20170101225519786" tags="" title="Contents">
-<pre>!!! System Administration
+<div created="20170103042059426" modified="20170103042659122" tags="practices" title="Always Nest API Results" type="text/x-markdown">
+<pre>When designing an API, don't do this:
 
-Stuff related to system administration, environment setup, etc.
+    // QUERY: GET /users/search?query=bob
 
-&lt;&lt;list-links &quot;[tag[sysadmin]]&quot;&gt;&gt;</pre>
+    // RESPONSE:
+    [
+      {
+         &quot;first_name&quot;: &quot;Bob&quot;,
+         &quot;last_name&quot;: &quot;Dole&quot;
+      },
+      {
+         &quot;first_name&quot;: &quot;Kevin&quot;,          
+         &quot;last_name&quot;: &quot;Bobson&quot;
+      }
+    ]
+
+Instead, nest your information one level, so that adding attributes is trivial without breaking backwards compatibility:
+
+    {
+      &quot;results&quot;: [
+        {
+          &quot;first_name&quot;: &quot;Bob&quot;,
+          &quot;last_name&quot;: &quot;Dole&quot;
+        },
+        {
+          &quot;first_name&quot;: &quot;Kevin&quot;,
+          &quot;last_name&quot;: &quot;Bobson&quot;
+        }
+      ]
+    }</pre>
+</div>
+<div created="20170101224023062" modified="20170103174124244" tags="" title="Contents">
+<pre>!! System Administration
+
+Stuff related to system administration, environment setup, etc.:
+
+&lt;&lt;list-links &quot;[tag[sysadmin]]&quot;&gt;&gt;
+
+!! Good Practices
+
+&lt;&lt;list-links &quot;[tag[practices]]&quot;&gt;&gt;
+
+!! Elixir
+
+&lt;&lt;list-links &quot;[tag[elixir]]&quot;&gt;&gt;
+</pre>
+</div>
+<div color="#ff8000" created="20170103191343824" modified="20170103191343824" title="ecto">
+<pre></pre>
+</div>
+<div color="#ff8000" created="20170103174206617" modified="20170103174206617" title="elixir">
+<pre></pre>
+</div>
+<div color="#8000ff" created="20170103193636054" modified="20170103193653610" title="hasQuestions">
+<pre></pre>
+</div>
+<div color="#ff8000" created="20170103174425858" modified="20170103174425858" title="phoenix">
+<pre></pre>
+</div>
+<div created="20170103174127736" modified="20170103193840990" tags="elixir tutorial phoenix ecto hasQuestions" title="Separate Ecto From Phoenix In Umbrella App" type="text/x-markdown">
+<pre>First, create umbrella application:
+
+    $ mix new --umbrella my_app
+    $ cd my_app/apps
+
+Next create Phoenix app, excluding Ecto:
+
+    $ mix phoenix.new web --no-ecto
+
+Now we create a new mix project for Ecto, with supervision tree:
+
+    $ mix new db --sup
+
+Finally we need to set up some configuration files.
+
+## Setting Up Db Project
+
+    $ cd db
+
+First in the `db` project (following the [getting started](https://hexdocs.pm/ecto/getting-started.html) docs for Ecto:
+
+**`mix.exs`** (note that we do not need to register `:ecto` application)
+
+      def application do
+        [applications: [:logger, :postgrex],
+         mod: {Db, []}]
+      end
+
+      defp deps do
+        [{:postgrex, &quot;~&gt; 0.13.0&quot;},
+         {:ecto, &quot;~&gt; 2.1.1&quot;}]
+      end
+
+Run configuration by running:
+
+    $ mix ecto.gen.repo -r Db.Repo
+
+This will populate `lib/db/repo.ex` and  `config.config.exs`.
+
+**`lib/db.ex`**
+
+    children = [
+      supervisor(Db.Repo, [])
+    ]
+
+**optional**
+
+We probably want configs for multiple environments.
+
+**`config/config.exs`**
+
+Uncomment the last line, or replace the contents of the file with:
+
+    use Mix.Config
+
+    config :db,
+      ecto_repos: [UdioDb.Repo]
+
+    # Import environment specific config. This must remain at the bottom
+    # of this file so it overrides the configuration defined above.
+    import_config &quot;#{Mix.env}.exs&quot;
+
+This will load environment-specific configs.
+
+**`config/dev.exs`**
+
+    use Mix.Config
+
+    config :db, Db.Repo,
+      adapter: Ecto.Adapters.Postgres,
+      username: &quot;foo&quot;,
+      database: &quot;myproject_dev&quot;,
+      hostname: &quot;localhost&quot;,
+      pool_size: 10
+
+**`config/test.exs`**
+
+    use Mix.Config
+
+    config :db, Db.Repo,
+      adapter: Ecto.Adapters.Postgres,
+      username: &quot;foo&quot;,
+      password: &quot;12345&quot;,
+      database: &quot;myproject_test&quot;,
+      hostname: &quot;localhost&quot;,
+      pool: Ecto.Adapters.SQL.Sandbox
+
+    config :logger,
+      backends: [:console],
+      compile_time_purge_level: :debug
+
+## Set Up Phoenix App
+
+    $ cd ../web
+
+**`mix.exs`**
+
+      def application do
+        [mod: {Web, []},
+         applications: [:phoenix_ecto, :db]]
+      end
+
+      defp deps do
+        [{:phoenix_ecto, &quot;~&gt; 3.2.1&quot;},
+         {:udio_db, in_umbrella: true}]
+      end
+
+**`config/config.exs`**
+
+    config :web,
+      ecto_repos: [Db.Repo]
+
+    # Configure phoenix generators
+        config :phoenix, :generators,
+          migration: false
+
+## Notes
+
+* From now on, when running `mix phoenix.gen.html` or `mix phoenix.gen.json`, pass the `--no-model` option.
+
+* Since app is umbrella app now, remember to `cd` into phoenix app directory before running generators, or files will be generated at umbrella's top level.
+
+## Questions
+
+* Is it there a way to make it so that there's no need for `--no-model` option every time?</pre>
 </div>
 <div color="#0000ff" created="20170101232708334" modified="20170101232710088" title="sysadmin">
 <pre></pre>
