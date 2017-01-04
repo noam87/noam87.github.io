@@ -6,15 +6,57 @@
     <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2017 00:52:25 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2017 11:05:23 -0500</lastBuildDate>
     <atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Machine Learning Resources</title>
+      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
+      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Author&lt;/th&gt;
+&lt;th&gt;Recommend&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A Tutorial On Deep Learning&lt;/td&gt;
+&lt;td&gt;Quoc V. Le (Google)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;PDF&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt. 1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt. 2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Separate Ecto From Phoenix In Umbrella App</title>
-      <link>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</link>
+      <link>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</link>
       <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</guid>
+      <guid>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</guid>
       <description>
 
 &lt;p&gt;First, create umbrella application:&lt;/p&gt;
@@ -168,10 +210,10 @@ every time?&lt;/li&gt;
     
     <item>
       <title>Using The Same bashrc / zshrc Across Computers</title>
-      <link>http://noamswebsite.com/wiki-main/sync_bashrc/</link>
+      <link>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</link>
       <pubDate>Wed, 04 Jan 2017 00:19:02 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-main/sync_bashrc/</guid>
+      <guid>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</guid>
       <description>&lt;p&gt;Here is a simple method I use to share the same &lt;code&gt;.bashrc&lt;/code&gt; / &lt;code&gt;.zshrc&lt;/code&gt; /
 &lt;code&gt;.bash_profile&lt;/code&gt; on multiple computers, while still retaining unique
 settings where I need them.&lt;/p&gt;

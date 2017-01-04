@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/wikis/machine-learning/index.xml</link>
+    <description>Recent content in Machine Learning on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/wikis/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Machine Learning Resources</title>
+      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
+      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Author&lt;/th&gt;
+&lt;th&gt;Recommend&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A Tutorial On Deep Learning&lt;/td&gt;
+&lt;td&gt;Quoc V. Le (Google)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;PDF&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt. 1&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt. 2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

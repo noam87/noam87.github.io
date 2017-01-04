@@ -10,10 +10,10 @@
     
     <item>
       <title>Using The Same bashrc / zshrc Across Computers</title>
-      <link>http://noamswebsite.com/wiki-main/sync_bashrc/</link>
+      <link>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</link>
       <pubDate>Wed, 04 Jan 2017 00:19:02 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-main/sync_bashrc/</guid>
+      <guid>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</guid>
       <description>&lt;p&gt;Here is a simple method I use to share the same &lt;code&gt;.bashrc&lt;/code&gt; / &lt;code&gt;.zshrc&lt;/code&gt; /
 &lt;code&gt;.bash_profile&lt;/code&gt; on multiple computers, while still retaining unique
 settings where I need them.&lt;/p&gt;

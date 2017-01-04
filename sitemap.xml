@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</loc>
+    <loc>http://noamswebsite.com/wiki-main/ml/ml_resources/</loc>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</loc>
     <lastmod>2017-01-04T00:52:25-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wiki-main/sync_bashrc/</loc>
+    <loc>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</loc>
     <lastmod>2017-01-04T00:19:02-05:00</lastmod>
   </url>
   
@@ -23,7 +28,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-01-04T00:52:25-05:00</lastmod>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -34,8 +39,14 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/wikis/machine-learning/</loc>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-01-04T00:52:25-05:00</lastmod>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,7 +81,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wiki-main/</loc>
-    <lastmod>2017-01-04T00:52:25-05:00</lastmod>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
     <priority>0</priority>
   </url>
   

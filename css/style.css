@@ -18,6 +18,29 @@ img {
   height: auto;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: ;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+thead {
+  border-bottom: 2px solid black;
+}
+
+th, td {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 4px 10px;
+}
+
+td {
+  border-top: 1px solid #c6c9cc;
+  text-align: left;
+}
+
 .main-title {
   font-size: 1em;
   font-weight: normal;
