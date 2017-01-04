@@ -9,6 +9,38 @@
     <atom:link href="http://noamswebsite.com/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Elixir Resources</title>
+      <link>http://noamswebsite.com/wiki-main/computers/elixir_resources/</link>
+      <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;book&lt;/td&gt;
+&lt;td&gt;My go-to recommendation for getting started with Elixir.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://medium.com/@diamondgfx/introduction-fe138ac6079d&#34;&gt;Writing A Blog Engine in Phoenix&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;tutorial&lt;/td&gt;
+&lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Separate Ecto From Phoenix In Umbrella App</title>
       <link>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</link>
       <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>

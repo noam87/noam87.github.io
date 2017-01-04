@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/elixir_resources/</loc>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/react_resources/</loc>
+    <lastmod>2017-01-04T14:41:18-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/wiki-main/ml/ml_resources/</loc>
     <lastmod>2017-01-04T11:05:23-05:00</lastmod>
   </url>
@@ -28,31 +38,31 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/computers/</loc>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/datascience/</loc>
     <lastmod>2017-01-04T11:05:23-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/tags/elixir/</loc>
-    <lastmod>2017-01-04T00:52:25-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/wikis/machine-learning/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/tags/phoenix/</loc>
-    <lastmod>2017-01-04T00:52:25-05:00</lastmod>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,7 +91,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wiki-main/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
