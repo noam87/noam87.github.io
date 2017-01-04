@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wiki-mains on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/wiki-main/index.xml</link>
+    <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jan 2017 00:52:25 -0500</lastBuildDate>
+    <atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Separate Ecto From Phoenix In Umbrella App</title>
+      <link>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</link>
+      <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</guid>
+      <description>
+
+&lt;p&gt;First, create umbrella application:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mix new --umbrella my_app
+$ cd my_app/apps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next create Phoenix app, excluding Ecto:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mix phoenix.new web --no-ecto
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we create a new mix project for Ecto, with supervision tree:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mix new db --sup
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally we need to set up some configuration files.&lt;/p&gt;
+
+&lt;h2 id=&#34;setting-up-db-project&#34;&gt;Setting Up Db Project&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd db
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;First in the &lt;code&gt;db&lt;/code&gt; project (following the
+&lt;a href=&#34;https://hexdocs.pm/ecto/getting-started.html&#34;&gt;getting started&lt;/a&gt; docs for Ecto:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;mix.exs&lt;/code&gt;&lt;/strong&gt; (note that we do not need to register &lt;code&gt;:ecto&lt;/code&gt; application)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  def application do
+    [applications: [:logger, :postgrex],
+     mod: {Db, []}]
+  end
+
+  defp deps do
+    [{:postgrex, &amp;quot;~&amp;gt; 0.13.0&amp;quot;},
+     {:ecto, &amp;quot;~&amp;gt; 2.1.1&amp;quot;}]
+  end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run configuration by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mix ecto.gen.repo -r Db.Repo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will populate &lt;code&gt;lib/db/repo.ex&lt;/code&gt; and  &lt;code&gt;config.config.exs&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;lib/db.ex&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;children = [
+  supervisor(Db.Repo, [])
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;optional&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We probably want configs for multiple environments.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/config.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Uncomment the last line, or replace the contents of the file with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;use Mix.Config
+
+config :db,
+  ecto_repos: [Db.Repo]
+
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config &amp;quot;#{Mix.env}.exs&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will load environment-specific configs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/dev.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;use Mix.Config
+
+config :db, Db.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: &amp;quot;foo&amp;quot;,
+  database: &amp;quot;myproject_dev&amp;quot;,
+  hostname: &amp;quot;localhost&amp;quot;,
+  pool_size: 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/test.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;use Mix.Config
+
+config :db, Db.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: &amp;quot;foo&amp;quot;,
+  password: &amp;quot;12345&amp;quot;,
+  database: &amp;quot;myproject_test&amp;quot;,
+  hostname: &amp;quot;localhost&amp;quot;,
+  pool: Ecto.Adapters.SQL.Sandbox
+
+config :logger,
+  backends: [:console],
+  compile_time_purge_level: :debug
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;set-up-phoenix-app&#34;&gt;Set Up Phoenix App&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd ../web
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;mix.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  def application do
+    [mod: {Web, []},
+     applications: [:phoenix_ecto, :db]]
+  end
+
+  defp deps do
+    [{:phoenix_ecto, &amp;quot;~&amp;gt; 3.2.1&amp;quot;},
+     {:db, in_umbrella: true}]
+  end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/config.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config :web,
+  ecto_repos: [Db.Repo]
+
+# Configure phoenix generators
+config :phoenix, :generators,
+  migration: false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;From now on, when running &lt;code&gt;mix phoenix.gen.html&lt;/code&gt; or &lt;code&gt;mix phoenix.gen.json&lt;/code&gt;,
+pass the &lt;code&gt;--no-model&lt;/code&gt; option.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Since app is umbrella app now, remember to &lt;code&gt;cd&lt;/code&gt; into phoenix app directory
+before running generators, or files will be generated at umbrella&amp;rsquo;s top level.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is it there a way to make it so that there&amp;rsquo;s no need for &lt;code&gt;--no-model&lt;/code&gt; option
+every time?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using The Same bashrc / zshrc Across Computers</title>
+      <link>http://noamswebsite.com/wiki-main/sync_bashrc/</link>
+      <pubDate>Wed, 04 Jan 2017 00:19:02 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/sync_bashrc/</guid>
+      <description>&lt;p&gt;Here is a simple method I use to share the same &lt;code&gt;.bashrc&lt;/code&gt; / &lt;code&gt;.zshrc&lt;/code&gt; /
+&lt;code&gt;.bash_profile&lt;/code&gt; on multiple computers, while still retaining unique
+settings where I need them.&lt;/p&gt;
+
+&lt;p&gt;Suppose you want some special setting to apply only to your linux laptop, but
+not to your mac laptop.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir ~/configs
+$ touch ~/.is_linux
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if [ -f &#39;.is_linux&#39; ]; then
+    echo &amp;quot;This message only shows on my Linux laptops!&amp;quot;
+fi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now with different config files you can configure different environments from
+is single universal &lt;code&gt;*rc&lt;/code&gt; file you keep in a
+&lt;a href=&#34;https://github.com/noam87/DOTfiles&#34;&gt;dotfiles&lt;/a&gt; repo.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. It&amp;rsquo;s not fancy, but it works.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

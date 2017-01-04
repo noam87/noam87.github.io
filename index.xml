@@ -11,10 +11,10 @@
     
     <item>
       <title>Separate Ecto From Phoenix In Umbrella App</title>
-      <link>http://noamswebsite.com/wiki-computers/phoenix_no_ecto/</link>
+      <link>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</link>
       <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-computers/phoenix_no_ecto/</guid>
+      <guid>http://noamswebsite.com/wiki-main/phoenix_no_ecto/</guid>
       <description>
 
 &lt;p&gt;First, create umbrella application:&lt;/p&gt;
@@ -143,8 +143,8 @@ config :logger,
   ecto_repos: [Db.Repo]
 
 # Configure phoenix generators
-    config :phoenix, :generators,
-      migration: false
+config :phoenix, :generators,
+  migration: false
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
@@ -168,10 +168,10 @@ every time?&lt;/li&gt;
     
     <item>
       <title>Using The Same bashrc / zshrc Across Computers</title>
-      <link>http://noamswebsite.com/wiki-computers/sync_bashrc/</link>
+      <link>http://noamswebsite.com/wiki-main/sync_bashrc/</link>
       <pubDate>Wed, 04 Jan 2017 00:19:02 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-computers/sync_bashrc/</guid>
+      <guid>http://noamswebsite.com/wiki-main/sync_bashrc/</guid>
       <description>&lt;p&gt;Here is a simple method I use to share the same &lt;code&gt;.bashrc&lt;/code&gt; / &lt;code&gt;.zshrc&lt;/code&gt; /
 &lt;code&gt;.bash_profile&lt;/code&gt; on multiple computers, while still retaining unique
 settings where I need them.&lt;/p&gt;
