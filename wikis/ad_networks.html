@@ -295,15 +295,23 @@ Error message and password prompt
 
 <li>AppNexus</li>
 
+<li>AppNexus Campaign Hirerarchy</li>
+
 <li>Booked Revenue</li>
 
 <li>Cost Per Acquisition</li>
+
+<li>Cost Per Click</li>
 
 <li>Cost Per Mille</li>
 
 <li>CPA</li>
 
+<li>CPC</li>
+
 <li>CPM</li>
+
+<li>Creative</li>
 
 <li>Data Management Platform</li>
 
@@ -329,7 +337,11 @@ Error message and password prompt
 
 <li>RTB</li>
 
+<li>Segment</li>
+
 <li>Sell Side Platform</li>
+
+<li>SiteScout</li>
 
 <li>SSP</li>
 
@@ -8226,7 +8238,7 @@ Topics</pre>
 <div created="20170101015308997" modified="20170104161015881" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div list="$:/TagManager [[Line Item]] CPA [[Cost Per Acquisition]] CPM [[Cost Per Mille]] [[Booked Revenue]]" title="$:/StoryList">
+<div list="[[AppNexus Campaign Hirerarchy]] Terms Topics AppNexus" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8579,8 +8591,8 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
 <div created="20170101023202884" modified="20170101023203816" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>mark</pre>
 </div>
-<div created="20170101021234039" modified="20170101213301805" title="$:/temp/search">
-<pre></pre>
+<div created="20170101021234039" modified="20170105163907559" title="$:/temp/search">
+<pre>line </pre>
 </div>
 <div created="20170101023200780" modified="20170101023200780" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.13/index.html" url="http://tiddlywiki.com/library/v5.1.13/index.html">
 <pre>loaded</pre>
@@ -8719,7 +8731,7 @@ Advertising inventory is the number of advertisements, or amount of ad space, a 
 <div created="20170103001245853" modified="20170103002708546" tags="term" title="Ad Netowrk">
 <pre>Aggregates publisher [[Ad Inventory]] and packages it up to sell through an [[Ad Exchange]].</pre>
 </div>
-<div created="20170101021017594" link="https://www.appnexus.com/en/buyers/appnexus-console" modified="20170104161127102" title="App Nexus Console">
+<div created="20170101021017594" link="https://www.appnexus.com/en/buyers/appnexus-console" modified="20170105191423418" tags="AppNexus" title="App Nexus Console">
 <pre>Console offers powerful optimization through AppNexus Programmable Bidder, a technology for building customized buying algorithms focused on your precise performance objectives – not expensive commodity bidder infrastructure from scratch.
 
 AppNexus provides cost benefits when using their API to set up campaigns instead of their built in UI.
@@ -8729,7 +8741,7 @@ AppNexus provides cost benefits when using their API to set up campaigns instead
 
 https://wiki.appnexus.com/display/api/Home</pre>
 </div>
-<div created="20170101020206557" modified="20170101193310518" title="AppNexus" type="">
+<div created="20170101020206557" modified="20170105191445965" title="AppNexus" type="">
 <pre>AppNexus is a global technology company whose cloud-based software platform enables and optimizes programmatic online advertising.
 
 AppNexus offers online auction infrastructure and technology for data management, optimization, financial clearing and support for directly negotiated advertising campaigns. It integrates with advertising sources including Google's DoubleClick, Microsoft's AdECN, engage:BDR and other aggregators. It operates out of multiple data centers, including one in Amsterdam serving Europe and the Middle East, in a facility shared with Equinix.
@@ -8737,7 +8749,58 @@ AppNexus offers online auction infrastructure and technology for data management
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/2l86Vh190xA&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 It offers an [[App Nexus Console]] for buyers.
+
+&lt;hr&gt;
+
+!! AppNexus Topics
+
+&lt;&lt;list-links &quot;[tag[AppNexus]]&quot;&gt;&gt;
 </pre>
+</div>
+<div created="20170105191450563" modified="20170105192107895" tags="AppNexus" title="AppNexus Campaign Hirerarchy">
+<pre>!! Advertiser
+
+First an advertiser must be created.
+
+```
+/api/advertiser
+```
+
+!! [[Line Item]]
+
+Next, a line item for the advertiser.
+
+```
+/api/line-item
+```
+
+!! [[Creative]]
+
+```
+/api/creative
+```
+
+!! [[Segment]]
+
+```
+/api/segment
+```
+
+!! Campaign
+
+''NOTE:'' Set the campaign to inactive initially, or it will start placing bids right away. Only after a profile is created and assigned to the campaign set it to active.
+
+```
+/api/campaign
+```
+
+!! Profile
+
+Segments can be associated with a profile.
+
+```
+/api/profile
+```</pre>
 </div>
 <div created="20170104164849113" modified="20170104164912291" tags="term" title="Booked Revenue">
 <pre>Booked revenue considers all income recorded in the financial records. This includes both earned and unearned revenue. When the company makes a sale to a customer, it records, or books, the earned revenue into the financial records. When the company receives an interest or dividend payment from one of its investments, it records, or books, the unearned revenue into the financial records.</pre>
@@ -8749,9 +8812,20 @@ CPA, or Cost Per Action, or sometimes Cost Per Acquisition is the best deal of a
 
 That said, all Direct Marketers will calculate their effective CPA, or eCPA as an optimization metric and to track their Return on Investment. An eCPA can be calculated by taking the total marketing cost and dividing it by the number of sales realized. So, if you were a company that bought $50 worth of media to advertise a product and made 5 sales to people that clicked on your ad, your eCPA was $50 / 5 sales = $10 per sale. This was a great deal if you make more than $10 in profit on each sale, but if not, you’ll have to rethink your marketing strategy.</pre>
 </div>
-<div created="20170104165046492" modified="20170104165156209" tags="term" title="Cost Per Mille">
-<pre>
+<div created="20170105154825513" modified="20170105155042991" tags="term" title="Cost Per Click">
+<pre>!! Realm of the Small Publisher and Direct Response Marketer
+
 &lt;&lt;&lt;
+CPC stands for Cost-Per-Click, and is a performance-based metric. This means the Publisher only gets paid when (and if) a user clicks on an ad, no matter how many impressions they serve trying to get the click. As you can guess, this pricing structure is much more favorable to Marketers, but can be difficult if not impossible to negotiate with any Publisher with a premium brand, ''especially with all the Ad Networks and Ad Exchanges out there today willing to pick up unsold inventory and pay by CPM, albeit a low CPM. '' Publishers don’t like CPC pricing because it is difficult to plan inventory demand around a moving target like click-through-rate on an ad they’ve never seen or tested before. Two campaigns with the same CPC rate might require vastly different levels of impressions for the Publisher to bill in full and this uncertainty is a high opportunity cost to pay. Only when they’ve exhausted their ability to sell by CPM will Publishers entertain CPC offers, and by that point, Marketers are scraping the bottom of the barrel in terms of inventory availability and quality. If you are a brand fighting for the attention of a key demographic, this simply won’t do.
+
+''For smaller publishers without much of a brand however, selling their inventory on a CPC basis is often the only option they have.'' But don’t let the disdain among premium Publishers fool you, the CPC media business is an immense, multi-billion dollar market and there are plenty of people making a fortune off clicks. Just ask Google – ''Google’s AdSense product is the largest CPC clearing house on earth that attracts Publishers and Marketers by the thousands.'' CPC is a very low risk way to buy media because Marketers only have to pay for performance, so they have some level of confidence in their return on investment.
+&lt;&lt;&lt;
+
+https://written.com/blog/51/cpm-cpc-cpa-pricing-online-media
+</pre>
+</div>
+<div created="20170104165046492" modified="20170104165156209" tags="term" title="Cost Per Mille">
+<pre>&lt;&lt;&lt;
 !! Premium Inventory, Premium Publishers, Premium Price
 
 [[CPM]], which stands for Cost-Per-Mille (Mille is Latin for “thousand”), is when the price is based on 1,000 impressions. Almost all Publishers prefer to bill on impressions because it is an inventory based product, rather than a performance based product. In other words, publishers risk nothing on ad performance with a CPM system and get paid for every impression. For the largest and best-known Publishers, this is the pricing standard and in terms of overall cost, CPM priced media is almost always at the top of the food chain.
@@ -8763,16 +8837,30 @@ https://written.com/blog/51/cpm-cpc-cpa-pricing-online-media</pre>
 <div created="20170104165215588" modified="20170104165237242" tags="term acronym" title="CPA">
 <pre>[[Cost Per Acquisition]]</pre>
 </div>
+<div created="20170105154758608" modified="20170105154819085" tags="acronym term" title="CPC">
+<pre>[[Cost Per Click]]</pre>
+</div>
 <div created="20170104165023748" modified="20170104165039718" tags="term acronym" title="CPM">
 <pre>[[Cost Per Mille]]</pre>
+</div>
+<div created="20170105164159722" modified="20170105164230988" tags="term" title="Creative">
+<pre>
+&lt;&lt;&lt;
+A creative is the actual advertisement viewed by a user. Creatives can function purely to promote a brand, but because the Internet is based around interactive media and experiences, many online creatives are intended to convince a user to take some action, like sign up for membership or make a purchase. Creative formats include GIF, JPEG, JavaScript, Flash, HTML5, video, and mobile. Creatives can be static images or they can contain video; they can expand or respond to user input. These files are managed via an ad server, which is responsible for sending the file to the browser at the time of an ad call.
+&lt;&lt;&lt;
+
+https://wiki.appnexus.com/display/industry/Creatives
+</pre>
 </div>
 <div created="20170103003556031" modified="20170103003729176" tags="term" title="Data Management Platform">
 <pre>Can ingest [[1st Party Data]] and data from [[3rd Party Data Provider]] and make it actionable.</pre>
 </div>
-<div created="20170101214214645" modified="20170103002638723" tags="term" title="Demand Side Platform">
+<div created="20170101214214645" modified="20170105155333403" tags="term" title="Demand Side Platform">
 <pre>A [[DSP]] is a layer of technologies connected to one or more ad networks (for example the [[Google Display Network]]. It holds the ad content and users either direct or through an ad agency, and has the capability of placing bids on different [[Ad Exchange]]s.
 
-A DSP may offer other useful features like [[Frequency Capping]] and [[Budget Pacing]].</pre>
+A DSP may offer other useful features like [[Frequency Capping]] and [[Budget Pacing]].
+
+For example, [[SiteScout]].</pre>
 </div>
 <div created="20170101214029497" modified="20170103002550927" tags="acronym term" title="DSP">
 <pre>[[Demand Side Platform]]</pre>
@@ -8781,8 +8869,7 @@ A DSP may offer other useful features like [[Frequency Capping]] and [[Budget Pa
 <pre>https://www.google.ca/ads/displaynetwork/</pre>
 </div>
 <div created="20170104164444498" modified="20170104164714754" tags="term" title="Insertion Order">
-<pre>
-&lt;&lt;&lt;
+<pre>&lt;&lt;&lt;
 An insertion order is the final step in the ad proposal process; when an insertion order is signed, it represents a commitment from an advertiser (or their agency) to run a campaign on a publisher’s site(s).
 
 An insertion order will generally contain all the details surrounding a spend, in order to avoid any confusion about what the advertiser will be paying for. These details typically include the following for each line item that makes up the campaign:
@@ -8850,8 +8937,21 @@ https://retargeter.com/what-is-retargeting-and-how-does-it-work
 <div created="20170101193126232" modified="20170103002534927" tags="acronym term" title="RTB">
 <pre>[[Real Time Bidding]]</pre>
 </div>
+<div created="20170105164447137" modified="20170105164457308" tags="term" title="Segment">
+<pre>
+&lt;&lt;&lt;
+A group composed of members of a target audience identified based on the webpages they visit, the actions they take such as making a purchase or completing a sign-up form, or data such as gender or geographical region.
+&lt;&lt;&lt;
+</pre>
+</div>
 <div created="20170103002649741" modified="20170103003009311" tags="term" title="Sell Side Platform">
 <pre>Set of technologies that allows publishers to connect to [[Ad Exchange]]. May also offer features such as helping with [[Yield Management]].</pre>
+</div>
+<div created="20170105155340368" modified="20170105155403134" title="SiteScout">
+<pre>A  self-serve demand side
+platform (DSP) for marketing professionals and agencies.
+
+http://www.sitescout.com/</pre>
 </div>
 <div created="20170103002442251" modified="20170103002511665" tags="acronym term" title="SSP">
 <pre>[[Supply Side Platform]]</pre>
