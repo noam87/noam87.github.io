@@ -2,6 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/r/quotes_adam_smith/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/completely/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/creative/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/enemy/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/trudge/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/wiki-main/computers/elixir_resources/</loc>
     <lastmod>2017-01-04T16:11:51-05:00</lastmod>
   </url>
@@ -27,13 +52,80 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/w/zuck2/</loc>
+    <lastmod>2016-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/shoes/</loc>
+    <lastmod>2016-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/post/sorting_by_relative_popularity/</loc>
     <lastmod>2015-12-08T17:45:08-05:00</lastmod>
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/w/stones/</loc>
+    <lastmod>2015-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/post/eigengoogle/</loc>
     <lastmod>2014-01-27T18:06:24-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/traingirl/</loc>
+    <lastmod>2012-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/little_room/</loc>
+    <lastmod>2012-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/bursts/</loc>
+    <lastmod>2009-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/downstream/</loc>
+    <lastmod>2009-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/bird/</loc>
+    <lastmod>2009-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/characters/</loc>
+    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/roomly/</loc>
+    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/words/</loc>
+    <lastmod>2006-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/adamsmith/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/cognitive/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -56,7 +148,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,6 +161,41 @@
   <url>
     <loc>http://noamswebsite.com/post/</loc>
     <lastmod>2015-12-08T17:45:08-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/quotes/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/random/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/social/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/stoicism/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -97,6 +224,12 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/w/</loc>
+    <lastmod>2016-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

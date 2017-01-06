@@ -6,8 +6,96 @@
     <description>Recent content on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2017 16:11:51 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://noamswebsite.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adam Smith Quotes</title>
+      <link>http://noamswebsite.com/r/quotes_adam_smith/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/quotes_adam_smith/</guid>
+      <description>
+
+&lt;h2 id=&#34;on-stoicism&#34;&gt;On Stoicism&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Human life the Stoics appear to have considered as a game of great skill; in which, however, there was a mixture of chance [&amp;hellip;] In such games the stake is commonly a trifle, and the whole pleasure of the game arises from playing well, from playing fairly, and playing skilfully. If notwithstanding all his skill, however, the good player should, by the influence of chance, happen to lose, the loss ought to be a matter, rather of merriment, than of serious sorrow. He has made no false stroke; he has done nothing which he ought to be ashamed of; he has enjoyed completely the whole pleasure of the game. [&amp;hellip;]&lt;/p&gt;
+
+&lt;p&gt;Our only anxious concern ought to be, not about the stake, but about the proper method of playing. If we placed our happiness in winning the stake, we placed it in what depended upon causes beyond our power, and out of our direction. We necessarily exposed ourselves to perpetual fear and uneasiness, and frequently to grievous and mortifying disappointments. If we placed it in playing well, in playing fairly, in playing wisely and skilfully; in the propriety of our own conduct in short; we placed it in what, by proper discipline, education, and attention, might be altogether in our own power, and under our own direction. Our happiness was perfectly secure, and beyond the reach of fortune.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Completely</title>
+      <link>http://noamswebsite.com/r/completely/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/completely/</guid>
+      <description>&lt;p&gt;When I die, I hope it&amp;rsquo;s completely.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Creative</title>
+      <link>http://noamswebsite.com/r/creative/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/creative/</guid>
+      <description>&lt;p&gt;Is it courage to, or incapacity not-to?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The creative person has the courage to experience opposites of his nature and to attempt some reconciliation of them in an individuated expression of himself.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.brainpickings.org/2016/12/29/the-creative-architect/&#34;&gt;The Creative Architect&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Enemy Of You Enemy</title>
+      <link>http://noamswebsite.com/r/enemy/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/enemy/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the enemy of your enemy is your friend, then by the transitive property, if any of your enemies are enemies, you are your enemy.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Unless the friend of your enemy is not your enemy.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trudge</title>
+      <link>http://noamswebsite.com/r/trudge/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/trudge/</guid>
+      <description>&lt;p&gt;Soon you&amp;rsquo;ll be dead, and this might cross your mind: that there were two
+principal aims toward which you could have aspired:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;To understand the world as fully as is possible to you, given your natural limitations.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;To feel as good as possible, as often as possible, and experience as much as there is to be experienced.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sadly the two exist in a sort of opposition, so that the pursuit of one to a
+high enough degree seriously hinders one&amp;rsquo;s capacity for pursuing the other.&lt;/p&gt;
+
+&lt;p&gt;But worse still, there&amp;rsquo;s this unctuous mire one is made to trudge through, if
+one wishes to pursue either at all: that of societal obligations &amp;ndash; not social
+obligations, of which there&amp;rsquo;s only one, and it&amp;rsquo;s to not be terrible to the
+others &amp;ndash; but the type that swallow up one&amp;rsquo;s days and take over our minds, this
+assault of rituals, that turns our life into noise, casting the pursuit of
+either principal aims to the stuff of  Sundays and tired evenings and nights;
+relegated to the status of half-dreams.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Elixir Resources</title>
@@ -282,6 +370,53 @@ is single universal &lt;code&gt;*rc&lt;/code&gt; file you keep in a
 &lt;a href=&#34;https://github.com/noam87/DOTfiles&#34;&gt;dotfiles&lt;/a&gt; repo.&lt;/p&gt;
 
 &lt;p&gt;That&amp;rsquo;s it. It&amp;rsquo;s not fancy, but it works.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My Dearest Zuckerberg #2</title>
+      <link>http://noamswebsite.com/w/zuck2/</link>
+      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/w/zuck2/</guid>
+      <description>&lt;p&gt;My Dearest Zuckerberg,&lt;/p&gt;
+
+&lt;p&gt;I think the elderly grocerystoreman has lost his mind. Why is it that whenever
+I visit his store so that I may purchase one of his goods (puddings by the
+pound and junk and spiced killgrinded cow in an addictively unsatisfying stale
+orange envelope made of, presumably, wheat, or corn? (The kind that when I bite
+on it it sticks to my teeth and stains my palate with thoughts of
+factory-cookeries somewhere in a third world country)) UP pops he like a wildly
+flankhaired coocoobird, sharp hairy ear and nosetendrils protruding at the dent
+of his upper lip reminding one of&amp;hellip; of, DEATH! The shadowy claws of DEATH
+protruding from and clawing at the face of a man who can no longer hear or
+smell yet insists to do and die in slow motion before my very eyes, each day
+wrinkling further in imperceptible ways and in UNMENTIONABLE places, gibbering
+an ineffectual recombinant pidgin of tongues that tickle barely my ear so that
+here and there I say &amp;ldquo;Ah!&amp;rdquo; and smile simply and there and here he SUDDENLY JABS
+me with English and I scramble but, Zuck, off he goes again into the structured
+madness of a verbal semiotics which my neural net can interpret only as noise,
+white and black and peppered like swirlylocks of a middleaged lothario, slave
+still and for one last go to that shriveled greedy chromosome, and why not,
+buying pounds for pounds, indiscriminately and without remorse, as he surely
+was some many married lustless lustra prior, which he must remember fondly
+whenever a goodsome pair of gelatinous mounds tingle his doorbell? Where was he
+before and what was he doing there and why?&lt;/p&gt;
+
+&lt;p&gt;I wish I could understand Cantonese too.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A Pair Of Dirty Shoes</title>
+      <link>http://noamswebsite.com/w/shoes/</link>
+      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/w/shoes/</guid>
+      <description>&lt;p&gt;A second pair stacked on top. Dirty socks. Dirty shirts. Piles of them.  That
+chair I don&amp;rsquo;t even like. Too many cups. A clean bedroom, the bed made. Clean
+dishes, one of those pluggable scented candles. His records. My records. Too
+much space.&lt;/p&gt;
 </description>
     </item>
     
@@ -563,6 +698,16 @@ end
   end
 end
 &lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Stones</title>
+      <link>http://noamswebsite.com/w/stones/</link>
+      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/w/stones/</guid>
+      <description>&lt;p&gt;I was at the lake last Summer. I picked a mossy old bench to sit, when a group of adolescents gathered to throw stones into the water.  For an hour they busied around, making loud gestures and arguing over whose stone made the bigger splash.  They would try every angle, and then bicker about which one spattered out the widest, or which one sent the water flying the highest, and how could they agree on what they&amp;rsquo;d seen if in a moment it was gone? Finally they approached me hoping I would settle their dispute, but I&amp;rsquo;d not seen the water splash&amp;ndash; they scoffed, frustrated, and went on their way, and I was free to continue watching the ripples that now adorned the surface of the lake.&lt;/p&gt;
+</description>
     </item>
     
     <item>
