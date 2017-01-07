@@ -1,9 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Tauri|Oxygen+Mono);
+@import url(http://fonts.googleapis.com/css?family=Tauri|Oxygen+Mono|HeadlandOne);
 body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   color: black;
   background-color: white;
+}
+
+.written {
+  font-family: "Headland One", serif;
+  font-size: 17px;
 }
 
 header {
@@ -58,17 +63,21 @@ td {
  margin-bottom: 10px;
 }
 
-pre, code {
-  border-radius: 15px;
+code {
   font-family: "Oxygen Mono", monospace;
+  border-radius: 15px;
   background: #efe;
 }
 
 pre {
   overflow: auto;
-  font-family: "Oxygen Mono", monospace;
   margin-top: 1.125em;
   padding: 10px;
+}
+
+.written pre {
+  font-family: "Headland One", serif;
+  font-size: 17px;
 }
 
 pre .line-numbers {
