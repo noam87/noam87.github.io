@@ -14,47 +14,50 @@
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
-      <description>&lt;table&gt;
+      <description>
+
+&lt;h2 id=&#34;learning&#34;&gt;Learning&lt;/h2&gt;
+
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
 &lt;th&gt;Notes&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;book&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt; (book)&lt;/td&gt;
 &lt;td&gt;My go-to recommendation for getting started with Elixir.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&#34;https://medium.com/@diamondgfx/introduction-fe138ac6079d&#34;&gt;Writing A Blog Engine in Phoenix&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;tutorial&lt;/td&gt;
 &lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;article&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;article&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;pdf&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.erlang-in-anger.com/&#34;&gt;Erlang In Anger&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Great guide for when stuff goes bad.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&#34;memory-gc&#34;&gt;Memory / GC&lt;/h2&gt;
+
+&lt;p&gt;| Title                                    | Notes  |
+| &lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Scheduler Details and Why It Matters&lt;/a&gt; | |
+| &lt;a href=&#34;https://hamidreza-s.github.io/erlang%20garbage%20collection%20memory%20layout%20soft%20realtime/2015/08/24/erlang-garbage-collection-details-and-why-it-matters.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt; | Simple introduction to Erlang GC concepts. Start here. |
+| &lt;a href=&#34;https://www.erlang-solutions.com/blog/erlang-19-0-garbage-collector.html&#34;&gt;Erlang 19.0 Garbage Collector&lt;/a&gt; | |
+| &lt;a href=&#34;http://erlang.org/doc/efficiency_guide/introduction.html&#34;&gt;Erlang Efficiency Guide&lt;/a&gt; | |
+| &lt;a href=&#34;http://blog.bugsense.com/post/74179424069/erlang-binary-garbage-collection-a-lovehate&#34;&gt;Erlang Binary Garbage Collection: A love/hate relationship&lt;/a&gt; | Some findings on the shared heap GC. |&lt;/p&gt;
+
+&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
+
+&lt;p&gt;| Title                                    | Notes  |
+| &lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt; | |
+| &lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt; (pdf) | |&lt;/p&gt;
 </description>
     </item>
     
