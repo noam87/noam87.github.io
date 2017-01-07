@@ -147,6 +147,24 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/erlang/</loc>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/javascript/</loc>
+    <lastmod>2017-01-04T14:41:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/ml/</loc>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -173,6 +191,18 @@
   <url>
     <loc>http://noamswebsite.com/wikis/random/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/react/</loc>
+    <lastmod>2017-01-04T14:41:18-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/resource-list/</loc>
+    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -9,7 +9,7 @@
     <atom:link href="http://noamswebsite.com/wikis/computers/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Elixir Resources</title>
+      <title>Elixir/Erlang Resources</title>
       <link>http://noamswebsite.com/wiki-main/computers/elixir_resources/</link>
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
       
@@ -35,6 +35,24 @@
 &lt;td&gt;tutorial&lt;/td&gt;
 &lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
 &lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;article&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;article&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;pdf&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 </description>
@@ -46,10 +64,29 @@
       <pubDate>Wed, 04 Jan 2017 14:41:18 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/react_resources/</guid>
-      <description>&lt;p&gt;| Title | Format ||
-|&amp;mdash;&amp;mdash;-|&amp;mdash;&amp;mdash;&amp;ndash;||
-| &lt;a href=&#34;http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html&#34;&gt;A Comprehensive Guide to Test-First Development with Redux, React, and Immutable&lt;/a&gt; | tutorial | Great comprehensive introduction to the whole ecosystem. |
-| &lt;a href=&#34;https://youtu.be/-jwQ3sGoiXg&#34;&gt;Redux, Re-fram, Relay, Om/next, oh my!&lt;/a&gt; | video ||&lt;/p&gt;
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html&#34;&gt;A Comprehensive Guide to Test-First Development with Redux, React, and Immutable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;tutorial&lt;/td&gt;
+&lt;td&gt;Great comprehensive introduction to the whole ecosystem.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/-jwQ3sGoiXg&#34;&gt;Redux, Re-fram, Relay, Om/next, oh my!&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;video&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

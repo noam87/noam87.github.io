@@ -18,32 +18,14 @@
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Author&lt;/th&gt;
-&lt;th&gt;Recommend&lt;/th&gt;
 &lt;th&gt;Format&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;A Tutorial On Deep Learning&lt;/td&gt;
+&lt;td&gt;A Tutorial On Deep Learning (&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt 1&lt;/a&gt;, &lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt 2&lt;/a&gt;)&lt;/td&gt;
 &lt;td&gt;Quoc V. Le (Google)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt. 1&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt. 2&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
