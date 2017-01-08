@@ -78,7 +78,7 @@ pre {
 .written pre {
   font-family: "Headland One", serif;
   font-size: 17px;
-  background: white;
+  background: none;
 }
 
 pre .line-numbers {
