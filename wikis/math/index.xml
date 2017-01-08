@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/wikis/math/index.xml</link>
+    <description>Recent content in Math on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/wikis/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sorting By Relative Popularity</title>
+      <link>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</link>
+      <pubDate>Tue, 08 Dec 2015 17:45:08 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</guid>
+      <description>&lt;p&gt;Hey, looks like I&amp;rsquo;m sorting user content again! &lt;a href=&#34;https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/&#34;&gt;last time&lt;/a&gt;, I sorted user posts by &amp;ldquo;interestingness&amp;rdquo;; this time around I&amp;rsquo;ll be sorting players from a set of sports teams. Once again we&amp;rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&amp;rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-task&#34;&gt;The Task&lt;/h3&gt;
+
+&lt;p&gt;To drive up user engagement at &lt;a href=&#34;http://www.thescore.com/&#34; target=&#34;_blank&#34;&gt;theScore&lt;/a&gt;, we introduced an onboarding screen that&amp;rsquo;s shown when you open the app for the first time.&lt;/p&gt;
+
+&lt;p&gt;First, you get a list of sports teams that are popular in your area, and the option to subscribe to some of them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/team_select.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now based on the teams you choose, it would be nice to also recommend some players for you to follow. So how would one go about choosing which players to recommend out of all those teams?&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s assume we have three six-player teams, where each player has the following number of subscribers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;big_team_1:
+
+  1. 100 000
+  2. 110 000
+  3. 90 000
+  4. 80 500
+  5. 140 000
+  6. 140 500
+
+
+big_team_2:
+
+  1. 120 000
+  2. 250 000
+  3. 180 000
+  4. 135 000
+  5. 157 000
+  6. 202 000
+
+
+small_team:
+
+  1. 3 000
+  2. 100
+  3. 234
+  4. 301
+  5. 250
+  6. 400
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s consider some properties we want from our algorithm:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A compute-once, static value:&lt;/strong&gt; we don&amp;rsquo;t want to run our algorithm on every user. We want to give each player in our database a static &lt;code&gt;recommendation_score&lt;/code&gt;; a numeric value that is cheap to index.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Simple:&lt;/strong&gt; the algorithm should be simple and use elementary methods. Recommending players is a small part of the app; there should be little code maintenance involved.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Variety:&lt;/strong&gt; The purpose of the onboarding process is to get you engaged, so we want to recommend a variety of players from different sports and leagues.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;the-naive-approach&#34;&gt;The Naive Approach&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; I will be using the &lt;a href=&#34;http://julialang.org/&#34; target=&#34;_blank&#34;&gt;Julia programming language&lt;/a&gt; for all my examples. You can find the complete implementation at the bottom of this post.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The first obvious solution is to simply sort players by their &lt;code&gt;subscription_count&lt;/code&gt;. The more popular the player, the more recommendable he is. Here is our naive sorting function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function naive_sort(teams)
+  Base.sort(
+    [[team.players for team in teams]...],
+    by=x -&amp;gt; x.subscribers,
+    rev=true
+  )[1:5]
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which yields:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;5-element Array{PlayerRecommender.Player,1}:
+  Big Team 2 Player | subscribers: 250000
+  Big Team 2 Player | subscribers: 202000
+  Big Team 2 Player | subscribers: 180000
+  Big Team 2 Player | subscribers: 157000
+  Big Team 1 Player | subscribers: 140500
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The problem with this approach is that we only get results from the most popular teams. So if you&amp;rsquo;re a fan of both a very popular NFL team and another team that is not as popular (your local basketball team, perhaps), even the least popular player from the NFL team will be recommended to you, whereas the most popular player from your favorite local basketball team will not show up in your list at all!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-better-approach&#34;&gt;A Better Approach&lt;/h3&gt;
+
+&lt;p&gt;What are we really looking for?&lt;/p&gt;
+
+&lt;p&gt;Well, I think the players we want to recommend are the not necessarily the ones who are most famous, but rather, the ones who are most popular &lt;em&gt;compared to the rest of their team&lt;/em&gt;, regardless of how popular that teams is (we already know you&amp;rsquo;re a fan of the team or you wouldn&amp;rsquo;t have subscribed to it in the first place).&lt;/p&gt;
+
+&lt;p&gt;In other words, we want an algorithm that answers the following question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Which players &lt;em&gt;deviate&lt;/em&gt; the most in popularity from the rest of their team?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Luckily, there&amp;rsquo;s a mathematical tool for figuring out just this: &lt;a href=&#34;https://en.wikipedia.org/wiki/Standard_deviation&#34; target=&#34;_blank&#34;&gt;standard deviation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id=&#34;standard-deviation-tl-dr&#34;&gt;Standard Deviation tl;dr&lt;/h4&gt;
+
+&lt;p&gt;Standard deviation is a pretty straight-forward concept: Take a set of values, and figure out the average value for that set (also known as the &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arithmetic_mean&#34; target=&#34;_blank&#34;&gt;arithmetic mean&lt;/a&gt;&lt;/em&gt;). The standard deviation simply tells us by how much the value of the typical element in our set deviates from the average.&lt;/p&gt;
+
+&lt;p&gt;The mathematical representation of this calculation is:&lt;/p&gt;
+
+&lt;p&gt;$$ s_N = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \overline{x})^2} $$&lt;/p&gt;
+
+&lt;p&gt;Where $N$ is the population size, and $\overline{x}$ is the arithmetic mean, which itself is represented by:&lt;/p&gt;
+
+&lt;p&gt;$$ \overline{x}_N = \frac{1}{N}\sum_{i=1}^{N} a_i $$&lt;/p&gt;
+
+&lt;p&gt;For example, the following two sets have the same average value, but clearly the values are spread out differently:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;close_to_average = [11,8,9,12]
+spread_out = [0,1,19,20]
+
+average(close_to_average) == 10
+average(spread_out) == 10
+
+standard_deviation(close_to_average) == 1.59
+standard_deviation(spread_out) == 9.51
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Thus we arrive at our simple scoring function. All we need to do is find players whose deviation from the average is substantially higher than that of their teammates:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function recommend(player, team)
+  player_dev = player.subscribers - team.average
+  if player_dev == 0
+    player.recommendation_score = 0
+  else
+    player.recommendation_score = player_dev / team.std_dev
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using this scoring function on our original teams, we get the following results:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;5-element Array{PlayerRecommender.Player,1}:
+ Small Team Player | subscribers: 3000 | score: 2.2276261544470644
+ Big Team 2 Player | subscribers: 250000 | score: 1.749555170961297
+ Big Team 1 Player | subscribers: 140500 | score: 1.3134034577576315
+ Big Team 1 Player | subscribers: 140000 | score: 1.291753950212176
+ Big Team 2 Player | subscribers: 202000 | score: 0.6445729577225832
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Much better. This time around, our top player actually has the least number of subscribers, but this makes sense, because even though he belongs to a team that is not very popular, his subscription count is tenfold that of his teammates; clearly someone to keep an eye on! (perhaps a rising star in a college league? Certainly wouldn&amp;rsquo;t want our recommendation script to ignore that one.)&lt;/p&gt;
+
+&lt;h3 id=&#34;limitations&#34;&gt;Limitations&lt;/h3&gt;
+
+&lt;p&gt;This algorithm has many limitations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;New players won&amp;rsquo;t be very well represented (they will by nature have low subscription counts).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;All-star teams might result in nobody being particularly recommendable. Though this one might be less of a problem: thanks to our good ol&amp;rsquo; friend the &lt;a href=&#34;https://en.wikipedia.org/wiki/Gaussian_function&#34;&gt;bell curve&lt;/a&gt;, even among rare anomalies, there are &lt;a href=&#34;http://fivethirtyeight.com/features/lionel-messi-is-impossible/&#34; target=&#34;_blank&#34;&gt;rare anomalies&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While there are ways to address these limitations and improve the accuracy of the algorithm (for example, taking into account the rate of change in &lt;code&gt;subscription_count&lt;/code&gt;), one has to remember the purpose of this feature: to drive up user engagement during onboarding. Is the added complexity of such changes worth the minimal improvement in the recommendations?&lt;/p&gt;
+
+&lt;p&gt;Point is, it&amp;rsquo;s Friday night and I should go out for a beer now. I&amp;rsquo;m also looking forward to testing out the enormous Chinese fermentation jug I bought yesterday. It looks something like this, but a LOT bigger:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/ferm_crock.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And it was only \$30. What a bargain.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Here is the code used in these examples (working as of Julia 0.4.1). Our actual code at theScore is in Ruby.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;module PlayerRecommender
+  export Team, Player, big_team_1, big_team_2, small_team
+  export naive_sort, sort
+
+  type Player
+    subscribers::Int
+    team::AbstractString
+    recommendation_score::Float64
+
+    function Player(subscribers)
+      new(subscribers, &amp;quot;&amp;quot;, 0.0)
+    end
+  end
+
+  # Pretty print Player
+  function Base.show(io::IO, p::Player)
+    print(io, &amp;quot;$(p.team) $(typeof(p)) | subscribers: $(p.subscribers) | score: $(p.recommendation_score)&amp;quot;)
+  end
+
+  type Team
+    players::Array{Player}
+    std_dev::Float64
+    average::Float64
+    name::AbstractString
+
+    function Team(name, players)
+      for p in players
+        p.team = name
+      end
+
+      new(players, 0.0, 0.0, name)
+    end
+  end
+
+
+  function naive_sort(teams)
+    Base.sort(
+      [[team.players for team in teams]...],
+      by=x -&amp;gt; x.subscribers,
+      rev=true
+    )[1:5]
+  end
+
+  function sort(teams)
+    map(set_subscriptions_avg, teams)
+    map(std_dev, teams)
+    map(recommend, teams)
+
+    Base.sort(
+      [[team.players for team in teams]...],
+      by=x -&amp;gt; x.recommendation_score,
+      rev=true
+    )[1:5]
+  end
+
+  # Private
+
+  function average(xs)
+    reduce(+, xs) / length(xs)
+  end
+
+  function dev_from_average(xs, average)
+    map(x -&amp;gt; x - average, xs)
+  end
+
+  function recommend(team)
+    map( x -&amp;gt; recommend(x, team), team.players)
+  end
+
+  function recommend(player, team)
+    player_dev = player.subscribers - team.average
+    if player_dev == 0
+      player.recommendation_score = 0
+    else
+      player.recommendation_score = player_dev / team.std_dev
+    end
+  end
+
+  function set_subscriptions_avg(team)
+    team.average = average([p.subscribers for p in team.players])
+  end
+
+  function squares(xs)
+    map(x -&amp;gt; x * x, xs)
+  end
+
+  function std_dev(team)
+    team.std_dev = std_dev([p.subscribers for p in team.players], team.average)
+  end
+
+  function std_dev(xs, average)
+    sqrt(reduce(+, squares(dev_from_average(xs, average))) / length(xs))
+  end
+
+  function subscriptions_avg(team)
+    team.average = average(float([x.subscribers for x in team.players]))
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
+      <link>http://noamswebsite.com/wiki-main/ml/eigengoogle/</link>
+      <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/eigengoogle/</guid>
+      <description>
+
+&lt;p&gt;While we&amp;rsquo;re on the subject of sorting things online, we might as well talk
+about Google: the 93-billion dollar company whose main export is taking all the
+things ever and putting them in the right order. If there&amp;rsquo;s one thing Google
+knows best, it&amp;rsquo;s sorting stuff.&lt;/p&gt;
+
+&lt;p&gt;I was curious how it all works, and it turned out really interesting, plus I
+got to learn a bit about Markov chains. It all starts with an algorithm called
+PageRank&lt;sup&gt;1&lt;/sup&gt;.
+&lt;a href=&#34;http://en.wikipedia.org/wiki/PageRank&#34;&gt;Accodring to Wikipedia&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Pagerank uses a model of a random surfer who gets bored after several clicks
+and switches to a random page. It can be understood as a Markov chain in
+which the states are pages, and the transitions are the links between pages.
+When calculating PageRank, pages with no outbound links are assumed to link
+out to all other pages in the collection (the random surfer chooses another
+page at random).&lt;/p&gt;
+
+&lt;p&gt;The PageRank values are the entries of the dominant eigenvector of the
+modified adjacency matrix.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/eigenvectors.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this post I&amp;rsquo;ll try to break that down and provide some of the background
+necessary to understand Google PageRank. My main reference for making sense
+of it all was the book
+&lt;em&gt;Probability, Markov Chains, Queues, And Simulation&lt;/em&gt; by William J. Stweart, my
+linear algebra textbook, and Google.&lt;/p&gt;
+
+&lt;h2 id=&#34;graphs-as-matrices&#34;&gt;Graphs as Matrices&lt;/h2&gt;
+
+&lt;p&gt;A graph is a collection of nodes joined by edges. If the edges are arrows that
+flow in one direction, we call that a &lt;strong&gt;directed graph&lt;/strong&gt;. A graph whose
+edges have each been assigned a &amp;ldquo;weight&amp;rdquo; (usually some real number) is a
+&lt;strong&gt;weighted graph&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/weighted_graph01.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A graph of &lt;code&gt;n&lt;/code&gt; nodes can be represented in the form of an &lt;code&gt;n x n&lt;/code&gt; &lt;strong&gt;adjacency
+matrix&lt;/strong&gt;, $M = [m_{ij}]$ such that $m_{ij}$ is equal to the weight of the edge
+going from node $j$ to node $i$:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[0, 1, 0, 0]
+[1, 0, 2, 0]
+[2, 1, 0, 1]
+[0, 0, 4, 0]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;stochastic-matrices&#34;&gt;Stochastic Matrices&lt;/h1&gt;
+
+&lt;p&gt;The term &amp;ldquo;stochastic&amp;rdquo; is used to describe systems whose state can only be
+described in probabilistic terms (i.e: the likelihood of some event happening
+at any given time).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Scenario&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Consider two competing websites. Every month, the first website loses 30% of
+its audience to the second website, while the second website loses 60% of its
+audience to the first.&lt;/p&gt;
+
+&lt;p&gt;If the two websites start out with 50% of the global audience each, how many
+users will each website have after a month? After a year?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This scenario can be represented as the following system:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;P = [0.7, 0.6],   x_0 = [0.5, 0.5]
+    [0.3, 0.4]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/competing_stores_graph.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a &lt;strong&gt;Markov chain&lt;/strong&gt; with &lt;strong&gt;transition matrix&lt;/strong&gt; $P$ and a &lt;strong&gt;state vector&lt;/strong&gt;
+$\mathbf{ x^{(0)} }$.&lt;/p&gt;
+
+&lt;p&gt;The transition matrix is called a &lt;strong&gt;stochastic matrix&lt;/strong&gt;; it represents the
+likelihood that some individual in a system will transition from one state to
+another. The columns on a stochastic matrix are always non-negative numbers
+that add up to 1 (i.e: the probability of &lt;strong&gt;at least one&lt;/strong&gt; of the events
+occurring is always 1 &amp;ndash; the likelihood of a user either staying on the same
+website, or leaving, is always 100%. He must choose one of the two).&lt;/p&gt;
+
+&lt;p&gt;The state after the first month is&lt;/p&gt;
+
+&lt;p&gt;$$
+  \begin{gather}
+    \mathbf{x^{ (1) }} = P \mathbf{ x^{ (0) } } \cr
+      = [(0.7 + 0.6)\times0.5, (0.3 + 0.4)\times0.5] \cr
+      = [0.65, 0.35] \cr
+  \end{gather}
+$$&lt;/p&gt;
+
+&lt;p&gt;So, after the first month, the second website will have only 35% of the global audience.&lt;/p&gt;
+
+&lt;p&gt;To get the state of the system after two months, we simply apply the transition
+matrix again, and so on. That is, the current state of a Markov chain depends
+only on its previous state. Thus, the state vector at month $k$ can be
+defined recursively:&lt;/p&gt;
+
+&lt;p&gt;$$ \mathbf{ x^{(k)} } = P\mathbf{ x^{ (k - 1) } } $$&lt;/p&gt;
+
+&lt;p&gt;From which, through substitution, we can derive the following equation:&lt;/p&gt;
+
+&lt;p&gt;$$\mathbf{ x^{(k)} } = P^k \mathbf{ x^{(0)} }$$&lt;/p&gt;
+
+&lt;p&gt;Using this information, we can figure out the state of the system after a year,
+and then again after two years (using the (Sage)[&lt;a href=&#34;http://www.sagemath.org/&#34;&gt;http://www.sagemath.org/&lt;/a&gt;], a
+mathematical library for python):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;P = Matrix([[0.70, 0.60], [0.30, 0.40]])
+x = vector([0.5,0.5])
+
+P^12 * x
+# -&amp;gt; (0.666666666666500, 0.333333333333500)
+
+P^24 * x
+# -&amp;gt; (0.666666666666666, 0.333333333333333)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So it seems like the state vector is &amp;ldquo;settling&amp;rdquo; around those values. It would
+appear that, as $n \to \infty$, $P^n\mathbf{x^{(0)}}$ is converging to some
+$\mathbf{x}$ such that $P\mathbf{x} = \mathbf{x}$.
+As we&amp;rsquo;ll see below, this is indeed the case.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll call this $\mathbf{x} $ the &lt;strong&gt;steady state vector&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;eigenvectors&#34;&gt;Eigenvectors!&lt;/h2&gt;
+
+&lt;p&gt;Recall from linear algebra that an eigenvector of a matrix $A$ is a vector
+$\mathbf{x}$ such that:&lt;/p&gt;
+
+&lt;p&gt;$$A\mathbf{x} = \lambda \mathbf{x}$$&lt;/p&gt;
+
+&lt;p&gt;for some scalar $\lambda$ (the &lt;strong&gt;eigenvalue&lt;/strong&gt;). A &lt;strong&gt;leading eigenvalue&lt;/strong&gt; is an
+eigenvalue $\lambda_{1}$ such that its absolute value is greater than any
+other eigenvalue for the given matrix.&lt;/p&gt;
+
+&lt;p&gt;One method of finding the leading eigenvector of a matrix is through a
+&lt;a href=&#34;http://en.wikipedia.org/wiki/Power_iteration&#34;&gt;power iteration&lt;/a&gt; sequence, defined
+recursively like so:&lt;/p&gt;
+
+&lt;p&gt;$$
+  \mathbf{ x_k }
+    = \cfrac{A\mathbf{x_{k-1}}}
+            {| A\mathbf{x_{ k-1 }} |}
+$$&lt;/p&gt;
+
+&lt;p&gt;Again, by noting that we can substitute
+$A\mathbf{x_{k-1}} = A(A\mathbf{x_{k-2}}) = A^2\mathbf{x_{k-2}}$,
+and so on, it follows that:&lt;/p&gt;
+
+&lt;p&gt;$$
+  \mathbf{x_k}
+    = \cfrac{A^k \mathbf{x_0}}
+            {| A^k \mathbf{x_0} |}
+$$&lt;/p&gt;
+
+&lt;p&gt;This sequence converges to the leading eigenvector of $A$.&lt;/p&gt;
+
+&lt;p&gt;Thus we see that the steady state vector is just an eigenvector with the special
+case $\lambda = 1$.&lt;/p&gt;
+
+&lt;h2 id=&#34;stochastic-matrices-that-don-t-play-nice&#34;&gt;Stochastic Matrices that Don&amp;rsquo;t Play Nice&lt;/h2&gt;
+
+&lt;p&gt;Before we can finally get to Google PageRank, we need to make a few more
+observations.&lt;/p&gt;
+
+&lt;p&gt;First, it should be noted that power iteration has its limitations: not all
+stochastic matrices converge. Take as an example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;P = Matrix([ [0, 1, 0], [1, 0, 0], [0, 0, 1]])
+x = vector([0.2, 0.3, 0.5])
+
+P * x
+# -&amp;gt; (0.3, 0.2, 0.5)
+
+P^2 * x
+# -&amp;gt; (0.2, 0.3, 0.5)
+
+P^3 * x
+# -&amp;gt; (0.3, 0.2, 0.5)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The state vectors of this matrix will oscillate in such a way forever. This
+matrix can be thought of as the transformation matrix for reflection about a
+line in the x,y axis&amp;hellip; this system will never converge (indeed, it has no
+leading eigenvalue: $|\lambda_1| = |\lambda_2| = |\lambda_3| = 1$).&lt;/p&gt;
+
+&lt;p&gt;Another way of looking at $P$ is by drawing its graph:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/oscillating_chain.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using our example of competing websites, this matrix describes a system such
+that, every month, &lt;em&gt;all&lt;/em&gt; of the first website&amp;rsquo;s users leave and join the
+seconds website, only to abandon the second website again a month later and
+return to the first, and so on, forever.&lt;/p&gt;
+
+&lt;p&gt;It would be absurd to hope for this system to converge to a steady state.&lt;/p&gt;
+
+&lt;p&gt;States 1 and 2 are examples of &lt;strong&gt;recurrent states&lt;/strong&gt;. These are states that,
+once reached, there is a probability of 1 (absolute certainty) that the Markov
+chain will return to them infinitely many times.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;transient state&lt;/strong&gt; is such that the probability is $&amp;gt; 0$ that they will
+never be reached again. (If the probability &lt;em&gt;is&lt;/em&gt; 0, we call such a state
+&lt;strong&gt;ephemeral&lt;/strong&gt; &amp;ndash; in terms of Google PageRank, this would be a page that no
+other page links to):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/diffrent_states.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are two conditions a transition matrix must meet if we want to ensure
+that it converges to a steady state:&lt;/p&gt;
+
+&lt;p&gt;It must be &lt;strong&gt;irreducible&lt;/strong&gt;: an irreducible transition matrix is a matrix
+whose graph has no closed subsets. (A closed subset is such that no state
+within it can reach a state outside of it. 1, 2 and 3 above are closed from 4
+and 5.)&lt;/p&gt;
+
+&lt;p&gt;It must be &lt;strong&gt;primitive&lt;/strong&gt;: A primitive matrix $P$ is such that, for some
+positive integer $n$, $P^n$ is such that $p_{ij} &amp;gt; 0$ for all
+$p_{ij} \in P$ (that is: all of its entries are positive numbers).&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;More generally, it must be &lt;strong&gt;positive recurrent&lt;/strong&gt; and &lt;strong&gt;aperiodic&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Positive recurrence means that it takes, on average, a finite number of steps
+to return to any given state. Periodicity means the number of steps it takes
+to return to a particular state is always divisible by some natural number
+$n$ (its period).&lt;/p&gt;
+
+&lt;p&gt;Since we&amp;rsquo;re dealing with finite Markov chains, irreducibility implies
+positive recurrence, and primitiveness ensures aperiodicity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/periodic.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;google-pagerank&#34;&gt;Google PageRank&lt;/h2&gt;
+
+&lt;p&gt;We are now finally ready to understand how the PageRank algorithm works. Recall
+from Wikipedia:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The formula uses a model of a random surfer who gets bored after several
+clicks and switches to a random page. The PageRank value of a page reflects
+the chance that the random surfer will land on that page by clicking on a
+link. It can be understood as a Markov chain in which the states are pages,
+and the transitions, which are all equally probable, are the links between
+pages.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, for example, if we wanted to represent our graph above, we would start with
+the following adjacency matrix:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[0, 0, 0.5, 0,   0],
+[0, 0, 0.5, 0.5, 0],
+[1, 1, 0,   0,   0],
+[0, 0, 0,   0,   0],
+[0, 0, 0,   0.5, 0]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For the algorithm to work, we must transform this original matrix in such a way
+that we end up with an irreducible, primitive matrix. First,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If a page has no links to other pages, it becomes a sink and therefore
+terminates the random surfing process. If the random surfer arrives at a sink
+page, it picks another URL at random and continues surfing again.&lt;/p&gt;
+
+&lt;p&gt;When calculating PageRank, pages with no outbound links are assumed to link out
+to all other pages in the collection.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;    [0, 0, 0.5, 0,   0.2],
+    [0, 0, 0.5, 0.5, 0.2],
+S = [1, 1, 0,   0,   0.2],
+    [0, 0, 0,   0,   0.2],
+    [0, 0, 0,   0.5, 0.2]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We are now ready to produce $G$, the Google Matrix, which is both irreducible
+and primitive. Its steady state vector gives us the final PageRank score for
+each page.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-google-matrix&#34;&gt;The Google Matrix&lt;/h2&gt;
+
+&lt;p&gt;The [Google Matric](&lt;a href=&#34;http://en.wikipedia.org/wiki/Google_matrix]&#34;&gt;http://en.wikipedia.org/wiki/Google_matrix]&lt;/a&gt; for an $n
+\times n$ matrix $S$ is derived from the equation&lt;/p&gt;
+
+&lt;p&gt;$$ G = \alpha S + (1 - \alpha) \frac{1}{n} E$$&lt;/p&gt;
+
+&lt;p&gt;Where $E = \mathbf{ e }\mathbf{ e }^T$ is an $n \times n$
+matrix whose entries are all 1, and
+$0 \le \alpha \le 1$ is referred to as the &lt;strong&gt;damping factor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If $\alpha = 1$, then $G = S$. Meanwhile, if $\alpha = 0$ all of the entries in
+$G$ are the same (hence, the original structure of the network is &amp;ldquo;dampened&amp;rdquo; by
+$\alpha$, until we lose it altogether).&lt;/p&gt;
+
+&lt;p&gt;So the matrix $(1 - \alpha) \frac{1}{n} E$ is a matrix that represents a &amp;ldquo;flat&amp;rdquo;
+network in which all pages link to all pages, and the user is equally likely to
+click any given link (with likelihood $\frac{1-\alpha}{n}$), while $S$ is
+dampened by a factor of $\alpha$.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Google uses a damping factor of 0.85. For more on this, I found &lt;a href=&#34;http://noamswebsite.com/eigenpaper&#34;&gt;this paper&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; the second eigenvalue of a Google matrix is $|\lambda_2| = \alpha
+\le |\lambda_1| = 1 $, and the rate of convergence of the power iteration is
+given by $\frac{|\lambda_2|}{|\lambda_1|} = \alpha$. So higher values of
+$\alpha$ imply better accuracy but worse performance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With some moving stuff around, we can see that&lt;/p&gt;
+
+&lt;p&gt;$$
+  \left(\alpha s_{ 1j } + \frac{1-\alpha}{ n }\right) + \left(\alpha s_{ 2j }
+  + \frac{1-\alpha}{ n }\right) + &amp;hellip; + \left(\alpha s_{ nj } + \frac{1-\alpha}{ n }\right) = 1
+$$&lt;/p&gt;
+
+&lt;p&gt;For all $j$ up to $n$, which means that $G$ is indeed stochastic, irreducible,
+and primitive. Cool.&lt;/p&gt;
+
+&lt;p&gt;In conclusion,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/eigensnotsicles.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;
+  1. Actually, it all started with the &lt;a href=&#34;http://en.wikipedia.org/wiki/HITS_algorithm&#34;&gt;HITS algorithm&lt;/a&gt;, which PageRank is based off of. More details &lt;a href=&#34;http://www.math.cornell.edu/~mec/Winter2009/RalucaRemus/Lecture4/lecture4.html&#34;&gt;here&lt;/a&gt;.
+&lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sorting Posts by User Engagement Level</title>
+      <link>http://noamswebsite.com/wiki-main/computers/user_eng/</link>
+      <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/user_eng/</guid>
+      <description>
+
+&lt;p&gt;At Functional Imperative we&amp;rsquo;re building the new &lt;em&gt;CanLII Connects&lt;/em&gt;
+website (a social portal for Canada&amp;rsquo;s largest database of legal cases), and
+this week I was given the task of figuring out a sensible way of sorting posts.&lt;/p&gt;
+
+&lt;p&gt;Figuring out how to sort user-generated content is a common problem that many
+social websites face.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s Reddit&amp;rsquo;s scoring equation for &amp;lsquo;Best&amp;rsquo; &lt;a href=&#34;http://www.evanmiller.org/how-not-to-sort-by-average-rating.html&#34;&gt;(source and explanation)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/reddit_best.png&#34; alt=&#34;Reddit&#39;s &#39;best&#39; scoring equation&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Not all scoring equations are that hairy, &lt;a href=&#34;http://moz.com/blog/reddit-stumbleupon-delicious-and-hacker-news-algorithms-exposed&#34;&gt;here are a few more&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Interestingly enough, Reddit&amp;rsquo;s &amp;lsquo;Hot&amp;rsquo; scoring function (explained in link above):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/reddit_hot_algo.png&#34; alt=&#34;Reddit&#39;s &amp;quot;hot&amp;quot; algorithm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;is &lt;a href=&#34;http://technotes.iangreenleaf.com/posts/2013-12-09-reddits-empire-is-built-on-a-flawed-algorithm.html&#34;&gt;quite flawed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Sidenote&lt;/strong&gt;: One observation not mentioned in that first
+article is that, while all other equations use some form of &lt;code&gt;time_now -
+time_posted&lt;/code&gt; to calculate how old a post is, the clever guys at Reddit use
+&lt;code&gt;time_posted - some_old_date&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The advantage of this is that the post&amp;rsquo;s score need only be calculated once,
+whereas the value of scores calculated with &lt;code&gt;time_now&lt;/code&gt; will change on every
+request.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Anyway, while all those scoring functions work pretty well, they didn&amp;rsquo;t quite
+fit the requirements for &lt;em&gt;CanLII Connects&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this post, I&amp;rsquo;ll walk through the decision process of creating a scoring
+function. Hopefully this will be useful if you encounter a similar feature to
+implement.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements:&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;CanLII Connects&lt;/em&gt; links to a database of legal cases, and users can post
+opinions on those cases:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A user can post.&lt;/li&gt;
+  &lt;li&gt;A user can upvote a post.&lt;/li&gt;
+  &lt;li&gt;A user can comment on a post.&lt;/li&gt;
+  &lt;li&gt;A user can comment on a comment on a post.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So what&amp;rsquo;s a sensible way of sorting posts?&lt;/p&gt;
+
+&lt;p&gt;Right away, we&amp;rsquo;re dealing with a different problem than Reddit or HN: while it
+makes sense to slowly degrade the score of a post on those sites over time, the
+same does not make sense for CanLII. Old cases might be cited at any time, no
+matter how old they are, so what matters is not how old a discussion is, but
+rather how actively engaged users are within a given discussion.&lt;/p&gt;
+
+&lt;h2 id=&#34;initial-score&#34;&gt;Initial Score&lt;/h2&gt;
+
+&lt;p&gt;Ok, so first we have to give each post an initial score. I like Reddit&amp;rsquo;s
+approach of taking the base-10 log of its upvotes. This makes sense because,
+the more popular a post already is, the more likely people are to see it, and
+therefore upvote it, which gives it an unfair advantage.&lt;/p&gt;
+
+&lt;p&gt;In our case, we&amp;rsquo;re not only trying to measure how much people &amp;ldquo;like&amp;rdquo; a post,
+but rather how engaged they are with it.  It makes sense that, while an upvote
+is a fine indicator of &amp;ldquo;engagedness&amp;rdquo;, a user actually bothering to comment on a
+post is even more of an indicator. I&amp;rsquo;ll count that as equivalent to two
+upvotes, and a user commenting on a comment will count as three upvotes (the 2
+is so we don&amp;rsquo;t take the log of 1 or 0):&lt;/p&gt;
+
+&lt;p&gt;$$log_{10}(2 + u + 2c + 3cc)$$&lt;/p&gt;
+
+&lt;h2 id=&#34;frequency&#34;&gt;Frequency&lt;/h2&gt;
+
+&lt;p&gt;Next, we need the post&amp;rsquo;s position to degrade as it becomes less active. It
+makes sense to divide the intial score by some factor of time:&lt;/p&gt;
+
+&lt;p&gt;$$\cfrac{log_{10} (2+u+2c+3cc)}{\bar{t}}$$&lt;/p&gt;
+
+&lt;p&gt;Now we need a reasonable value for $\bar{t}$.  A good start is the average
+time, in seconds, between the three most recent user interactions with  a post.&lt;/p&gt;
+
+&lt;p&gt;We define a user interaction to be: a user creates a post, a user comments on a
+post, or a user upvotes a post.&lt;/p&gt;
+
+&lt;p&gt;Also, we want the most recent interactions to weigh more than older
+interactions.  So let&amp;rsquo;s say each &lt;code&gt;t&lt;/code&gt; weighs twice as much as the previous:&lt;/p&gt;
+
+&lt;p&gt;$$\bar{t} = \cfrac{\sum_{i=1}^3 \left(\frac{1}{2}\right)^{i-1} * (t_i - t_{i-1})}{\sum_{i=1}^3  \left(\frac{1}{2}\right)^{i-1}}$$&lt;/p&gt;
+
+&lt;p&gt;Where&lt;/p&gt;
+
+&lt;p&gt;$t_0 $ = &lt;a href=&#34;http://en.wikipedia.org/wiki/Unix\_time&#34;&gt;UNIX timestamp&lt;/a&gt;,
+at now, in seconds.&lt;/p&gt;
+
+&lt;p&gt;$t_n  $ = &lt;a href=&#34;http://en.wikipedia.org/wiki/Unix\_time&#34;&gt;UNIX timestamp&lt;/a&gt;
+of n&lt;sup&gt;th&lt;/sup&gt; interaction.&lt;/p&gt;
+
+&lt;h2 id=&#34;one-final-detail&#34;&gt;One Final Detail&lt;/h2&gt;
+
+&lt;p&gt;There is one last property we want this function to have, which is the
+following: if interactions are very frequent right now (within a timeframe of,
+say, 10 days), then clearly the post is &amp;ldquo;hot&amp;rdquo;, and its score should be boosted.
+But as time passes, it really doesn&amp;rsquo;t matter as much how much distance there is
+between interactions. If a post has already gone a full year without anyone
+commenting on it, does it really make that much difference if it goes another
+month without a comment?&lt;/p&gt;
+
+&lt;p&gt;To accomplish the first property, all we do is divide $\bar{t} $ by the number
+of seconds in 10 days: &lt;code&gt;60*60*24*10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To accomplish the second property, what we are looking for is some sort of
+always-increasing, concave function (positive derivative, negative second
+derivative).  The first thing that comes to mind is the square-root function,
+which is good enough.&lt;/p&gt;
+
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+
+&lt;p&gt;And thus we have our final scoring function:&lt;/p&gt;
+
+&lt;p&gt;$$\cfrac{log_{10} (2 + u + 2c + 3cc)}{\sqrt{\bar{t}/60*60*24*10}}$$&lt;/p&gt;
+
+&lt;p&gt;$$\bar{t} = \cfrac{\sum_{i=1}^3 \left(\frac{1}{2}\right)^{i-1} * (t_i - t_{i-1})}{\sum_{i=1}^3  \left(\frac{1}{2}\right)^{i-1}}$$&lt;/p&gt;
+
+&lt;p&gt;If we plot this equation for &lt;code&gt;x = number of points&lt;/code&gt; and &lt;code&gt;y = time&lt;/code&gt;, we can see
+the shape of this function and check for different values if they make sense:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/scoring_function_shape_2.jpg&#34; alt=&#34;Scoring function 3D plot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As expected, there is a steep 10-day &amp;ldquo;boost&amp;rdquo; period, followed by an
+increasingly slower decline in the value as more and more time passes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The function is also heavily biased toward very new posts, which will always
+come out on top, giving them a chance. This might be a bad idea if posting
+becomes frequent, but user interaction is low (many summaries a day, few
+votes or comments), and might have to be changed.&lt;/p&gt;
+
+&lt;p&gt;There are many ways to tweak this equation (changing the boost period, for
+example) to make it more or less biased towards either time or user
+interaction.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;bonus-round-implementing-in-elasticsearch&#34;&gt;Bonus Round: Implementing in ElasticSearch&lt;/h2&gt;
+
+&lt;p&gt;Implementing a custom scoring function in Elasticsearch, though easy once it&amp;rsquo;s
+all set up, was rather frustrating because of the poor documentation.&lt;/p&gt;
+
+&lt;p&gt;For our implementation, we&amp;rsquo;re using the &lt;code&gt;tire&lt;/code&gt; gem (a wrapper around the
+Elasticsearch API). This is where we call the custom scoring script:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;query do
+  #custom_score script: &amp;quot;parseInt(doc[&#39;upvote_count&#39;].value)&amp;quot;, lang: &amp;quot;javascript&amp;quot; do
+  custom_score script: script, lang: &#39;javascript&#39; do
+    string query.join(&amp;quot; OR &amp;quot;)
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where &lt;code&gt;script&lt;/code&gt; is simply a variable holding the contents of a javascript file
+as a string. Note the option &lt;code&gt;lang: &#39;javascript&#39;&lt;/code&gt;. This lets us use javascript
+as our language of choice, as opposed to
+&lt;ahref=&#34;http://mvel.codehaus.org/&#34;&gt;mvel&lt;/a&gt;,
+the most poorly documented scripting
+language on the face of the earth. To enable this option, we&amp;rsquo;ll also require
+the
+&lt;a href=&#34;https://github.com/elasticsearch/elasticsearch-lang-javascript&#34;&gt;elasticsearch-lang-javascript&lt;/a&gt; plugin.&lt;/p&gt;
+
+&lt;p&gt;Here is our script:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Sidenote:&lt;/strong&gt; Notice the logger function. This enables us to implement a sort of &amp;ldquo;console.log&amp;rdquo; which we can read using the following shell command &lt;code&gt;tail -f /var/log/elasticsearch/elasticsearch.log&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;// Logger function:
+var logger = org.elasticsearch.common.logging.Loggers.getLogger(&amp;quot;rails_logger&amp;quot;);
+// Example usage:
+logger.info(&amp;quot;========= NEW CALC ===========&amp;quot;);
+
+var points_log = parseFloat(doc.points_log.value);
+var now = Math.round(new Date().getTime() / 1000);
+
+/**
+* NOTE: doc.ts.values is not actually an array,
+* here I create an array out of it:
+**/
+var ts = [];
+for (var i = 0; i &amp;lt; doc.ts.values.length; i++) ts[i] = doc.ts.values[i];
+ts.push(now);
+// Newest first
+ts.reverse();
+
+/**
+* Boost period.
+**/
+var ten_days = 60*60*24*10;
+
+/**
+* The scoring function
+**/
+function score() {
+  /**
+  * Weighed average numerator
+  **/
+  var times_num = (function() {
+    var val = 0;
+    for (var i = 1; i &amp;lt; ts.length; i++) {
+      var exp = i - 1;
+      val += Math.pow(0.5, exp) *
+             (parseFloat(ts[i]) -
+             parseFloat(ts[i - 1]));
+    }
+    return val;
+  })();
+
+  /**
+  * Weighed average denominator
+  **/
+  var times_denom = (function() {
+    var val = 0;
+    for (var i = 1; i &amp;lt; ts.length; i++) {
+      var exp = i - 1;
+      val += Math.pow(0.5, exp);
+    }
+    return val;
+  })();
+
+  var t_ave = (times_num/times_denom);
+
+  return points_log/Math.sqrt(t_ave/ten_days);
+};
+
+score();
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Amdahl&#39;s Law</title>
+      <link>http://noamswebsite.com/wiki-main/computers/amdahls_law/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/amdahls_law/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;As multicore computing becomes the norm (even my phone is dual core!), it&amp;rsquo;s important to understand the benefits and also the limitations of concurrency. Amdahl&amp;rsquo;s Law addresses the latter.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let&amp;rsquo;s imagine a simple program. It prints &amp;ldquo;Hello World&amp;rdquo; 100 times, then quits.&lt;/p&gt;
+
+&lt;p&gt;Our first version of the program is written as a single sequential task: it prints one &amp;ldquo;Hello World&amp;rdquo;, then another, then another, 100 times, then quits.  This program takes some unit of time, $t$ to execute.&lt;/p&gt;
+
+&lt;p&gt;Now say we have a dual-core machine at hand. (My phone, perhaps).&lt;/p&gt;
+
+&lt;p&gt;Cool, now we can spawn &lt;em&gt;two&lt;/em&gt; tasks that print &amp;ldquo;Hello World&amp;rdquo; 50 times each. And, because our magical imaginary computer experiences no overhead, it takes us exactly $\frac{ t }{ 2 }$ units of time to run our second program.&lt;/p&gt;
+
+&lt;p&gt;So we keep adding more and more processors, until we have 100 concurrent threads printing one &amp;ldquo;Hello World&amp;rdquo; each, and our program runs 100 times faster.&lt;/p&gt;
+
+&lt;p&gt;At this point we stop: &amp;ldquo;Ah, the trend is clear: more processors equals more speed! No point in continuing this experiment.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A naive (wrong) first guess:&lt;/strong&gt; Given $n$ processors executing a program, the maximum boost in speed is $n$. (That is, we can get our program to run $n$ times faster).&lt;/p&gt;
+
+&lt;p&gt;Cool! This means that, given enough processors, we could make &lt;em&gt;any&lt;/em&gt; program run almost instantly. Right?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/more_cores.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&#34;http://forums.pureoverclock.com/amd/21809-rumor-mill-amd-iv-x12-170-12-cores-24mb-cache-6ghz-2.html#post169754&#34;&gt;Pic original source&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Of course this is not the case! Enough daydreaming. Let&amp;rsquo;s figure out a more  realistic estimate.&lt;/p&gt;
+
+&lt;p&gt;Let $P$ be the proportion of our program that can run in parallel. Then it follows that $1 - P$ is the proportion that cannot be broken up into independent tasks.&lt;/p&gt;
+
+&lt;p&gt;For example, since our program can be broken up into 100 independent tasks, then $1 - P = \frac{ 1 }{ 100 }$.&lt;/p&gt;
+
+&lt;p&gt;It follows that the maximum boost in speed (denoted $S(n)$) that we can expect out of assigning concurrent tasks to $n$ parallel processors can be represented by the following equation:&lt;/p&gt;
+
+&lt;p&gt;$$S(n) = \frac{ 1 }{ (1 - P) + \frac{ P }{ n } }$$&lt;/p&gt;
+
+&lt;p&gt;This is, in fact, Amdahl&amp;rsquo;s equation.&lt;/p&gt;
+
+&lt;p&gt;Uh-oh&amp;hellip; do you see it? As we add more and more processors to our computer, and $n \to \infty$, we are left with $ S =  \frac{ 1 }{ 1 - p }$.&lt;/p&gt;
+
+&lt;p&gt;What we have here is a clear case of &lt;em&gt;diminishing returns.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;How bad is it?  Let&amp;rsquo;s add &lt;em&gt;one million cores&lt;/em&gt; to our imaginary computer, and measure its performance at $gc = 99\%$:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/99pc.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, for our imaginary software, 99% of which can be parallelized, we can expect a maximum boost of $ S = 100$.&lt;/p&gt;
+
+&lt;p&gt;What about a program with $gc = 90\%$?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/90pc.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There&amp;rsquo;s that same plateau again. But this time we&amp;rsquo;re only seeing a maximum performance boost of $S = 10$.&lt;/p&gt;
+
+&lt;p&gt;By $gc = 50\% $, we&amp;rsquo;re down to a program that can only be boosted to run twice as fast no matter how much parallel processing your machine is capable of!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Final Note:&lt;/strong&gt; In fact, Amdahl&amp;rsquo;s Law is not exclusive to concurrency, but applies to &lt;em&gt;any&lt;/em&gt; speed-boosting strategy that only affects some portion of a program.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rice&#39;s Theorem</title>
+      <link>http://noamswebsite.com/wiki-main/computers/rices_theorem/</link>
+      <pubDate>Tue, 16 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/rices_theorem/</guid>
+      <description>
+
+&lt;p&gt;Rice&amp;rsquo;s theorem can be stated thus:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Every non-trivial semantic property of a program is undecidable.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Before we prove the theorem, let&amp;rsquo;s break down that statement:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;semantic-property&#34;&gt;&amp;ldquo;Semantic Property&amp;rdquo;&lt;/h3&gt;
+
+&lt;p&gt;A ssemantic property is a property of the language, &lt;em&gt;not the machine that is
+computing it&lt;/em&gt;. For example, this is a semantic property of a language:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;All strings in language $L$ are of the form $1^n0^n$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is not a semantic property:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It takes my program $n$ steps to generate the first 100 strings in $L$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note the importance of differentiating between a semantic property and not:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The halting problem is actually decidable for
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Linear_bounded_automaton&#34;&gt;Linear Bouned Automata&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;non-trivial&#34;&gt;&amp;ldquo;Non-Trivial&amp;rdquo;&lt;/h3&gt;
+
+&lt;p&gt;A trivial property is a property that either all languages have or no language
+has. A non-trivial property is everything else.&lt;/p&gt;
+
+&lt;h3 id=&#34;undecidable&#34;&gt;&amp;ldquo;Undecidable&amp;rdquo;&lt;/h3&gt;
+
+&lt;p&gt;A program can either &lt;strong&gt;accept&lt;/strong&gt;, &lt;strong&gt;reject&lt;/strong&gt;, or &lt;strong&gt;run forever&lt;/strong&gt;. If a program
+reaches an accept or reject state, we say it &lt;strong&gt;halts&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are two types of programs: &lt;strong&gt;recognizers&lt;/strong&gt; and &lt;strong&gt;deciders&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;A recognizer is a program that can only tell you with certainty when it has
+succeeded to solve a problem (reached the accept state). It cannot always tell
+you when it has failed (if it goes into an infinite loop, there is no way to
+know if it&amp;rsquo;s in a loop, or if it&amp;rsquo;s just taking very long to solve the problem).&lt;/p&gt;
+
+&lt;p&gt;A decider is a program that always reaches either accepts or rejects. That is,
+you not only know when the problem was solved, but you also know when it was
+&lt;em&gt;not&lt;/em&gt; solved.&lt;/p&gt;
+
+&lt;p&gt;A language is &lt;strong&gt;recognizable&lt;/strong&gt; if there exists at least one program that can
+recognize it. For example, the following program reconizes $L = \{&amp;ldquo;342&amp;rdquo;\}$ (the
+language made up of only the string &amp;ldquo;342&amp;rdquo;):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read input.&lt;/li&gt;
+&lt;li&gt;If input == &amp;ldquo;342&amp;rdquo; print &amp;ldquo;accept&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Else return to step 1.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This program &lt;em&gt;recognizes&lt;/em&gt; $L$, but it does not &lt;em&gt;decide&lt;/em&gt; $L$: if the input is in
+$L$, it accepts, but if it&amp;rsquo;s not, then it will run forever, and you will never
+know whether the input was not in $L$ or the program is just taking a long
+time.&lt;/p&gt;
+
+&lt;p&gt;A language is &lt;strong&gt;decidable&lt;/strong&gt; if there exists a program that can decide it. All
+decidable languages are also recognizable. Here is a program that decides $L$:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Read input.&lt;/li&gt;
+&lt;li&gt;If input == &amp;ldquo;342&amp;rdquo; print &amp;ldquo;accept&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Else print &amp;ldquo;input rejected&amp;rdquo;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;the-halting-problem&#34;&gt;The Halting Problem&lt;/h2&gt;
+
+&lt;p&gt;Take the following language:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;$HALT_{ TM } = \{ \langle M, w \rangle | M$
+is a program and $M$ halts on input $w \}$&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Remember, a program is itself just a string: any program can be written down as
+a description, say an &lt;code&gt;.rb&lt;/code&gt; file, and that file can be used as an input for
+another program (or itself!). So $HALT_{ TM }$ is a language that consists of
+all programs $M$ and inputs $w$ such that $M$ halts on $w$.&lt;/p&gt;
+
+&lt;p&gt;I won&amp;rsquo;t prove it in this post, but, as it turns out, $HALT_{ TM }$ is
+undecidable. Meaning it is not possible to write a program that decides whether
+an algorithm halts.&lt;/p&gt;
+
+&lt;p&gt;With this in mind, we can finally prove Rice&amp;rsquo;s theorem:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;rice-s-theorem&#34;&gt;Rice&amp;rsquo;s Theorem&lt;/h2&gt;
+
+&lt;p&gt;Recall the theorem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Every non-trivial semantic property of a program is undecidable.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yet another way of stating this is as follows:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The language $P_{ TM }$, described below, is undecidable:
+$P_{ TM } = \{ \langle M \rangle | M$ is a program and $L(M)$ has
+non-trivial property $P \}$. Where $L(M)$ means &amp;ldquo;The language of $M$&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So, for example, it is not possible to write a program $R $ that takes as its
+input another program $M$ and decides whether the language of $M$ is regular
+(that is, if $M$ can be simplified and represented as a finite automation).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;proof&#34;&gt;Proof&lt;/h2&gt;
+
+&lt;p&gt;We can prove Rice&amp;rsquo;s theorem by contradiction. We will show that &lt;strong&gt;if&lt;/strong&gt; $P_{ TM
+}$ is decidable &lt;strong&gt;then&lt;/strong&gt; so is $HALT_{ TM }$.  Since we know that $ HALT_{ TM
+}$ is undecidable, then $P_{ TM }$ must be undecidable too.&lt;/p&gt;
+
+&lt;p&gt;Assume that $P$ is some non-trivial semantic property and that it is possible
+to write a program $R$ that decides $P_{ TM }$. Here is how we could solve the
+halting problem with that program:&lt;/p&gt;
+
+&lt;p&gt;First, we write a program $T$ such that $\langle T \rangle $ is in $P_{ TM }$.
+Because $P$ is non-trivial, such a program must exist.&lt;/p&gt;
+
+&lt;p&gt;Take input $\langle M, w \rangle$ and use it to write a program $M_w$that
+takes $x$ as its input and does the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;$M_w $:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Run $M$ on input $w$. If $M$ halts, move on to step 2.  2. Run $T$ on $x$. Accept if $T$ accepts, and reject if $T$ rejects.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the clever part. &lt;em&gt;We don&amp;rsquo;t actually have to run $M_w$&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;All we need to know is that, if we &lt;em&gt;were&lt;/em&gt; to run $M_w$, there are two possible
+outcomes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;$M$ halts on input $w$, in which case $M_w$ reaches step 2.&lt;/li&gt;
+&lt;li&gt;$M$ never halts and never reaches step 2.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But note that, if $M$ halts on $w$, then step 2 is simply to run $T$, which
+means that &lt;strong&gt;when $M$ halts on $w$, $ \langle M_w \rangle$is in $ P_{ TM
+}$.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So, if we were to run $R$ with input $\langle M_w \rangle$, it would be able
+to tell us whether it is in $P_{ TM }$, and that in turn would tell us if $M$
+halts on $w$.&lt;/p&gt;
+
+&lt;p&gt;But this would mean that we could solve the halting problem, which we know  is
+not possible.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

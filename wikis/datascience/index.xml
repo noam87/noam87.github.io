@@ -34,10 +34,10 @@
     
     <item>
       <title>Sorting By Relative Popularity</title>
-      <link>http://noamswebsite.com/post/sorting_by_relative_popularity/</link>
+      <link>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</link>
       <pubDate>Tue, 08 Dec 2015 17:45:08 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/post/sorting_by_relative_popularity/</guid>
+      <guid>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</guid>
       <description>&lt;p&gt;Hey, looks like I&amp;rsquo;m sorting user content again! &lt;a href=&#34;https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/&#34;&gt;last time&lt;/a&gt;, I sorted user posts by &amp;ldquo;interestingness&amp;rdquo;; this time around I&amp;rsquo;ll be sorting players from a set of sports teams. Once again we&amp;rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&amp;rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.&lt;/p&gt;
 
 &lt;h3 id=&#34;the-task&#34;&gt;The Task&lt;/h3&gt;
@@ -314,10 +314,10 @@ end
     
     <item>
       <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
-      <link>http://noamswebsite.com/post/eigengoogle/</link>
+      <link>http://noamswebsite.com/wiki-main/ml/eigengoogle/</link>
       <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
       
-      <guid>http://noamswebsite.com/post/eigengoogle/</guid>
+      <guid>http://noamswebsite.com/wiki-main/ml/eigengoogle/</guid>
       <description>
 
 &lt;p&gt;While we&amp;rsquo;re on the subject of sorting things online, we might as well talk
@@ -653,6 +653,254 @@ and primitive. Cool.&lt;/p&gt;
 &lt;p&gt;&lt;small&gt;
   1. Actually, it all started with the &lt;a href=&#34;http://en.wikipedia.org/wiki/HITS_algorithm&#34;&gt;HITS algorithm&lt;/a&gt;, which PageRank is based off of. More details &lt;a href=&#34;http://www.math.cornell.edu/~mec/Winter2009/RalucaRemus/Lecture4/lecture4.html&#34;&gt;here&lt;/a&gt;.
 &lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Sorting Posts by User Engagement Level</title>
+      <link>http://noamswebsite.com/wiki-main/computers/user_eng/</link>
+      <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/user_eng/</guid>
+      <description>
+
+&lt;p&gt;At Functional Imperative we&amp;rsquo;re building the new &lt;em&gt;CanLII Connects&lt;/em&gt;
+website (a social portal for Canada&amp;rsquo;s largest database of legal cases), and
+this week I was given the task of figuring out a sensible way of sorting posts.&lt;/p&gt;
+
+&lt;p&gt;Figuring out how to sort user-generated content is a common problem that many
+social websites face.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s Reddit&amp;rsquo;s scoring equation for &amp;lsquo;Best&amp;rsquo; &lt;a href=&#34;http://www.evanmiller.org/how-not-to-sort-by-average-rating.html&#34;&gt;(source and explanation)&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/reddit_best.png&#34; alt=&#34;Reddit&#39;s &#39;best&#39; scoring equation&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Not all scoring equations are that hairy, &lt;a href=&#34;http://moz.com/blog/reddit-stumbleupon-delicious-and-hacker-news-algorithms-exposed&#34;&gt;here are a few more&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Interestingly enough, Reddit&amp;rsquo;s &amp;lsquo;Hot&amp;rsquo; scoring function (explained in link above):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/reddit_hot_algo.png&#34; alt=&#34;Reddit&#39;s &amp;quot;hot&amp;quot; algorithm&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;is &lt;a href=&#34;http://technotes.iangreenleaf.com/posts/2013-12-09-reddits-empire-is-built-on-a-flawed-algorithm.html&#34;&gt;quite flawed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Sidenote&lt;/strong&gt;: One observation not mentioned in that first
+article is that, while all other equations use some form of &lt;code&gt;time_now -
+time_posted&lt;/code&gt; to calculate how old a post is, the clever guys at Reddit use
+&lt;code&gt;time_posted - some_old_date&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The advantage of this is that the post&amp;rsquo;s score need only be calculated once,
+whereas the value of scores calculated with &lt;code&gt;time_now&lt;/code&gt; will change on every
+request.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Anyway, while all those scoring functions work pretty well, they didn&amp;rsquo;t quite
+fit the requirements for &lt;em&gt;CanLII Connects&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In this post, I&amp;rsquo;ll walk through the decision process of creating a scoring
+function. Hopefully this will be useful if you encounter a similar feature to
+implement.&lt;/p&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements:&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;CanLII Connects&lt;/em&gt; links to a database of legal cases, and users can post
+opinions on those cases:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A user can post.&lt;/li&gt;
+  &lt;li&gt;A user can upvote a post.&lt;/li&gt;
+  &lt;li&gt;A user can comment on a post.&lt;/li&gt;
+  &lt;li&gt;A user can comment on a comment on a post.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So what&amp;rsquo;s a sensible way of sorting posts?&lt;/p&gt;
+
+&lt;p&gt;Right away, we&amp;rsquo;re dealing with a different problem than Reddit or HN: while it
+makes sense to slowly degrade the score of a post on those sites over time, the
+same does not make sense for CanLII. Old cases might be cited at any time, no
+matter how old they are, so what matters is not how old a discussion is, but
+rather how actively engaged users are within a given discussion.&lt;/p&gt;
+
+&lt;h2 id=&#34;initial-score&#34;&gt;Initial Score&lt;/h2&gt;
+
+&lt;p&gt;Ok, so first we have to give each post an initial score. I like Reddit&amp;rsquo;s
+approach of taking the base-10 log of its upvotes. This makes sense because,
+the more popular a post already is, the more likely people are to see it, and
+therefore upvote it, which gives it an unfair advantage.&lt;/p&gt;
+
+&lt;p&gt;In our case, we&amp;rsquo;re not only trying to measure how much people &amp;ldquo;like&amp;rdquo; a post,
+but rather how engaged they are with it.  It makes sense that, while an upvote
+is a fine indicator of &amp;ldquo;engagedness&amp;rdquo;, a user actually bothering to comment on a
+post is even more of an indicator. I&amp;rsquo;ll count that as equivalent to two
+upvotes, and a user commenting on a comment will count as three upvotes (the 2
+is so we don&amp;rsquo;t take the log of 1 or 0):&lt;/p&gt;
+
+&lt;p&gt;$$log_{10}(2 + u + 2c + 3cc)$$&lt;/p&gt;
+
+&lt;h2 id=&#34;frequency&#34;&gt;Frequency&lt;/h2&gt;
+
+&lt;p&gt;Next, we need the post&amp;rsquo;s position to degrade as it becomes less active. It
+makes sense to divide the intial score by some factor of time:&lt;/p&gt;
+
+&lt;p&gt;$$\cfrac{log_{10} (2+u+2c+3cc)}{\bar{t}}$$&lt;/p&gt;
+
+&lt;p&gt;Now we need a reasonable value for $\bar{t}$.  A good start is the average
+time, in seconds, between the three most recent user interactions with  a post.&lt;/p&gt;
+
+&lt;p&gt;We define a user interaction to be: a user creates a post, a user comments on a
+post, or a user upvotes a post.&lt;/p&gt;
+
+&lt;p&gt;Also, we want the most recent interactions to weigh more than older
+interactions.  So let&amp;rsquo;s say each &lt;code&gt;t&lt;/code&gt; weighs twice as much as the previous:&lt;/p&gt;
+
+&lt;p&gt;$$\bar{t} = \cfrac{\sum_{i=1}^3 \left(\frac{1}{2}\right)^{i-1} * (t_i - t_{i-1})}{\sum_{i=1}^3  \left(\frac{1}{2}\right)^{i-1}}$$&lt;/p&gt;
+
+&lt;p&gt;Where&lt;/p&gt;
+
+&lt;p&gt;$t_0 $ = &lt;a href=&#34;http://en.wikipedia.org/wiki/Unix\_time&#34;&gt;UNIX timestamp&lt;/a&gt;,
+at now, in seconds.&lt;/p&gt;
+
+&lt;p&gt;$t_n  $ = &lt;a href=&#34;http://en.wikipedia.org/wiki/Unix\_time&#34;&gt;UNIX timestamp&lt;/a&gt;
+of n&lt;sup&gt;th&lt;/sup&gt; interaction.&lt;/p&gt;
+
+&lt;h2 id=&#34;one-final-detail&#34;&gt;One Final Detail&lt;/h2&gt;
+
+&lt;p&gt;There is one last property we want this function to have, which is the
+following: if interactions are very frequent right now (within a timeframe of,
+say, 10 days), then clearly the post is &amp;ldquo;hot&amp;rdquo;, and its score should be boosted.
+But as time passes, it really doesn&amp;rsquo;t matter as much how much distance there is
+between interactions. If a post has already gone a full year without anyone
+commenting on it, does it really make that much difference if it goes another
+month without a comment?&lt;/p&gt;
+
+&lt;p&gt;To accomplish the first property, all we do is divide $\bar{t} $ by the number
+of seconds in 10 days: &lt;code&gt;60*60*24*10&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To accomplish the second property, what we are looking for is some sort of
+always-increasing, concave function (positive derivative, negative second
+derivative).  The first thing that comes to mind is the square-root function,
+which is good enough.&lt;/p&gt;
+
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+
+&lt;p&gt;And thus we have our final scoring function:&lt;/p&gt;
+
+&lt;p&gt;$$\cfrac{log_{10} (2 + u + 2c + 3cc)}{\sqrt{\bar{t}/60*60*24*10}}$$&lt;/p&gt;
+
+&lt;p&gt;$$\bar{t} = \cfrac{\sum_{i=1}^3 \left(\frac{1}{2}\right)^{i-1} * (t_i - t_{i-1})}{\sum_{i=1}^3  \left(\frac{1}{2}\right)^{i-1}}$$&lt;/p&gt;
+
+&lt;p&gt;If we plot this equation for &lt;code&gt;x = number of points&lt;/code&gt; and &lt;code&gt;y = time&lt;/code&gt;, we can see
+the shape of this function and check for different values if they make sense:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/scoring_function_shape_2.jpg&#34; alt=&#34;Scoring function 3D plot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As expected, there is a steep 10-day &amp;ldquo;boost&amp;rdquo; period, followed by an
+increasingly slower decline in the value as more and more time passes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The function is also heavily biased toward very new posts, which will always
+come out on top, giving them a chance. This might be a bad idea if posting
+becomes frequent, but user interaction is low (many summaries a day, few
+votes or comments), and might have to be changed.&lt;/p&gt;
+
+&lt;p&gt;There are many ways to tweak this equation (changing the boost period, for
+example) to make it more or less biased towards either time or user
+interaction.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;bonus-round-implementing-in-elasticsearch&#34;&gt;Bonus Round: Implementing in ElasticSearch&lt;/h2&gt;
+
+&lt;p&gt;Implementing a custom scoring function in Elasticsearch, though easy once it&amp;rsquo;s
+all set up, was rather frustrating because of the poor documentation.&lt;/p&gt;
+
+&lt;p&gt;For our implementation, we&amp;rsquo;re using the &lt;code&gt;tire&lt;/code&gt; gem (a wrapper around the
+Elasticsearch API). This is where we call the custom scoring script:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;query do
+  #custom_score script: &amp;quot;parseInt(doc[&#39;upvote_count&#39;].value)&amp;quot;, lang: &amp;quot;javascript&amp;quot; do
+  custom_score script: script, lang: &#39;javascript&#39; do
+    string query.join(&amp;quot; OR &amp;quot;)
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where &lt;code&gt;script&lt;/code&gt; is simply a variable holding the contents of a javascript file
+as a string. Note the option &lt;code&gt;lang: &#39;javascript&#39;&lt;/code&gt;. This lets us use javascript
+as our language of choice, as opposed to
+&lt;ahref=&#34;http://mvel.codehaus.org/&#34;&gt;mvel&lt;/a&gt;,
+the most poorly documented scripting
+language on the face of the earth. To enable this option, we&amp;rsquo;ll also require
+the
+&lt;a href=&#34;https://github.com/elasticsearch/elasticsearch-lang-javascript&#34;&gt;elasticsearch-lang-javascript&lt;/a&gt; plugin.&lt;/p&gt;
+
+&lt;p&gt;Here is our script:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Sidenote:&lt;/strong&gt; Notice the logger function. This enables us to implement a sort of &amp;ldquo;console.log&amp;rdquo; which we can read using the following shell command &lt;code&gt;tail -f /var/log/elasticsearch/elasticsearch.log&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;// Logger function:
+var logger = org.elasticsearch.common.logging.Loggers.getLogger(&amp;quot;rails_logger&amp;quot;);
+// Example usage:
+logger.info(&amp;quot;========= NEW CALC ===========&amp;quot;);
+
+var points_log = parseFloat(doc.points_log.value);
+var now = Math.round(new Date().getTime() / 1000);
+
+/**
+* NOTE: doc.ts.values is not actually an array,
+* here I create an array out of it:
+**/
+var ts = [];
+for (var i = 0; i &amp;lt; doc.ts.values.length; i++) ts[i] = doc.ts.values[i];
+ts.push(now);
+// Newest first
+ts.reverse();
+
+/**
+* Boost period.
+**/
+var ten_days = 60*60*24*10;
+
+/**
+* The scoring function
+**/
+function score() {
+  /**
+  * Weighed average numerator
+  **/
+  var times_num = (function() {
+    var val = 0;
+    for (var i = 1; i &amp;lt; ts.length; i++) {
+      var exp = i - 1;
+      val += Math.pow(0.5, exp) *
+             (parseFloat(ts[i]) -
+             parseFloat(ts[i - 1]));
+    }
+    return val;
+  })();
+
+  /**
+  * Weighed average denominator
+  **/
+  var times_denom = (function() {
+    var val = 0;
+    for (var i = 1; i &amp;lt; ts.length; i++) {
+      var exp = i - 1;
+      val += Math.pow(0.5, exp);
+    }
+    return val;
+  })();
+
+  var t_ave = (times_num/times_denom);
+
+  return points_log/Math.sqrt(t_ave/ten_days);
+};
+
+score();
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

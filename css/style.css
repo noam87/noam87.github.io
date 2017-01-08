@@ -66,18 +66,19 @@ td {
 code {
   font-family: "Oxygen Mono", monospace;
   border-radius: 15px;
-  background: #efe;
 }
 
 pre {
   overflow: auto;
   margin-top: 1.125em;
+  background: #efe;
   padding: 10px;
 }
 
 .written pre {
   font-family: "Headland One", serif;
   font-size: 17px;
+  background: white;
 }
 
 pre .line-numbers {
@@ -94,4 +95,12 @@ blockquote {
   background: black;
   color: white;
   text-align: center;
+}
+
+.all-tags li {
+  display: inline;
+}
+
+hr {
+  border: 1px grey solid;
 }

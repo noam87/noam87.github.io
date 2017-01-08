@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sorting By Relative Popularity</title>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-89673307-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script>
+    MathJax.Hub.Config({
+      preRemoveClass: "mj",
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      },
+      CommonHTML: { linebreaks: { automatic: true } },
+      "HTML-CSS": { linebreaks: { automatic: true } },
+             SVG: { linebreaks: { automatic: true } }
+    });
+  </script>
+
+
+	
+	
+	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="http://noamswebsite.com/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.18" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
+    </header>
+
+  <div>
+    
+      <small>
+      <strong>Back to wiki:</strong>
+      
+        
+        <a href="/wikis/datascience">datascience</a>
+      
+        ,
+        
+        <a href="/wikis/math">math</a>
+      
+      </small>
+    
+  </div>
+
+  
+    <main>
+  
+		<article>
+			<h1 class="article-title">Sorting By Relative Popularity</h1>
+      <div class="article-date">
+        Published: <time>2015-12-08</time>
+      </div>
+			<div>
+				<p>Hey, looks like I&rsquo;m sorting user content again! <a href="https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/">last time</a>, I sorted user posts by &ldquo;interestingness&rdquo;; this time around I&rsquo;ll be sorting players from a set of sports teams. Once again we&rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.</p>
+
+<h3 id="the-task">The Task</h3>
+
+<p>To drive up user engagement at <a href="http://www.thescore.com/" target="_blank">theScore</a>, we introduced an onboarding screen that&rsquo;s shown when you open the app for the first time.</p>
+
+<p>First, you get a list of sports teams that are popular in your area, and the option to subscribe to some of them.</p>
+
+<p><img src="/img/team_select.png" alt="" /></p>
+
+<p>Now based on the teams you choose, it would be nice to also recommend some players for you to follow. So how would one go about choosing which players to recommend out of all those teams?</p>
+
+<p>Let&rsquo;s assume we have three six-player teams, where each player has the following number of subscribers:</p>
+
+<pre><code>big_team_1:
+
+  1. 100 000
+  2. 110 000
+  3. 90 000
+  4. 80 500
+  5. 140 000
+  6. 140 500
+
+
+big_team_2:
+
+  1. 120 000
+  2. 250 000
+  3. 180 000
+  4. 135 000
+  5. 157 000
+  6. 202 000
+
+
+small_team:
+
+  1. 3 000
+  2. 100
+  3. 234
+  4. 301
+  5. 250
+  6. 400
+</code></pre>
+
+<p>Now let&rsquo;s consider some properties we want from our algorithm:</p>
+
+<ul>
+<li><p><strong>A compute-once, static value:</strong> we don&rsquo;t want to run our algorithm on every user. We want to give each player in our database a static <code>recommendation_score</code>; a numeric value that is cheap to index.</p></li>
+
+<li><p><strong>Simple:</strong> the algorithm should be simple and use elementary methods. Recommending players is a small part of the app; there should be little code maintenance involved.</p></li>
+
+<li><p><strong>Variety:</strong> The purpose of the onboarding process is to get you engaged, so we want to recommend a variety of players from different sports and leagues.</p></li>
+</ul>
+
+<h3 id="the-naive-approach">The Naive Approach</h3>
+
+<blockquote>
+<p><strong>NOTE:</strong> I will be using the <a href="http://julialang.org/" target="_blank">Julia programming language</a> for all my examples. You can find the complete implementation at the bottom of this post.</p>
+</blockquote>
+
+<p>The first obvious solution is to simply sort players by their <code>subscription_count</code>. The more popular the player, the more recommendable he is. Here is our naive sorting function:</p>
+
+<pre><code>function naive_sort(teams)
+  Base.sort(
+    [[team.players for team in teams]...],
+    by=x -&gt; x.subscribers,
+    rev=true
+  )[1:5]
+end
+</code></pre>
+
+<p>Which yields:</p>
+
+<pre><code>5-element Array{PlayerRecommender.Player,1}:
+  Big Team 2 Player | subscribers: 250000
+  Big Team 2 Player | subscribers: 202000
+  Big Team 2 Player | subscribers: 180000
+  Big Team 2 Player | subscribers: 157000
+  Big Team 1 Player | subscribers: 140500
+</code></pre>
+
+<p>The problem with this approach is that we only get results from the most popular teams. So if you&rsquo;re a fan of both a very popular NFL team and another team that is not as popular (your local basketball team, perhaps), even the least popular player from the NFL team will be recommended to you, whereas the most popular player from your favorite local basketball team will not show up in your list at all!</p>
+
+<h3 id="a-better-approach">A Better Approach</h3>
+
+<p>What are we really looking for?</p>
+
+<p>Well, I think the players we want to recommend are the not necessarily the ones who are most famous, but rather, the ones who are most popular <em>compared to the rest of their team</em>, regardless of how popular that teams is (we already know you&rsquo;re a fan of the team or you wouldn&rsquo;t have subscribed to it in the first place).</p>
+
+<p>In other words, we want an algorithm that answers the following question:</p>
+
+<blockquote>
+<p>Which players <em>deviate</em> the most in popularity from the rest of their team?</p>
+</blockquote>
+
+<p>Luckily, there&rsquo;s a mathematical tool for figuring out just this: <a href="https://en.wikipedia.org/wiki/Standard_deviation" target="_blank">standard deviation</a>.</p>
+
+<hr>
+
+<h4 id="standard-deviation-tl-dr">Standard Deviation tl;dr</h4>
+
+<p>Standard deviation is a pretty straight-forward concept: Take a set of values, and figure out the average value for that set (also known as the <em><a href="https://en.wikipedia.org/wiki/Arithmetic_mean" target="_blank">arithmetic mean</a></em>). The standard deviation simply tells us by how much the value of the typical element in our set deviates from the average.</p>
+
+<p>The mathematical representation of this calculation is:</p>
+
+<p>$$ s_N = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \overline{x})^2} $$</p>
+
+<p>Where $N$ is the population size, and $\overline{x}$ is the arithmetic mean, which itself is represented by:</p>
+
+<p>$$ \overline{x}_N = \frac{1}{N}\sum_{i=1}^{N} a_i $$</p>
+
+<p>For example, the following two sets have the same average value, but clearly the values are spread out differently:</p>
+
+<pre><code>close_to_average = [11,8,9,12]
+spread_out = [0,1,19,20]
+
+average(close_to_average) == 10
+average(spread_out) == 10
+
+standard_deviation(close_to_average) == 1.59
+standard_deviation(spread_out) == 9.51
+</code></pre>
+
+<hr>
+
+<p>Thus we arrive at our simple scoring function. All we need to do is find players whose deviation from the average is substantially higher than that of their teammates:</p>
+
+<pre><code>function recommend(player, team)
+  player_dev = player.subscribers - team.average
+  if player_dev == 0
+    player.recommendation_score = 0
+  else
+    player.recommendation_score = player_dev / team.std_dev
+  end
+end
+</code></pre>
+
+<p>Using this scoring function on our original teams, we get the following results:</p>
+
+<pre><code>5-element Array{PlayerRecommender.Player,1}:
+ Small Team Player | subscribers: 3000 | score: 2.2276261544470644
+ Big Team 2 Player | subscribers: 250000 | score: 1.749555170961297
+ Big Team 1 Player | subscribers: 140500 | score: 1.3134034577576315
+ Big Team 1 Player | subscribers: 140000 | score: 1.291753950212176
+ Big Team 2 Player | subscribers: 202000 | score: 0.6445729577225832
+</code></pre>
+
+<p>Much better. This time around, our top player actually has the least number of subscribers, but this makes sense, because even though he belongs to a team that is not very popular, his subscription count is tenfold that of his teammates; clearly someone to keep an eye on! (perhaps a rising star in a college league? Certainly wouldn&rsquo;t want our recommendation script to ignore that one.)</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>This algorithm has many limitations.</p>
+
+<ul>
+<li><p>New players won&rsquo;t be very well represented (they will by nature have low subscription counts).</p></li>
+
+<li><p>All-star teams might result in nobody being particularly recommendable. Though this one might be less of a problem: thanks to our good ol&rsquo; friend the <a href="https://en.wikipedia.org/wiki/Gaussian_function">bell curve</a>, even among rare anomalies, there are <a href="http://fivethirtyeight.com/features/lionel-messi-is-impossible/" target="_blank">rare anomalies</a>.</p></li>
+</ul>
+
+<p>While there are ways to address these limitations and improve the accuracy of the algorithm (for example, taking into account the rate of change in <code>subscription_count</code>), one has to remember the purpose of this feature: to drive up user engagement during onboarding. Is the added complexity of such changes worth the minimal improvement in the recommendations?</p>
+
+<p>Point is, it&rsquo;s Friday night and I should go out for a beer now. I&rsquo;m also looking forward to testing out the enormous Chinese fermentation jug I bought yesterday. It looks something like this, but a LOT bigger:</p>
+
+<p><img src="/img/ferm_crock.jpeg" alt="" /></p>
+
+<p>And it was only \$30. What a bargain.</p>
+
+<hr />
+
+<p>Here is the code used in these examples (working as of Julia 0.4.1). Our actual code at theScore is in Ruby.</p>
+
+<p></p>
+
+<pre><code>module PlayerRecommender
+  export Team, Player, big_team_1, big_team_2, small_team
+  export naive_sort, sort
+
+  type Player
+    subscribers::Int
+    team::AbstractString
+    recommendation_score::Float64
+
+    function Player(subscribers)
+      new(subscribers, &quot;&quot;, 0.0)
+    end
+  end
+
+  # Pretty print Player
+  function Base.show(io::IO, p::Player)
+    print(io, &quot;$(p.team) $(typeof(p)) | subscribers: $(p.subscribers) | score: $(p.recommendation_score)&quot;)
+  end
+
+  type Team
+    players::Array{Player}
+    std_dev::Float64
+    average::Float64
+    name::AbstractString
+
+    function Team(name, players)
+      for p in players
+        p.team = name
+      end
+
+      new(players, 0.0, 0.0, name)
+    end
+  end
+
+
+  function naive_sort(teams)
+    Base.sort(
+      [[team.players for team in teams]...],
+      by=x -&gt; x.subscribers,
+      rev=true
+    )[1:5]
+  end
+
+  function sort(teams)
+    map(set_subscriptions_avg, teams)
+    map(std_dev, teams)
+    map(recommend, teams)
+
+    Base.sort(
+      [[team.players for team in teams]...],
+      by=x -&gt; x.recommendation_score,
+      rev=true
+    )[1:5]
+  end
+
+  # Private
+
+  function average(xs)
+    reduce(+, xs) / length(xs)
+  end
+
+  function dev_from_average(xs, average)
+    map(x -&gt; x - average, xs)
+  end
+
+  function recommend(team)
+    map( x -&gt; recommend(x, team), team.players)
+  end
+
+  function recommend(player, team)
+    player_dev = player.subscribers - team.average
+    if player_dev == 0
+      player.recommendation_score = 0
+    else
+      player.recommendation_score = player_dev / team.std_dev
+    end
+  end
+
+  function set_subscriptions_avg(team)
+    team.average = average([p.subscribers for p in team.players])
+  end
+
+  function squares(xs)
+    map(x -&gt; x * x, xs)
+  end
+
+  function std_dev(team)
+    team.std_dev = std_dev([p.subscribers for p in team.players], team.average)
+  end
+
+  function std_dev(xs, average)
+    sqrt(reduce(+, squares(dev_from_average(xs, average))) / length(xs))
+  end
+
+  function subscriptions_avg(team)
+    team.average = average(float([x.subscribers for x in team.players]))
+  end
+end
+</code></pre>
+			</div>
+		</article>
+
+    <hr>
+
+    <div>
+      
+        <strong>Tags:</strong>
+        
+          
+          <a href="/tags/featured">featured</a>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <hr>
+
+    <div>
+      
+    </div>
+	</main>
+
+    <footer>
+      <p>&copy; 2017 <a href="http://noamswebsite.com/">Noam
+      Gagliardi-Rabinovich</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+

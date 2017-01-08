@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Amdahl&#39;s Law</title>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-89673307-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script>
+    MathJax.Hub.Config({
+      preRemoveClass: "mj",
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      },
+      CommonHTML: { linebreaks: { automatic: true } },
+      "HTML-CSS": { linebreaks: { automatic: true } },
+             SVG: { linebreaks: { automatic: true } }
+    });
+  </script>
+
+
+	
+	
+	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="http://noamswebsite.com/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.18" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
+    </header>
+
+  <div>
+    
+      <small>
+      <strong>Back to wiki:</strong>
+      
+        
+        <a href="/wikis/computers">computers</a>
+      
+        ,
+        
+        <a href="/wikis/math">math</a>
+      
+      </small>
+    
+  </div>
+
+  
+    <main>
+  
+		<article>
+			<h1 class="article-title">Amdahl&#39;s Law</h1>
+      <div class="article-date">
+        Published: <time>2013-10-05</time>
+      </div>
+			<div>
+				<blockquote>
+<p>As multicore computing becomes the norm (even my phone is dual core!), it&rsquo;s important to understand the benefits and also the limitations of concurrency. Amdahl&rsquo;s Law addresses the latter.</p>
+</blockquote>
+
+<p>Let&rsquo;s imagine a simple program. It prints &ldquo;Hello World&rdquo; 100 times, then quits.</p>
+
+<p>Our first version of the program is written as a single sequential task: it prints one &ldquo;Hello World&rdquo;, then another, then another, 100 times, then quits.  This program takes some unit of time, $t$ to execute.</p>
+
+<p>Now say we have a dual-core machine at hand. (My phone, perhaps).</p>
+
+<p>Cool, now we can spawn <em>two</em> tasks that print &ldquo;Hello World&rdquo; 50 times each. And, because our magical imaginary computer experiences no overhead, it takes us exactly $\frac{ t }{ 2 }$ units of time to run our second program.</p>
+
+<p>So we keep adding more and more processors, until we have 100 concurrent threads printing one &ldquo;Hello World&rdquo; each, and our program runs 100 times faster.</p>
+
+<p>At this point we stop: &ldquo;Ah, the trend is clear: more processors equals more speed! No point in continuing this experiment.&rdquo;</p>
+
+<p><strong>A naive (wrong) first guess:</strong> Given $n$ processors executing a program, the maximum boost in speed is $n$. (That is, we can get our program to run $n$ times faster).</p>
+
+<p>Cool! This means that, given enough processors, we could make <em>any</em> program run almost instantly. Right?</p>
+
+<p><img src="/img/more_cores.jpg" alt="" /></p>
+
+<p>(<a href="http://forums.pureoverclock.com/amd/21809-rumor-mill-amd-iv-x12-170-12-cores-24mb-cache-6ghz-2.html#post169754">Pic original source</a>)</p>
+
+<p>Of course this is not the case! Enough daydreaming. Let&rsquo;s figure out a more  realistic estimate.</p>
+
+<p>Let $P$ be the proportion of our program that can run in parallel. Then it follows that $1 - P$ is the proportion that cannot be broken up into independent tasks.</p>
+
+<p>For example, since our program can be broken up into 100 independent tasks, then $1 - P = \frac{ 1 }{ 100 }$.</p>
+
+<p>It follows that the maximum boost in speed (denoted $S(n)$) that we can expect out of assigning concurrent tasks to $n$ parallel processors can be represented by the following equation:</p>
+
+<p>$$S(n) = \frac{ 1 }{ (1 - P) + \frac{ P }{ n } }$$</p>
+
+<p>This is, in fact, Amdahl&rsquo;s equation.</p>
+
+<p>Uh-oh&hellip; do you see it? As we add more and more processors to our computer, and $n \to \infty$, we are left with $ S =  \frac{ 1 }{ 1 - p }$.</p>
+
+<p>What we have here is a clear case of <em>diminishing returns.</em></p>
+
+<p>How bad is it?  Let&rsquo;s add <em>one million cores</em> to our imaginary computer, and measure its performance at $gc = 99\%$:</p>
+
+<p><img src="/img/99pc.gif" alt="" /></p>
+
+<p>Well, for our imaginary software, 99% of which can be parallelized, we can expect a maximum boost of $ S = 100$.</p>
+
+<p>What about a program with $gc = 90\%$?</p>
+
+<p><img src="/img/90pc.gif" alt="" /></p>
+
+<p>There&rsquo;s that same plateau again. But this time we&rsquo;re only seeing a maximum performance boost of $S = 10$.</p>
+
+<p>By $gc = 50\% $, we&rsquo;re down to a program that can only be boosted to run twice as fast no matter how much parallel processing your machine is capable of!</p>
+
+<p><strong>Final Note:</strong> In fact, Amdahl&rsquo;s Law is not exclusive to concurrency, but applies to <em>any</em> speed-boosting strategy that only affects some portion of a program.</p>
+			</div>
+		</article>
+
+    <hr>
+
+    <div>
+      
+        <strong>Tags:</strong>
+        
+          
+          <a href="/tags/concurrency">concurrency</a>
+        
+          ,
+          
+          <a href="/tags/featured">featured</a>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <hr>
+
+    <div>
+      
+    </div>
+	</main>
+
+    <footer>
+      <p>&copy; 2017 <a href="http://noamswebsite.com/">Noam
+      Gagliardi-Rabinovich</a></p>
+    </footer>
+  </div>
+</body>
+</html>
+

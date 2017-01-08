@@ -2,12 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/q/epictetus/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/q/geoffrey_chaucer/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/hannah_arendt/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/q/amiel/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/q/james_baldwin/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/q/john_locke/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/john_stuart_mill/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/q/vikings/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -77,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/post/sorting_by_relative_popularity/</loc>
+    <loc>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</loc>
     <lastmod>2015-12-08T17:45:08-05:00</lastmod>
   </url>
   
@@ -87,8 +117,23 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/post/eigengoogle/</loc>
+    <loc>http://noamswebsite.com/wiki-main/ml/eigengoogle/</loc>
     <lastmod>2014-01-27T18:06:24-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/user_eng/</loc>
+    <lastmod>2014-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/amdahls_law/</loc>
+    <lastmod>2013-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/rices_theorem/</loc>
+    <lastmod>2013-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -138,14 +183,32 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/chaucer/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/cognitive/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/computation/</loc>
+    <lastmod>2013-04-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/wikis/computers/</loc>
     <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/concurrency/</loc>
+    <lastmod>2013-10-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -162,13 +225,31 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/epictetus/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/tags/erlang/</loc>
     <lastmod>2017-01-04T16:11:51-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/featured/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/hannaharendt/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/jamesbaldwin/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -188,6 +269,18 @@
   <url>
     <loc>http://noamswebsite.com/rtags/liberalism/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/locke/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/math/</loc>
+    <lastmod>2015-12-08T17:45:08-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -212,12 +305,6 @@
   <url>
     <loc>http://noamswebsite.com/tags/phoenix/</loc>
     <lastmod>2017-01-04T16:11:51-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/post/</loc>
-    <lastmod>2015-12-08T17:45:08-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -270,7 +357,7 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/stoicism/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -288,6 +375,12 @@
   <url>
     <loc>http://noamswebsite.com/tags/tutorial/</loc>
     <lastmod>2017-01-04T00:52:25-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/vikings/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
