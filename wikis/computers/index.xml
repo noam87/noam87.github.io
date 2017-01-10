@@ -329,6 +329,223 @@ is single universal &lt;code&gt;*rc&lt;/code&gt; file you keep in a
     </item>
     
     <item>
+      <title>Ecto Callbacks Macro</title>
+      <link>http://noamswebsite.com/wiki-main/computers/ecto_callbacks/</link>
+      <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/ecto_callbacks/</guid>
+      <description>
+
+&lt;p&gt;Ecto callbacks (before/after) commit hooks have been deprecated, for a
+general good reason. Using callbacks is generally bad and you should never do
+it. But sometimes you need to do it because real life.&lt;/p&gt;
+
+&lt;p&gt;I wrote this macro this afternoon that implements both atomic and non-atomic
+callbacks. Here it is in all its glory. I won&amp;rsquo;t make it a hex package because
+it&amp;rsquo;s probably a bad thing to do.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;In your &lt;code&gt;YourProject.Model.ex&lt;/code&gt; file, add:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;defmodule MyProject.Model do
+  defmacro __using__(_opts) do
+    quote do
+      use Ecto.Schema
+      import Ecto.Changeset
+      use MyProject.Hooks
+    end
+
+    @doc &amp;quot;&amp;quot;&amp;quot;
+    Dumb. For piping together methods in an `atomic_after_*` function call.
+
+    ## Example
+
+      first_callback()
+      |&amp;gt; hook_glue()
+      |&amp;gt; second_callback()
+    &amp;quot;&amp;quot;&amp;quot;
+    def hook_glue({:ok, struct}), do: struct
+    def hook_glue(struct), do: struct
+  end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;defmodule MyProject.Hooks do
+  @moduledoc &amp;quot;&amp;quot;&amp;quot;
+  This module macro defines the following functions within the model,
+  delegating to `Repo`, but allowing us to add `after_*` hooks,
+  which are no longer supported in Ecto
+  (http://blog.plataformatec.com.br/2015/12/ecto-v1-1-released-and-ecto-v2-0-plans/)
+
+      delete,
+      delete!,
+      delete_all,
+      insert,
+      insert!,
+      insert_all,
+      insert_or_update,
+      insert_or_update!,
+      update,
+      update!,
+      update_all
+
+  ## Hooks
+
+  `after_*` will perform action after transaction is done.
+  `atomic_after_*` will perform action within the same transaction, at the end.
+
+  When using `atomic_after`, make sure to return the resulting struct in
+  the success case, in its tuple format `{:ok, res}` or `{:error, error}`.
+
+  The return value of the transaction is what will be returned by the action.
+
+  ## Usage
+
+  Will print console message after updating:
+
+  **NOTE:** Remember to cover general case after.
+
+      defmodule MyModel do
+        use MyProject.Model # which calls `use MyProject.Overrides`
+
+        defp after_update(result, changeset) do
+          IO.puts(&amp;quot;updating!&amp;quot;)
+        end
+
+        defp atomic_after_update(r = {:error, _}, _), do: r
+        defp atomic_after_update(res, ch) do
+          case OtherModel.get!(1).name do
+            &amp;quot;bob&amp;quot; -&amp;gt; Repo.rollback(:cant_update_if_name_is_bob)
+            _ -&amp;gt; res
+          end
+        end
+
+      end
+
+      MyModel.update!(ch)
+      # -&amp;gt; &amp;quot;updating!&amp;quot;
+      %MyModel{...}
+  &amp;quot;&amp;quot;&amp;quot;
+
+  defmacro __using__(_) do
+    actions = [:delete,
+               :delete!,
+               :delete_all,
+               :insert,
+               :insert!,
+               :insert_all,
+               :insert_or_update,
+               :insert_or_update!,
+               :update,
+               :update!,
+               :update_all]
+
+    # For the love of God, do not touch until this is tested!
+    quote do
+      alias MyProject.Repo
+
+      unquote do
+        Enum.map(actions, fn action -&amp;gt;
+          quote do
+            def unquote(action)(changeset, opts \\ []) do
+              fwd = fn -&amp;gt;
+                res = Repo.unquote(action)(changeset, opts)
+                after_res = unquote(:&amp;quot;atomic_after_#{action}&amp;quot;)(res, changeset)
+
+                # Handle whether the action is with bang for or not
+                unquote do
+                  if String.last(Atom.to_string(action)) == &amp;quot;!&amp;quot; do
+                    quote do
+                      transaction_result =
+                        case after_res do
+                          {:ok, res} -&amp;gt; res
+                          {:error, error} -&amp;gt; raise error
+                        end
+                    end
+                  else
+                    quote do
+                      transaction_result = after_res
+                    end
+                  end
+                end
+                transaction_result
+              end
+
+              result =
+                case Repo.transaction(fwd) do
+                  # Covers e.g insert / update
+                  {:ok, {:ok, res}} -&amp;gt; {:ok, res}
+                  # Just in case
+                  {:ok, {:error, error}} -&amp;gt; {:error, error}
+                  # Covers insert! update! which return struct
+                  {:ok, res} -&amp;gt; res
+                  # Covers rollback which returns error
+                  {:error, error} -&amp;gt; {:error, error}
+                end
+
+              unquote(:&amp;quot;after_#{action}&amp;quot;)(result, changeset)
+              result
+            end
+          end
+        end)
+      end
+
+      unquote do
+        Enum.map(actions, fn action -&amp;gt;
+          quote do
+            defp unquote(:&amp;quot;after_#{action}&amp;quot;)(_res, _original_struct), do: nil
+          end
+        end)
+      end
+
+      unquote do
+        Enum.map(actions, fn action -&amp;gt;
+          if String.last(Atom.to_string(action)) == &amp;quot;!&amp;quot; do
+            quote do
+              defp unquote(:&amp;quot;atomic_after_#{action}&amp;quot;)(res, _) do
+                {:ok, res}
+              end
+            end
+          else
+            quote do
+              defp unquote(:&amp;quot;atomic_after_#{action}&amp;quot;)(res, _), do: res
+            end
+          end
+        end)
+      end
+
+      defoverridable [after_delete: 2,
+                      atomic_after_delete: 2,
+                      after_delete!: 2,
+                      atomic_after_delete!: 2,
+                      after_delete_all: 2,
+                      atomic_after_delete_all: 2,
+                      after_insert: 2,
+                      atomic_after_insert: 2,
+                      after_insert!: 2,
+                      atomic_after_insert!: 2,
+                      after_insert_all: 2,
+                      atomic_after_insert_all: 2,
+                      after_insert_or_update: 2,
+                      atomic_after_insert_or_update: 2,
+                      after_insert_or_update!: 2,
+                      atomic_after_insert_or_update!: 2,
+                      after_update: 2,
+                      atomic_after_update: 2,
+                      after_update!: 2,
+                      atomic_after_update!: 2,
+                      after_update_all: 2,
+                      atomic_after_update_all: 2]
+    end
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Amdahl&#39;s Law</title>
       <link>http://noamswebsite.com/wiki-main/computers/amdahls_law/</link>
       <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
