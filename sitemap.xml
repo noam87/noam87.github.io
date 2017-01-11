@@ -259,12 +259,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/gx/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/rtags/hannaharendt/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -301,14 +295,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/rtags/math/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/math/</loc>
+    <lastmod>2015-12-08T17:45:08-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/math/</loc>
-    <lastmod>2015-12-08T17:45:08-05:00</lastmod>
+    <loc>http://noamswebsite.com/rtags/math/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

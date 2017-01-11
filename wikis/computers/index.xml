@@ -14,7 +14,14 @@
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/compilers/</guid>
-      <description>&lt;table&gt;
+      <description>
+
+&lt;h2 id=&#34;garbage-collection&#34;&gt;Garbage Collection&lt;/h2&gt;
+
+&lt;p&gt;See &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
+GC.&lt;/p&gt;
+
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Title&lt;/th&gt;
