@@ -9,6 +9,30 @@
     <atom:link href="http://noamswebsite.com/wikis/computers/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Resources About Compilers</title>
+      <link>http://noamswebsite.com/wiki-main/computers/compilers/</link>
+      <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/compilers/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/abhinaba/2009/03/02/back-to-basics-generational-garbage-collection/&#34;&gt;Back To Basics: Generational Garbage Collection&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Elixir/Erlang Resources</title>
       <link>http://noamswebsite.com/wiki-main/computers/elixir_resources/</link>
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>

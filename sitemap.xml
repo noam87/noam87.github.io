@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/compilers/</loc>
+    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/epictetus/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
   </url>
@@ -207,7 +212,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -244,6 +249,12 @@
   <url>
     <loc>http://noamswebsite.com/tags/featured/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/gc/</loc>
+    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -309,7 +320,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -345,7 +356,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/recommendations/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -397,7 +408,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wiki-main/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
