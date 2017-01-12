@@ -106,6 +106,67 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.evanmiller.org/elixir-ram-and-the-template-of-doom.html&#34;&gt;Elixir RAM And The Template Of Doom&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/&#34;&gt;Elixir and IO Lists, Part 1: Building Output Efficiently&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>React Resources</title>
+      <link>http://noamswebsite.com/wiki-main/computers/react_resources/</link>
+      <pubDate>Wed, 04 Jan 2017 14:41:18 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/react_resources/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html&#34;&gt;A Comprehensive Guide to Test-First Development with Redux, React, and Immutable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;tutorial&lt;/td&gt;
+&lt;td&gt;Great comprehensive introduction to the whole ecosystem.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/-jwQ3sGoiXg&#34;&gt;Redux, Re-fram, Relay, Om/next, oh my!&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;video&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/absinthe-graphql/absinthe_relay/issues/8&#34;&gt;Setting Up Absinthe Relay In Elixir&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
