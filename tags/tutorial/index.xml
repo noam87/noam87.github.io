@@ -150,7 +150,7 @@ config :phoenix, :generators,
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;From now on, when running &lt;code&gt;mix phoenix.gen.html&lt;/code&gt; or &lt;code&gt;mix phoenix.gen.json&lt;/code&gt;,
-pass the &lt;code&gt;--no-model&lt;/code&gt; option. (&lt;strong&gt;update:&lt;/strong&gt; see question below.)&lt;/p&gt;&lt;/li&gt;
+pass the &lt;code&gt;--no-model&lt;/code&gt; option.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Since app is umbrella app now, remember to &lt;code&gt;cd&lt;/code&gt; into phoenix app directory
 before running generators, or files will be generated at umbrella&amp;rsquo;s top level.&lt;/p&gt;&lt;/li&gt;
@@ -162,12 +162,6 @@ before running generators, or files will be generated at umbrella&amp;rsquo;s to
 &lt;li&gt;Is it there a way to make it so that there&amp;rsquo;s no need for &lt;code&gt;--no-model&lt;/code&gt; option
 every time?&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;config :phoenix, :generators, model: false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Answer provided by the man himself :)
-&lt;a href=&#34;https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22&#34;&gt;https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

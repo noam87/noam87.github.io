@@ -205,7 +205,7 @@ config :phoenix, :generators,
 
 <ul>
 <li><p>From now on, when running <code>mix phoenix.gen.html</code> or <code>mix phoenix.gen.json</code>,
-pass the <code>--no-model</code> option. (<strong>update:</strong> see question below.)</p></li>
+pass the <code>--no-model</code> option.</p></li>
 
 <li><p>Since app is umbrella app now, remember to <code>cd</code> into phoenix app directory
 before running generators, or files will be generated at umbrella&rsquo;s top level.</p></li>
@@ -217,12 +217,6 @@ before running generators, or files will be generated at umbrella&rsquo;s top le
 <li>Is it there a way to make it so that there&rsquo;s no need for <code>--no-model</code> option
 every time?</li>
 </ul>
-
-<pre><code>config :phoenix, :generators, model: false
-</code></pre>
-
-<p>Answer provided by the man himself :)
-<a href="https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22">https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22</a></p>
 
 			</div>
 		</article>
