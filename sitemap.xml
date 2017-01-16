@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/elixir_performance_tips/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/w/it_sort_of_alliterates/</loc>
     <lastmod>2017-01-14T00:00:00+00:00</lastmod>
   </url>
@@ -217,7 +222,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -235,7 +240,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/elixir/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -247,7 +252,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/erlang/</loc>
-    <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -413,7 +418,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wiki-main/</loc>
-    <lastmod>2017-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
