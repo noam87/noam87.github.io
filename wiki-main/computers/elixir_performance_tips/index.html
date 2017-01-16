@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Erlang</title>
+	<title>Elixir/Erlang Performance Tips</title>
   
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -39,7 +39,7 @@ ga('send', 'pageview');
 	
 	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
 	<link rel="stylesheet" href="http://noamswebsite.com/css/style.css">
-	<link href="http://noamswebsite.com/tags/erlang/index.xml" rel="feed" type="application/rss+xml" title="Noam&#39;s Website About Software">
+	
 	<meta name="generator" content="Hugo 0.18" />
 </head>
 <body>
@@ -48,22 +48,63 @@ ga('send', 'pageview');
       <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
     </header>
 
-  <main id="main">
+  <div>
+    
+      <small>
+      <strong>Back to wiki:</strong>
+      
+        
+        <a href="/wikis/computers">computers</a>
+      
+      </small>
+    
+  </div>
+
+  
+    <main>
+  
+		<article>
+			<h1 class="article-title">Elixir/Erlang Performance Tips</h1>
+      <div class="article-date">
+        Published: <time>2017-01-14</time>
+      </div>
+			<div>
+				<p>Don&rsquo;t have processes the many other processes depend on. For example, a
+single-process cache that many others call to. This will be a bottleneck
+because you&rsquo;ll always have to wait for that process&rsquo;s turn from the scheduler.</p>
+
+<hr />
+
+			</div>
+		</article>
+
+    <hr>
+
     <div>
-     <h1 id="title">Erlang</h1>
-      <ul>
       
-        <li>
-          <a href="http://noamswebsite.com/wiki-main/computers/elixir_performance_tips/">Elixir/Erlang Performance Tips</a>
-        </li>
+        <strong>Tags:</strong>
+        
+          
+          <a href="/tags/elixir">elixir</a>
+        
+          ,
+          
+          <a href="/tags/erlang">erlang</a>
+        
       
-        <li>
-          <a href="http://noamswebsite.com/wiki-main/computers/elixir_resources/">Elixir/Erlang Resources</a>
-        </li>
-      
-      </ul>
     </div>
-  </main>
+
+    <div>
+      
+    </div>
+
+    <hr>
+
+    <div>
+      
+    </div>
+	</main>
+
     <footer>
       <p>&copy; 2017 <a href="http://noamswebsite.com/">Noam
       Gagliardi-Rabinovich</a></p>
