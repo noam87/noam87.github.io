@@ -6,8 +6,32 @@
     <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Startup Resources</title>
+      <link>http://noamswebsite.com/wiki-main/career/startup_resources/</link>
+      <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/career/startup_resources/</guid>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d&#34;&gt;What I Wish I&amp;rsquo;d Known Before Joining A Unicorn&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Elixir/Erlang Performance Tips</title>
