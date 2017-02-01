@@ -14,18 +14,45 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Cancer Info</title>
   <style>
+    body {
+      padding: 10px;
+      padding-top: 20px;
+    }
     .treatment { color: red; }
+    .status {
+      border: solid 2px orange;
+      background-color: #CFF;
+      max-width: 400px;
+      padding: 10px;
+    }
   </style>
 </head>
 <body>
   <h1>Cancer Reference</h1>
 
-  <a href="/">Back To My Website</a>
+  <p>
+    <a href="/">Back To My Website</a>
+  </p>
 
-  <h2>Timeline</h2>
+  <div class="status">
+    <p>
+      <a name="status">Current Status</a>
+    </p>
+
+    <p>
+      One tumor in upper lung/chest. Two stable in lungs. One new one in spine
+      causing a lot of pain. Hard to sleep and focus due to pain.
+      Waiting to see radiologist for radiation treatment
+      to spine. Waiting to see new medical trial team to see if there's something
+      new to try.
+      5 Year survival probability &lt; 10%.
+    </p>
+  </div>
+
+  <h2 class="timeline">Events Log</h2>
 
   <p>
-    <b class="treatment">Treatments in red.</b>
+    <b><a name="treatment">Treatments in red.</a></b>
   </p>
 
   <h3>Early 2013</h3>
