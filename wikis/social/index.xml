@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/wikis/social/index.xml</link>
+    <description>Recent content in Social on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/wikis/social/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mob Authority</title>
+      <link>http://noamswebsite.com/r/mob/</link>
+      <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/mob/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m baffled by supposed anti-authoritarians who revel in the chaos of mobs,
+since what more intractably illegitimate form of authority exists than that of
+a mob? At least the autocrat can be reasoned with.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
