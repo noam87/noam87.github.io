@@ -252,14 +252,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/computers/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/computers/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/computers/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -342,12 +342,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/math/</loc>
-    <lastmod>2015-12-08T17:45:08-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/tags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -356,6 +350,12 @@
   <url>
     <loc>http://noamswebsite.com/rtags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/math/</loc>
+    <lastmod>2015-12-08T17:45:08-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -409,7 +409,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/random/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -433,12 +433,6 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/wikis/social/</loc>
-    <lastmod>2017-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
