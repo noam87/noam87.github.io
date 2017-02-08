@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Math on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/tags/math/index.xml</link>
+    <description>Recent content in Math on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Stuff I REALLY Recommend</title>
+      <link>http://noamswebsite.com/r/recommended/</link>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/recommended/</guid>
+      <description>
+
+&lt;h3 id=&#34;video-talks&#34;&gt;Video Talks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/kBdfcR-8hEY&#34;&gt;Justice: What&amp;rsquo;s the Right Thing To Do?&lt;/a&gt;. Provocative Harvard lecture series on Ethics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;Robert Sapolsky: The Biology of Human Behavior&lt;/a&gt;. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/GPYzY9I78CI&#34;&gt;John Ioannidis: &amp;ldquo;Reproducible Research: True or False?&amp;rdquo;&lt;/a&gt;. Unsettling results: 70%-80% of scientific studies, even from cited, reputable sources, are wrong. On the dangers of ignoring reproducibility in science.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://everythingisaremix.info/&#34;&gt;Everything is a Remix&lt;/a&gt;. &amp;ldquo;There be nothing new, but that which is Hath been before&amp;hellip;&amp;rdquo; (Free) documentary on the history of stealing ideas, and how the current reinterpretation of IP / copyright laws stand in the way of innovation, not help it.&lt;/li&gt;
+&lt;li&gt;Century Of The Self.&lt;/li&gt;
+&lt;li&gt;The Story Of Maths (4 part series).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/7qUKiHZbVwc&#34;&gt;The Human Animal&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Untold History Of The United Stated (series on Netflix).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;books&#34;&gt;Books&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0262510871&#34;&gt;SICP&lt;/a&gt; (or anything else Sussman).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0393913007&#34;&gt;Norton Anthology of English Literature&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/c1zNqGm&#34;&gt;Principles and Techniques in Combinatorics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/6VMIaQg&#34;&gt;What Is Mathematics?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0387257659&#34;&gt;Putnam and Beyond&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0815344325&#34;&gt;Molecular Biology of the Cell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Meditations of Marcus Aurelius.&lt;/li&gt;
+&lt;li&gt;The Golden Sayings of Epictetus.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/fT21Dzu&#34;&gt;On Crimes And Punishment&lt;/a&gt;, Beccaria (Young translation).&lt;/li&gt;
+&lt;li&gt;On Liberty, John Stuart Mill.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0942299795&#34;&gt;Society Of The Spectacle&lt;/a&gt; (Nicholson translation).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0578012812&#34;&gt;Getting Real&lt;/a&gt;, Jason Fried&lt;/li&gt;
+&lt;li&gt;Alice in Wonderland / Through the Looking Glass, Lewis Carroll&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/2UH8Udf&#34;&gt;The Trial&lt;/a&gt;, Franz Kafka&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/genNFo1&#34;&gt;Don Quijote De La Mancha&lt;/a&gt;, Miguel de Cervantes&lt;/li&gt;
+&lt;li&gt;The writings of Hannah Arendt.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/9505156944&#34;&gt;Mafalda&lt;/a&gt; + Other works of Quino.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
