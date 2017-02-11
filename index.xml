@@ -6,8 +6,90 @@
     <description>Recent content on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://noamswebsite.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Beliefs Vs Conclusions</title>
+      <link>http://noamswebsite.com/r/conclusions/</link>
+      <pubDate>Sat, 11 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/conclusions/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;belief&lt;/strong&gt; is axiomatic. It&amp;rsquo;s what one holds to be true. They are at the core
+of our interpretation of the world around us, and our understanding of what is
+&amp;ldquo;true&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;At the same time, as with mathematical axioms, beliefs are by necessity
+arbitrary. Whether one asserts with certainty &amp;ldquo;Freedom is desirable&amp;rdquo; or
+&amp;ldquo;Subjugation is justified&amp;rdquo; in the end comes down to choosing to believe so (Even
+if the first is further derived from the belief that &amp;ldquo;Suffering in others is
+bad&amp;rdquo;, that in itself must be arbitrarily asserted, and so on).&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;conclusion&lt;/strong&gt;, as the name implies, is some terminal point at the end of a
+chain of logical assertions, ultimately stemming from one&amp;rsquo;s beliefs, and
+whatever information is available to us.&lt;/p&gt;
+
+&lt;p&gt;And it goes without saying: whatever information &lt;em&gt;is&lt;/em&gt; available to one at all
+times is incomplete or incorrect.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Given the same information, but different beliefs, two individuals will arrive
+at different conclusions; each conclusion being perfectly logical.&lt;/p&gt;
+
+&lt;p&gt;Choose your axioms carefully!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Given the same beliefs, but different subsets of all of the information about a
+subject, two individuals will arrive, again logically, at different conclusions.&lt;/p&gt;
+
+&lt;p&gt;Reconsider your conclusions always. Ask: what would I have concluded had &lt;code&gt;x&lt;/code&gt;
+unknown been such and such? Or, what would I have concluded if I were to believe
+&lt;code&gt;B&lt;/code&gt; instead of &lt;code&gt;A&lt;/code&gt;?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;From studying the mathematical foundations of logic we know that, by playing and
+combining competing sets of axioms (and even logics themselves), and arriving at
+(sometimes contradictory) conclusions, we gain a richer understanding of the
+&amp;ldquo;truths&amp;rdquo; that exist within the mathematical spectrum&lt;sup&gt;1&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;As such, one must be careful not to fool oneself into believing one has, or is
+capable of arriving at a &amp;ldquo;Truth&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;(Even if such one exists, can it even be
+&lt;a href=&#34;https://en.wikipedia.org/wiki/G%C3%B6del&#39;s_incompleteness_theorems&#34;&gt;formulated&lt;/a&gt;?
+Can such a formulation be trusted? It&amp;rsquo;s turtles all the way down.)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;One&amp;rsquo;s beliefs and conclusions, even if &amp;ldquo;logically&amp;rdquo; formulated, at any given
+time, even if one can suspend all belief and assume to possess all relevant
+information, even then all we can aspire for is that our cherished conclusions
+be, at best, one many equally valid readings of the &amp;ldquo;Truth&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;The best way to go about, if one desires not to go completely mad, is to pick
+one, or a few, and be mindful that each one of these is simply one more way of
+further enriching our flavor of reality.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; I think.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;ol&gt;
+  &lt;li&gt;
+    At the same, thinking too much about the philosophical and existential
+    implications of &lt;a href=&#34;https://en.wikipedia.org/wiki/Formalism_(philosophy_of_mathematics)&#34;&gt;mathematical
+    formalism&lt;/a&gt;
+    is bound to drive one absolutely mad. &lt;em&gt;Caveat emptor&lt;/em&gt;!
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Friedrich Nietzsche</title>
@@ -197,9 +279,9 @@ taste which seems to &lt;em&gt;deny&lt;/em&gt; suffering.&lt;/p&gt;
       <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/mob/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m baffled by supposed anti-authoritarians who revel in the chaos of mobs,
-since what more intractably illegitimate form of authority exists than that of
-a mob? At least the autocrat can be reasoned with.&lt;/p&gt;
+      <description>&lt;p&gt;There&amp;rsquo;s a funny contradiction with supposed anti-authoritarians who revel in the
+chaos of mobs: what more intractably illegitimate form of authority exists
+than that of a mob?&lt;/p&gt;
 </description>
     </item>
     
@@ -948,30 +1030,6 @@ danger of being lost, or enfeebled, and deprived of its vital effect on the
 character and conduct: the dogma becoming a mere formal profession,
 inefficacious for good, but cumbering the ground, and preventing the growth of
 any real and heartfelt conviction, from reason or personal experience.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Old Norse Sayings (Vikings)</title>
-      <link>http://noamswebsite.com/q/vikings/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/vikings/</guid>
-      <description>
-
-&lt;h2 id=&#34;from-hávamál&#34;&gt;From Hávamál&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Praise no day until evening, no wife before cremation, no sword till tested,
-no maid before marriage, no ice till crossed, no ale till it&amp;rsquo;s drunk.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Only a fool lies awake all night and broods over his problems. When morning
-comes he is exhausted. And his troubles are the same as before.&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>
