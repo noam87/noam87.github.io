@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/w/a_bug/</loc>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/20170305stoned/</loc>
+    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/r/completely/</loc>
     <lastmod>2017-03-05T00:00:00+00:00</lastmod>
   </url>
@@ -406,7 +416,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -517,13 +527,13 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/writing/</loc>
-    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/w/</loc>
-    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
