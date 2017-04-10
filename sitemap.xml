@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/q/leibniz/</loc>
+    <lastmod>2017-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/von_neumann/</loc>
     <lastmod>2017-03-16T00:00:00+00:00</lastmod>
   </url>
@@ -372,6 +377,12 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/leibniz/</loc>
+    <lastmod>2017-04-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/liberalism/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -384,12 +395,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/rtags/math/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/wikis/math/</loc>
     <lastmod>2015-12-08T17:45:08-05:00</lastmod>
     <priority>0</priority>
@@ -397,6 +402,12 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/math/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -421,7 +432,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -439,13 +450,13 @@
   
   <url>
     <loc>http://noamswebsite.com/q/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/wikis/quotes/</loc>
-    <lastmod>2017-03-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
