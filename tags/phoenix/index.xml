@@ -129,6 +129,12 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;h2 id=&#34;performance-tips&#34;&gt;Performance Tips&lt;/h2&gt;
+
+&lt;p&gt;Don&amp;rsquo;t have processes the many other processes depend on. For example, a
+single-process cache that many others call to. This will be a bottleneck
+because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn from the scheduler.&lt;/p&gt;
 </description>
     </item>
     

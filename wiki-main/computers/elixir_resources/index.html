@@ -185,6 +185,12 @@ ga('send', 'pageview');
 </tbody>
 </table>
 
+<h2 id="performance-tips">Performance Tips</h2>
+
+<p>Don&rsquo;t have processes the many other processes depend on. For example, a
+single-process cache that many others call to. This will be a bottleneck
+because you&rsquo;ll always have to wait for that process&rsquo;s turn from the scheduler.</p>
+
 			</div>
 		</article>
 

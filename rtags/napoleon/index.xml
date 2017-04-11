@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Napoleon on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/rtags/napoleon/index.xml</link>
+    <description>Recent content in Napoleon on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/rtags/napoleon/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Napoleon Bonaparte</title>
+      <link>http://noamswebsite.com/q/napoleon/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/q/napoleon/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;When the enemy is making a false movement we must take good care not to
+interrupt him.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You must not fight too often with one enemy, or you will teach him all your
+art of war.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
