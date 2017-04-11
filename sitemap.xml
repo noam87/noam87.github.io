@@ -27,16 +27,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/r/20170305stoned/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/r/completely/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/r/jokes/</loc>
     <lastmod>2017-03-05T00:00:00+00:00</lastmod>
   </url>
@@ -133,6 +123,11 @@
   
   <url>
     <loc>http://noamswebsite.com/q/adam_smith/</loc>
+    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/completely/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
   </url>
   
