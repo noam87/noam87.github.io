@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vikings on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/rtags/vikings/</link>
+    <link>http://noamswebsite.com/rtags/vikings/index.xml</link>
     <description>Recent content in Vikings on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/rtags/vikings/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/rtags/vikings/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Old Norse Sayings (Vikings)</title>
@@ -17,9 +14,22 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/vikings/</guid>
-      <description> From Hávamál  Praise no day until evening, no wife before cremation, no sword till tested, no maid before marriage, no ice till crossed, no ale till it&amp;rsquo;s drunk.
-  Only a fool lies awake all night and broods over his problems. When morning comes he is exhausted. And his troubles are the same as before.
- </description>
+      <description>
+
+&lt;h2 id=&#34;from-hávamál&#34;&gt;From Hávamál&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Praise no day until evening, no wife before cremation, no sword till tested,
+no maid before marriage, no ice till crossed, no ale till it&amp;rsquo;s drunk.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Only a fool lies awake all night and broods over his problems. When morning
+comes he is exhausted. And his troubles are the same as before.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
   </channel>

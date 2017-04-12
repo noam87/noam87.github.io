@@ -2,14 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recommendations on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/recommendations/</link>
+    <link>http://noamswebsite.com/tags/recommendations/index.xml</link>
     <description>Recent content in Recommendations on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://noamswebsite.com/tags/recommendations/index.xml" rel="self" type="application/rss+xml" />
     
-	<atom:link href="http://noamswebsite.com/tags/recommendations/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Science Resources</title>
+      <link>http://noamswebsite.com/wiki-main/science/science_resources/</link>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
+      <description>
+
+&lt;h2 id=&#34;biology&#34;&gt;Biology&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Robert Sapolsky: The Biology Of Human Behavior&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;YouTube&lt;/a&gt; lecture series&lt;/td&gt;
+&lt;td&gt;You are not in control.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Molecular Biology Of the Cell&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/ap9m9UD&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;cancer&#34;&gt;Cancer&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;The Biology Of Cancer&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/cj4bhIS&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Optimising Combination Dosing Strategy Of Abemaciclib And Vemurafenib In BRAF-Mutated Melanoma tumours&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.nature.com/bjc/journal/v114/n6/full/bjc201640a.html&#34;&gt;HTML&lt;/a&gt; (full paper)&lt;/td&gt;
+&lt;td&gt;Interesting findings for using intermittent dosing to extend the effectiveness of targeted therapies.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Cool Articles / Papers</title>
@@ -17,26 +76,167 @@
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/cool_articles/</guid>
-      <description> General    Title Notes     Build Your Own Text Editor Really great tutorial (and introduction to C programming and terminal programming)   Data Structures For Text Sequences (PDF)     Crypto    Title Notes     Efficient Data Structures for Tamper-Evident Logging (PDF) Youtube talk here   Cryptographic Data Structures     </description>
+      <description>
+
+&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://viewsourcecode.org/snaptoken/kilo/&#34;&gt;Build Your Own Text Editor&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;Really great tutorial (and introduction to C programming and terminal programming).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.cs.unm.edu/~crowley/papers/sds.pdf&#34;&gt;Data Structures For Text Sequences&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;PDF&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Handmade hero&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://handmadehero.org/&#34;&gt;YouTube&lt;/a&gt; series&lt;/td&gt;
+&lt;td&gt;Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;crypto&#34;&gt;Crypto&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Efficient Data Structures for Tamper-Evident Logging&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&#34;http://people.cs.vt.edu/danfeng/courses/cs6204/sp10-papers/crosby.pdf&#34;&gt;PDF&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;Youtube talk &lt;a href=&#34;https://youtu.be/G0tkCxq9OuE&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blog.bren2010.io/2015/04/07/data-structures.html&#34;&gt;Cryptographic Data Structures&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;compilers&#34;&gt;Compilers&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/abhinaba/2009/03/02/back-to-basics-generational-garbage-collection/&#34;&gt;Back To Basics: Generational Garbage Collection&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
+GC.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Startup Resources</title>
+      <title>Self-Employment Resources</title>
       <link>http://noamswebsite.com/wiki-main/career/startup_resources/</link>
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/startup_resources/</guid>
-      <description>   Title Format     What I Wish I&amp;rsquo;d Known Before Joining A Unicorn HTML    </description>
-    </item>
-    
-    <item>
-      <title>Resources About Compilers</title>
-      <link>http://noamswebsite.com/wiki-main/computers/compilers/</link>
-      <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/compilers/</guid>
-      <description> Garbage Collection See here for examples with Erlang VM GC.
-   Title Notes     Back To Basics: Generational Garbage Collection     </description>
+      <description>
+
+&lt;h2 id=&#34;personal-finance&#34;&gt;Personal Finance&lt;/h2&gt;
+
+&lt;p&gt;(Will mostly apply to Canadians.)&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Make Sure It&amp;rsquo;s Deductable&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/h31tdDm&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Must-have saving and tax tips for Canadian freelancers and small business owners.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Reddit: Personal Finance Canada&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.reddit.com/r/PersonalFinanceCanada/&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;self-employment-remote-work&#34;&gt;Self-Employment / Remote Work&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Awesome Remote Job&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/lukasz-madon/awesome-remote-job&#34;&gt;HTML&lt;/a&gt; ; Git&lt;/td&gt;
+&lt;td&gt;Community curated list of useful links&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;startup-stuff&#34;&gt;Startup Stuff&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d&#34;&gt;What I Wish I&amp;rsquo;d Known Before Joining A Unicorn&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
@@ -45,7 +245,42 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/recommended/</guid>
-      <description>Video Talks  Justice: What&amp;rsquo;s the Right Thing To Do?. Provocative Harvard lecture series on Ethics. Robert Sapolsky: The Biology of Human Behavior. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think. John Ioannidis: &amp;ldquo;Reproducible Research: True or False?&amp;rdquo;. Unsettling results: 70%-80% of scientific studies, even from cited, reputable sources, are wrong. On the dangers of ignoring reproducibility in science.</description>
+      <description>
+
+&lt;h2 id=&#34;video-talks&#34;&gt;Video Talks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/kBdfcR-8hEY&#34;&gt;Justice: What&amp;rsquo;s the Right Thing To Do?&lt;/a&gt;. Provocative Harvard lecture series on Ethics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;Robert Sapolsky: The Biology of Human Behavior&lt;/a&gt;. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://everythingisaremix.info/&#34;&gt;Everything is a Remix&lt;/a&gt;. &amp;ldquo;There be nothing new, but that which is Hath been before&amp;hellip;&amp;rdquo; (Free) documentary on the history of stealing ideas, and how the current reinterpretation of IP / copyright laws stand in the way of innovation, not help it.&lt;/li&gt;
+&lt;li&gt;Century Of The Self.&lt;/li&gt;
+&lt;li&gt;The Story Of Maths (4 part series).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/7qUKiHZbVwc&#34;&gt;The Human Animal&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Untold History Of The United Stated (series on Netflix).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0262510871&#34;&gt;SICP&lt;/a&gt; (or anything else Sussman).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0393913007&#34;&gt;Norton Anthology of English Literature&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/c1zNqGm&#34;&gt;Principles and Techniques in Combinatorics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/6VMIaQg&#34;&gt;What Is Mathematics?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0387257659&#34;&gt;Putnam and Beyond&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0815344325&#34;&gt;Molecular Biology of the Cell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Meditations of Marcus Aurelius.&lt;/li&gt;
+&lt;li&gt;The Golden Sayings of Epictetus.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/fT21Dzu&#34;&gt;On Crimes And Punishment&lt;/a&gt;, Beccaria (Young translation).&lt;/li&gt;
+&lt;li&gt;On Liberty, John Stuart Mill.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0942299795&#34;&gt;Society Of The Spectacle&lt;/a&gt; (Nicholson translation).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0578012812&#34;&gt;Getting Real&lt;/a&gt;, Jason Fried&lt;/li&gt;
+&lt;li&gt;Alice in Wonderland / Through the Looking Glass, Lewis Carroll&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/2UH8Udf&#34;&gt;The Trial&lt;/a&gt;, Franz Kafka&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/genNFo1&#34;&gt;Don Quijote De La Mancha&lt;/a&gt;, Miguel de Cervantes&lt;/li&gt;
+&lt;li&gt;The writings of Hannah Arendt.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/9505156944&#34;&gt;Mafalda&lt;/a&gt; + Other works of Quino.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -54,8 +289,128 @@
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
-      <description>Learning    Title Notes     Elixir In Action (book) My go-to recommendation for getting started with Elixir.   Writing A Blog Engine in Phoenix Great first tutorial for Phoenix framework   Erlang In Anger Great guide for when stuff goes bad.    Memory / GC For articles on GC / compilers in general see compilers section.
-   Title Notes     Erlang Scheduler Details and Why It Matters    Erlang Garbage Collection Details and Why It Matters Simple introduction to Erlang GC concepts.</description>
+      <description>
+
+&lt;h2 id=&#34;learning&#34;&gt;Learning&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt; (book)&lt;/td&gt;
+&lt;td&gt;My go-to recommendation for getting started with Elixir.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://medium.com/@diamondgfx/introduction-fe138ac6079d&#34;&gt;Writing A Blog Engine in Phoenix&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.erlang-in-anger.com/&#34;&gt;Erlang In Anger&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Great guide for when stuff goes bad.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;memory-gc&#34;&gt;Memory / GC&lt;/h2&gt;
+
+&lt;p&gt;For articles on GC / compilers in general see &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/compilers&#34;&gt;compilers&lt;/a&gt; section.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Scheduler Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang%20garbage%20collection%20memory%20layout%20soft%20realtime/2015/08/24/erlang-garbage-collection-details-and-why-it-matters.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Simple introduction to Erlang GC concepts. Start here.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.erlang-solutions.com/blog/erlang-19-0-garbage-collector.html&#34;&gt;Erlang 19.0 Garbage Collector&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://erlang.org/doc/efficiency_guide/introduction.html&#34;&gt;Erlang Efficiency Guide&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://blog.bugsense.com/post/74179424069/erlang-binary-garbage-collection-a-lovehate&#34;&gt;Erlang Binary Garbage Collection: A love/hate relationship&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Some findings on the shared heap GC.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt; (pdf)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.evanmiller.org/elixir-ram-and-the-template-of-doom.html&#34;&gt;Elixir RAM And The Template Of Doom&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/&#34;&gt;Elixir and IO Lists, Part 1: Building Output Efficiently&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;performance-tips&#34;&gt;Performance Tips&lt;/h2&gt;
+
+&lt;p&gt;Don&amp;rsquo;t have processes the many other processes depend on. For example, a
+single-process cache that many others call to. This will be a bottleneck
+because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn from the scheduler.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -64,16 +419,94 @@
       <pubDate>Wed, 04 Jan 2017 14:41:18 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/react_resources/</guid>
-      <description>   Title Format Notes     A Comprehensive Guide to Test-First Development with Redux, React, and Immutable tutorial Great comprehensive introduction to the whole ecosystem.   Redux, Re-fram, Relay, Om/next, oh my! video    Setting Up Absinthe Relay In Elixir      </description>
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html&#34;&gt;A Comprehensive Guide to Test-First Development with Redux, React, and Immutable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;tutorial&lt;/td&gt;
+&lt;td&gt;Great comprehensive introduction to the whole ecosystem.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/-jwQ3sGoiXg&#34;&gt;Redux, Re-fram, Relay, Om/next, oh my!&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;video&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/absinthe-graphql/absinthe_relay/issues/8&#34;&gt;Setting Up Absinthe Relay In Elixir&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
-      <title>Data/ML Resources</title>
+      <title>Math/ML Resources</title>
       <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
       <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>   Title Notes     A Tutorial On Deep Learning (PDF) (Pt 1, Pt 2) Quoc V. Le (Google)    </description>
+      <description>
+
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Probability Through Problems&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://archive.org/details/springer_10.1007-978-0-387-21659-1&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/chcB92K&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Best introductory probability book out there. Learn by discovering!&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Principles And Techniques In Combinatorics&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/2gz4ZXD&#34;&gt;BOOK&lt;/a&gt; ; &lt;a href=&#34;http://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/26781/Principles%20and%20Techniques%20in%20Combinatorics.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Beautiful book: simple, clear explanations, no filler, challenging problems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;statistics&#34;&gt;Statistics&lt;/h2&gt;
+
+&lt;h2 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A Tutorial On Deep Learning (&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt 1&lt;/a&gt;, &lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt 2&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;PDF&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
   </channel>

@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Random on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/wikis/random/</link>
+    <link>http://noamswebsite.com/wikis/random/index.xml</link>
     <description>Recent content in Random on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Mar 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/wikis/random/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/wikis/random/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jokes</title>
@@ -17,7 +14,9 @@
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/jokes/</guid>
-      <description>Babies cry and giggle at everything and fall in love with everyone. To Joke is to prod the world.</description>
+      <description>&lt;p&gt;Babies cry and giggle at everything and fall in love with everyone.
+To Joke is to prod the world.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -26,7 +25,10 @@
       <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/mob/</guid>
-      <description>There&amp;rsquo;s a funny contradiction with anti-authoritarians who revel in the chaos of mobs: what more intractably illegitimate form of authority exists than that of a mob?</description>
+      <description>&lt;p&gt;There&amp;rsquo;s a funny contradiction with anti-authoritarians who revel in the
+chaos of mobs: what more intractably illegitimate form of authority exists
+than that of a mob?&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -35,7 +37,42 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/recommended/</guid>
-      <description>Video Talks  Justice: What&amp;rsquo;s the Right Thing To Do?. Provocative Harvard lecture series on Ethics. Robert Sapolsky: The Biology of Human Behavior. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think. John Ioannidis: &amp;ldquo;Reproducible Research: True or False?&amp;rdquo;. Unsettling results: 70%-80% of scientific studies, even from cited, reputable sources, are wrong. On the dangers of ignoring reproducibility in science.</description>
+      <description>
+
+&lt;h2 id=&#34;video-talks&#34;&gt;Video Talks&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/kBdfcR-8hEY&#34;&gt;Justice: What&amp;rsquo;s the Right Thing To Do?&lt;/a&gt;. Provocative Harvard lecture series on Ethics.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;Robert Sapolsky: The Biology of Human Behavior&lt;/a&gt;. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://everythingisaremix.info/&#34;&gt;Everything is a Remix&lt;/a&gt;. &amp;ldquo;There be nothing new, but that which is Hath been before&amp;hellip;&amp;rdquo; (Free) documentary on the history of stealing ideas, and how the current reinterpretation of IP / copyright laws stand in the way of innovation, not help it.&lt;/li&gt;
+&lt;li&gt;Century Of The Self.&lt;/li&gt;
+&lt;li&gt;The Story Of Maths (4 part series).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/7qUKiHZbVwc&#34;&gt;The Human Animal&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Untold History Of The United Stated (series on Netflix).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0262510871&#34;&gt;SICP&lt;/a&gt; (or anything else Sussman).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0393913007&#34;&gt;Norton Anthology of English Literature&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/c1zNqGm&#34;&gt;Principles and Techniques in Combinatorics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/6VMIaQg&#34;&gt;What Is Mathematics?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0387257659&#34;&gt;Putnam and Beyond&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0815344325&#34;&gt;Molecular Biology of the Cell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Meditations of Marcus Aurelius.&lt;/li&gt;
+&lt;li&gt;The Golden Sayings of Epictetus.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/fT21Dzu&#34;&gt;On Crimes And Punishment&lt;/a&gt;, Beccaria (Young translation).&lt;/li&gt;
+&lt;li&gt;On Liberty, John Stuart Mill.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0942299795&#34;&gt;Society Of The Spectacle&lt;/a&gt; (Nicholson translation).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/0578012812&#34;&gt;Getting Real&lt;/a&gt;, Jason Fried&lt;/li&gt;
+&lt;li&gt;Alice in Wonderland / Through the Looking Glass, Lewis Carroll&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/2UH8Udf&#34;&gt;The Trial&lt;/a&gt;, Franz Kafka&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://a.co/genNFo1&#34;&gt;Don Quijote De La Mancha&lt;/a&gt;, Miguel de Cervantes&lt;/li&gt;
+&lt;li&gt;The writings of Hannah Arendt.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://amzn.com/9505156944&#34;&gt;Mafalda&lt;/a&gt; + Other works of Quino.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -44,8 +81,55 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/sweep/</guid>
-      <description>I was on my regular afternoon bike ride when I noticed a crowd of people sweeping the walkways. I leaned my bike on a tree and went to the first man and asked &amp;ldquo;Why do you sweep?&amp;rdquo;
-&amp;ldquo;I sweep because I resign,&amp;rdquo; he said to me.&amp;ldquo;I used to go blue in the face with how dirty these streets were. But it was no use, they paid no attention, and I would go mad each day when upon arriving I would dirty my carpet.</description>
+      <description>&lt;p&gt;I was on my regular afternoon bike ride when I noticed a crowd of people
+sweeping the walkways. I leaned my bike on a tree and  went to the first man and
+asked &amp;ldquo;Why do you sweep?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;I sweep because I resign,&amp;rdquo; he said to me.&amp;ldquo;I used to go blue in the face with
+how dirty these streets were. But it was no use, they paid no attention, and I
+would go mad each day when upon arriving I would dirty my carpet. I swear I was
+losing my mind. I would shout and complain and nobody did a damn thing. Finally
+I resigned to the situation. And I was struck by a notion, that only one thing
+was within my reach to do, and I got myself this broom and since then I keep my
+head down and sweep.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;And what if another walks on your path and muddies it again?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Then I sweep.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I thanked the man and went on to the next one and asked &amp;ldquo;Why do you sweep?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;I sweep because someone has to. I always suspected these streets were not as
+clean as they could be, but none would have it,&amp;rdquo; he answered, then looked both
+ways to check if anyone was eavesdropping before adding &amp;ldquo;downright dirty,
+actually &amp;ndash; and then one day I saw that man over there sweeping. So I got a
+broom and started sweeping too.&amp;rdquo; He paused for a moment, tired, then looked at
+me again with pride: &amp;ldquo;Look how clean my walkway is!&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Moving on, I asked another group of people, further down the crowd why they
+swept: &amp;ldquo;Well, we sweep because it&amp;rsquo;s proper,&amp;rdquo; answered one. &amp;ldquo;We saw those over
+there doing it, and it seemed like a good enough thing to do to join in. The
+streets are much cleaner now, don&amp;rsquo;t you see?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;I walked further into the crowd, some were sweeping more vigorously than others,
+but even the lazy ones stood with brooms in their hands and talked of how much
+they loved to sweep, and again I asked one &amp;ldquo;Why do you sweep?&amp;rdquo; and he said &amp;ldquo;We
+sweep because everyone sweeps. How else do you think these streets would stay so
+clean?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;And a little further down, I asked again and one said to me simply &amp;ldquo;We&amp;rsquo;ve always
+swept.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;At last I was lost in the crowd completely, I couldn&amp;rsquo;t make out my bike or the
+tree in the distance at all. I looked around me and tapped one of the sweeping
+men on the shoulder.  &amp;ldquo;Why do you sweep?&amp;rdquo; I asked.&lt;/p&gt;
+
+&lt;p&gt;For a moment he looked at me as if I was strange, then he paused, and a look of
+worry came to his face &amp;ndash; it was as if he&amp;rsquo;d not even realized he had been
+sweeping all this time! The mere question had snapped him out of a trance.&lt;/p&gt;
+
+&lt;p&gt;Then he was struck by a notion.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -54,7 +138,8 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/completely/</guid>
-      <description>When I die, I hope it&amp;rsquo;s completely.</description>
+      <description>&lt;p&gt;When I die, I hope it&amp;rsquo;s completely.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -63,10 +148,14 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/creative/</guid>
-      <description>Is it courage to, or incapacity not-to?
- The creative person has the courage to experience opposites of his nature and to attempt some reconciliation of them in an individuated expression of himself.
-&amp;ndash; The Creative Architect
- </description>
+      <description>&lt;p&gt;Is it courage to, or incapacity not-to?&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The creative person has the courage to experience opposites of his nature and to attempt some reconciliation of them in an individuated expression of himself.&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash;  &lt;a href=&#34;https://www.brainpickings.org/2016/12/29/the-creative-architect/&#34;&gt;The Creative Architect&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -75,9 +164,12 @@
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/enemy/</guid>
-      <description> If the enemy of your enemy is your friend, then by the transitive property, if any of your enemies are enemies, you are your enemy.
- Unless the friend of your enemy is not your enemy.
-  </description>
+      <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If the enemy of your enemy is your friend, then by the transitive property, if any of your enemies are enemies, you are your enemy.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Unless the friend of your enemy is not your enemy.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
@@ -86,7 +178,48 @@
       <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/books/</guid>
-      <description>There&amp;rsquo;s something about learning from a physical object that makes things &amp;ldquo;click&amp;rdquo; better in my head (it has volume, texture; a particular smell); and I doubt I&amp;rsquo;m an oddity in this respect &amp;ndash; the root of this effect may be biological: For example, when recalling some piece of information, often I can remember where &amp;ndash; within some textbook I read half a decade ago &amp;ndash; the subject is explained. And I do mean, a literal, physical &amp;ldquo;where&amp;rdquo;: a page, (a thing,) which at all times can be found tucked somewhere within a physical stack of bound paper, which I can touch and feel; I might even remember where I was sitting (or standing, or lying), as I held that particular book, open at that page, when I studied the subject, and what it felt like to the touch, and how the lighting in the room fell on the paper; maybe I jotted some note on the margin, maybe I spilled tea on the pages before, giving that &amp;ldquo;where&amp;rdquo; its own unique irregular texture and color &amp;ndash; all of which my brain will forever associate with that information.</description>
+      <description>&lt;p&gt;There&amp;rsquo;s something about learning from a physical object that makes things
+&amp;ldquo;click&amp;rdquo; better in my head (it has volume, texture; a particular smell); and I
+doubt I&amp;rsquo;m an oddity in this respect &amp;ndash; the root of this effect may be
+biological: For example, when recalling some piece of information, often I can
+remember where &amp;ndash; within some textbook I read half a decade ago &amp;ndash; the subject
+is explained. And I do mean, a literal, &lt;em&gt;physical&lt;/em&gt; &amp;ldquo;where&amp;rdquo;: a page, (a
+&lt;em&gt;thing&lt;/em&gt;,) which at all times can be found tucked somewhere within a physical
+stack of bound paper, which I can touch and feel; I might even remember where I
+was sitting (or standing, or lying), as I held that particular book, open at
+that page, when I studied the subject, and what it felt like to the touch, and
+how the lighting in the room fell on the paper; maybe I jotted some note on the
+margin, maybe I spilled tea on the pages before, giving that &amp;ldquo;where&amp;rdquo; its own
+unique irregular texture and color &amp;ndash; all of which my brain will forever
+associate with that information. Digital can&amp;rsquo;t do any of that.&lt;/p&gt;
+
+&lt;p&gt;In this sense, there is nothing left to improve about the physical book.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, if once I open this book I find myself confused, (maybe
+because the book was written by a guy named named Spivak, who does not like to
+explain what happens in between those little &amp;ldquo;=&amp;rdquo; symbols,) I can&amp;rsquo;t press on
+anything and expect it to expand magically and reveal more detail. It&amp;rsquo;s at this
+point that I will turn to my laptop, and search for more information, maybe
+even ask a stranger half a world away, or watch an interactive video. My copy
+of &amp;ldquo;Calculus on Manifolds&amp;rdquo; can&amp;rsquo;t do any of that.&lt;/p&gt;
+
+&lt;p&gt;So even though ebooks do offer some perks, in many ways the printed book
+remains superior. &lt;a
+href=&#34;http://www.nytimes.com/2015/09/23/business/media/the-plot-twist-e-book-sales-slip-and-print-is-far-from-dead.html&#34;&gt;I
+think it&amp;rsquo;s a safe bet that books aren&amp;rsquo;t going anywhere&lt;/a&gt;. Radio did not
+replace print, TV did not replace radio. (Interactive did not replace passive;
+print did not replace the spoken word.) Each of these media is better suited
+for different tasks.&lt;/p&gt;
+
+&lt;p&gt;(I also still find that the best way to solve a problem (even a programming
+problem), is with pen and paper. Physically jotting down an idea beats pressing
+buttons while staring at an obnoxious, headache-inducing glowing screen any
+time (which I try to avoid as much as possible, even as a software developer).
+To me flipping pages still beats searching and clicking &amp;ndash; what a dreadful user
+experience is a digital textbook!)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/quijote.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -95,7 +228,16 @@
       <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/stones/</guid>
-      <description>I was at the lake last Summer. I picked a mossy old bench to sit, when a group of adolescents gathered to throw stones into the water. For an hour they busied around, making loud gestures and arguing over whose stone made the bigger splash. They would try every angle, and then bicker about which one spattered out the widest, or which one sent the water flying the highest, and how could they agree on what they&amp;rsquo;d seen if in a moment it was gone?</description>
+      <description>&lt;p&gt;I was at the lake last Summer. I picked a mossy old bench to sit, when a group
+of adolescents gathered to throw stones into the water.  For an hour they busied
+around, making loud gestures and arguing over whose stone made the bigger
+splash.  They would try every angle, and then bicker about which one spattered
+out the widest, or which one sent the water flying the highest, and how could
+they agree on what they&amp;rsquo;d seen if in a moment it was gone? Finally they
+approached me hoping I would settle their dispute, but I&amp;rsquo;d not seen the water
+splash&amp;ndash; they scoffed, frustrated, and went on their way, and I was free to
+continue watching the ripples that now adorned the surface of the lake.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

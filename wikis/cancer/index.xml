@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cancer on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/wikis/cancer/index.xml</link>
+    <description>Recent content in Cancer on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/wikis/cancer/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Science Resources</title>
+      <link>http://noamswebsite.com/wiki-main/science/science_resources/</link>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
+      <description>
+
+&lt;h2 id=&#34;biology&#34;&gt;Biology&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Robert Sapolsky: The Biology Of Human Behavior&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;YouTube&lt;/a&gt; lecture series&lt;/td&gt;
+&lt;td&gt;You are not in control.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Molecular Biology Of the Cell&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/ap9m9UD&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;cancer&#34;&gt;Cancer&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;The Biology Of Cancer&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/cj4bhIS&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Optimising Combination Dosing Strategy Of Abemaciclib And Vemurafenib In BRAF-Mutated Melanoma tumours&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.nature.com/bjc/journal/v114/n6/full/bjc201640a.html&#34;&gt;HTML&lt;/a&gt; (full paper)&lt;/td&gt;
+&lt;td&gt;Interesting findings for using intermittent dosing to extend the effectiveness of targeted therapies.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
