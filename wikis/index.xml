@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wikis on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/wikis/</link>
+    <description>Recent content in Wikis on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/wikis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Career</title>
+      <link>http://noamswebsite.com/wikis/career/</link>
+      <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/career/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computers</title>
+      <link>http://noamswebsite.com/wikis/computers/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/computers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Datascience</title>
+      <link>http://noamswebsite.com/wikis/datascience/</link>
+      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/datascience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>http://noamswebsite.com/wikis/math/</link>
+      <pubDate>Tue, 08 Dec 2015 17:45:08 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quotes</title>
+      <link>http://noamswebsite.com/wikis/quotes/</link>
+      <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>http://noamswebsite.com/wikis/random/</link>
+      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/random/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>http://noamswebsite.com/wikis/writing/</link>
+      <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/writing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

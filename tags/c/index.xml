@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/c/index.xml</link>
+    <link>http://noamswebsite.com/tags/c/</link>
     <description>Recent content in C on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cool Articles / Papers</title>
@@ -14,49 +17,7 @@
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/cool_articles/</guid>
-      <description>
-
-&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://viewsourcecode.org/snaptoken/kilo/&#34;&gt;Build Your Own Text Editor&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Really great tutorial (and introduction to C programming and terminal programming)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.unm.edu/~crowley/papers/sds.pdf&#34;&gt;Data Structures For Text Sequences&lt;/a&gt; (&lt;strong&gt;PDF&lt;/strong&gt;)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;crypto&#34;&gt;Crypto&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Efficient Data Structures for Tamper-Evident Logging (&lt;a href=&#34;http://people.cs.vt.edu/danfeng/courses/cs6204/sp10-papers/crosby.pdf&#34;&gt;PDF&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;Youtube talk &lt;a href=&#34;https://youtu.be/G0tkCxq9OuE&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description> General    Title Notes     Build Your Own Text Editor Really great tutorial (and introduction to C programming and terminal programming)   Data Structures For Text Sequences (PDF)     Crypto    Title Notes     Efficient Data Structures for Tamper-Evident Logging (PDF) Youtube talk here    </description>
     </item>
     
   </channel>

@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Startups on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/startups/index.xml</link>
+    <link>http://noamswebsite.com/tags/startups/</link>
     <description>Recent content in Startups on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/tags/startups/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/startups/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Startup Resources</title>
@@ -14,22 +17,7 @@
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/startup_resources/</guid>
-      <description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d&#34;&gt;What I Wish I&amp;rsquo;d Known Before Joining A Unicorn&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>   Title Format     What I Wish I&amp;rsquo;d Known Before Joining A Unicorn HTML    </description>
     </item>
     
   </channel>
