@@ -96,6 +96,38 @@
 
 &lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
 GC.&lt;/p&gt;
+
+&lt;h2 id=&#34;low-level-programming&#34;&gt;Low Level Programming&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Embedded Systems: Introduction To ARM Cortex-M Microcontrollers (5&lt;sup&gt;th&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/03pd6u0&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Computer Systems: A Programming Perspective, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/7W4IMFZ&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/jloJHt7&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Memory Accessing Alignment</title>
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-89673307-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript"
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  
+  <script>
+    MathJax.Hub.Config({
+      preRemoveClass: "mj",
+      tex2jax: {
+        inlineMath: [['$','$']],
+        processEscapes: true
+      },
+      CommonHTML: { linebreaks: { automatic: true } },
+      "HTML-CSS": { linebreaks: { automatic: true } },
+             SVG: { linebreaks: { automatic: true } }
+    });
+  </script>
+
+
+	
+	
+	<link rel="stylesheet" href="http://noamswebsite.com/css/bootstrap-grid.css">
+	<link rel="stylesheet" href="http://noamswebsite.com/css/style.css">
+	
+	<meta name="generator" content="Hugo 0.18" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="main-title"><a href="http://noamswebsite.com/">Noam&#39;s Website About Software</a></h1>
+    </header>
+
+  <div>
+    
+      <small>
+      <strong>Back to wiki:</strong>
+      
+        
+        <a href="/wikis/computers">computers</a>
+      
+      </small>
+    
+  </div>
+
+  
+    <main>
+  
+		<article>
+			<h1 class="article-title">Memory Accessing Alignment</h1>
+      <div class="article-date">
+        Published: <time>2017-04-12</time>
+      </div>
+			<div>
+				
+
+<p>For any data type that requires <code>N</code> bytes, its starting address should be a
+multiple of <code>N</code>. In most <code>x86</code> processors the memory interface is designed to
+read/write blocks that are 8 or 16 bytes long<sup>2</sup>.</p>
+
+<blockquote>
+<p><em>Unaligned memory accesses</em> occur when you try to read <code>N</code> bytes of data
+starting from an address that is not evenly divisible by <code>N</code> (i.e. <code>addr % N
+!= 0</code>).  For example, reading 4 bytes of data from address <code>0x10004</code> is fine,
+but reading 4 bytes of data from address <code>0x10005</code> would be an unaligned
+memory access <sup>6</sup>.</p>
+</blockquote>
+
+<p>Unaligned access may allow the program to use less
+memory<sup>1</sup>, but it has many drawbacks:</p>
+
+<blockquote>
+<p>The effects of performing an unaligned memory access vary from architecture
+to architecture. A summary of the common scenarios:</p>
+
+<ul>
+<li>Some architectures are able to perform unaligned memory accesses
+transparently, but there is usually a significant performance cost.</li>
+<li>Some architectures raise processor exceptions when unaligned accesses
+happen. The exception handler is able to correct the unaligned access, at
+significant cost to performance.</li>
+<li>Some architectures raise processor exceptions when unaligned accesses
+happen, but the exceptions do not contain enough information for the
+unaligned access to be corrected.</li>
+<li>Some architectures are not capable of unaligned memory access, but will
+silently perform a different memory access to the one that was requested,
+resulting in a subtle code bug that is hard to detect!</li>
+</ul>
+
+<p>If your code causes unaligned memory accesses to happen, your code will not
+work correctly on certain platforms and will cause performance problems on
+others <sup>6</sup>.</p>
+</blockquote>
+
+<h2 id="example">Example</h2>
+
+<p>Consider a bitmap data structure where each pixel is represented by 3 bytes (RGB). In order to preserve alignment we add a &ldquo;padding byte&rdquo;<sup>3</sup>, making the structure 32 bits instead of 24:</p>
+
+<pre><code>+---------------+---------------+---------------+---------------+
+| : : : : : : : | : : : : : : : | : : : : : : : | : : : : : : : |
++---------------+---------------+---------------+---------------+
+     Red             Green           Blue            Padding
+</code></pre>
+
+<p>This consumes more memory, but is ideally more performant. Of course, YMMV<sup>5</sup>.</p>
+
+<hr />
+
+<p><small></p>
+
+<ol>
+<li><em>Introduction To ARM Cortex-M Microcontrollers</em> (5<sup>th</sup> Ed.), p. 96.</li>
+<li><em>Computer Systems: A Programming Perspective</em> (2<sup>nd</sup> Ed.), p. 290.</li>
+<li><a href="https://youtu.be/hNKU8Jiza2g?t=5m19s"><em>Handmande Hero, Day 004</em></a> (t. 5:19).</li>
+<li><em>21<sup>st</sup> Century C</em>, (2<sup>nd</sup> Ed.), p. 137.</li>
+<li><a href="http://lemire.me/blog/2012/05/31/data-alignment-for-speed-myth-or-reality/">Data Alignment For Speed: Myth Or Reality?</a>.</li>
+<li><a href="https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt">Kernel.org: Unaligned Memory Access</a>.</li>
+</ol>
+
+<p></small></p>
+
+			</div>
+		</article>
+
+    <hr>
+
+    <div>
+      
+        <strong>Tags:</strong>
+        
+          
+          <a href="/tags/c">c</a>
+        
+          ,
+          
+          <a href="/tags/lowlevel">lowlevel</a>
+        
+          ,
+          
+          <a href="/tags/performance">performance</a>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <hr>
+
+    <div>
+      
+    </div>
+	</main>
+
+    <footer>
+      <p>&copy; 2017 <a href="http://noamswebsite.com/">Noam
+      Gagliardi-Rabinovich</a></p>
+
+      <p>
+        <small>
+          Website is built with Hugo static site generator. Full source
+          available <a
+          href="here](https://github.com/noam87/noamswebsite">here</a> and
+          generated HTML available
+          <a href="https://github.com/noam87/noam87.github.io">here</a>.
+        </small>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
+

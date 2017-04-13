@@ -34,6 +34,12 @@ table {
 
 thead {
   border-bottom: 2px solid black;
+  background-color: #446;
+  color: white;
+}
+
+tbody {
+  background-color: #EEF;
 }
 
 th, td {

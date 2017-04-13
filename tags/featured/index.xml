@@ -659,7 +659,8 @@ click any given link (with likelihood $\frac{1-\alpha}{n}$), while $S$ is
 dampened by a factor of $\alpha$.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Google uses a damping factor of 0.85. For more on this, I found &lt;a href=&#34;http://noamswebsite.com/eigenpaper&#34;&gt;this paper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Google uses a damping factor of 0.85. For more on this, I found &lt;a href=&#34;http://noamswebsite.com/eigenpaper&#34;&gt;this
+paper&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; the second eigenvalue of a Google matrix is $|\lambda_2| = \alpha
 \le |\lambda_1| = 1 $, and the rate of convergence of the power iteration is

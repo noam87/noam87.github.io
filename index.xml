@@ -10,6 +10,81 @@
     <atom:link href="http://noamswebsite.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Memory Accessing Alignment</title>
+      <link>http://noamswebsite.com/wiki-main/computers/alignment/</link>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/alignment/</guid>
+      <description>
+
+&lt;p&gt;For any data type that requires &lt;code&gt;N&lt;/code&gt; bytes, its starting address should be a
+multiple of &lt;code&gt;N&lt;/code&gt;. In most &lt;code&gt;x86&lt;/code&gt; processors the memory interface is designed to
+read/write blocks that are 8 or 16 bytes long&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Unaligned memory accesses&lt;/em&gt; occur when you try to read &lt;code&gt;N&lt;/code&gt; bytes of data
+starting from an address that is not evenly divisible by &lt;code&gt;N&lt;/code&gt; (i.e. &lt;code&gt;addr % N
+!= 0&lt;/code&gt;).  For example, reading 4 bytes of data from address &lt;code&gt;0x10004&lt;/code&gt; is fine,
+but reading 4 bytes of data from address &lt;code&gt;0x10005&lt;/code&gt; would be an unaligned
+memory access &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Unaligned access may allow the program to use less
+memory&lt;sup&gt;1&lt;/sup&gt;, but it has many drawbacks:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The effects of performing an unaligned memory access vary from architecture
+to architecture. A summary of the common scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Some architectures are able to perform unaligned memory accesses
+transparently, but there is usually a significant performance cost.&lt;/li&gt;
+&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
+happen. The exception handler is able to correct the unaligned access, at
+significant cost to performance.&lt;/li&gt;
+&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
+happen, but the exceptions do not contain enough information for the
+unaligned access to be corrected.&lt;/li&gt;
+&lt;li&gt;Some architectures are not capable of unaligned memory access, but will
+silently perform a different memory access to the one that was requested,
+resulting in a subtle code bug that is hard to detect!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If your code causes unaligned memory accesses to happen, your code will not
+work correctly on certain platforms and will cause performance problems on
+others &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;Consider a bitmap data structure where each pixel is represented by 3 bytes (RGB). In order to preserve alignment we add a &amp;ldquo;padding byte&amp;rdquo;&lt;sup&gt;3&lt;/sup&gt;, making the structure 32 bits instead of 24:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------+---------------+---------------+---------------+
+| : : : : : : : | : : : : : : : | : : : : : : : | : : : : : : : |
++---------------+---------------+---------------+---------------+
+     Red             Green           Blue            Padding
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This consumes more memory, but is ideally more performant. Of course, YMMV&lt;sup&gt;5&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Introduction To ARM Cortex-M Microcontrollers&lt;/em&gt; (5&lt;sup&gt;th&lt;/sup&gt; Ed.), p. 96.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Computer Systems: A Programming Perspective&lt;/em&gt; (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 290.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/hNKU8Jiza2g?t=5m19s&#34;&gt;&lt;em&gt;Handmande Hero, Day 004&lt;/em&gt;&lt;/a&gt; (t. 5:19).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C&lt;/em&gt;, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 137.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lemire.me/blog/2012/05/31/data-alignment-for-speed-myth-or-reality/&#34;&gt;Data Alignment For Speed: Myth Or Reality?&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt&#34;&gt;Kernel.org: Unaligned Memory Access&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Science Resources</title>
       <link>http://noamswebsite.com/wiki-main/science/science_resources/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
@@ -185,6 +260,38 @@ make over &lt;strong&gt;\$30_000&lt;/strong&gt;, register for an HST account &lt
 
 &lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
 GC.&lt;/p&gt;
+
+&lt;h2 id=&#34;low-level-programming&#34;&gt;Low Level Programming&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Embedded Systems: Introduction To ARM Cortex-M Microcontrollers (5&lt;sup&gt;th&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/03pd6u0&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Computer Systems: A Programming Perspective, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/7W4IMFZ&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/jloJHt7&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     
@@ -870,142 +977,6 @@ Turning clay to dust again
 &lt;p&gt;All of humanity&amp;rsquo;s problems stem from man&amp;rsquo;s inability to sit quietly in a room
 alone.&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Epictetus</title>
-      <link>http://noamswebsite.com/q/epictetus/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/epictetus/</guid>
-      <description>
-
-&lt;h2 id=&#34;enchiridion&#34;&gt;Enchiridion&lt;/h2&gt;
-
-&lt;h3 id=&#34;x&#34;&gt;X&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;On the occasion of every accident (event) that befalls you, remember to turn
-to yourself and inquire what power you have for turning it to use. If you see
-a fair man or a fair woman, you will find that the power to resist is
-temperance (continence). If labour (pain) be presented to you, you will find
-that it is endurance. If it be abusive words, you will find it to be
-patience. And if you have been thus formed to the (proper) habit, the
-appearances will not carry you along with them.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xi&#34;&gt;XI&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Never say about any thing, I have lost it, but say I have restored it. Is
-your child dead? It has been restored. Is your wife dead? She has been
-restored. Has your estate been taken from you? Has not then this also been
-restored? But he who has taken it from me is a bad man. But what is it to
-you, by whose hands the giver demanded it back? So long as he may allow you,
-take care of it as a thing which belongs to another, as travellers do with
-their inn.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xvii&#34;&gt;XVII&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Remember that thou art an actor in a play, of such a kind as the teacher
-(author) may choose; if short, of a short one; if long, of a long one: if he
-wishes you to act the part of a poor man, see that you act the part
-naturally; if the part of a lame man, of a magistrate, of a private person,
-(do the same). For this is your duty, to act well the part that is given to
-you; but to select the part, belongs to another.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xxi&#34;&gt;XXI&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Let death and exile and every other thing which appears dreadful be daily
-before your eyes; but most of all death: and you will never think of any
-thing mean nor will you desire any thing extravagantly.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xxiii&#34;&gt;XXIII&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If a man has reported to you, that a certain person speaks ill of you, do not
-make any defence to what has been told you: but reply, The man did
-not know the rest of my faults, for he would not have mentioned these only.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xxxv&#34;&gt;XXXV&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;When you have decided that a thing ought to be done and are doing it, never
-avoid being seen doing it, though the many shall form an unfavourable opinion
-about it. For if it is not right to do it, avoid doing the thing; but if it
-is right, why are you afraid of those who shall find fault wrongly?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xvii-1&#34;&gt;XVII&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;If you have assumed a character above your strength, you have both acted in
-this matter in an unbecoming way, and you have neglected that which you might
-have fulfilled.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xliii&#34;&gt;XLIII&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Every thing has two handles, the one by which it may be borne, the other by
-which it may not. If your brother acts unjustly, do not lay hold of the act
-by that handle wherein he acts unjustly, for this is the handle which cannot
-be borne: but lay hold of the other, that he is your brother, that he was
-nurtured with you, and you will lay hold of the thing by that handle by which
-it can be borne.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xlvi&#34;&gt;XLVI&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;On no occasion call yourself a philosopher, and do not speak much among the
-uninstructed about theorems (philosophical rules, precepts): but do that
-which follows from them. For example at a banquet do not say how a man ought
-to eat, but eat as you ought to eat. For remember that in this way Socrates
-also altogether avoided ostentation: persons used to come to him and ask to
-be recommended by him to philosophers, and he used to take them to
-philosophers: so easily did he submit to being overlooked. Accordingly if any
-conversation should arise among uninstructed persons about any theorem,
-generally be silent; for there is great danger that you will immediately
-vomit up what you have not digested. And when a man shall say to you, that
-you know nothing, and you are not vexed, then be sure that you have begun the
-work (of philosophy). For even sheep do not vomit up their grass and show to
-the shepherds how much they have eaten; but when they have internally
-digested the pasture, they produce externally wool and milk. Do you also show
-not your theorems to the uninstructed, but show the acts which come from
-their digestion.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&#34;xlviii&#34;&gt;XLVIII&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The condition and characteristic of an uninstructed person is this: he never
-expects from himself profit (advantage) nor harm, but from externals. The
-condition and characteristic of a philosopher is this: he expects all
-advantage and all harm from himself. The signs (marks) of one who is making
-progress are these: he censures no man, he praises no man, he blames no man,
-he accuses no man, he says nothing about himself as if he were somebody or
-knew something; when he is impeded at all or hindered, he blames himself: if
-a man praises him, he ridicules the praiser to himself: if a man censures
-him, he makes no defence: he goes about like weak persons, being careful not
-to move any of the things which are placed, before they are firmly fixed: he
-removes all desire from himself, and he transfers aversion
-(ἔκκλισιν)&lt;sup&gt;1&lt;/sup&gt; to those things only of the things within our power
-which are contrary to nature: he employs a moderate movement towards every
-thing: whether he is considered foolish or ignorant, he cares not: and in a
-word he watches himself as if he were an enemy and lying in ambush.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;small&gt;&lt;pre&gt;
-1) Turning of one&amp;rsquo;s course, deflexion.
-&lt;pre&gt;&lt;/small&gt;&lt;/p&gt;
 </description>
     </item>
     

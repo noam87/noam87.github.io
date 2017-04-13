@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/wiki-main/computers/alignment/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/wiki-main/science/science_resources/</loc>
     <lastmod>2017-04-12T00:00:00+00:00</lastmod>
   </url>
@@ -274,20 +279,20 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/biology/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/wikis/biology/</loc>
     <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/biology/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/tags/c/</loc>
-    <lastmod>2017-04-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -328,14 +333,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/computers/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/computers/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-04-11T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/computers/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -436,6 +441,18 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/lowlevel/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/math/</loc>
+    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/tags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -444,12 +461,6 @@
   <url>
     <loc>http://noamswebsite.com/rtags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/wikis/math/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -486,6 +497,12 @@
   <url>
     <loc>http://noamswebsite.com/rtags/pascal/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/tags/performance/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -537,14 +554,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/science/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/science/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/science/</loc>
-    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/science/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
