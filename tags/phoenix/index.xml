@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Phoenix on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/phoenix/index.xml</link>
+    <link>http://noamswebsite.com/tags/phoenix/</link>
     <description>Recent content in Phoenix on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/tags/phoenix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2017 16:11:51 -0500</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/phoenix/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Elixir/Erlang Resources</title>
@@ -14,128 +17,8 @@
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;learning&#34;&gt;Learning&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt; (book)&lt;/td&gt;
-&lt;td&gt;My go-to recommendation for getting started with Elixir.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://medium.com/@diamondgfx/introduction-fe138ac6079d&#34;&gt;Writing A Blog Engine in Phoenix&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.erlang-in-anger.com/&#34;&gt;Erlang In Anger&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Great guide for when stuff goes bad.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;memory-gc&#34;&gt;Memory / GC&lt;/h2&gt;
-
-&lt;p&gt;For articles on GC / compilers in general see &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/compilers&#34;&gt;compilers&lt;/a&gt; section.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Scheduler Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang%20garbage%20collection%20memory%20layout%20soft%20realtime/2015/08/24/erlang-garbage-collection-details-and-why-it-matters.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Simple introduction to Erlang GC concepts. Start here.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.erlang-solutions.com/blog/erlang-19-0-garbage-collector.html&#34;&gt;Erlang 19.0 Garbage Collector&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://erlang.org/doc/efficiency_guide/introduction.html&#34;&gt;Erlang Efficiency Guide&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://blog.bugsense.com/post/74179424069/erlang-binary-garbage-collection-a-lovehate&#34;&gt;Erlang Binary Garbage Collection: A love/hate relationship&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Some findings on the shared heap GC.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt; (pdf)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.evanmiller.org/elixir-ram-and-the-template-of-doom.html&#34;&gt;Elixir RAM And The Template Of Doom&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/&#34;&gt;Elixir and IO Lists, Part 1: Building Output Efficiently&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;performance-tips&#34;&gt;Performance Tips&lt;/h2&gt;
-
-&lt;p&gt;Don&amp;rsquo;t have processes the many other processes depend on. For example, a
-single-process cache that many others call to. This will be a bottleneck
-because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn from the scheduler.&lt;/p&gt;
-</description>
+      <description>Learning    Title Notes     Elixir In Action (book) My go-to recommendation for getting started with Elixir.   Writing A Blog Engine in Phoenix Great first tutorial for Phoenix framework   Erlang In Anger Great guide for when stuff goes bad.    Memory / GC For articles on GC / compilers in general see compilers section.
+   Title Notes     Erlang Scheduler Details and Why It Matters    Erlang Garbage Collection Details and Why It Matters Simple introduction to Erlang GC concepts.</description>
     </item>
     
     <item>
@@ -144,161 +27,11 @@ because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn f
       <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</guid>
-      <description>
-
-&lt;p&gt;First, create umbrella application:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix new --umbrella my_app
-$ cd my_app/apps
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next create Phoenix app, excluding Ecto:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix phoenix.new web --no-ecto
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we create a new mix project for Ecto, with supervision tree:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix new db --sup
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally we need to set up some configuration files.&lt;/p&gt;
-
-&lt;h2 id=&#34;setting-up-db-project&#34;&gt;Setting Up Db Project&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd db
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;First in the &lt;code&gt;db&lt;/code&gt; project (following the
-&lt;a href=&#34;https://hexdocs.pm/ecto/getting-started.html&#34;&gt;getting started&lt;/a&gt; docs for Ecto:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;mix.exs&lt;/code&gt;&lt;/strong&gt; (note that we do not need to register &lt;code&gt;:ecto&lt;/code&gt; application)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  def application do
-    [applications: [:logger, :postgrex],
-     mod: {Db, []}]
-  end
-
-  defp deps do
-    [{:postgrex, &amp;quot;~&amp;gt; 0.13.0&amp;quot;},
-     {:ecto, &amp;quot;~&amp;gt; 2.1.1&amp;quot;}]
-  end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run configuration by running:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix ecto.gen.repo -r Db.Repo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will populate &lt;code&gt;lib/db/repo.ex&lt;/code&gt; and  &lt;code&gt;config.config.exs&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;lib/db.ex&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;children = [
-  supervisor(Db.Repo, [])
-]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;optional&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;We probably want configs for multiple environments.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/config.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Uncomment the last line, or replace the contents of the file with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;use Mix.Config
-
-config :db,
-  ecto_repos: [Db.Repo]
-
-# Import environment specific config. This must remain at the bottom
-# of this file so it overrides the configuration defined above.
-import_config &amp;quot;#{Mix.env}.exs&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will load environment-specific configs.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/dev.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;use Mix.Config
-
-config :db, Db.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: &amp;quot;foo&amp;quot;,
-  database: &amp;quot;myproject_dev&amp;quot;,
-  hostname: &amp;quot;localhost&amp;quot;,
-  pool_size: 10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/test.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;use Mix.Config
-
-config :db, Db.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: &amp;quot;foo&amp;quot;,
-  password: &amp;quot;12345&amp;quot;,
-  database: &amp;quot;myproject_test&amp;quot;,
-  hostname: &amp;quot;localhost&amp;quot;,
-  pool: Ecto.Adapters.SQL.Sandbox
-
-config :logger,
-  backends: [:console],
-  compile_time_purge_level: :debug
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;set-up-phoenix-app&#34;&gt;Set Up Phoenix App&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd ../web
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;mix.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  def application do
-    [mod: {Web, []},
-     applications: [:phoenix_ecto, :db]]
-  end
-
-  defp deps do
-    [{:phoenix_ecto, &amp;quot;~&amp;gt; 3.2.1&amp;quot;},
-     {:db, in_umbrella: true}]
-  end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/config.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config :web,
-  ecto_repos: [Db.Repo]
-
-# Configure phoenix generators
-config :phoenix, :generators,
-  migration: false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;From now on, when running &lt;code&gt;mix phoenix.gen.html&lt;/code&gt; or &lt;code&gt;mix phoenix.gen.json&lt;/code&gt;,
-pass the &lt;code&gt;--no-model&lt;/code&gt; option. (&lt;strong&gt;update:&lt;/strong&gt; see question below.)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Since app is umbrella app now, remember to &lt;code&gt;cd&lt;/code&gt; into phoenix app directory
-before running generators, or files will be generated at umbrella&amp;rsquo;s top level.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Is it there a way to make it so that there&amp;rsquo;s no need for &lt;code&gt;--no-model&lt;/code&gt; option
-every time?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;config :phoenix, :generators, model: false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Answer provided by the man himself :)
-&lt;a href=&#34;https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22&#34;&gt;https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>First, create umbrella application:
+$ mix new --umbrella my_app $ cd my_app/apps  Next create Phoenix app, excluding Ecto:
+$ mix phoenix.new web --no-ecto  Now we create a new mix project for Ecto, with supervision tree:
+$ mix new db --sup  Finally we need to set up some configuration files.
+Setting Up Db Project $ cd db  First in the db project (following the getting started docs for Ecto:</description>
     </item>
     
   </channel>
