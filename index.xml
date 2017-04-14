@@ -390,10 +390,10 @@ I wrote this macro this afternoon that implements both atomic and non-atomic cal
       <pubDate>Thu, 14 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/r/problem/</guid>
-      <description>Sumebody submitted to Hacker New this thing where the only rule is &amp;ldquo;You can&amp;rsquo;t use the letter &amp;lsquo;e&amp;rsquo;.&amp;rdquo;
+      <description>Sumebody submitted to Hacker News this thing where the only rule is &amp;ldquo;You can&amp;rsquo;t use the letter &amp;lsquo;e&amp;rsquo;.&amp;rdquo;
 On may writ lik this.  Or
 You can simply pick words without it.  Here&amp;rsquo;s an nteresting puzzle:
-One can leave out one letter, &amp;ldquo;e&amp;rdquo;, then another, and measure at what rate does understandability decrease for people (until eventually it&amp;rsquo;s complete gibberish). Also, given a large enough audience, one could try different combinations of letter order and distribute those randomly, and measure the same&amp;hellip; the question being:</description>
+One can leave out one letter, &amp;ldquo;e&amp;rdquo;, then another, then another&amp;hellip; and measure at what rate does understandability decrease for people (until eventually it&amp;rsquo;s complete gibberish). Also, given a large enough audience, one could try different combinations of letter-removal order and distribute those randomly, and measure the same&amp;hellip; the question being:</description>
     </item>
     
     <item>
