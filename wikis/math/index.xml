@@ -9,6 +9,52 @@
     <atom:link href="http://noamswebsite.com/wikis/math/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Information Theory Overview</title>
+      <link>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
+      <description>&lt;p&gt;Roadmap based on &lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;youtube introductory series&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;blank&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Compression&lt;/strong&gt; (efficiency, source coding)&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Error Correction&lt;/strong&gt; (reliability, channel coding)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Information Theory (Math)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Losless:&lt;/strong&gt; source coding theorem,  Kraft-McMillan inequality&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Lossy:&lt;/strong&gt; rate distortion theorem&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Coding Methods (algorithms)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Symbol Code:&lt;/strong&gt; Huffman codes&lt;/td&gt;
+&lt;td&gt;Hamming codes, BCH codes, Turbocodes, Gallager codes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Stream Codes:&lt;/strong&gt; arithmetic coding&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Math/ML Resources</title>
       <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
       <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>

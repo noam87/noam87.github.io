@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Informationtheory on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/tags/informationtheory/index.xml</link>
+    <description>Recent content in Informationtheory on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://noamswebsite.com/tags/informationtheory/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Information Theory Overview</title>
+      <link>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
+      <description>&lt;p&gt;Roadmap based on &lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;youtube introductory series&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;blank&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Compression&lt;/strong&gt; (efficiency, source coding)&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Error Correction&lt;/strong&gt; (reliability, channel coding)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Information Theory (Math)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Losless:&lt;/strong&gt; source coding theorem,  Kraft-McMillan inequality&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Lossy:&lt;/strong&gt; rate distortion theorem&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Coding Methods (algorithms)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Symbol Code:&lt;/strong&gt; Huffman codes&lt;/td&gt;
+&lt;td&gt;Hamming codes, BCH codes, Turbocodes, Gallager codes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Stream Codes:&lt;/strong&gt; arithmetic coding&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Math/ML Resources</title>
+      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
+      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
+      <description>
+
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Probability Through Problems&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://archive.org/details/springer_10.1007-978-0-387-21659-1&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/chcB92K&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Best introductory probability book out there. Learn by discovering!&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Principles And Techniques In Combinatorics&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/2gz4ZXD&#34;&gt;BOOK&lt;/a&gt; ; &lt;a href=&#34;http://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/26781/Principles%20and%20Techniques%20in%20Combinatorics.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Beautiful book: simple, clear explanations, no filler, challenging problems&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;computer-science&#34;&gt;Computer Science&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Information Theory And Coding&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;YouTube Lectures&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Elements Of Information Theory (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://staff.ustc.edu.cn/~cgong821/Wiley.Interscience.Elements.of.Information.Theory.Jul.2006.eBook-DDU.pdf&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/dHvNEwV&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A Tutorial On Deep Learning (&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt 1&lt;/a&gt;, &lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt 2&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;PDF&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

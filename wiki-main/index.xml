@@ -6,8 +6,54 @@
     <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Information Theory Overview</title>
+      <link>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
+      <description>&lt;p&gt;Roadmap based on &lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;youtube introductory series&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;blank&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Compression&lt;/strong&gt; (efficiency, source coding)&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Error Correction&lt;/strong&gt; (reliability, channel coding)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Information Theory (Math)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Losless:&lt;/strong&gt; source coding theorem,  Kraft-McMillan inequality&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Lossy:&lt;/strong&gt; rate distortion theorem&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Coding Methods (algorithms)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Symbol Code:&lt;/strong&gt; Huffman codes&lt;/td&gt;
+&lt;td&gt;Hamming codes, BCH codes, Turbocodes, Gallager codes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Stream Codes:&lt;/strong&gt; arithmetic coding&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
     
     <item>
       <title>Memory Accessing Alignment</title>
@@ -1906,69 +1952,6 @@ function score() {
 score();
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Amdahl&#39;s Law</title>
-      <link>http://noamswebsite.com/wiki-main/computers/amdahls_law/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/amdahls_law/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;As multicore computing becomes the norm (even my phone is dual core!), it&amp;rsquo;s important to understand the benefits and also the limitations of concurrency. Amdahl&amp;rsquo;s Law addresses the latter.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Let&amp;rsquo;s imagine a simple program. It prints &amp;ldquo;Hello World&amp;rdquo; 100 times, then quits.&lt;/p&gt;
-
-&lt;p&gt;Our first version of the program is written as a single sequential task: it prints one &amp;ldquo;Hello World&amp;rdquo;, then another, then another, 100 times, then quits.  This program takes some unit of time, $t$ to execute.&lt;/p&gt;
-
-&lt;p&gt;Now say we have a dual-core machine at hand. (My phone, perhaps).&lt;/p&gt;
-
-&lt;p&gt;Cool, now we can spawn &lt;em&gt;two&lt;/em&gt; tasks that print &amp;ldquo;Hello World&amp;rdquo; 50 times each. And, because our magical imaginary computer experiences no overhead, it takes us exactly $\frac{ t }{ 2 }$ units of time to run our second program.&lt;/p&gt;
-
-&lt;p&gt;So we keep adding more and more processors, until we have 100 concurrent threads printing one &amp;ldquo;Hello World&amp;rdquo; each, and our program runs 100 times faster.&lt;/p&gt;
-
-&lt;p&gt;At this point we stop: &amp;ldquo;Ah, the trend is clear: more processors equals more speed! No point in continuing this experiment.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A naive (wrong) first guess:&lt;/strong&gt; Given $n$ processors executing a program, the maximum boost in speed is $n$. (That is, we can get our program to run $n$ times faster).&lt;/p&gt;
-
-&lt;p&gt;Cool! This means that, given enough processors, we could make &lt;em&gt;any&lt;/em&gt; program run almost instantly. Right?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/more_cores.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href=&#34;http://forums.pureoverclock.com/amd/21809-rumor-mill-amd-iv-x12-170-12-cores-24mb-cache-6ghz-2.html#post169754&#34;&gt;Pic original source&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Of course this is not the case! Enough daydreaming. Let&amp;rsquo;s figure out a more  realistic estimate.&lt;/p&gt;
-
-&lt;p&gt;Let $P$ be the proportion of our program that can run in parallel. Then it follows that $1 - P$ is the proportion that cannot be broken up into independent tasks.&lt;/p&gt;
-
-&lt;p&gt;For example, since our program can be broken up into 100 independent tasks, then $1 - P = \frac{ 1 }{ 100 }$.&lt;/p&gt;
-
-&lt;p&gt;It follows that the maximum boost in speed (denoted $S(n)$) that we can expect out of assigning concurrent tasks to $n$ parallel processors can be represented by the following equation:&lt;/p&gt;
-
-&lt;p&gt;$$S(n) = \frac{ 1 }{ (1 - P) + \frac{ P }{ n } }$$&lt;/p&gt;
-
-&lt;p&gt;This is, in fact, Amdahl&amp;rsquo;s equation.&lt;/p&gt;
-
-&lt;p&gt;Uh-oh&amp;hellip; do you see it? As we add more and more processors to our computer, and $n \to \infty$, we are left with $ S =  \frac{ 1 }{ 1 - p }$.&lt;/p&gt;
-
-&lt;p&gt;What we have here is a clear case of &lt;em&gt;diminishing returns.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;How bad is it?  Let&amp;rsquo;s add &lt;em&gt;one million cores&lt;/em&gt; to our imaginary computer, and measure its performance at $gc = 99\%$:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/99pc.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Well, for our imaginary software, 99% of which can be parallelized, we can expect a maximum boost of $ S = 100$.&lt;/p&gt;
-
-&lt;p&gt;What about a program with $gc = 90\%$?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/90pc.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s that same plateau again. But this time we&amp;rsquo;re only seeing a maximum performance boost of $S = 10$.&lt;/p&gt;
-
-&lt;p&gt;By $gc = 50\% $, we&amp;rsquo;re down to a program that can only be boosted to run twice as fast no matter how much parallel processing your machine is capable of!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final Note:&lt;/strong&gt; In fact, Amdahl&amp;rsquo;s Law is not exclusive to concurrency, but applies to &lt;em&gt;any&lt;/em&gt; speed-boosting strategy that only affects some portion of a program.&lt;/p&gt;</description>
     </item>
     
   </channel>
