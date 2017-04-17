@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Performance on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/performance/</link>
+    <link>http://noamswebsite.com/tags/performance/index.xml</link>
     <description>Recent content in Performance on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/tags/performance/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/tags/performance/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Memory Accessing Alignment</title>
@@ -17,8 +14,73 @@
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/alignment/</guid>
-      <description>For any data type that requires N bytes, its starting address should be a multiple of N. In most x86 processors the memory interface is designed to read/write blocks that are 8 or 16 bytes long2.
- Unaligned memory accesses occur when you try to read N bytes of data starting from an address that is not evenly divisible by N (i.e. addr % N != 0). For example, reading 4 bytes of data from address 0x10004 is fine, but reading 4 bytes of data from address 0x10005 would be an unaligned memory access 6.</description>
+      <description>
+
+&lt;p&gt;For any data type that requires &lt;code&gt;N&lt;/code&gt; bytes, its starting address should be a
+multiple of &lt;code&gt;N&lt;/code&gt;. In most &lt;code&gt;x86&lt;/code&gt; processors the memory interface is designed to
+read/write blocks that are 8 or 16 bytes long&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Unaligned memory accesses&lt;/em&gt; occur when you try to read &lt;code&gt;N&lt;/code&gt; bytes of data
+starting from an address that is not evenly divisible by &lt;code&gt;N&lt;/code&gt; (i.e. &lt;code&gt;addr % N
+!= 0&lt;/code&gt;).  For example, reading 4 bytes of data from address &lt;code&gt;0x10004&lt;/code&gt; is fine,
+but reading 4 bytes of data from address &lt;code&gt;0x10005&lt;/code&gt; would be an unaligned
+memory access &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Unaligned access may allow the program to use less
+memory&lt;sup&gt;1&lt;/sup&gt;, but it has many drawbacks:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The effects of performing an unaligned memory access vary from architecture
+to architecture. A summary of the common scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Some architectures are able to perform unaligned memory accesses
+transparently, but there is usually a significant performance cost.&lt;/li&gt;
+&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
+happen. The exception handler is able to correct the unaligned access, at
+significant cost to performance.&lt;/li&gt;
+&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
+happen, but the exceptions do not contain enough information for the
+unaligned access to be corrected.&lt;/li&gt;
+&lt;li&gt;Some architectures are not capable of unaligned memory access, but will
+silently perform a different memory access to the one that was requested,
+resulting in a subtle code bug that is hard to detect!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If your code causes unaligned memory accesses to happen, your code will not
+work correctly on certain platforms and will cause performance problems on
+others &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;Consider a bitmap data structure where each pixel is represented by 3 bytes (RGB). In order to preserve alignment we add a &amp;ldquo;padding byte&amp;rdquo;&lt;sup&gt;3&lt;/sup&gt;, making the structure 32 bits instead of 24:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------+---------------+---------------+---------------+
+| : : : : : : : | : : : : : : : | : : : : : : : | : : : : : : : |
++---------------+---------------+---------------+---------------+
+     Red             Green           Blue            Padding
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This consumes more memory, but is ideally more performant. Of course, YMMV&lt;sup&gt;5&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Introduction To ARM Cortex-M Microcontrollers&lt;/em&gt; (5&lt;sup&gt;th&lt;/sup&gt; Ed.), p. 96.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Computer Systems: A Programming Perspective&lt;/em&gt; (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 290.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/hNKU8Jiza2g?t=5m19s&#34;&gt;&lt;em&gt;Handmande Hero, Day 004&lt;/em&gt;&lt;/a&gt; (t. 5:19).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C&lt;/em&gt;, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 137.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lemire.me/blog/2012/05/31/data-alignment-for-speed-myth-or-reality/&#34;&gt;Data Alignment For Speed: Myth Or Reality?&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt&#34;&gt;Kernel.org: Unaligned Memory Access&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/small&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

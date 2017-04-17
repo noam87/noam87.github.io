@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jsmill on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/rtags/jsmill/</link>
+    <link>http://noamswebsite.com/rtags/jsmill/index.xml</link>
     <description>Recent content in Jsmill on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/rtags/jsmill/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/rtags/jsmill/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>John Stuart Mill</title>
@@ -17,8 +14,36 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/john_stuart_mill/</guid>
-      <description>On Freedom Of Speech  We have now recognised the necessity to the mental well-being of mankind (on which all their other well-being depends) of freedom of opinion, and freedom of the expression of opinion, on four distinct grounds; which we will now briefly recapitulate.
-First, if any opinion is compelled to silence, that opinion may, for aught we can certainly know, be true. To deny this is to assume our own infallibility.</description>
+      <description>
+
+&lt;h1 id=&#34;on-freedom-of-speech&#34;&gt;On Freedom Of Speech&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We have now recognised the necessity to the mental well-being of mankind (on
+which all their other well-being depends) of freedom of opinion, and freedom
+of the expression of opinion, on four distinct grounds; which we will now
+briefly recapitulate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First,&lt;/strong&gt; if any opinion is compelled to silence, that opinion may, for aught we
+can certainly know, be true. To deny this is to assume our own infallibility.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Secondly,&lt;/strong&gt; though the silenced opinion be an error, it may, and very commonly
+does, contain a portion of truth; and since the general or prevailing opinion
+on any subject is rarely or never the whole truth, it is only by the collision
+of adverse opinions that the remainder of the truth has any chance of being
+supplied.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Thirdly,&lt;/strong&gt; even if the received opinion be not only true, but the whole truth;
+unless it is suffered to be, and actually is, vigorously and earnestly
+contested, it will, by most of those who receive it, be held in the manner of
+a prejudice, with little comprehension or feeling of its rational grounds. And
+not only this, but, &lt;strong&gt;fourthly,&lt;/strong&gt; the meaning of the doctrine itself will be in
+danger of being lost, or enfeebled, and deprived of its vital effect on the
+character and conduct: the dogma becoming a mere formal profession,
+inefficacious for good, but cumbering the ground, and preventing the growth of
+any real and heartfelt conviction, from reason or personal experience.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
   </channel>

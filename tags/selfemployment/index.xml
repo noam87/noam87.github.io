@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Selfemployment on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/selfemployment/</link>
+    <link>http://noamswebsite.com/tags/selfemployment/index.xml</link>
     <description>Recent content in Selfemployment on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/tags/selfemployment/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/tags/selfemployment/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Self-Employed Taxes (Canada) tl;dr</title>
@@ -17,9 +14,24 @@
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/taxes_tldr/</guid>
-      <description>CPP CPP is payed at the end of the year. Save 6% of your gross income for this.
-Income Taxes Payed at the end of the year. These are bracketed by income, but to make calculations simple I just keep a flat 29% of my monthly income.
-HST If you are operating as a freelancer or small business and are expecting to make over \$30_000, register for an HST account here and charge the customer directly on top of net fee (13% in Ontario).</description>
+      <description>
+
+&lt;h2 id=&#34;cpp&#34;&gt;CPP&lt;/h2&gt;
+
+&lt;p&gt;CPP is payed at the end of the year. Save &lt;strong&gt;6%&lt;/strong&gt; of your gross income for this.&lt;/p&gt;
+
+&lt;h2 id=&#34;income-taxes&#34;&gt;Income Taxes&lt;/h2&gt;
+
+&lt;p&gt;Payed at the end of the year. These are
+&lt;a href=&#34;http://www.cra-arc.gc.ca/tx/ndvdls/fq/txrts-eng.html&#34;&gt;bracketed&lt;/a&gt; by income,
+but to make calculations simple I just keep a flat &lt;strong&gt;29%&lt;/strong&gt; of my monthly
+income.&lt;/p&gt;
+
+&lt;h2 id=&#34;hst&#34;&gt;HST&lt;/h2&gt;
+
+&lt;p&gt;If you are operating as a freelancer or small business and are expecting to
+make over &lt;strong&gt;\$30_000&lt;/strong&gt;, register for an HST account &lt;a href=&#34;http://www.cra-arc.gc.ca/tx/bsnss/tpcs/gst-tps/rgstrng/menu-eng.html&#34;&gt;here&lt;/a&gt; and charge the customer directly on top of net fee (&lt;strong&gt;13%&lt;/strong&gt; in Ontario).&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,8 +40,76 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/startup_resources/</guid>
-      <description> Personal Finance (Will mostly apply to Canadians.)
-   Title Format Notes     Make Sure It&amp;rsquo;s Deductable BOOK Must-have saving and tax tips for Canadian freelancers and small business owners.   Reddit: Personal Finance Canada HTML     Self-Employment / Remote Work    Title Format Notes     Awesome Remote Job HTML ; Git Community curated list of useful links    Startup Stuff    Title Format Notes     What I Wish I&amp;rsquo;d Known Before Joining A Unicorn HTML     </description>
+      <description>
+
+&lt;h2 id=&#34;personal-finance&#34;&gt;Personal Finance&lt;/h2&gt;
+
+&lt;p&gt;(Will mostly apply to Canadians.)&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Make Sure It&amp;rsquo;s Deductable&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/h31tdDm&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Must-have saving and tax tips for Canadian freelancers and small business owners.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Reddit: Personal Finance Canada&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.reddit.com/r/PersonalFinanceCanada/&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;self-employment-remote-work&#34;&gt;Self-Employment / Remote Work&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Awesome Remote Job&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/lukasz-madon/awesome-remote-job&#34;&gt;HTML&lt;/a&gt; ; Git&lt;/td&gt;
+&lt;td&gt;Community curated list of useful links&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;startup-stuff&#34;&gt;Startup Stuff&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d&#34;&gt;What I Wish I&amp;rsquo;d Known Before Joining A Unicorn&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
   </channel>

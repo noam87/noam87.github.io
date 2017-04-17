@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leibniz on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/rtags/leibniz/</link>
+    <link>http://noamswebsite.com/rtags/leibniz/index.xml</link>
     <description>Recent content in Leibniz on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Apr 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/rtags/leibniz/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/rtags/leibniz/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gottfried Leibniz</title>
@@ -17,8 +14,10 @@
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/leibniz/</guid>
-      <description> When a rule is extremely complex, that which conforms to it passes for random.
- </description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;When a rule is extremely complex, that which conforms to it passes for random.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
   </channel>
