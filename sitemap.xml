@@ -47,22 +47,12 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/r/jokes/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/q/marcus/</loc>
     <lastmod>2017-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/q/nietzsche/</loc>
-    <lastmod>2017-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/r/mob/</loc>
     <lastmod>2017-02-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -148,11 +138,6 @@
   
   <url>
     <loc>http://noamswebsite.com/r/creative/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/r/enemy/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -415,12 +400,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/rtags/individuality/</loc>
-    <lastmod>2017-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/tags/informationtheory/</loc>
     <lastmod>2017-04-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -554,7 +533,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/random/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -572,7 +551,7 @@
   
   <url>
     <loc>http://noamswebsite.com/r/</loc>
-    <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -9,17 +9,6 @@
     <atom:link href="http://noamswebsite.com/rtags/cognitive/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Jokes</title>
-      <link>http://noamswebsite.com/r/jokes/</link>
-      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/jokes/</guid>
-      <description>&lt;p&gt;Babies cry and giggle at everything and fall in love with everyone.
-To Joke is to prod the world.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Marcus Aurelius</title>
       <link>http://noamswebsite.com/q/marcus/</link>
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
