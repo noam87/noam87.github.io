@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://noamswebsite.com/wiki-main/science/squiggles/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wiki-main/science/plarity/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</loc>
     <lastmod>2017-04-17T00:00:00+00:00</lastmod>
   </url>
@@ -275,7 +285,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/biology/</loc>
-    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -306,6 +316,12 @@
   <url>
     <loc>http://noamswebsite.com/rtags/chaucer/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/wikis/chemistry/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -491,7 +507,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -562,7 +578,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/science/</loc>
-    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -633,7 +649,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wiki-main/</loc>
-    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
