@@ -6,10 +6,31 @@
     <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Calculus Cheat Sheet</title>
+      <link>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</guid>
+      <description>Gradient A vector field in the direction of steepest ascent.
+$$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\partial x_{1}} \\ \frac{\partial f}{\partial x_{2}} \\
+\vdots \\
+\frac{\partial f}{\partial x_{i}} \end{bmatrix} $$</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra Cheat Sheet</title>
+      <link>http://noamswebsite.com/wiki-main/ml/linear_algebra/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/linear_algebra/</guid>
+      <description> Multiplying Matrices </description>
+    </item>
     
     <item>
       <title>Chemistry Cheat Sheet</title>
@@ -28,7 +49,7 @@
       
       <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
       <description>Roadmap based on youtube introductory series.
-   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     </description>
+   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     Information How many bits are needed to encode information:</description>
     </item>
     
     <item>

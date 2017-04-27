@@ -20,5 +20,15 @@
       <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
     </item>
     
+    <item>
+      <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
+      <link>http://noamswebsite.com/wiki-main/ml/eigengoogle/</link>
+      <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/eigengoogle/</guid>
+      <description>While we&amp;rsquo;re on the subject of sorting things online, we might as well talk about Google: the 93-billion dollar company whose main export is taking all the things ever and putting them in the right order. If there&amp;rsquo;s one thing Google knows best, it&amp;rsquo;s sorting stuff.
+I was curious how it all works, and it turned out really interesting, plus I got to learn a bit about Markov chains. It all starts with an algorithm called PageRank1.</description>
+    </item>
+    
   </channel>
 </rss>

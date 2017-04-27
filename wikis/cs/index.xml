@@ -18,7 +18,7 @@
       
       <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
       <description>Roadmap based on youtube introductory series.
-   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     </description>
+   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     Information How many bits are needed to encode information:</description>
     </item>
     
     <item>

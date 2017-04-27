@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Calculus</title>
+      <link>http://noamswebsite.com/tags/calculus/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/tags/calculus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Compilers</title>
       <link>http://noamswebsite.com/tags/compilers/</link>
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
@@ -129,11 +138,29 @@
     </item>
     
     <item>
+      <title>Linearalgebra</title>
+      <link>http://noamswebsite.com/tags/linearalgebra/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/tags/linearalgebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Lowlevel</title>
       <link>http://noamswebsite.com/tags/lowlevel/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/tags/lowlevel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markovchains</title>
+      <link>http://noamswebsite.com/tags/markovchains/</link>
+      <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/tags/markovchains/</guid>
       <description></description>
     </item>
     

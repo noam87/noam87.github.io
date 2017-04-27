@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linearalgebra on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/tags/linearalgebra/</link>
+    <description>Recent content in Linearalgebra on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/linearalgebra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linear Algebra Cheat Sheet</title>
+      <link>http://noamswebsite.com/wiki-main/ml/linear_algebra/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/linear_algebra/</guid>
+      <description> Multiplying Matrices </description>
+    </item>
+    
+    <item>
+      <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
+      <link>http://noamswebsite.com/wiki-main/ml/eigengoogle/</link>
+      <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/eigengoogle/</guid>
+      <description>While we&amp;rsquo;re on the subject of sorting things online, we might as well talk about Google: the 93-billion dollar company whose main export is taking all the things ever and putting them in the right order. If there&amp;rsquo;s one thing Google knows best, it&amp;rsquo;s sorting stuff.
+I was curious how it all works, and it turned out really interesting, plus I got to learn a bit about Markov chains. It all starts with an algorithm called PageRank1.</description>
+    </item>
+    
+  </channel>
+</rss>
