@@ -2,98 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wiki-mains on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/wiki-main/index.xml</link>
+    <link>http://noamswebsite.com/wiki-main/</link>
     <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>How to read chemistry squiggles</title>
-      <link>http://noamswebsite.com/wiki-main/science/squiggles/</link>
+      <title>Chemistry Cheat Sheet</title>
+      <link>http://noamswebsite.com/wiki-main/science/chem_cheat_sheet/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-main/science/squiggles/</guid>
-      <description>&lt;p&gt;In order to make shorthand easier, chemists omit C and H atoms
-from its structural formula. There are two simple rules for adding them back in:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;span style=&#34;color:red;&#34;&gt;All sharp corners represent carbon atoms.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span style=&#34;color:blue;&#34;&gt;Hydrogen - carbon bonds are implied
-(so if a carbon atom has less than 4 bonds, the rest are H).&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;For example in this formual for a caffeine molecule:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/caffeine.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The following is implied:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/caffeine_ch.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Is A Chemical Bond Polar?</title>
-      <link>http://noamswebsite.com/wiki-main/science/plarity/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/science/plarity/</guid>
-      <description>&lt;p&gt;Whether a bond between two atoms is polar depends on the difference between
-the two atoms&amp;rsquo; Pauling Electronegativity (their ability to attract electrons).&lt;/p&gt;
-
-&lt;p&gt;For example, taking the most common elements in living organisms:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Element&lt;/th&gt;
-&lt;th&gt;Pauling Electronegativity&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Phosphorus&lt;/td&gt;
-&lt;td&gt;2.19&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Hydrogen&lt;/td&gt;
-&lt;td&gt;2.20&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Carbon&lt;/td&gt;
-&lt;td&gt;2.55&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Sulfur&lt;/td&gt;
-&lt;td&gt;2.58&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Nitrogen&lt;/td&gt;
-&lt;td&gt;3.04&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Oxygen&lt;/td&gt;
-&lt;td&gt;3.44&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So, an &lt;code&gt;O-H&lt;/code&gt; bond yields &lt;code&gt;3.44 - 2.20 = 1.24&lt;/code&gt; (polar), while a &lt;code&gt;C-H&lt;/code&gt; bond
-yields &lt;code&gt;2.55 - 2.20 = 0.35&lt;/code&gt; (low polarity / non-polar).&lt;/p&gt;
-
-&lt;p&gt;Polarity exists on a spectrum. Usually one considers anything above &lt;code&gt;~0.4&lt;/code&gt; polar.&lt;/p&gt;
-
-&lt;p&gt;Polarity can be high enough that the bond is no longer a covalent bond,
-but an &lt;strong&gt;ionic bond&lt;/strong&gt;, where one of the atoms steals the electrons of the other.&lt;/p&gt;
-</description>
+      <guid>http://noamswebsite.com/wiki-main/science/chem_cheat_sheet/</guid>
+      <description>TOC  How To Read The Squiggles Is A Chemical Bond Polar?  How To Read The Squiggles In order to make shorthand easier, chemists omit C and H atoms from its structural formula. There are two simple rules for adding them back in:
+ All sharp corners represent carbon atoms. Hydrogen - carbon bonds are implied (so if a carbon atom has less than 4 bonds, the rest are H).</description>
     </item>
     
     <item>
@@ -102,44 +27,8 @@ but an &lt;strong&gt;ionic bond&lt;/strong&gt;, where one of the atoms steals th
       <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
-      <description>&lt;p&gt;Roadmap based on &lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;youtube introductory series&lt;/a&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;blank&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Compression&lt;/strong&gt; (efficiency, source coding)&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Error Correction&lt;/strong&gt; (reliability, channel coding)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Information Theory (Math)&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Losless:&lt;/strong&gt; source coding theorem,  Kraft-McMillan inequality&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Lossy:&lt;/strong&gt; rate distortion theorem&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Coding Methods (algorithms)&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Symbol Code:&lt;/strong&gt; Huffman codes&lt;/td&gt;
-&lt;td&gt;Hamming codes, BCH codes, Turbocodes, Gallager codes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Stream Codes:&lt;/strong&gt; arithmetic coding&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Roadmap based on youtube introductory series.
+   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     </description>
     </item>
     
     <item>
@@ -148,73 +37,8 @@ but an &lt;strong&gt;ionic bond&lt;/strong&gt;, where one of the atoms steals th
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/alignment/</guid>
-      <description>
-
-&lt;p&gt;For any data type that requires &lt;code&gt;N&lt;/code&gt; bytes, its starting address should be a
-multiple of &lt;code&gt;N&lt;/code&gt;. In most &lt;code&gt;x86&lt;/code&gt; processors the memory interface is designed to
-read/write blocks that are 8 or 16 bytes long&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Unaligned memory accesses&lt;/em&gt; occur when you try to read &lt;code&gt;N&lt;/code&gt; bytes of data
-starting from an address that is not evenly divisible by &lt;code&gt;N&lt;/code&gt; (i.e. &lt;code&gt;addr % N
-!= 0&lt;/code&gt;).  For example, reading 4 bytes of data from address &lt;code&gt;0x10004&lt;/code&gt; is fine,
-but reading 4 bytes of data from address &lt;code&gt;0x10005&lt;/code&gt; would be an unaligned
-memory access &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Unaligned access may allow the program to use less
-memory&lt;sup&gt;1&lt;/sup&gt;, but it has many drawbacks:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The effects of performing an unaligned memory access vary from architecture
-to architecture. A summary of the common scenarios:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Some architectures are able to perform unaligned memory accesses
-transparently, but there is usually a significant performance cost.&lt;/li&gt;
-&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
-happen. The exception handler is able to correct the unaligned access, at
-significant cost to performance.&lt;/li&gt;
-&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
-happen, but the exceptions do not contain enough information for the
-unaligned access to be corrected.&lt;/li&gt;
-&lt;li&gt;Some architectures are not capable of unaligned memory access, but will
-silently perform a different memory access to the one that was requested,
-resulting in a subtle code bug that is hard to detect!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If your code causes unaligned memory accesses to happen, your code will not
-work correctly on certain platforms and will cause performance problems on
-others &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
-
-&lt;p&gt;Consider a bitmap data structure where each pixel is represented by 3 bytes (RGB). In order to preserve alignment we add a &amp;ldquo;padding byte&amp;rdquo;&lt;sup&gt;3&lt;/sup&gt;, making the structure 32 bits instead of 24:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;+---------------+---------------+---------------+---------------+
-| : : : : : : : | : : : : : : : | : : : : : : : | : : : : : : : |
-+---------------+---------------+---------------+---------------+
-     Red             Green           Blue            Padding
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This consumes more memory, but is ideally more performant. Of course, YMMV&lt;sup&gt;5&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;small&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;em&gt;Introduction To ARM Cortex-M Microcontrollers&lt;/em&gt; (5&lt;sup&gt;th&lt;/sup&gt; Ed.), p. 96.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Computer Systems: A Programming Perspective&lt;/em&gt; (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 290.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://youtu.be/hNKU8Jiza2g?t=5m19s&#34;&gt;&lt;em&gt;Handmande Hero, Day 004&lt;/em&gt;&lt;/a&gt; (t. 5:19).&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C&lt;/em&gt;, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 137.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://lemire.me/blog/2012/05/31/data-alignment-for-speed-myth-or-reality/&#34;&gt;Data Alignment For Speed: Myth Or Reality?&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt&#34;&gt;Kernel.org: Unaligned Memory Access&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;/small&gt;&lt;/p&gt;
-</description>
+      <description>For any data type that requires N bytes, its starting address should be a multiple of N. In most x86 processors the memory interface is designed to read/write blocks that are 8 or 16 bytes long2.
+ Unaligned memory accesses occur when you try to read N bytes of data starting from an address that is not evenly divisible by N (i.e. addr % N != 0). For example, reading 4 bytes of data from address 0x10004 is fine, but reading 4 bytes of data from address 0x10005 would be an unaligned memory access 6.</description>
     </item>
     
     <item>
@@ -223,60 +47,7 @@ others &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;biology&#34;&gt;Biology&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Robert Sapolsky: The Biology Of Human Behavior&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;YouTube&lt;/a&gt; lecture series&lt;/td&gt;
-&lt;td&gt;You are not in control.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Molecular Biology Of the Cell&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/ap9m9UD&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;cancer&#34;&gt;Cancer&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;The Biology Of Cancer&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/cj4bhIS&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Optimising Combination Dosing Strategy Of Abemaciclib And Vemurafenib In BRAF-Mutated Melanoma tumours&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.nature.com/bjc/journal/v114/n6/full/bjc201640a.html&#34;&gt;HTML&lt;/a&gt; (full paper)&lt;/td&gt;
-&lt;td&gt;Interesting findings for using intermittent dosing to extend the effectiveness of targeted therapies.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Biology    Title Format Notes     Robert Sapolsky: The Biology Of Human Behavior YouTube lecture series You are not in control.   Molecular Biology Of the Cell BOOK     Cancer    Title Format Notes     The Biology Of Cancer BOOK Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.</description>
     </item>
     
     <item>
@@ -285,24 +56,9 @@ others &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/taxes_tldr/</guid>
-      <description>
-
-&lt;h2 id=&#34;cpp&#34;&gt;CPP&lt;/h2&gt;
-
-&lt;p&gt;CPP is payed at the end of the year. Save &lt;strong&gt;6%&lt;/strong&gt; of your gross income for this.&lt;/p&gt;
-
-&lt;h2 id=&#34;income-taxes&#34;&gt;Income Taxes&lt;/h2&gt;
-
-&lt;p&gt;Payed at the end of the year. These are
-&lt;a href=&#34;http://www.cra-arc.gc.ca/tx/ndvdls/fq/txrts-eng.html&#34;&gt;bracketed&lt;/a&gt; by income,
-but to make calculations simple I just keep a flat &lt;strong&gt;29%&lt;/strong&gt; of my monthly
-income.&lt;/p&gt;
-
-&lt;h2 id=&#34;hst&#34;&gt;HST&lt;/h2&gt;
-
-&lt;p&gt;If you are operating as a freelancer or small business and are expecting to
-make over &lt;strong&gt;\$30_000&lt;/strong&gt;, register for an HST account &lt;a href=&#34;http://www.cra-arc.gc.ca/tx/bsnss/tpcs/gst-tps/rgstrng/menu-eng.html&#34;&gt;here&lt;/a&gt; and charge the customer directly on top of net fee (&lt;strong&gt;13%&lt;/strong&gt; in Ontario).&lt;/p&gt;
-</description>
+      <description>CPP CPP is payed at the end of the year. Save 6% of your gross income for this.
+Income Taxes Payed at the end of the year. These are bracketed by income, but to make calculations simple I just keep a flat 29% of my monthly income.
+HST If you are operating as a freelancer or small business and are expecting to make over \$30_000, register for an HST account here and charge the customer directly on top of net fee (13% in Ontario).</description>
     </item>
     
     <item>
@@ -311,133 +67,7 @@ make over &lt;strong&gt;\$30_000&lt;/strong&gt;, register for an HST account &lt
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/cool_articles/</guid>
-      <description>
-
-&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://viewsourcecode.org/snaptoken/kilo/&#34;&gt;Build Your Own Text Editor&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;Really great tutorial (and introduction to C programming and terminal programming).&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.unm.edu/~crowley/papers/sds.pdf&#34;&gt;Data Structures For Text Sequences&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Handmade hero&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://handmadehero.org/&#34;&gt;YouTube&lt;/a&gt; series&lt;/td&gt;
-&lt;td&gt;Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Online Computer Science Courses With Video Lectures&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/Developer-Y/cs-video-courses&#34;&gt;HTML&lt;/a&gt; (community git)&lt;/td&gt;
-&lt;td&gt;Giant collection of free video lectures.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;crypto&#34;&gt;Crypto&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Efficient Data Structures for Tamper-Evident Logging&lt;/td&gt;
-&lt;td&gt;(&lt;a href=&#34;http://people.cs.vt.edu/danfeng/courses/cs6204/sp10-papers/crosby.pdf&#34;&gt;PDF&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;Youtube talk &lt;a href=&#34;https://youtu.be/G0tkCxq9OuE&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://blog.bren2010.io/2015/04/07/data-structures.html&#34;&gt;Cryptographic Data Structures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;compilers&#34;&gt;Compilers&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/abhinaba/2009/03/02/back-to-basics-generational-garbage-collection/&#34;&gt;Back To Basics: Generational Garbage Collection&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
-GC.&lt;/p&gt;
-
-&lt;h2 id=&#34;low-level-programming&#34;&gt;Low Level Programming&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Embedded Systems: Introduction To ARM Cortex-M Microcontrollers (5&lt;sup&gt;th&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/03pd6u0&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Computer Systems: A Programming Perspective, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/7W4IMFZ&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;See next resource for complementary video lectres&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Introduction To Computer Systems (Carnegie Mellon University)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~213/schedule.html&#34;&gt;video lectures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Closely follows the book &amp;ldquo;Computer Systems: A Programming Perspective&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/jloJHt7&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>General    Title Format Notes     Build Your Own Text Editor HTML Really great tutorial (and introduction to C programming and terminal programming).   Data Structures For Text Sequences PDF    Handmade hero YouTube series Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.   Online Computer Science Courses With Video Lectures HTML (community git) Giant collection of free video lectures.</description>
     </item>
     
     <item>
@@ -446,76 +76,8 @@ GC.&lt;/p&gt;
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/startup_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;personal-finance&#34;&gt;Personal Finance&lt;/h2&gt;
-
-&lt;p&gt;(Will mostly apply to Canadians.)&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Make Sure It&amp;rsquo;s Deductable&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/h31tdDm&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Must-have saving and tax tips for Canadian freelancers and small business owners.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Reddit: Personal Finance Canada&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.reddit.com/r/PersonalFinanceCanada/&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;self-employment-remote-work&#34;&gt;Self-Employment / Remote Work&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Awesome Remote Job&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/lukasz-madon/awesome-remote-job&#34;&gt;HTML&lt;/a&gt; ; Git&lt;/td&gt;
-&lt;td&gt;Community curated list of useful links&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;startup-stuff&#34;&gt;Startup Stuff&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d&#34;&gt;What I Wish I&amp;rsquo;d Known Before Joining A Unicorn&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description> Personal Finance (Will mostly apply to Canadians.)
+   Title Format Notes     Make Sure It&amp;rsquo;s Deductable BOOK Must-have saving and tax tips for Canadian freelancers and small business owners.   Reddit: Personal Finance Canada HTML     Self-Employment / Remote Work    Title Format Notes     Awesome Remote Job HTML ; Git Community curated list of useful links    Startup Stuff    Title Format Notes     What I Wish I&amp;rsquo;d Known Before Joining A Unicorn HTML     </description>
     </item>
     
     <item>
@@ -524,128 +86,8 @@ GC.&lt;/p&gt;
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;learning&#34;&gt;Learning&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt; (book)&lt;/td&gt;
-&lt;td&gt;My go-to recommendation for getting started with Elixir.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://medium.com/@diamondgfx/introduction-fe138ac6079d&#34;&gt;Writing A Blog Engine in Phoenix&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.erlang-in-anger.com/&#34;&gt;Erlang In Anger&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Great guide for when stuff goes bad.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;memory-gc&#34;&gt;Memory / GC&lt;/h2&gt;
-
-&lt;p&gt;For articles on GC / compilers in general see &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/compilers&#34;&gt;compilers&lt;/a&gt; section.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Scheduler Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang%20garbage%20collection%20memory%20layout%20soft%20realtime/2015/08/24/erlang-garbage-collection-details-and-why-it-matters.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Simple introduction to Erlang GC concepts. Start here.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.erlang-solutions.com/blog/erlang-19-0-garbage-collector.html&#34;&gt;Erlang 19.0 Garbage Collector&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://erlang.org/doc/efficiency_guide/introduction.html&#34;&gt;Erlang Efficiency Guide&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://blog.bugsense.com/post/74179424069/erlang-binary-garbage-collection-a-lovehate&#34;&gt;Erlang Binary Garbage Collection: A love/hate relationship&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Some findings on the shared heap GC.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt; (pdf)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.evanmiller.org/elixir-ram-and-the-template-of-doom.html&#34;&gt;Elixir RAM And The Template Of Doom&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/&#34;&gt;Elixir and IO Lists, Part 1: Building Output Efficiently&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;performance-tips&#34;&gt;Performance Tips&lt;/h2&gt;
-
-&lt;p&gt;Don&amp;rsquo;t have processes the many other processes depend on. For example, a
-single-process cache that many others call to. This will be a bottleneck
-because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn from the scheduler.&lt;/p&gt;
-</description>
+      <description>Learning    Title Notes     Elixir In Action (book) My go-to recommendation for getting started with Elixir.   Writing A Blog Engine in Phoenix Great first tutorial for Phoenix framework   Erlang In Anger Great guide for when stuff goes bad.    Memory / GC For articles on GC / compilers in general see compilers section.
+   Title Notes     Erlang Scheduler Details and Why It Matters    Erlang Garbage Collection Details and Why It Matters Simple introduction to Erlang GC concepts.</description>
     </item>
     
     <item>
@@ -654,36 +96,7 @@ because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn f
       <pubDate>Wed, 04 Jan 2017 14:41:18 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/react_resources/</guid>
-      <description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html&#34;&gt;A Comprehensive Guide to Test-First Development with Redux, React, and Immutable&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;tutorial&lt;/td&gt;
-&lt;td&gt;Great comprehensive introduction to the whole ecosystem.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/-jwQ3sGoiXg&#34;&gt;Redux, Re-fram, Relay, Om/next, oh my!&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;video&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/absinthe-graphql/absinthe_relay/issues/8&#34;&gt;Setting Up Absinthe Relay In Elixir&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>   Title Format Notes     A Comprehensive Guide to Test-First Development with Redux, React, and Immutable tutorial Great comprehensive introduction to the whole ecosystem.   Redux, Re-fram, Relay, Om/next, oh my! video    Setting Up Absinthe Relay In Elixir      </description>
     </item>
     
     <item>
@@ -692,80 +105,7 @@ because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn f
       <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Probability Through Problems&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://archive.org/details/springer_10.1007-978-0-387-21659-1&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/chcB92K&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Best introductory probability book out there. Learn by discovering!&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Principles And Techniques In Combinatorics&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/2gz4ZXD&#34;&gt;BOOK&lt;/a&gt; ; &lt;a href=&#34;http://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/26781/Principles%20and%20Techniques%20in%20Combinatorics.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Beautiful book: simple, clear explanations, no filler, challenging problems&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;computer-science&#34;&gt;Computer Science&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Information Theory And Coding&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;YouTube Lectures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Elements Of Information Theory (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://staff.ustc.edu.cn/~cgong821/Wiley.Interscience.Elements.of.Information.Theory.Jul.2006.eBook-DDU.pdf&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/dHvNEwV&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A Tutorial On Deep Learning (&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt 1&lt;/a&gt;, &lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt 2&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
     </item>
     
     <item>
@@ -774,161 +114,11 @@ because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn f
       <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</guid>
-      <description>
-
-&lt;p&gt;First, create umbrella application:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix new --umbrella my_app
-$ cd my_app/apps
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next create Phoenix app, excluding Ecto:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix phoenix.new web --no-ecto
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now we create a new mix project for Ecto, with supervision tree:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix new db --sup
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Finally we need to set up some configuration files.&lt;/p&gt;
-
-&lt;h2 id=&#34;setting-up-db-project&#34;&gt;Setting Up Db Project&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd db
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;First in the &lt;code&gt;db&lt;/code&gt; project (following the
-&lt;a href=&#34;https://hexdocs.pm/ecto/getting-started.html&#34;&gt;getting started&lt;/a&gt; docs for Ecto:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;mix.exs&lt;/code&gt;&lt;/strong&gt; (note that we do not need to register &lt;code&gt;:ecto&lt;/code&gt; application)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  def application do
-    [applications: [:logger, :postgrex],
-     mod: {Db, []}]
-  end
-
-  defp deps do
-    [{:postgrex, &amp;quot;~&amp;gt; 0.13.0&amp;quot;},
-     {:ecto, &amp;quot;~&amp;gt; 2.1.1&amp;quot;}]
-  end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Run configuration by running:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mix ecto.gen.repo -r Db.Repo
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will populate &lt;code&gt;lib/db/repo.ex&lt;/code&gt; and  &lt;code&gt;config.config.exs&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;lib/db.ex&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;children = [
-  supervisor(Db.Repo, [])
-]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;optional&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;We probably want configs for multiple environments.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/config.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Uncomment the last line, or replace the contents of the file with:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;use Mix.Config
-
-config :db,
-  ecto_repos: [Db.Repo]
-
-# Import environment specific config. This must remain at the bottom
-# of this file so it overrides the configuration defined above.
-import_config &amp;quot;#{Mix.env}.exs&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This will load environment-specific configs.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/dev.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;use Mix.Config
-
-config :db, Db.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: &amp;quot;foo&amp;quot;,
-  database: &amp;quot;myproject_dev&amp;quot;,
-  hostname: &amp;quot;localhost&amp;quot;,
-  pool_size: 10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/test.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;use Mix.Config
-
-config :db, Db.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: &amp;quot;foo&amp;quot;,
-  password: &amp;quot;12345&amp;quot;,
-  database: &amp;quot;myproject_test&amp;quot;,
-  hostname: &amp;quot;localhost&amp;quot;,
-  pool: Ecto.Adapters.SQL.Sandbox
-
-config :logger,
-  backends: [:console],
-  compile_time_purge_level: :debug
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;set-up-phoenix-app&#34;&gt;Set Up Phoenix App&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd ../web
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;mix.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  def application do
-    [mod: {Web, []},
-     applications: [:phoenix_ecto, :db]]
-  end
-
-  defp deps do
-    [{:phoenix_ecto, &amp;quot;~&amp;gt; 3.2.1&amp;quot;},
-     {:db, in_umbrella: true}]
-  end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;config/config.exs&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;config :web,
-  ecto_repos: [Db.Repo]
-
-# Configure phoenix generators
-config :phoenix, :generators,
-  migration: false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;From now on, when running &lt;code&gt;mix phoenix.gen.html&lt;/code&gt; or &lt;code&gt;mix phoenix.gen.json&lt;/code&gt;,
-pass the &lt;code&gt;--no-model&lt;/code&gt; option. (&lt;strong&gt;update:&lt;/strong&gt; see question below.)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Since app is umbrella app now, remember to &lt;code&gt;cd&lt;/code&gt; into phoenix app directory
-before running generators, or files will be generated at umbrella&amp;rsquo;s top level.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Is it there a way to make it so that there&amp;rsquo;s no need for &lt;code&gt;--no-model&lt;/code&gt; option
-every time?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;config :phoenix, :generators, model: false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Answer provided by the man himself :)
-&lt;a href=&#34;https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22&#34;&gt;https://elixirforum.com/t/should-we-separate-ecto-from-phoenix-in-umbrella-app/1515/22&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>First, create umbrella application:
+$ mix new --umbrella my_app $ cd my_app/apps  Next create Phoenix app, excluding Ecto:
+$ mix phoenix.new web --no-ecto  Now we create a new mix project for Ecto, with supervision tree:
+$ mix new db --sup  Finally we need to set up some configuration files.
+Setting Up Db Project $ cd db  First in the db project (following the getting started docs for Ecto:</description>
     </item>
     
     <item>
@@ -937,30 +127,10 @@ every time?&lt;/li&gt;
       <pubDate>Wed, 04 Jan 2017 00:19:02 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</guid>
-      <description>&lt;p&gt;Here is a simple method I use to share the same &lt;code&gt;.bashrc&lt;/code&gt; / &lt;code&gt;.zshrc&lt;/code&gt; /
-&lt;code&gt;.bash_profile&lt;/code&gt; on multiple computers, while still retaining unique
-settings where I need them.&lt;/p&gt;
-
-&lt;p&gt;Suppose you want some special setting to apply only to your linux laptop, but
-not to your mac laptop.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir ~/configs
-$ touch ~/.is_linux
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;if [ -f &#39;.is_linux&#39; ]; then
-    echo &amp;quot;This message only shows on my Linux laptops!&amp;quot;
-fi
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now with different config files you can configure different environments from
-is single universal &lt;code&gt;*rc&lt;/code&gt; file you keep in a
-&lt;a href=&#34;https://github.com/noam87/DOTfiles&#34;&gt;dotfiles&lt;/a&gt; repo.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s it. It&amp;rsquo;s not fancy, but it works.&lt;/p&gt;
-</description>
+      <description>Here is a simple method I use to share the same .bashrc / .zshrc / .bash_profile on multiple computers, while still retaining unique settings where I need them.
+Suppose you want some special setting to apply only to your linux laptop, but not to your mac laptop.
+$ mkdir ~/configs $ touch ~/.is_linux  Next:
+if [ -f &#39;.is_linux&#39; ]; then echo &amp;quot;This message only shows on my Linux laptops!&amp;quot; fi  Now with different config files you can configure different environments from is single universal *rc file you keep in a dotfiles repo.</description>
     </item>
     
     <item>
@@ -969,215 +139,8 @@ is single universal &lt;code&gt;*rc&lt;/code&gt; file you keep in a
       <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/ecto_callbacks/</guid>
-      <description>
-
-&lt;p&gt;Ecto callbacks (before/after) commit hooks have been deprecated, for a
-general good reason. Using callbacks is generally bad and you should never do
-it. But sometimes you need to do it because real life.&lt;/p&gt;
-
-&lt;p&gt;I wrote this macro this afternoon that implements both atomic and non-atomic
-callbacks. Here it is in all its glory. I won&amp;rsquo;t make it a hex package because
-it&amp;rsquo;s probably a bad thing to do.&lt;/p&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;In your &lt;code&gt;YourProject.Model.ex&lt;/code&gt; file, add:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;defmodule MyProject.Model do
-  defmacro __using__(_opts) do
-    quote do
-      use Ecto.Schema
-      import Ecto.Changeset
-      use MyProject.Hooks
-    end
-
-    @doc &amp;quot;&amp;quot;&amp;quot;
-    Dumb. For piping together methods in an `atomic_after_*` function call.
-
-    ## Example
-
-      first_callback()
-      |&amp;gt; hook_glue()
-      |&amp;gt; second_callback()
-    &amp;quot;&amp;quot;&amp;quot;
-    def hook_glue({:ok, struct}), do: struct
-    def hook_glue(struct), do: struct
-  end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;defmodule MyProject.Hooks do
-  @moduledoc &amp;quot;&amp;quot;&amp;quot;
-  This module macro defines the following functions within the model,
-  delegating to `Repo`, but allowing us to add `after_*` hooks,
-  which are no longer supported in Ecto
-  (http://blog.plataformatec.com.br/2015/12/ecto-v1-1-released-and-ecto-v2-0-plans/)
-
-      delete,
-      delete!,
-      delete_all,
-      insert,
-      insert!,
-      insert_all,
-      insert_or_update,
-      insert_or_update!,
-      update,
-      update!,
-      update_all
-
-  ## Hooks
-
-  `after_*` will perform action after transaction is done.
-  `atomic_after_*` will perform action within the same transaction, at the end.
-
-  When using `atomic_after`, make sure to return the resulting struct in
-  the success case, in its tuple format `{:ok, res}` or `{:error, error}`.
-
-  The return value of the transaction is what will be returned by the action.
-
-  ## Usage
-
-  Will print console message after updating:
-
-  **NOTE:** Remember to cover general case after.
-
-      defmodule MyModel do
-        use MyProject.Model # which calls `use MyProject.Overrides`
-
-        defp after_update(result, changeset) do
-          IO.puts(&amp;quot;updating!&amp;quot;)
-        end
-
-        defp atomic_after_update(r = {:error, _}, _), do: r
-        defp atomic_after_update(res, ch) do
-          case OtherModel.get!(1).name do
-            &amp;quot;bob&amp;quot; -&amp;gt; Repo.rollback(:cant_update_if_name_is_bob)
-            _ -&amp;gt; res
-          end
-        end
-
-      end
-
-      MyModel.update!(ch)
-      # -&amp;gt; &amp;quot;updating!&amp;quot;
-      %MyModel{...}
-  &amp;quot;&amp;quot;&amp;quot;
-
-  defmacro __using__(_) do
-    actions = [:delete,
-               :delete!,
-               :delete_all,
-               :insert,
-               :insert!,
-               :insert_all,
-               :insert_or_update,
-               :insert_or_update!,
-               :update,
-               :update!,
-               :update_all]
-
-    # For the love of God, do not touch until this is tested!
-    quote do
-      alias MyProject.Repo
-
-      unquote do
-        Enum.map(actions, fn action -&amp;gt;
-          quote do
-            def unquote(action)(changeset, opts \\ []) do
-              fwd = fn -&amp;gt;
-                res = Repo.unquote(action)(changeset, opts)
-                after_res = unquote(:&amp;quot;atomic_after_#{action}&amp;quot;)(res, changeset)
-
-                # Handle whether the action is with bang for or not
-                unquote do
-                  if String.last(Atom.to_string(action)) == &amp;quot;!&amp;quot; do
-                    quote do
-                      transaction_result =
-                        case after_res do
-                          {:ok, res} -&amp;gt; res
-                          {:error, error} -&amp;gt; raise error
-                        end
-                    end
-                  else
-                    quote do
-                      transaction_result = after_res
-                    end
-                  end
-                end
-                transaction_result
-              end
-
-              result =
-                case Repo.transaction(fwd) do
-                  # Covers e.g insert / update
-                  {:ok, {:ok, res}} -&amp;gt; {:ok, res}
-                  # Just in case
-                  {:ok, {:error, error}} -&amp;gt; {:error, error}
-                  # Covers insert! update! which return struct
-                  {:ok, res} -&amp;gt; res
-                  # Covers rollback which returns error
-                  {:error, error} -&amp;gt; {:error, error}
-                end
-
-              unquote(:&amp;quot;after_#{action}&amp;quot;)(result, changeset)
-              result
-            end
-          end
-        end)
-      end
-
-      unquote do
-        Enum.map(actions, fn action -&amp;gt;
-          quote do
-            defp unquote(:&amp;quot;after_#{action}&amp;quot;)(_res, _original_struct), do: nil
-          end
-        end)
-      end
-
-      unquote do
-        Enum.map(actions, fn action -&amp;gt;
-          if String.last(Atom.to_string(action)) == &amp;quot;!&amp;quot; do
-            quote do
-              defp unquote(:&amp;quot;atomic_after_#{action}&amp;quot;)(res, _) do
-                {:ok, res}
-              end
-            end
-          else
-            quote do
-              defp unquote(:&amp;quot;atomic_after_#{action}&amp;quot;)(res, _), do: res
-            end
-          end
-        end)
-      end
-
-      defoverridable [after_delete: 2,
-                      atomic_after_delete: 2,
-                      after_delete!: 2,
-                      atomic_after_delete!: 2,
-                      after_delete_all: 2,
-                      atomic_after_delete_all: 2,
-                      after_insert: 2,
-                      atomic_after_insert: 2,
-                      after_insert!: 2,
-                      atomic_after_insert!: 2,
-                      after_insert_all: 2,
-                      atomic_after_insert_all: 2,
-                      after_insert_or_update: 2,
-                      atomic_after_insert_or_update: 2,
-                      after_insert_or_update!: 2,
-                      atomic_after_insert_or_update!: 2,
-                      after_update: 2,
-                      atomic_after_update: 2,
-                      after_update!: 2,
-                      atomic_after_update!: 2,
-                      after_update_all: 2,
-                      atomic_after_update_all: 2]
-    end
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>Ecto callbacks (before/after) commit hooks have been deprecated, for a general good reason. Using callbacks is generally bad and you should never do it. But sometimes you need to do it because real life.
+I wrote this macro this afternoon that implements both atomic and non-atomic callbacks. Here it is in all its glory. I won&amp;rsquo;t make it a hex package because it&amp;rsquo;s probably a bad thing to do.</description>
     </item>
     
     <item>
@@ -1357,107 +320,75 @@ end
 
 &lt;p&gt;Here is the code used in these examples (working as of Julia 0.4.1). Our actual code at theScore is in Ruby.&lt;/p&gt;
 
-&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
+      <link>http://noamswebsite.com/wiki-main/ml/eigengoogle/</link>
+      <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/eigengoogle/</guid>
+      <description>While we&amp;rsquo;re on the subject of sorting things online, we might as well talk about Google: the 93-billion dollar company whose main export is taking all the things ever and putting them in the right order. If there&amp;rsquo;s one thing Google knows best, it&amp;rsquo;s sorting stuff.
+I was curious how it all works, and it turned out really interesting, plus I got to learn a bit about Markov chains. It all starts with an algorithm called PageRank1.</description>
+    </item>
+    
+    <item>
+      <title>Sorting Posts by User Engagement Level</title>
+      <link>http://noamswebsite.com/wiki-main/computers/user_eng/</link>
+      <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/user_eng/</guid>
+      <description>At Functional Imperative we&amp;rsquo;re building the new CanLII Connects website (a social portal for Canada&amp;rsquo;s largest database of legal cases), and this week I was given the task of figuring out a sensible way of sorting posts.
+Figuring out how to sort user-generated content is a common problem that many social websites face.
+Here&amp;rsquo;s Reddit&amp;rsquo;s scoring equation for &amp;lsquo;Best&amp;rsquo; (source and explanation):
+Not all scoring equations are that hairy, here are a few more.</description>
+    </item>
+    
+    <item>
+      <title>Amdahl&#39;s Law</title>
+      <link>http://noamswebsite.com/wiki-main/computers/amdahls_law/</link>
+      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/amdahls_law/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;As multicore computing becomes the norm (even my phone is dual core!), it&amp;rsquo;s important to understand the benefits and also the limitations of concurrency. Amdahl&amp;rsquo;s Law addresses the latter.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;module PlayerRecommender
-  export Team, Player, big_team_1, big_team_2, small_team
-  export naive_sort, sort
+&lt;p&gt;Let&amp;rsquo;s imagine a simple program. It prints &amp;ldquo;Hello World&amp;rdquo; 100 times, then quits.&lt;/p&gt;
 
-  type Player
-    subscribers::Int
-    team::AbstractString
-    recommendation_score::Float64
+&lt;p&gt;Our first version of the program is written as a single sequential task: it prints one &amp;ldquo;Hello World&amp;rdquo;, then another, then another, 100 times, then quits.  This program takes some unit of time, $t$ to execute.&lt;/p&gt;
 
-    function Player(subscribers)
-      new(subscribers, &amp;quot;&amp;quot;, 0.0)
-    end
-  end
+&lt;p&gt;Now say we have a dual-core machine at hand. (My phone, perhaps).&lt;/p&gt;
 
-  # Pretty print Player
-  function Base.show(io::IO, p::Player)
-    print(io, &amp;quot;$(p.team) $(typeof(p)) | subscribers: $(p.subscribers) | score: $(p.recommendation_score)&amp;quot;)
-  end
+&lt;p&gt;Cool, now we can spawn &lt;em&gt;two&lt;/em&gt; tasks that print &amp;ldquo;Hello World&amp;rdquo; 50 times each. And, because our magical imaginary computer experiences no overhead, it takes us exactly $\frac{ t }{ 2 }$ units of time to run our second program.&lt;/p&gt;
 
-  type Team
-    players::Array{Player}
-    std_dev::Float64
-    average::Float64
-    name::AbstractString
+&lt;p&gt;So we keep adding more and more processors, until we have 100 concurrent threads printing one &amp;ldquo;Hello World&amp;rdquo; each, and our program runs 100 times faster.&lt;/p&gt;
 
-    function Team(name, players)
-      for p in players
-        p.team = name
-      end
+&lt;p&gt;At this point we stop: &amp;ldquo;Ah, the trend is clear: more processors equals more speed! No point in continuing this experiment.&amp;rdquo;&lt;/p&gt;
 
-      new(players, 0.0, 0.0, name)
-    end
-  end
+&lt;p&gt;&lt;strong&gt;A naive (wrong) first guess:&lt;/strong&gt; Given $n$ processors executing a program, the maximum boost in speed is $n$. (That is, we can get our program to run $n$ times faster).&lt;/p&gt;
 
+&lt;p&gt;Cool! This means that, given enough processors, we could make &lt;em&gt;any&lt;/em&gt; program run almost instantly. Right?&lt;/p&gt;
 
-  function naive_sort(teams)
-    Base.sort(
-      [[team.players for team in teams]...],
-      by=x -&amp;gt; x.subscribers,
-      rev=true
-    )[1:5]
-  end
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/more_cores.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-  function sort(teams)
-    map(set_subscriptions_avg, teams)
-    map(std_dev, teams)
-    map(recommend, teams)
+&lt;p&gt;(&lt;a href=&#34;http://forums.pureoverclock.com/amd/21809-rumor-mill-amd-iv-x12-170-12-cores-24mb-cache-6ghz-2.html#post169754&#34;&gt;Pic original source&lt;/a&gt;)&lt;/p&gt;
 
-    Base.sort(
-      [[team.players for team in teams]...],
-      by=x -&amp;gt; x.recommendation_score,
-      rev=true
-    )[1:5]
-  end
-
-  # Private
-
-  function average(xs)
-    reduce(+, xs) / length(xs)
-  end
-
-  function dev_from_average(xs, average)
-    map(x -&amp;gt; x - average, xs)
-  end
-
-  function recommend(team)
-    map( x -&amp;gt; recommend(x, team), team.players)
-  end
-
-  function recommend(player, team)
-    player_dev = player.subscribers - team.average
-    if player_dev == 0
-      player.recommendation_score = 0
-    else
-      player.recommendation_score = player_dev / team.std_dev
-    end
-  end
-
-  function set_subscriptions_avg(team)
-    team.average = average([p.subscribers for p in team.players])
-  end
-
-  function squares(xs)
-    map(x -&amp;gt; x * x, xs)
-  end
-
-  function std_dev(team)
-    team.std_dev = std_dev([p.subscribers for p in team.players], team.average)
-  end
-
-  function std_dev(xs, average)
-    sqrt(reduce(+, squares(dev_from_average(xs, average))) / length(xs))
-  end
-
-  function subscriptions_avg(team)
-    team.average = average(float([x.subscribers for x in team.players]))
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;p&gt;Of course this is not the case! Enough daydreaming. Let&amp;rsquo;s figure out a more  realistic estimate.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rice&#39;s Theorem</title>
+      <link>http://noamswebsite.com/wiki-main/computers/rices_theorem/</link>
+      <pubDate>Tue, 16 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/computers/rices_theorem/</guid>
+      <description>Rice&amp;rsquo;s theorem can be stated thus:
+ Every non-trivial semantic property of a program is undecidable.
+ Before we prove the theorem, let&amp;rsquo;s break down that statement:
+&amp;ldquo;Semantic Property&amp;rdquo; A ssemantic property is a property of the language, not the machine that is computing it. For example, this is a semantic property of a language:
+ All strings in language $L$ are of the form $1^n0^n$.  This is not a semantic property:</description>
     </item>
     
   </channel>

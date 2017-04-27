@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Crypto on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/crypto/index.xml</link>
+    <link>http://noamswebsite.com/tags/crypto/</link>
     <description>Recent content in Crypto on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cool Articles / Papers</title>
@@ -14,133 +17,7 @@
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/cool_articles/</guid>
-      <description>
-
-&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://viewsourcecode.org/snaptoken/kilo/&#34;&gt;Build Your Own Text Editor&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;Really great tutorial (and introduction to C programming and terminal programming).&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.unm.edu/~crowley/papers/sds.pdf&#34;&gt;Data Structures For Text Sequences&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Handmade hero&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://handmadehero.org/&#34;&gt;YouTube&lt;/a&gt; series&lt;/td&gt;
-&lt;td&gt;Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Online Computer Science Courses With Video Lectures&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/Developer-Y/cs-video-courses&#34;&gt;HTML&lt;/a&gt; (community git)&lt;/td&gt;
-&lt;td&gt;Giant collection of free video lectures.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;crypto&#34;&gt;Crypto&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Efficient Data Structures for Tamper-Evident Logging&lt;/td&gt;
-&lt;td&gt;(&lt;a href=&#34;http://people.cs.vt.edu/danfeng/courses/cs6204/sp10-papers/crosby.pdf&#34;&gt;PDF&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;Youtube talk &lt;a href=&#34;https://youtu.be/G0tkCxq9OuE&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://blog.bren2010.io/2015/04/07/data-structures.html&#34;&gt;Cryptographic Data Structures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;compilers&#34;&gt;Compilers&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/abhinaba/2009/03/02/back-to-basics-generational-garbage-collection/&#34;&gt;Back To Basics: Generational Garbage Collection&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
-GC.&lt;/p&gt;
-
-&lt;h2 id=&#34;low-level-programming&#34;&gt;Low Level Programming&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Embedded Systems: Introduction To ARM Cortex-M Microcontrollers (5&lt;sup&gt;th&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/03pd6u0&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Computer Systems: A Programming Perspective, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/7W4IMFZ&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;See next resource for complementary video lectres&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Introduction To Computer Systems (Carnegie Mellon University)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~213/schedule.html&#34;&gt;video lectures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Closely follows the book &amp;ldquo;Computer Systems: A Programming Perspective&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/jloJHt7&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>General    Title Format Notes     Build Your Own Text Editor HTML Really great tutorial (and introduction to C programming and terminal programming).   Data Structures For Text Sequences PDF    Handmade hero YouTube series Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.   Online Computer Science Courses With Video Lectures HTML (community git) Giant collection of free video lectures.</description>
     </item>
     
   </channel>

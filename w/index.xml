@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ws on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/w/index.xml</link>
+    <link>http://noamswebsite.com/w/</link>
     <description>Recent content in Ws on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Mar 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://noamswebsite.com/w/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://noamswebsite.com/w/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A Bug</title>
@@ -15,25 +17,8 @@
       <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/a_bug/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;(Unfinished Sketch / In Progress)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;
-It happed one day that through a thick-leaved forest wondered I
-And in that dark buzzed what I thought an ordinary fly
-
-...
-
-&#34;If not to pester me, foul creature, why fly thus at night?&#34;
-&#34;Let me demonstrate,&#34; I heard, and sure enough: a light!
-&#34;An ordinary bug I am, invisible, by day;
-So when the sun is hid I wake&#34;, it said, and lit my way;
-And before soon the stars and moon we spotted merrily.
-&#34;What such relief!&#34; I thought, then said, and thanked him heartily;
-Then brighter still my wingèd friend drew geometric shapes:
-Shine where you are seen! we sang,
-Shine where you are seen!
-&lt;/pre&gt;
-</description>
+      <description>(Unfinished Sketch / In Progress)
+ It happed one day that through a thick-leaved forest wondered I And in that dark buzzed what I thought an ordinary fly ... &#34;If not to pester me, foul creature, why fly thus at night?&#34; &#34;Let me demonstrate,&#34; I heard, and sure enough: a light! &#34;An ordinary bug I am, invisible, by day; So when the sun is hid I wake&#34;, it said, and lit my way; And before soon the stars and moon we spotted merrily.</description>
     </item>
     
     <item>
@@ -42,23 +27,7 @@ Shine where you are seen!
       <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/it_sort_of_alliterates/</guid>
-      <description>&lt;pre&gt;
-I&#39;m a cheerful ball of clay
-See me rolling down the slope
-Tumbling forth stochastically
-Slowly gathering full shape
-My only maker gravity
-Molded of some dust and rain
-And salt and pressed to solid form
-Out of which grass blades cut through
-And another and more still
-Softening the tumble more
-They extend toward the sun
-Growing roots that soak and feed
-That chip and crack me outside in
-Turning clay to dust again
-&lt;/pre&gt;
-</description>
+      <description> I&#39;m a cheerful ball of clay See me rolling down the slope Tumbling forth stochastically Slowly gathering full shape My only maker gravity Molded of some dust and rain And salt and pressed to solid form Out of which grass blades cut through And another and more still Softening the tumble more They extend toward the sun Growing roots that soak and feed That chip and crack me outside in Turning clay to dust again  </description>
     </item>
     
     <item>
@@ -67,32 +36,8 @@ Turning clay to dust again
       <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/zuck2/</guid>
-      <description>&lt;p&gt;My Dearest Zuckerberg,&lt;/p&gt;
-
-&lt;p&gt;I think the elderly grocerystoreman has lost his mind. Why is it that whenever
-I visit his store so that I may purchase one of his goods (puddings by the
-pound and junk and spiced killgrinded cow in an addictively unsatisfying stale
-orange envelope made of, presumably, wheat, or corn? (The kind that when I bite
-on it it sticks to my teeth and stains my palate with thoughts of
-factory-cookeries somewhere in a third world country)) UP pops he like a wildly
-flankhaired coocoobird, sharp hairy ear and nosetendrils protruding at the dent
-of his upper lip reminding one of&amp;hellip; of, DEATH! The shadowy claws of DEATH
-protruding from and clawing at the face of a man who can no longer hear or
-smell yet insists to do and die in slow motion before my very eyes, each day
-wrinkling further in imperceptible ways and in UNMENTIONABLE places, gibbering
-an ineffectual recombinant pidgin of tongues that tickle barely my ear so that
-here and there I say &amp;ldquo;Ah!&amp;rdquo; and smile simply and there and here he SUDDENLY JABS
-me with English and I scramble but, Zuck, off he goes again into the structured
-madness of a verbal semiotics which my neural net can interpret only as noise,
-white and black and peppered like swirlylocks of a middleaged lothario, slave
-still and for one last go to that shriveled greedy chromosome, and why not,
-buying pounds for pounds, indiscriminately and without remorse, as he surely
-was some many lustless lustra prior, married, which he must remember fondly
-whenever a goodsome pair of gelatinous mounds tingle his doorbell? Where was he
-before and what was he doing there and why?&lt;/p&gt;
-
-&lt;p&gt;I wish I could understand Cantonese too.&lt;/p&gt;
-</description>
+      <description>My Dearest Zuckerberg,
+I think the elderly grocerystoreman has lost his mind. Why is it that whenever I visit his store so that I may purchase one of his goods (puddings by the pound and junk and spiced killgrinded cow in an addictively unsatisfying stale orange envelope made of, presumably, wheat, or corn? (The kind that when I bite on it it sticks to my teeth and stains my palate with thoughts of factory-cookeries somewhere in a third world country)) UP pops he like a wildly flankhaired coocoobird, sharp hairy ear and nosetendrils protruding at the dent of his upper lip reminding one of&amp;hellip; of, DEATH!</description>
     </item>
     
     <item>
@@ -101,11 +46,7 @@ before and what was he doing there and why?&lt;/p&gt;
       <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/shoes/</guid>
-      <description>&lt;p&gt;A second pair stacked on top. Dirty socks. Dirty shirts. Piles of them.  That
-chair I don&amp;rsquo;t even like. Too many cups. A clean bedroom, the bed made. Clean
-dishes, one of those pluggable scented candles. His records. My records. Too
-much space.&lt;/p&gt;
-</description>
+      <description>A second pair stacked on top. Dirty socks. Dirty shirts. Piles of them. That chair I don&amp;rsquo;t even like. Too many cups. A clean bedroom, the bed made. Clean dishes, one of those pluggable scented candles. His records. My records. Too much space.</description>
     </item>
     
     <item>
@@ -114,22 +55,11 @@ much space.&lt;/p&gt;
       <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/traingirl/</guid>
-      <description>&lt;p&gt;&amp;ldquo;What&amp;rsquo;s that book you&amp;rsquo;re reading?&amp;rdquo; she asks.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;&lt;em&gt;Ernest Wattle:&lt;/em&gt; the story of a man who falls in love with the statue of an
-ancient goddess.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Sounds strange.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Depends how you read it. It&amp;rsquo;s also the story of Almendra, an ancient goddess
-who creates a man just so he would love her. But then, through prayer, he
-brings her statue to life, but she falls in love with someone else.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;A quaint-looking pig farm, like something out of a picture book, whizzes across
-the window.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Everybody is inventing everybody.&amp;rdquo;&lt;/p&gt;
-</description>
+      <description>&amp;ldquo;What&amp;rsquo;s that book you&amp;rsquo;re reading?&amp;rdquo; she asks.
+&amp;ldquo;Ernest Wattle: the story of a man who falls in love with the statue of an ancient goddess.&amp;rdquo;
+&amp;ldquo;Sounds strange.&amp;rdquo;
+&amp;ldquo;Depends how you read it. It&amp;rsquo;s also the story of Almendra, an ancient goddess who creates a man just so he would love her. But then, through prayer, he brings her statue to life, but she falls in love with someone else.&amp;rdquo;
+A quaint-looking pig farm, like something out of a picture book, whizzes across the window.</description>
     </item>
     
     <item>
@@ -138,24 +68,9 @@ the window.&lt;/p&gt;
       <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/little_room/</guid>
-      <description>&lt;p&gt;A set of boots halt just behind Little Room door, mark a pensive hollow in the
-casted light on Little Room floor, peak an inch or two, bringing with them an
-ounce of sunshine more, and Little Room croaks.&lt;/p&gt;
-
-&lt;p&gt;The door shuts behind them; the sun is silenced again.&lt;/p&gt;
-
-&lt;p&gt;Little Room is home to feathered insects; bonsai orchards spring out of cracks
-on the floor, on which they perch and feed. A girl, sixteen maybe, lost her
-virginity there, by one of those cracks, to a crowd of cackling drunkards,
-tickled by the feathered pixies, and she thought it was a magical place, and
-she could never go back.&lt;/p&gt;
-
-&lt;p&gt;The Boots demand a double-shot of Jim from nobody in particular. Another girl,
-nineteen, ragged as a doll, but a doll, still, with hair frayed beautifully
-like a fractal tuft of burnt shrubbery, offers her body to The Boots, in her
-room upstairs, not for his money, just his attention. He takes the drink from
-her hand and tosses a coin and immediately forgets she exists.&lt;/p&gt;
-</description>
+      <description>A set of boots halt just behind Little Room door, mark a pensive hollow in the casted light on Little Room floor, peak an inch or two, bringing with them an ounce of sunshine more, and Little Room croaks.
+The door shuts behind them; the sun is silenced again.
+Little Room is home to feathered insects; bonsai orchards spring out of cracks on the floor, on which they perch and feed.</description>
     </item>
     
     <item>
@@ -164,32 +79,7 @@ her hand and tosses a coin and immediately forgets she exists.&lt;/p&gt;
       <pubDate>Mon, 05 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/bursts/</guid>
-      <description>&lt;p&gt;The first time he fell in love it was with a girl who always smelled like fresh
-laundry, and her name was Anna and it was love at first sight, or not quite so,
-because it wasn&amp;rsquo;t really all at once that he fell in love with her, but in
-little bursts rather, like the steps up a ladder, or grains of sand piling up at
-the bottom end of an hourglass, the first of which was him falling madly in love
-with her back, which was all he could see from where he sat, and all he wanted
-to see, entranced as he was at that moment by its smooth shape and tender flesh
-and by the contours of her spine and ribs, which traced sensuous grooves along
-the pink fabric of her tanktop whenever she took a deep breath, or spoke, or
-hunched over slightly in order to write something in her notebook, at which
-point long locks of black hair&amp;ndash;black like tree branches after a forest
-fire&amp;ndash;would fall and unravel, revealing for him, like curtains being fluttered
-by a morning breeze, which let slip a first ray of light into the room and wake
-the dreamer within from his slumber&amp;ndash; yes, exactly like that, they would fall
-and unravel and reveal to him her neck, her perfect neck, he thought, which was
-the next thing he fell in love with, followed by her dainty hands, and then the
-freckles on her face, which she hated, which he loved, adored, and, this is
-true, that very same winter he even fell in love with a certain bubbly noise her
-nose was making because she was trying to be as quiet as possible when sniffling
-every so often because she had had a cold and a runny nose, so he offered her a
-tissue, but really it was just so he could lean close enough to smell her, and
-to look into her eyes, which, he thought, gazing, small and dark and rounded,
-were like an infinitely dark abyss that gazed also into him, which he knew, of
-course, because the only reason he had read that damn book was because he had
-seen it poking out of her bag that one time.&lt;/p&gt;
-</description>
+      <description>The first time he fell in love it was with a girl who always smelled like fresh laundry, and her name was Anna and it was love at first sight, or not quite so, because it wasn&amp;rsquo;t really all at once that he fell in love with her, but in little bursts rather, like the steps up a ladder, or grains of sand piling up at the bottom end of an hourglass, the first of which was him falling madly in love with her back, which was all he could see from where he sat, and all he wanted to see, entranced as he was at that moment by its smooth shape and tender flesh and by the contours of her spine and ribs, which traced sensuous grooves along the pink fabric of her tanktop whenever she took a deep breath, or spoke, or hunched over slightly in order to write something in her notebook, at which point long locks of black hair&amp;ndash;black like tree branches after a forest fire&amp;ndash;would fall and unravel, revealing for him, like curtains being fluttered by a morning breeze, which let slip a first ray of light into the room and wake the dreamer within from his slumber&amp;ndash; yes, exactly like that, they would fall and unravel and reveal to him her neck, her perfect neck, he thought, which was the next thing he fell in love with, followed by her dainty hands, and then the freckles on her face, which she hated, which he loved, adored, and, this is true, that very same winter he even fell in love with a certain bubbly noise her nose was making because she was trying to be as quiet as possible when sniffling every so often because she had had a cold and a runny nose, so he offered her a tissue, but really it was just so he could lean close enough to smell her, and to look into her eyes, which, he thought, gazing, small and dark and rounded, were like an infinitely dark abyss that gazed also into him, which he knew, of course, because the only reason he had read that damn book was because he had seen it poking out of her bag that one time.</description>
     </item>
     
     <item>
@@ -198,37 +88,7 @@ seen it poking out of her bag that one time.&lt;/p&gt;
       <pubDate>Mon, 05 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/downstream/</guid>
-      <description>&lt;pre&gt;
-&#34;I would not mind floating downstream;
-End up among the fish and whales.
-
-Of the ocean waters, dark and deep,
-I&#39;m not afraid, for I do know
-That, once you&#39;ve lived among the corals,
-The muddy currents, pebbles and rocks,
-And parlous contours of the stream
-Against whose tide you&#39;d rather swim
-Are banes you&#39;ll gladly leave behind;
-
-For deep at sea you&#39;re not confined
-By rocks and edges that grind and rasp--
-The river&#39;s water may be sweet,
-But just as sweet, the river&#39;s shallow;
-I&#39;d rather down its torrent follow,
-Follow to the salted sea.&#34;
-
-(At this you quickly sipped your tea)
-
-&#34;Yes, in the sea I&#39;ll freely trace
-The peaceful ebbs of open space,
-More free than any shallow stream;
-As free as logic in a dream.&#34;
-
-Again you sipped, and leaned, and laughed,
-Then played a moment with your scarf;
-And I suspect you did agree.
-&lt;/pre&gt;
-</description>
+      <description>&#34;I would not mind floating downstream; End up among the fish and whales. Of the ocean waters, dark and deep, I&#39;m not afraid, for I do know That, once you&#39;ve lived among the corals, The muddy currents, pebbles and rocks, And parlous contours of the stream Against whose tide you&#39;d rather swim Are banes you&#39;ll gladly leave behind; For deep at sea you&#39;re not confined By rocks and edges that grind and rasp-- The river&#39;s water may be sweet, But just as sweet, the river&#39;s shallow; I&#39;d rather down its torrent follow, Follow to the salted sea.</description>
     </item>
     
     <item>
@@ -237,40 +97,7 @@ And I suspect you did agree.
       <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/bird/</guid>
-      <description>&lt;pre&gt;
-acu riousblue li ttlewing
-i sawta pingon mywindow
-like asif onstrings sheelin gered
-glo wingsof tlyin thesun
-
-sowith myfin geri tappedtoo
-what afun andglad somejoy
-theli ttleblue birdsang asong
-tobuoy myheart andbring mecheer
-
-not thenlong shestar tedflying
-there andhere andca lingmee
-pla yingcir clesin thesky
-andsaid sheedlike toplay withme:
-
-oh penup andcome outside!
-oh penup and chaseme!
-
-idlike tojoin itlooks likefun
-but alas ican notopen:
-
-oh penup youwill enjoyit!
-and thebreeze isso inviting!
-and thesun doesshine sobright-ly
-and thetrees arein fullbloom
-and thefruits andbugs and juicy warms
-and the earth smells fresh like after a storm
-and freedom
-and freedom is a
-freedom is the
-freedom is to
-&lt;/pre&gt;
-</description>
+      <description>acu riousblue li ttlewing i sawta pingon mywindow like asif onstrings sheelin gered glo wingsof tlyin thesun sowith myfin geri tappedtoo what afun andglad somejoy theli ttleblue birdsang asong tobuoy myheart andbring mecheer not thenlong shestar tedflying there andhere andca lingmee pla yingcir clesin thesky andsaid sheedlike toplay withme: oh penup andcome outside! oh penup and chaseme! idlike tojoin itlooks likefun but alas ican notopen: oh penup youwill enjoyit! and thebreeze isso inviting!</description>
     </item>
     
     <item>
@@ -279,40 +106,7 @@ freedom is to
       <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/characters/</guid>
-      <description>&lt;p&gt;They tear up the room, they jest and joke around, and I&amp;rsquo;m that much closer to
-not being here anymore; but when you have no friends, everyone is your friend.
-They gist and jitter, like little bugs, they bump into me, sit by my side, lean
-on me, kiss me, and just as quickly they leave; when I hold one it feels fuzzy,
-like an idea.  &amp;ldquo;Will you ever let me go?&amp;rdquo; No, never; I&amp;rsquo;ll hold you in my arms
-forever&amp;ndash; and it&amp;rsquo;s not there anymore. If you let them go, they&amp;rsquo;ll be yours
-forever, like air you&amp;rsquo;ve already exhaled. &amp;ldquo;Do you love me?&amp;rdquo; Well, when you&amp;rsquo;re
-not in love, you&amp;rsquo;re in love with everybody.  I write it all down, scratch
-things out, add things in; I make many mistakes you&amp;rsquo;ll never know about, sink
-into the couch and make easy conversation with pieces of lint and loose change;
-I clumsily stitch words onto people and people onto words. &amp;ldquo;I&amp;rsquo;m your ideal of
-an ideal woman,&amp;rdquo; I make one say, taking a long drag off someone else&amp;rsquo;s
-cigarette, I kind of shoot an askant smile, trying to look smart or at least
-aloof and not stupid.  Bumping into me, sitting by my side, leaning on me, she
-smiles.  &amp;ldquo;I&amp;rsquo;m afraid of dogs,&amp;rdquo; I tell her: &amp;ldquo;I was bitten when I was a toddler.
-It wasn&amp;rsquo;t painful, but some fears kind of stick like that and you can&amp;rsquo;t get rid
-of them. I wanted to pet it; I kept hesitating too, but the guy told me &amp;lsquo;Don&amp;rsquo;t
-worry, he won&amp;rsquo;t bite&amp;rsquo;&amp;ndash; so I petted it, and sure enough it bit me.&amp;rdquo; She presses
-her body, swaddled in a fuzzy sweater, closer against me, I hold her head tight
-against my chest, her hair glows redder than the tip of the cigarette; I make
-her say more things, pithy things, terse things, non sequiturs, redundancies,
-allusions; her skin burns the tips of my fingers and chars my tongue.  Casually
-she says &amp;ldquo;I think you&amp;rsquo;ll fall in love with me.&amp;rdquo; &amp;ldquo;O yea?&amp;rdquo; I chuckle, running the
-lank of her hair through my fingers. She says, &amp;ldquo;O yes; I have you all figured
-out.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;I write down the conversation before I&amp;rsquo;m any part of it.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Stop that,&amp;rdquo; she palms my notebook.&lt;/p&gt;
-
-&lt;p&gt;I try to get her hand out of the way, I try to explain to her that if I don&amp;rsquo;t
-write this down it&amp;rsquo;ll really happen, but it&amp;rsquo;s too late because she leans in and
-kisses me.&lt;/p&gt;
-</description>
+      <description>They tear up the room, they jest and joke around, and I&amp;rsquo;m that much closer to not being here anymore; but when you have no friends, everyone is your friend. They gist and jitter, like little bugs, they bump into me, sit by my side, lean on me, kiss me, and just as quickly they leave; when I hold one it feels fuzzy, like an idea. &amp;ldquo;Will you ever let me go?</description>
     </item>
     
     <item>
@@ -321,24 +115,7 @@ kisses me.&lt;/p&gt;
       <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/roomly/</guid>
-      <description>&lt;pre&gt;
-Roomly I dejected your enter.
-We bedded on your sit;
-Did you kiss to want me?
-I wanted to bad you kissly, sure.
-I loved you to make want to too.
-Real buttly, I felt near you just to get lucky.
-And your lovely open looked so wide, sweet eyes.
-Your sweet strawberry tastes like a juicy mouth.
-O, I&#39;m so long for you, I how in pain!
-And I want to proclaim my love for my pride, but you swallow.
-Darling, I am so in you, with love.
-And every time you stop, my heart looks at me.
-
-Dear love, this me for you will be the death of God.
-So leave, don&#39;t ever please me.
-&lt;/pre&gt;
-</description>
+      <description>Roomly I dejected your enter. We bedded on your sit; Did you kiss to want me? I wanted to bad you kissly, sure. I loved you to make want to too. Real buttly, I felt near you just to get lucky. And your lovely open looked so wide, sweet eyes. Your sweet strawberry tastes like a juicy mouth. O, I&#39;m so long for you, I how in pain! And I want to proclaim my love for my pride, but you swallow.</description>
     </item>
     
     <item>
@@ -347,14 +124,7 @@ So leave, don&#39;t ever please me.
       <pubDate>Thu, 05 Jan 2006 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/words/</guid>
-      <description>&lt;pre&gt;
-    Words don&#39;t listen
-     Words don&#39;t talk
-     Don&#39;t do nothing
-    You write them down
-They just kind of sit there
-&lt;/pre&gt;
-</description>
+      <description> Words don&#39;t listen Words don&#39;t talk Don&#39;t do nothing You write them down They just kind of sit there  </description>
     </item>
     
   </channel>

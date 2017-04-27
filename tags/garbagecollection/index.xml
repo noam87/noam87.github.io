@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Garbagecollection on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/garbagecollection/index.xml</link>
+    <link>http://noamswebsite.com/tags/garbagecollection/</link>
     <description>Recent content in Garbagecollection on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/tags/garbagecollection/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/garbagecollection/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Cool Articles / Papers</title>
@@ -14,133 +17,7 @@
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/cool_articles/</guid>
-      <description>
-
-&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://viewsourcecode.org/snaptoken/kilo/&#34;&gt;Build Your Own Text Editor&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;Really great tutorial (and introduction to C programming and terminal programming).&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.unm.edu/~crowley/papers/sds.pdf&#34;&gt;Data Structures For Text Sequences&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Handmade hero&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://handmadehero.org/&#34;&gt;YouTube&lt;/a&gt; series&lt;/td&gt;
-&lt;td&gt;Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Online Computer Science Courses With Video Lectures&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/Developer-Y/cs-video-courses&#34;&gt;HTML&lt;/a&gt; (community git)&lt;/td&gt;
-&lt;td&gt;Giant collection of free video lectures.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;crypto&#34;&gt;Crypto&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Efficient Data Structures for Tamper-Evident Logging&lt;/td&gt;
-&lt;td&gt;(&lt;a href=&#34;http://people.cs.vt.edu/danfeng/courses/cs6204/sp10-papers/crosby.pdf&#34;&gt;PDF&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;Youtube talk &lt;a href=&#34;https://youtu.be/G0tkCxq9OuE&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://blog.bren2010.io/2015/04/07/data-structures.html&#34;&gt;Cryptographic Data Structures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;compilers&#34;&gt;Compilers&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/abhinaba/2009/03/02/back-to-basics-generational-garbage-collection/&#34;&gt;Back To Basics: Generational Garbage Collection&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;HTML&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
-GC.&lt;/p&gt;
-
-&lt;h2 id=&#34;low-level-programming&#34;&gt;Low Level Programming&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Embedded Systems: Introduction To ARM Cortex-M Microcontrollers (5&lt;sup&gt;th&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/03pd6u0&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Computer Systems: A Programming Perspective, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/7W4IMFZ&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;See next resource for complementary video lectres&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Introduction To Computer Systems (Carnegie Mellon University)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~213/schedule.html&#34;&gt;video lectures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Closely follows the book &amp;ldquo;Computer Systems: A Programming Perspective&amp;rdquo;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/jloJHt7&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>General    Title Format Notes     Build Your Own Text Editor HTML Really great tutorial (and introduction to C programming and terminal programming).   Data Structures For Text Sequences PDF    Handmade hero YouTube series Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.   Online Computer Science Courses With Video Lectures HTML (community git) Giant collection of free video lectures.</description>
     </item>
     
     <item>
@@ -149,128 +26,8 @@ GC.&lt;/p&gt;
       <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;learning&#34;&gt;Learning&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/hjRDstC&#34;&gt;Elixir In Action&lt;/a&gt; (book)&lt;/td&gt;
-&lt;td&gt;My go-to recommendation for getting started with Elixir.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://medium.com/@diamondgfx/introduction-fe138ac6079d&#34;&gt;Writing A Blog Engine in Phoenix&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Great first tutorial for Phoenix framework&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.erlang-in-anger.com/&#34;&gt;Erlang In Anger&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Great guide for when stuff goes bad.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;memory-gc&#34;&gt;Memory / GC&lt;/h2&gt;
-
-&lt;p&gt;For articles on GC / compilers in general see &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/compilers&#34;&gt;compilers&lt;/a&gt; section.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang/scheduling/real-time/preemptive/migration/2016/02/09/erlang-scheduler-details.html&#34;&gt;Erlang Scheduler Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://hamidreza-s.github.io/erlang%20garbage%20collection%20memory%20layout%20soft%20realtime/2015/08/24/erlang-garbage-collection-details-and-why-it-matters.html&#34;&gt;Erlang Garbage Collection Details and Why It Matters&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Simple introduction to Erlang GC concepts. Start here.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.erlang-solutions.com/blog/erlang-19-0-garbage-collector.html&#34;&gt;Erlang 19.0 Garbage Collector&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://erlang.org/doc/efficiency_guide/introduction.html&#34;&gt;Erlang Efficiency Guide&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://blog.bugsense.com/post/74179424069/erlang-binary-garbage-collection-a-lovehate&#34;&gt;Erlang Binary Garbage Collection: A love/hate relationship&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Some findings on the shared heap GC.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://jlouisramblings.blogspot.ca/2013/01/how-erlang-does-scheduling.html?m=1&#34;&gt;How Erlang does scheduling&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://kth.diva-portal.org/smash/record.jsf?searchId=2&amp;amp;pid=diva2%3A392243&amp;amp;dswid=-8162&#34;&gt;Characterizing the Scalability of Erlang VM on Many-core Processors&lt;/a&gt; (pdf)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;performance&#34;&gt;Performance&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.evanmiller.org/elixir-ram-and-the-template-of-doom.html&#34;&gt;Elixir RAM And The Template Of Doom&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.bignerdranch.com/blog/elixir-and-io-lists-part-1-building-output-efficiently/&#34;&gt;Elixir and IO Lists, Part 1: Building Output Efficiently&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;performance-tips&#34;&gt;Performance Tips&lt;/h2&gt;
-
-&lt;p&gt;Don&amp;rsquo;t have processes the many other processes depend on. For example, a
-single-process cache that many others call to. This will be a bottleneck
-because you&amp;rsquo;ll always have to wait for that process&amp;rsquo;s turn from the scheduler.&lt;/p&gt;
-</description>
+      <description>Learning    Title Notes     Elixir In Action (book) My go-to recommendation for getting started with Elixir.   Writing A Blog Engine in Phoenix Great first tutorial for Phoenix framework   Erlang In Anger Great guide for when stuff goes bad.    Memory / GC For articles on GC / compilers in general see compilers section.
+   Title Notes     Erlang Scheduler Details and Why It Matters    Erlang Garbage Collection Details and Why It Matters Simple introduction to Erlang GC concepts.</description>
     </item>
     
   </channel>

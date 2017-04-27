@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cs on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/wikis/cs/index.xml</link>
+    <link>http://noamswebsite.com/wikis/cs/</link>
     <description>Recent content in Cs on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/wikis/cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/wikis/cs/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Information Theory Overview</title>
@@ -14,44 +17,8 @@
       <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
-      <description>&lt;p&gt;Roadmap based on &lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;youtube introductory series&lt;/a&gt;.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;blank&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Compression&lt;/strong&gt; (efficiency, source coding)&lt;/th&gt;
-&lt;th&gt;&lt;strong&gt;Error Correction&lt;/strong&gt; (reliability, channel coding)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Information Theory (Math)&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Losless:&lt;/strong&gt; source coding theorem,  Kraft-McMillan inequality&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Lossy:&lt;/strong&gt; rate distortion theorem&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Coding Methods (algorithms)&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Symbol Code:&lt;/strong&gt; Huffman codes&lt;/td&gt;
-&lt;td&gt;Hamming codes, BCH codes, Turbocodes, Gallager codes&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Stream Codes:&lt;/strong&gt; arithmetic coding&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Roadmap based on youtube introductory series.
+   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     </description>
     </item>
     
     <item>
@@ -60,80 +27,7 @@
       <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Probability Through Problems&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://archive.org/details/springer_10.1007-978-0-387-21659-1&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/chcB92K&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Best introductory probability book out there. Learn by discovering!&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Principles And Techniques In Combinatorics&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/2gz4ZXD&#34;&gt;BOOK&lt;/a&gt; ; &lt;a href=&#34;http://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/26781/Principles%20and%20Techniques%20in%20Combinatorics.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Beautiful book: simple, clear explanations, no filler, challenging problems&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;computer-science&#34;&gt;Computer Science&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Information Theory And Coding&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;YouTube Lectures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Elements Of Information Theory (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://staff.ustc.edu.cn/~cgong821/Wiley.Interscience.Elements.of.Information.Theory.Jul.2006.eBook-DDU.pdf&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/dHvNEwV&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A Tutorial On Deep Learning (&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt 1&lt;/a&gt;, &lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt 2&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
     </item>
     
     <item>
@@ -166,37 +60,7 @@
 
 &lt;p&gt;(&lt;a href=&#34;http://forums.pureoverclock.com/amd/21809-rumor-mill-amd-iv-x12-170-12-cores-24mb-cache-6ghz-2.html#post169754&#34;&gt;Pic original source&lt;/a&gt;)&lt;/p&gt;
 
-&lt;p&gt;Of course this is not the case! Enough daydreaming. Let&amp;rsquo;s figure out a more  realistic estimate.&lt;/p&gt;
-
-&lt;p&gt;Let $P$ be the proportion of our program that can run in parallel. Then it follows that $1 - P$ is the proportion that cannot be broken up into independent tasks.&lt;/p&gt;
-
-&lt;p&gt;For example, since our program can be broken up into 100 independent tasks, then $1 - P = \frac{ 1 }{ 100 }$.&lt;/p&gt;
-
-&lt;p&gt;It follows that the maximum boost in speed (denoted $S(n)$) that we can expect out of assigning concurrent tasks to $n$ parallel processors can be represented by the following equation:&lt;/p&gt;
-
-&lt;p&gt;$$S(n) = \frac{ 1 }{ (1 - P) + \frac{ P }{ n } }$$&lt;/p&gt;
-
-&lt;p&gt;This is, in fact, Amdahl&amp;rsquo;s equation.&lt;/p&gt;
-
-&lt;p&gt;Uh-oh&amp;hellip; do you see it? As we add more and more processors to our computer, and $n \to \infty$, we are left with $ S =  \frac{ 1 }{ 1 - p }$.&lt;/p&gt;
-
-&lt;p&gt;What we have here is a clear case of &lt;em&gt;diminishing returns.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;How bad is it?  Let&amp;rsquo;s add &lt;em&gt;one million cores&lt;/em&gt; to our imaginary computer, and measure its performance at $gc = 99\%$:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/99pc.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Well, for our imaginary software, 99% of which can be parallelized, we can expect a maximum boost of $ S = 100$.&lt;/p&gt;
-
-&lt;p&gt;What about a program with $gc = 90\%$?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/90pc.gif&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There&amp;rsquo;s that same plateau again. But this time we&amp;rsquo;re only seeing a maximum performance boost of $S = 10$.&lt;/p&gt;
-
-&lt;p&gt;By $gc = 50\% $, we&amp;rsquo;re down to a program that can only be boosted to run twice as fast no matter how much parallel processing your machine is capable of!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Final Note:&lt;/strong&gt; In fact, Amdahl&amp;rsquo;s Law is not exclusive to concurrency, but applies to &lt;em&gt;any&lt;/em&gt; speed-boosting strategy that only affects some portion of a program.&lt;/p&gt;</description>
+&lt;p&gt;Of course this is not the case! Enough daydreaming. Let&amp;rsquo;s figure out a more  realistic estimate.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -205,174 +69,11 @@
       <pubDate>Tue, 16 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/rices_theorem/</guid>
-      <description>
-
-&lt;p&gt;Rice&amp;rsquo;s theorem can be stated thus:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Every non-trivial semantic property of a program is undecidable.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Before we prove the theorem, let&amp;rsquo;s break down that statement:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&#34;semantic-property&#34;&gt;&amp;ldquo;Semantic Property&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;A ssemantic property is a property of the language, &lt;em&gt;not the machine that is
-computing it&lt;/em&gt;. For example, this is a semantic property of a language:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;All strings in language $L$ are of the form $1^n0^n$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is not a semantic property:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;It takes my program $n$ steps to generate the first 100 strings in $L$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Note the importance of differentiating between a semantic property and not:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The halting problem is actually decidable for
-&lt;a href=&#34;https://en.wikipedia.org/wiki/Linear_bounded_automaton&#34;&gt;Linear Bouned Automata&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;non-trivial&#34;&gt;&amp;ldquo;Non-Trivial&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;A trivial property is a property that either all languages have or no language
-has. A non-trivial property is everything else.&lt;/p&gt;
-
-&lt;h3 id=&#34;undecidable&#34;&gt;&amp;ldquo;Undecidable&amp;rdquo;&lt;/h3&gt;
-
-&lt;p&gt;A program can either &lt;strong&gt;accept&lt;/strong&gt;, &lt;strong&gt;reject&lt;/strong&gt;, or &lt;strong&gt;run forever&lt;/strong&gt;. If a program
-reaches an accept or reject state, we say it &lt;strong&gt;halts&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;There are two types of programs: &lt;strong&gt;recognizers&lt;/strong&gt; and &lt;strong&gt;deciders&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;A recognizer is a program that can only tell you with certainty when it has
-succeeded to solve a problem (reached the accept state). It cannot always tell
-you when it has failed (if it goes into an infinite loop, there is no way to
-know if it&amp;rsquo;s in a loop, or if it&amp;rsquo;s just taking very long to solve the problem).&lt;/p&gt;
-
-&lt;p&gt;A decider is a program that always reaches either accepts or rejects. That is,
-you not only know when the problem was solved, but you also know when it was
-&lt;em&gt;not&lt;/em&gt; solved.&lt;/p&gt;
-
-&lt;p&gt;A language is &lt;strong&gt;recognizable&lt;/strong&gt; if there exists at least one program that can
-recognize it. For example, the following program reconizes $L = \{&amp;ldquo;342&amp;rdquo;\}$ (the
-language made up of only the string &amp;ldquo;342&amp;rdquo;):&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Read input.&lt;/li&gt;
-&lt;li&gt;If input == &amp;ldquo;342&amp;rdquo; print &amp;ldquo;accept&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;Else return to step 1.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This program &lt;em&gt;recognizes&lt;/em&gt; $L$, but it does not &lt;em&gt;decide&lt;/em&gt; $L$: if the input is in
-$L$, it accepts, but if it&amp;rsquo;s not, then it will run forever, and you will never
-know whether the input was not in $L$ or the program is just taking a long
-time.&lt;/p&gt;
-
-&lt;p&gt;A language is &lt;strong&gt;decidable&lt;/strong&gt; if there exists a program that can decide it. All
-decidable languages are also recognizable. Here is a program that decides $L$:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Read input.&lt;/li&gt;
-&lt;li&gt;If input == &amp;ldquo;342&amp;rdquo; print &amp;ldquo;accept&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;Else print &amp;ldquo;input rejected&amp;rdquo;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;the-halting-problem&#34;&gt;The Halting Problem&lt;/h2&gt;
-
-&lt;p&gt;Take the following language:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;$HALT_{ TM } = \{ \langle M, w \rangle | M$
-is a program and $M$ halts on input $w \}$&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Remember, a program is itself just a string: any program can be written down as
-a description, say an &lt;code&gt;.rb&lt;/code&gt; file, and that file can be used as an input for
-another program (or itself!). So $HALT_{ TM }$ is a language that consists of
-all programs $M$ and inputs $w$ such that $M$ halts on $w$.&lt;/p&gt;
-
-&lt;p&gt;I won&amp;rsquo;t prove it in this post, but, as it turns out, $HALT_{ TM }$ is
-undecidable. Meaning it is not possible to write a program that decides whether
-an algorithm halts.&lt;/p&gt;
-
-&lt;p&gt;With this in mind, we can finally prove Rice&amp;rsquo;s theorem:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;rice-s-theorem&#34;&gt;Rice&amp;rsquo;s Theorem&lt;/h2&gt;
-
-&lt;p&gt;Recall the theorem:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Every non-trivial semantic property of a program is undecidable.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Yet another way of stating this is as follows:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;The language $P_{ TM }$, described below, is undecidable:
-$P_{ TM } = \{ \langle M \rangle | M$ is a program and $L(M)$ has
-non-trivial property $P \}$. Where $L(M)$ means &amp;ldquo;The language of $M$&amp;rdquo;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;So, for example, it is not possible to write a program $R $ that takes as its
-input another program $M$ and decides whether the language of $M$ is regular
-(that is, if $M$ can be simplified and represented as a finite automation).&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;proof&#34;&gt;Proof&lt;/h2&gt;
-
-&lt;p&gt;We can prove Rice&amp;rsquo;s theorem by contradiction. We will show that &lt;strong&gt;if&lt;/strong&gt; $P_{ TM
-}$ is decidable &lt;strong&gt;then&lt;/strong&gt; so is $HALT_{ TM }$.  Since we know that $ HALT_{ TM
-}$ is undecidable, then $P_{ TM }$ must be undecidable too.&lt;/p&gt;
-
-&lt;p&gt;Assume that $P$ is some non-trivial semantic property and that it is possible
-to write a program $R$ that decides $P_{ TM }$. Here is how we could solve the
-halting problem with that program:&lt;/p&gt;
-
-&lt;p&gt;First, we write a program $T$ such that $\langle T \rangle $ is in $P_{ TM }$.
-Because $P$ is non-trivial, such a program must exist.&lt;/p&gt;
-
-&lt;p&gt;Take input $\langle M, w \rangle$ and use it to write a program $M_w$that
-takes $x$ as its input and does the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;$M_w $:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Run $M$ on input $w$. If $M$ halts, move on to step 2.  2. Run $T$ on $x$. Accept if $T$ accepts, and reject if $T$ rejects.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Here&amp;rsquo;s the clever part. &lt;em&gt;We don&amp;rsquo;t actually have to run $M_w$&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;All we need to know is that, if we &lt;em&gt;were&lt;/em&gt; to run $M_w$, there are two possible
-outcomes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;$M$ halts on input $w$, in which case $M_w$ reaches step 2.&lt;/li&gt;
-&lt;li&gt;$M$ never halts and never reaches step 2.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;But note that, if $M$ halts on $w$, then step 2 is simply to run $T$, which
-means that &lt;strong&gt;when $M$ halts on $w$, $ \langle M_w \rangle$is in $ P_{ TM
-}$.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;So, if we were to run $R$ with input $\langle M_w \rangle$, it would be able
-to tell us whether it is in $P_{ TM }$, and that in turn would tell us if $M$
-halts on $w$.&lt;/p&gt;
-
-&lt;p&gt;But this would mean that we could solve the halting problem, which we know  is
-not possible.&lt;/p&gt;
-</description>
+      <description>Rice&amp;rsquo;s theorem can be stated thus:
+ Every non-trivial semantic property of a program is undecidable.
+ Before we prove the theorem, let&amp;rsquo;s break down that statement:
+&amp;ldquo;Semantic Property&amp;rdquo; A ssemantic property is a property of the language, not the machine that is computing it. For example, this is a semantic property of a language:
+ All strings in language $L$ are of the form $1^n0^n$.  This is not a semantic property:</description>
     </item>
     
   </channel>

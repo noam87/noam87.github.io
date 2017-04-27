@@ -2,97 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Biology on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/wikis/biology/index.xml</link>
+    <link>http://noamswebsite.com/wikis/biology/</link>
     <description>Recent content in Biology on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/wikis/biology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/wikis/biology/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>How to read chemistry squiggles</title>
-      <link>http://noamswebsite.com/wiki-main/science/squiggles/</link>
+      <title>Chemistry Cheat Sheet</title>
+      <link>http://noamswebsite.com/wiki-main/science/chem_cheat_sheet/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://noamswebsite.com/wiki-main/science/squiggles/</guid>
-      <description>&lt;p&gt;In order to make shorthand easier, chemists omit C and H atoms
-from its structural formula. There are two simple rules for adding them back in:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;span style=&#34;color:red;&#34;&gt;All sharp corners represent carbon atoms.&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span style=&#34;color:blue;&#34;&gt;Hydrogen - carbon bonds are implied
-(so if a carbon atom has less than 4 bonds, the rest are H).&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;For example in this formual for a caffeine molecule:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/caffeine.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The following is implied:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/caffeine_ch.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Is A Chemical Bond Polar?</title>
-      <link>http://noamswebsite.com/wiki-main/science/plarity/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/science/plarity/</guid>
-      <description>&lt;p&gt;Whether a bond between two atoms is polar depends on the difference between
-the two atoms&amp;rsquo; Pauling Electronegativity (their ability to attract electrons).&lt;/p&gt;
-
-&lt;p&gt;For example, taking the most common elements in living organisms:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Element&lt;/th&gt;
-&lt;th&gt;Pauling Electronegativity&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Phosphorus&lt;/td&gt;
-&lt;td&gt;2.19&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Hydrogen&lt;/td&gt;
-&lt;td&gt;2.20&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Carbon&lt;/td&gt;
-&lt;td&gt;2.55&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Sulfur&lt;/td&gt;
-&lt;td&gt;2.58&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Nitrogen&lt;/td&gt;
-&lt;td&gt;3.04&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Oxygen&lt;/td&gt;
-&lt;td&gt;3.44&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;So, an &lt;code&gt;O-H&lt;/code&gt; bond yields &lt;code&gt;3.44 - 2.20 = 1.24&lt;/code&gt; (polar), while a &lt;code&gt;C-H&lt;/code&gt; bond
-yields &lt;code&gt;2.55 - 2.20 = 0.35&lt;/code&gt; (low polarity / non-polar).&lt;/p&gt;
-
-&lt;p&gt;Polarity exists on a spectrum. Usually one considers anything above &lt;code&gt;~0.4&lt;/code&gt; polar.&lt;/p&gt;
-
-&lt;p&gt;Polarity can be high enough that the bond is no longer a covalent bond,
-but an &lt;strong&gt;ionic bond&lt;/strong&gt;, where one of the atoms steals the electrons of the other.&lt;/p&gt;
-</description>
+      <guid>http://noamswebsite.com/wiki-main/science/chem_cheat_sheet/</guid>
+      <description>TOC  How To Read The Squiggles Is A Chemical Bond Polar?  How To Read The Squiggles In order to make shorthand easier, chemists omit C and H atoms from its structural formula. There are two simple rules for adding them back in:
+ All sharp corners represent carbon atoms. Hydrogen - carbon bonds are implied (so if a carbon atom has less than 4 bonds, the rest are H).</description>
     </item>
     
     <item>
@@ -101,60 +27,7 @@ but an &lt;strong&gt;ionic bond&lt;/strong&gt;, where one of the atoms steals th
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;biology&#34;&gt;Biology&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Robert Sapolsky: The Biology Of Human Behavior&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;YouTube&lt;/a&gt; lecture series&lt;/td&gt;
-&lt;td&gt;You are not in control.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Molecular Biology Of the Cell&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/ap9m9UD&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;cancer&#34;&gt;Cancer&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;The Biology Of Cancer&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/cj4bhIS&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Optimising Combination Dosing Strategy Of Abemaciclib And Vemurafenib In BRAF-Mutated Melanoma tumours&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.nature.com/bjc/journal/v114/n6/full/bjc201640a.html&#34;&gt;HTML&lt;/a&gt; (full paper)&lt;/td&gt;
-&lt;td&gt;Interesting findings for using intermittent dosing to extend the effectiveness of targeted therapies.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Biology    Title Format Notes     Robert Sapolsky: The Biology Of Human Behavior YouTube lecture series You are not in control.   Molecular Biology Of the Cell BOOK     Cancer    Title Format Notes     The Biology Of Cancer BOOK Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.</description>
     </item>
     
   </channel>

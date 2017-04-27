@@ -6,7 +6,7 @@
     <description>Recent content in Wikis on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wikis/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Biology</title>
       <link>http://noamswebsite.com/wikis/biology/</link>
-      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/biology/</guid>
       <description></description>
@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Chemistry</title>
+      <link>http://noamswebsite.com/wikis/chemistry/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wikis/chemistry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Computers</title>
       <link>http://noamswebsite.com/wikis/computers/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
@@ -50,7 +59,7 @@
     <item>
       <title>Cs</title>
       <link>http://noamswebsite.com/wikis/cs/</link>
-      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/cs/</guid>
       <description></description>
@@ -66,18 +75,9 @@
     </item>
     
     <item>
-      <title>Games</title>
-      <link>http://noamswebsite.com/wikis/games/</link>
-      <pubDate>Thu, 14 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wikis/games/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Math</title>
       <link>http://noamswebsite.com/wikis/math/</link>
-      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/math/</guid>
       <description></description>
@@ -95,7 +95,7 @@
     <item>
       <title>Random</title>
       <link>http://noamswebsite.com/wikis/random/</link>
-      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/random/</guid>
       <description></description>
@@ -104,7 +104,7 @@
     <item>
       <title>Science</title>
       <link>http://noamswebsite.com/wikis/science/</link>
-      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/science/</guid>
       <description></description>
