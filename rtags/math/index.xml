@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Math on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/rtags/math/</link>
+    <link>http://noamswebsite.com/rtags/math/index.xml</link>
     <description>Recent content in Math on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/rtags/math/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/rtags/math/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Yutaka Taniyama</title>
@@ -17,8 +14,16 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/yutaka_taniyama/</guid>
-      <description> About Him  He was not a very careful person as a mathematician. He made a lot of mistakes. But he made mistakes in a good direction. I tried to imitate him. But I’ve realized that it’s very difficult to make good mistakes.
- </description>
+      <description>
+
+&lt;h2 id=&#34;about-him&#34;&gt;About Him&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;He was not a very careful person as a mathematician. He made a lot of
+mistakes. But he made mistakes in a good direction. I tried to imitate him.
+But I’ve realized that it’s very difficult to make good mistakes.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
   </channel>

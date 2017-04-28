@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Calculus on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/calculus/</link>
+    <link>http://noamswebsite.com/tags/calculus/index.xml</link>
     <description>Recent content in Calculus on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/tags/calculus/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Calculus Cheat Sheet</title>
@@ -17,10 +14,21 @@
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</guid>
-      <description>Gradient A vector field in the direction of steepest ascent.
-$$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\partial x_{1}} \\ \frac{\partial f}{\partial x_{2}} \\
-\vdots \\
-\frac{\partial f}{\partial x_{i}} \end{bmatrix} $$</description>
+      <description>
+
+&lt;h2 id=&#34;gradient&#34;&gt;Gradient&lt;/h2&gt;
+
+&lt;p&gt;A vector field in the direction of steepest ascent.&lt;/p&gt;
+
+&lt;p&gt;$$
+\nabla f( x_{1},  x_{2}, \dots  x_{i}) =  \begin{bmatrix}
+  \frac{\partial f}{\partial x_{1}} \\
+  \frac{\partial f}{\partial x_{2}} \\&lt;br /&gt;
+  \vdots \\&lt;br /&gt;
+  \frac{\partial f}{\partial x_{i}}
+\end{bmatrix}
+$$&lt;/p&gt;
+</description>
     </item>
     
   </channel>

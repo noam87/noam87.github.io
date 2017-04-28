@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pascal on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/rtags/pascal/</link>
+    <link>http://noamswebsite.com/rtags/pascal/index.xml</link>
     <description>Recent content in Pascal on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="http://noamswebsite.com/rtags/pascal/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="http://noamswebsite.com/rtags/pascal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Blaise Pascal</title>
@@ -17,8 +14,11 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/pascal/</guid>
-      <description> All of humanity&amp;rsquo;s problems stem from man&amp;rsquo;s inability to sit quietly in a room alone.
- </description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;All of humanity&amp;rsquo;s problems stem from man&amp;rsquo;s inability to sit quietly in a room
+alone.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
   </channel>

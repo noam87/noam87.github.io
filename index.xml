@@ -2,14 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/</link>
+    <link>http://noamswebsite.com/index.xml</link>
     <description>Recent content on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://noamswebsite.com/index.xml" rel="self" type="application/rss+xml" />
     
-	<atom:link href="http://noamswebsite.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Information Theory Overview</title>
+      <link>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</link>
+      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
+      <description>
+
+&lt;p&gt;Roadmap based on &lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;youtube introductory series&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Compression&lt;/strong&gt; (efficiency, source coding)&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;Error Correction&lt;/strong&gt; (reliability, channel coding)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Information Theory (Math)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Losless:&lt;/strong&gt; source coding theorem,  Kraft-McMillan inequality&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Lossy:&lt;/strong&gt; rate distortion theorem&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Coding Methods (algorithms)&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Symbol Code:&lt;/strong&gt; Huffman codes&lt;/td&gt;
+&lt;td&gt;Hamming codes, BCH codes, Turbocodes, Gallager codes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;Stream Codes:&lt;/strong&gt; arithmetic coding&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;information&#34;&gt;Information&lt;/h2&gt;
+
+&lt;p&gt;How many bits are needed to encode information:&lt;/p&gt;
+
+&lt;p&gt;$$log_{2}(\frac{1}{p})$$&lt;/p&gt;
+
+&lt;p&gt;Where $p$ is the probability of the event. For example, the number of bits
+needed for encoding the value of the result of a coin flip ($p=\frac{1}{2}$)
+is 1.&lt;/p&gt;
+
+&lt;h2 id=&#34;entropy&#34;&gt;Entropy&lt;/h2&gt;
+
+&lt;p&gt;How many bits should be needed to send a piece of information?&lt;/p&gt;
+
+&lt;p&gt;$$H(X) =  \sum  p_{i} (log_{2}( \frac{1}{p_{1}} )) = E(I(X))$$&lt;/p&gt;
+
+&lt;h2 id=&#34;binary-tree-encoding-huffman&#34;&gt;Binary Tree Encoding (Huffman)&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;th&gt;&lt;/th&gt;
+    &lt;th&gt;$$p\_{i}$$&lt;/th&gt;
+    &lt;th&gt;Encoded&lt;/th&gt;
+  &lt;/thead&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&#34;A&#34;&lt;/td&gt;
+    &lt;td&gt;$\frac{1}{3}$&lt;/td&gt;
+    &lt;td&gt;&lt;code&gt;11&lt;/code&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&#34;B&#34;&lt;/td&gt;
+    &lt;td&gt;$\frac{1}{2}$&lt;/td&gt;
+    &lt;td&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&#34;C&#34;&lt;/td&gt;
+    &lt;td&gt;$\frac{1}{12}$&lt;/td&gt;
+    &lt;td&gt;&lt;code&gt;100&lt;/code&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&#34;C&#34;&lt;/td&gt;
+    &lt;td&gt;$\frac{1}{12}$&lt;/td&gt;
+    &lt;td&gt;&lt;code&gt;101&lt;/code&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/bin_tree_encoding.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Calculus Cheat Sheet</title>
@@ -17,10 +111,21 @@
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</guid>
-      <description>Gradient A vector field in the direction of steepest ascent.
-$$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\partial x_{1}} \\ \frac{\partial f}{\partial x_{2}} \\
-\vdots \\
-\frac{\partial f}{\partial x_{i}} \end{bmatrix} $$</description>
+      <description>
+
+&lt;h2 id=&#34;gradient&#34;&gt;Gradient&lt;/h2&gt;
+
+&lt;p&gt;A vector field in the direction of steepest ascent.&lt;/p&gt;
+
+&lt;p&gt;$$
+\nabla f( x_{1},  x_{2}, \dots  x_{i}) =  \begin{bmatrix}
+  \frac{\partial f}{\partial x_{1}} \\
+  \frac{\partial f}{\partial x_{2}} \\&lt;br /&gt;
+  \vdots \\&lt;br /&gt;
+  \frac{\partial f}{\partial x_{i}}
+\end{bmatrix}
+$$&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -29,7 +134,12 @@ $$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\par
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/linear_algebra/</guid>
-      <description> Multiplying Matrices </description>
+      <description>
+
+&lt;h2 id=&#34;multiplying-matrices&#34;&gt;Multiplying Matrices&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/matrix_multiplication.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -38,18 +148,90 @@ $$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\par
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/science/chem_cheat_sheet/</guid>
-      <description>TOC  How To Read The Squiggles Is A Chemical Bond Polar?  How To Read The Squiggles In order to make shorthand easier, chemists omit C and H atoms from its structural formula. There are two simple rules for adding them back in:
- All sharp corners represent carbon atoms. Hydrogen - carbon bonds are implied (so if a carbon atom has less than 4 bonds, the rest are H).</description>
-    </item>
-    
-    <item>
-      <title>Information Theory Overview</title>
-      <link>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</link>
-      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
-      <description>Roadmap based on youtube introductory series.
-   blank Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     Information How many bits are needed to encode information:</description>
+      <description>
+
+&lt;h2 id=&#34;toc&#34;&gt;TOC&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How To Read The Squiggles&lt;/li&gt;
+&lt;li&gt;Is A Chemical Bond Polar?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;how-to-read-the-squiggles&#34;&gt;How To Read The Squiggles&lt;/h2&gt;
+
+&lt;p&gt;In order to make shorthand easier, chemists omit C and H atoms
+from its structural formula. There are two simple rules for adding them back in:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;span style=&#34;color:red;&#34;&gt;All sharp corners represent carbon atoms.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&#34;color:blue;&#34;&gt;Hydrogen - carbon bonds are implied
+(so if a carbon atom has less than 4 bonds, the rest are H).&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;For example in this formual for a caffeine molecule:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/caffeine.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The following is implied:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/caffeine_ch.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;is-a-chemical-bond-polar&#34;&gt;Is A Chemical Bond Polar?&lt;/h2&gt;
+
+&lt;p&gt;Whether a bond between two atoms is polar depends on the difference between
+the two atoms&amp;rsquo; Pauling Electronegativity (their ability to attract electrons).&lt;/p&gt;
+
+&lt;p&gt;For example, taking the most common elements in living organisms:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Element&lt;/th&gt;
+&lt;th&gt;Pauling Electronegativity&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Phosphorus&lt;/td&gt;
+&lt;td&gt;2.19&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Hydrogen&lt;/td&gt;
+&lt;td&gt;2.20&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Carbon&lt;/td&gt;
+&lt;td&gt;2.55&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Sulfur&lt;/td&gt;
+&lt;td&gt;2.58&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Nitrogen&lt;/td&gt;
+&lt;td&gt;3.04&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Oxygen&lt;/td&gt;
+&lt;td&gt;3.44&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;So, an &lt;code&gt;O-H&lt;/code&gt; bond yields &lt;code&gt;3.44 - 2.20 = 1.24&lt;/code&gt; (polar), while a &lt;code&gt;C-H&lt;/code&gt; bond
+yields &lt;code&gt;2.55 - 2.20 = 0.35&lt;/code&gt; (low polarity / non-polar).&lt;/p&gt;
+
+&lt;p&gt;Polarity exists on a spectrum. Usually one considers anything above &lt;code&gt;~0.4&lt;/code&gt; polar.&lt;/p&gt;
+
+&lt;p&gt;Polarity can be high enough that the bond is no longer a covalent bond,
+but an &lt;strong&gt;ionic bond&lt;/strong&gt;, where one of the atoms steals the electrons of the other.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -58,8 +240,73 @@ $$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\par
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/alignment/</guid>
-      <description>For any data type that requires N bytes, its starting address should be a multiple of N. In most x86 processors the memory interface is designed to read/write blocks that are 8 or 16 bytes long2.
- Unaligned memory accesses occur when you try to read N bytes of data starting from an address that is not evenly divisible by N (i.e. addr % N != 0). For example, reading 4 bytes of data from address 0x10004 is fine, but reading 4 bytes of data from address 0x10005 would be an unaligned memory access 6.</description>
+      <description>
+
+&lt;p&gt;For any data type that requires &lt;code&gt;N&lt;/code&gt; bytes, its starting address should be a
+multiple of &lt;code&gt;N&lt;/code&gt;. In most &lt;code&gt;x86&lt;/code&gt; processors the memory interface is designed to
+read/write blocks that are 8 or 16 bytes long&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Unaligned memory accesses&lt;/em&gt; occur when you try to read &lt;code&gt;N&lt;/code&gt; bytes of data
+starting from an address that is not evenly divisible by &lt;code&gt;N&lt;/code&gt; (i.e. &lt;code&gt;addr % N
+!= 0&lt;/code&gt;).  For example, reading 4 bytes of data from address &lt;code&gt;0x10004&lt;/code&gt; is fine,
+but reading 4 bytes of data from address &lt;code&gt;0x10005&lt;/code&gt; would be an unaligned
+memory access &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Unaligned access may allow the program to use less
+memory&lt;sup&gt;1&lt;/sup&gt;, but it has many drawbacks:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The effects of performing an unaligned memory access vary from architecture
+to architecture. A summary of the common scenarios:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Some architectures are able to perform unaligned memory accesses
+transparently, but there is usually a significant performance cost.&lt;/li&gt;
+&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
+happen. The exception handler is able to correct the unaligned access, at
+significant cost to performance.&lt;/li&gt;
+&lt;li&gt;Some architectures raise processor exceptions when unaligned accesses
+happen, but the exceptions do not contain enough information for the
+unaligned access to be corrected.&lt;/li&gt;
+&lt;li&gt;Some architectures are not capable of unaligned memory access, but will
+silently perform a different memory access to the one that was requested,
+resulting in a subtle code bug that is hard to detect!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If your code causes unaligned memory accesses to happen, your code will not
+work correctly on certain platforms and will cause performance problems on
+others &lt;sup&gt;6&lt;/sup&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;p&gt;Consider a bitmap data structure where each pixel is represented by 3 bytes (RGB). In order to preserve alignment we add a &amp;ldquo;padding byte&amp;rdquo;&lt;sup&gt;3&lt;/sup&gt;, making the structure 32 bits instead of 24:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------+---------------+---------------+---------------+
+| : : : : : : : | : : : : : : : | : : : : : : : | : : : : : : : |
++---------------+---------------+---------------+---------------+
+     Red             Green           Blue            Padding
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This consumes more memory, but is ideally more performant. Of course, YMMV&lt;sup&gt;5&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Introduction To ARM Cortex-M Microcontrollers&lt;/em&gt; (5&lt;sup&gt;th&lt;/sup&gt; Ed.), p. 96.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Computer Systems: A Programming Perspective&lt;/em&gt; (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 290.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/hNKU8Jiza2g?t=5m19s&#34;&gt;&lt;em&gt;Handmande Hero, Day 004&lt;/em&gt;&lt;/a&gt; (t. 5:19).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C&lt;/em&gt;, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.), p. 137.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lemire.me/blog/2012/05/31/data-alignment-for-speed-myth-or-reality/&#34;&gt;Data Alignment For Speed: Myth Or Reality?&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/doc/Documentation/unaligned-memory-access.txt&#34;&gt;Kernel.org: Unaligned Memory Access&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/small&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -68,7 +315,60 @@ $$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\par
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
-      <description>Biology    Title Format Notes     Robert Sapolsky: The Biology Of Human Behavior YouTube lecture series You are not in control.   Molecular Biology Of the Cell BOOK     Cancer    Title Format Notes     The Biology Of Cancer BOOK Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.</description>
+      <description>
+
+&lt;h2 id=&#34;biology&#34;&gt;Biology&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Robert Sapolsky: The Biology Of Human Behavior&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/NNnIGh9g6fA&#34;&gt;YouTube&lt;/a&gt; lecture series&lt;/td&gt;
+&lt;td&gt;You are not in control.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Molecular Biology Of the Cell&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/ap9m9UD&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;cancer&#34;&gt;Cancer&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;The Biology Of Cancer&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/cj4bhIS&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Optimising Combination Dosing Strategy Of Abemaciclib And Vemurafenib In BRAF-Mutated Melanoma tumours&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.nature.com/bjc/journal/v114/n6/full/bjc201640a.html&#34;&gt;HTML&lt;/a&gt; (full paper)&lt;/td&gt;
+&lt;td&gt;Interesting findings for using intermittent dosing to extend the effectiveness of targeted therapies.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
@@ -77,9 +377,24 @@ $$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\par
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/taxes_tldr/</guid>
-      <description>CPP CPP is payed at the end of the year. Save 6% of your gross income for this.
-Income Taxes Payed at the end of the year. These are bracketed by income, but to make calculations simple I just keep a flat 29% of my monthly income.
-HST If you are operating as a freelancer or small business and are expecting to make over \$30_000, register for an HST account here and charge the customer directly on top of net fee (13% in Ontario).</description>
+      <description>
+
+&lt;h2 id=&#34;cpp&#34;&gt;CPP&lt;/h2&gt;
+
+&lt;p&gt;CPP is payed at the end of the year. Save &lt;strong&gt;6%&lt;/strong&gt; of your gross income for this.&lt;/p&gt;
+
+&lt;h2 id=&#34;income-taxes&#34;&gt;Income Taxes&lt;/h2&gt;
+
+&lt;p&gt;Payed at the end of the year. These are
+&lt;a href=&#34;http://www.cra-arc.gc.ca/tx/ndvdls/fq/txrts-eng.html&#34;&gt;bracketed&lt;/a&gt; by income,
+but to make calculations simple I just keep a flat &lt;strong&gt;29%&lt;/strong&gt; of my monthly
+income.&lt;/p&gt;
+
+&lt;h2 id=&#34;hst&#34;&gt;HST&lt;/h2&gt;
+
+&lt;p&gt;If you are operating as a freelancer or small business and are expecting to
+make over &lt;strong&gt;\$30_000&lt;/strong&gt;, register for an HST account &lt;a href=&#34;http://www.cra-arc.gc.ca/tx/bsnss/tpcs/gst-tps/rgstrng/menu-eng.html&#34;&gt;here&lt;/a&gt; and charge the customer directly on top of net fee (&lt;strong&gt;13%&lt;/strong&gt; in Ontario).&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -88,7 +403,133 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/computers/cool_articles/</guid>
-      <description>General    Title Format Notes     Build Your Own Text Editor HTML Really great tutorial (and introduction to C programming and terminal programming).   Data Structures For Text Sequences PDF    Handmade hero YouTube series Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.   Online Computer Science Courses With Video Lectures HTML (community git) Giant collection of free video lectures.</description>
+      <description>
+
+&lt;h2 id=&#34;general&#34;&gt;General&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://viewsourcecode.org/snaptoken/kilo/&#34;&gt;Build Your Own Text Editor&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;Really great tutorial (and introduction to C programming and terminal programming).&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.cs.unm.edu/~crowley/papers/sds.pdf&#34;&gt;Data Structures For Text Sequences&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;PDF&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Handmade hero&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://handmadehero.org/&#34;&gt;YouTube&lt;/a&gt; series&lt;/td&gt;
+&lt;td&gt;Dude builds a complete release-quality video game from scratch in minimal subset of C++ before your very eyes.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Online Computer Science Courses With Video Lectures&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/Developer-Y/cs-video-courses&#34;&gt;HTML&lt;/a&gt; (community git)&lt;/td&gt;
+&lt;td&gt;Giant collection of free video lectures.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;crypto&#34;&gt;Crypto&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Efficient Data Structures for Tamper-Evident Logging&lt;/td&gt;
+&lt;td&gt;(&lt;a href=&#34;http://people.cs.vt.edu/danfeng/courses/cs6204/sp10-papers/crosby.pdf&#34;&gt;PDF&lt;/a&gt;)&lt;/td&gt;
+&lt;td&gt;Youtube talk &lt;a href=&#34;https://youtu.be/G0tkCxq9OuE&#34;&gt;here&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blog.bren2010.io/2015/04/07/data-structures.html&#34;&gt;Cryptographic Data Structures&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;compilers&#34;&gt;Compilers&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://blogs.msdn.microsoft.com/abhinaba/2009/03/02/back-to-basics-generational-garbage-collection/&#34;&gt;Back To Basics: Generational Garbage Collection&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;See also &lt;a href=&#34;http://noamswebsite.com/wiki-main/computers/elixir_resources&#34;&gt;here&lt;/a&gt; for examples with Erlang VM
+GC.&lt;/p&gt;
+
+&lt;h2 id=&#34;low-level-programming&#34;&gt;Low Level Programming&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Embedded Systems: Introduction To ARM Cortex-M Microcontrollers (5&lt;sup&gt;th&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/03pd6u0&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Computer Systems: A Programming Perspective, (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/7W4IMFZ&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;See next resource for complementary video lectres&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Introduction To Computer Systems (Carnegie Mellon University)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.cs.cmu.edu/~213/schedule.html&#34;&gt;video lectures&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Closely follows the book &amp;ldquo;Computer Systems: A Programming Perspective&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;sup&gt;st&lt;/sup&gt; Century C (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/jloJHt7&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
@@ -97,9 +538,18 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/napoleon/</guid>
-      <description> When the enemy is making a false movement we must take good care not to interrupt him.
-  You must not fight too often with one enemy, or you will teach him all your art of war.
- </description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;When the enemy is making a false movement we must take good care not to
+interrupt him.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You must not fight too often with one enemy, or you will teach him all your
+art of war.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -108,8 +558,10 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/leibniz/</guid>
-      <description> When a rule is extremely complex, that which conforms to it passes for random.
- </description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;When a rule is extremely complex, that which conforms to it passes for random.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -118,10 +570,80 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/von_neumann/</guid>
-      <description>When we talk mathematics, we may be discussing a secondary language built on the primary language of the nervous system.
-  If one has really technically penetrated a subject, things that previously seemed in complete contrast, might be purely mathematical transformations of each other.
- From Lectures On Self-Replicating Automata (1948?)  An automaton cannot be separated from the milieu to which it responds.
-  It is therefore quite possible that we are not too far from the limits of complication which can be achieved in artificial automata without really fundamental insights into a theory of information, although one should be very careful with such statements because they can sound awfully ridiculous 5 years later.</description>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;When we talk mathematics, we may be discussing a secondary language built on
+the primary language of the nervous system.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;If one has really technically penetrated a subject, things that previously
+seemed in complete contrast, might be purely mathematical transformations of
+each other.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;from-lectures-on-self-replicating-automata-1948&#34;&gt;From Lectures On Self-Replicating Automata (1948?)&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;An automaton cannot be separated from the milieu to which it responds.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It is therefore quite possible that we are not too far from the limits of
+complication which can be achieved in artificial automata without really
+fundamental insights into a theory of information, although one should be very
+careful with such statements because they can sound awfully ridiculous 5 years
+later.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The fact that natural organisms have such a radically different attitude about
+errors and behave so differently when an error occurs is probably connected
+with some other traits of natural organisms, which are entirely absent from
+our automata. The ability of a natural organism to survive in spite of a high
+incidence of error (which our artificial automata are incapable of) probably
+requires a very high flexibility and ability of the automaton to watch itself
+and reorganize itself. And this probably requires a very considerable autonomy
+of parts. There is a high autonomy of parts in the human nervous system. This
+autonomy of parts of a system has an effect which is observable in the human
+nervous system but not in artificial automata. When parts are autonomous and
+able to reorganize themselves, when there are several organs each capable of
+taking control in an emergency, an antagonistic relation can develop between
+the parts so that they are no longer friendly and cooperative. It is quite
+likely that all these phenomena are connected.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Even if the axioms are chosen within the common sense area, it is usually very
+difficult to achieve an agreement between two people who have done this
+independently. For instance, in the literature of formal logics there are
+about as many notations as there are authors, and anybody who has used a
+notation for a few weeks feels that it&amp;rsquo;s more or less superior to any other.
+So, while the choice of notations, of the elements, is enormously important
+and absolutely basic for an application of the axiomatic method, this choice
+is neither rigorously justifiable nor humanly unambiguously justifiable. All
+one can do is to try to submit a system which will stand up under common sense
+criteria.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There is reason to suspect that our predilection for linear codes, which have
+a simple, almost temporal sequence, is chiefly a literary habit, corresponding
+to our not particularly high level of combinatorial cleverness, and that a
+very efficient language would probably depart from linearity.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -130,8 +652,25 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/w/a_bug/</guid>
-      <description>(Unfinished Sketch / In Progress)
- It happed one day that through a thick-leaved forest wondered I And in that dark buzzed what I thought an ordinary fly ... &#34;If not to pester me, foul creature, why fly thus at night?&#34; &#34;Let me demonstrate,&#34; I heard, and sure enough: a light! &#34;An ordinary bug I am, invisible, by day; So when the sun is hid I wake&#34;, it said, and lit my way; And before soon the stars and moon we spotted merrily.</description>
+      <description>&lt;p&gt;&lt;strong&gt;(Unfinished Sketch / In Progress)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+It happed one day that through a thick-leaved forest wondered I
+And in that dark buzzed what I thought an ordinary fly
+
+...
+
+&#34;If not to pester me, foul creature, why fly thus at night?&#34;
+&#34;Let me demonstrate,&#34; I heard, and sure enough: a light!
+&#34;An ordinary bug I am, invisible, by day;
+So when the sun is hid I wake&#34;, it said, and lit my way;
+And before soon the stars and moon we spotted merrily.
+&#34;What such relief!&#34; I thought, then said, and thanked him heartily;
+Then brighter still my wingèd friend drew geometric shapes:
+Shine where you are seen! we sang,
+Shine where you are seen!
+&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -140,9 +679,221 @@ HST If you are operating as a freelancer or small business and are expecting to 
       <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/marcus/</guid>
-      <description>Selections from his meditations (Available here for free. One of my top 10 favorite books. I re-read them every time I disappoint myself.
-II  A limit of time is fixed for thee, which if thou dost not use for clearing away the clouds from thy mind, it will go and thou wilt go, and it will never return.
-  Through not observing what is in the mind of another man, a man has seldom been seen to be unhappy; but those who do not observe the movement of their own minds must of necessity be unhappy.</description>
+      <description>
+
+&lt;p&gt;Selections from his meditations (Available
+&lt;a href=&#34;http://classics.mit.edu/Antoninus/meditations.html&#34;&gt;here&lt;/a&gt; for free. One of
+my top 10 favorite books. I re-read them every time I disappoint myself.&lt;/p&gt;
+
+&lt;h2 id=&#34;ii&#34;&gt;II&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A limit of time is fixed for thee, which if thou dost not use for clearing
+away the clouds from thy mind, it will go and thou wilt go, and it will never
+return.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Through not observing what is in the mind of another man, a man has seldom been seen
+to be unhappy; but those who do not observe the movement of their own minds
+must of necessity be unhappy.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;iii&#34;&gt;III&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We must make haste then, not only because we are daily nearer to death, but
+also because the conception of things and the understanding of them cease
+first.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Do not waste the remainder of thy life in thoughts about others, when thou
+dost not refer thy thoughts to some object of common utility.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A man should use himself to think of those things only about which if one
+should suddenly ask, What hast thou now in thy thoughts? With perfect
+openness thou mightest, immediately answer, This or That;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Always to look at things so as to see at the same time what kind of universe
+this is, and what kind of use everything performs in it, and what value
+everything has with reference to the whole.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;iv&#34;&gt;IV&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Let thy principles be brief and fundamental.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Change thy opinion, if there is any one at hand who sets thee right and moves
+thee from any opinion. But this change of opinion must proceed only from a
+certain persuasion, as of what is just or of common advantage, and the like,
+not because it appears pleasant or brings reputation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Many grains of frankincense on the same altar: one falls before, another
+falls after; but it makes no difference.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Within ten days thou wilt seem a god to those to whom thou art now a beast
+and an ape, if thou wilt return to thy principles and the worship of reason.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;How much trouble he avoids who does not look to see what his neighbour says
+or does or thinks, but only to what he does himself, that it may be just and
+pure; or as Agathon says, look not round at the depraved morals of others,
+but run straight along the line without deviating from it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Do what is necessary, and whatever the reason of the animal which is
+naturally social requires, and as it requires. For this brings not only the
+tranquility which comes from doing well, but also that which comes from doing
+few things.  For the greatest part of what we say and do being unnecessary,
+if a man takes this away, he will have more leisure and less uneasiness.
+Accordingly on every occasion a man should ask himself, Is this one of the
+unnecessary things? Now a man should take away not only unnecessary acts, but
+also, unnecessary thoughts, for thus superfluous acts will not follow after.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Everything is only for a day, both that which remembers and that which is
+remembered.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Everything that exists is in a manner the seed of that which will be.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;v&#34;&gt;V&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Judge every word and deed which are according to nature to be fit for thee;
+and be not diverted by the blame which follows from any people nor by their
+words, but if a thing is good to be done or said, do not consider it unworthy
+of thee.  For those persons have their peculiar leading principle and follow
+their peculiar movement; which things do not thou regard, but go straight on,
+following thy own nature and the common nature; and the way of both is one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Be not disgusted, nor discouraged, nor dissatisfied, if thou dost not succeed
+in doing everything according to right principles; but when thou bast failed,
+return back again; [&amp;hellip;] and do not return to philosophy as if she were a
+master, but act like those who have sore eyes and apply a bit of sponge and
+egg.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Art thou angry with him whose armpits stink? Art thou angry with him whose
+mouth smells foul? What good will this danger do thee? He has such a mouth,
+he has such arm-pits: it is necessary that such an emanation must come from
+such things- but the man has reason, it will be said, and he is able, if he
+takes pain, to discover wherein he offends- I wish thee well of thy
+discovery. Well then, and thou hast reason: by thy rational faculty stir up
+his rational faculty; show him his error, admonish him. For if he listens,
+thou wilt cure him, and there is no need of anger.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;vi&#34;&gt;VI&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;How cruel it is not to allow men to strive after the things which appear to
+them to be suitable to their nature and profitable! And yet in a manner thou
+dost not allow them to do this, when thou art vexed because they do wrong.
+For they are certainly moved towards things because they suppose them to be
+suitable to their nature and profitable to them.- But it is not so.- Teach
+them then, and show them without being angry.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Accustom thyself to attend carefully to what is said by another, and as much
+as it is possible, be in the speaker&amp;rsquo;s mind.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;vii&#34;&gt;VII&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Let not future things disturb thee, for thou wilt come to them, if it shall
+be necessary, having with thee the same reason which now thou usest for
+present things.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Think not so much of what thou hast not as of what thou hast: but of the
+things which thou hast select the best, and then reflect how eagerly they
+would have been sought, if thou hadst them not. At the same time however take
+care that thou dost not through being so pleased with them accustom thyself
+to overvalue them, so as to be disturbed if ever thou shouldst not have them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Indeed in the case of most pains let this remark of Epicurus aid thee, that
+pain is neither intolerable nor everlasting, if thou bearest in mind that it
+has its limits, and if thou addest nothing to it in imagination.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Take care not to feel towards the inhuman, as they feel towards men.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;viii&#34;&gt;VIII&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Let no man any longer hear thee finding fault with the court life or with thy
+own.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Enter into every man&amp;rsquo;s ruling faculty; and also let every other man enter
+into thine.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -151,8 +902,180 @@ II  A limit of time is fixed for thee, which if thou dost not use for clearing a
       <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/q/nietzsche/</guid>
-      <description>Anti-Semitism (In letter to his sister.)
- Now it has gone so far that I have to defend myself hand and foot against people who confuse me with these anti-Semitic canaille; after my own sister, my former sister, and after Widemann more recently have given the impetus to this most dire of all confusions. After I read the name Zarathustra in the anti-Semitic Correspondence my forbearance came to an end.</description>
+      <description>
+
+&lt;h2 id=&#34;anti-semitism&#34;&gt;Anti-Semitism&lt;/h2&gt;
+
+&lt;p&gt;(In letter to his sister.)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Now it has gone so far that I have to defend myself hand and foot against
+people who confuse me with these anti-Semitic canaille; after my own sister,
+my former sister, and after Widemann more recently have given the impetus to
+this most dire of all confusions. After I read the name Zarathustra in the
+anti-Semitic Correspondence my forbearance came to an end. I am now in a
+position of emergency defense against your spouse&amp;rsquo;s Party. These accursed
+anti-Semite deformities shall not sully my ideal!!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I am just having all anti-Semites shot.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;truth&#34;&gt;Truth&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The falseness of an opinion is not for us any objection to it: it is here,
+perhaps, that our new language sounds most strangely. The question is, how
+far an opinion is life-furthering, life-preserving, species-preserving,
+perhaps species-rearing, and we are fundamentally inclined to maintain that
+the falsest opinions (to which the synthetic judgments a priori belong), are
+the most indispensable to us, that without a recognition of logical fictions,
+without a comparison of reality with the purely &lt;em&gt;imagined&lt;/em&gt; world of the
+absolute and immutable, without a constant counterfeiting of the world by
+means of numbers, man could not live&amp;ndash;that the renunciation of false opinions
+would be a renunciation of life, a negation of life. &lt;em&gt;to recognise untruth as
+a conditioN of life&lt;/em&gt;; that is certainly to impugn the traditional ideas of
+value in a dangerous manner, and a philosophy which ventures to do so, has
+thereby alone placed itself beyond good and evil.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It is certainly not the least charm of a theory that it is refutable; it is
+precisely thereby that it attracts the more subtle minds. It seems that the
+hundred-times-refuted theory of the &amp;ldquo;free will&amp;rdquo; owes its persistence to this
+charm alone; some one is always appearing who feels himself strong enough to
+refute it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What is it that forces us in general to the supposition that there is an
+essential opposition of &amp;ldquo;true&amp;rdquo; and &amp;ldquo;false&amp;rdquo;? Is it not enough to suppose
+degrees of seemingness, and as it were lighter and darker shades and tones of
+semblance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;history&#34;&gt;History&lt;/h2&gt;
+
+&lt;p&gt;Of the French Revolution.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The text has disappeared under the interpretation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;axioms&#34;&gt;Axioms&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There are still harmless self-observers who believe that there are &amp;ldquo;immediate
+certainties&amp;rdquo;; for instance, &amp;ldquo;I think,&amp;rdquo; [&amp;hellip;] I would repeat it, however, a
+hundred times, that &amp;ldquo;immediate certainty,&amp;rdquo; as well as &amp;ldquo;absolute knowledge&amp;rdquo;
+and the &amp;ldquo;thing in itself,&amp;rdquo; involve a &lt;em&gt;contradictio in adjecto&lt;/em&gt;; we really
+ought to free ourselves from the misleading significance of words! The people
+on their part may think that cognition is knowing all about things, but the
+philosopher must say to himself: &amp;ldquo;When I analyze the process that is
+expressed in the sentence, &amp;lsquo;I think,&amp;rsquo; I find a whole series of daring
+assertions, the argumentative proof of which would be difficult, perhaps
+impossible: for instance, that it is &lt;em&gt;I&lt;/em&gt; who think, that there must
+necessarily be something that thinks, that thinking is an activity and
+operation on the part of a being who is thought of as a cause, that there is
+an &amp;lsquo;ego,&amp;rsquo; and finally, that it is already determined what is to be designated
+by thinking &amp;ndash;that I &lt;em&gt;know&lt;/em&gt; what thinking is. [&amp;hellip;] In short, the assertion
+&amp;lsquo;I think,&amp;rsquo; assumes that I &lt;em&gt;compare&lt;/em&gt; my state at the present moment with other
+states of myself which I know, in order to determine what it is; on account
+of this retrospective connection with further &amp;lsquo;knowledge,&amp;rsquo; it has, at any
+rate, no immediate certainty for me.&amp;rdquo; [&amp;hellip;] He who ventures to answer these
+metaphysical questions at once by an appeal to a sort of &lt;em&gt;intuitive&lt;/em&gt;
+perception, like the person who says, &amp;ldquo;I think, and know that this, at least,
+is true, actual, and certain&amp;rdquo; &amp;ndash; will encounter a smile and two notes of
+interrogation in a philosopher nowadays. &amp;ldquo;Sir,&amp;rdquo; the philosopher will perhaps
+give him to understand, &amp;ldquo;it is improbable that you are not mistaken, but why
+should it be the truth?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Gödeless gracious what a conundrum!&lt;/p&gt;
+
+&lt;h2 id=&#34;solitude&#34;&gt;Solitude&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I am solitude become man.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I go into solitude so as not to drink out of everybody&amp;rsquo;s cistern. When I am
+among the many I live as the many do, and I do not think I really think.
+After a time it always seems as if they want to banish my self from myself
+and rob me of my soul.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Have people around you who are as a garden &amp;ndash; or as music on the waters at
+eventide, when already the day becomes a memory. Choose the &lt;em&gt;good&lt;/em&gt; solitude,
+the free, wanton, lightsome solitude, which also gives you the right still to
+remain good in any sense whatsoever! How poisonous, how crafty, how bad, does
+every long war make one, which cannot be waged openly by means of force! How
+&lt;em&gt;personal&lt;/em&gt; does a long fear make one, a long watching of enemies, of possible
+enemies!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Eventually one must do everything &lt;em&gt;oneself&lt;/em&gt; in order to know something; which means that one has &lt;em&gt;much&lt;/em&gt; to do!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;social-impulses&#34;&gt;Social Impulses&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Not to speak of the stupidity of moral indignation, which is the unfailing
+sign in a philosopher that the sense of philosophical humour has left him.
+The martyrdom of the philosopher, his &amp;ldquo;sacrifice for the sake of truth,&amp;rdquo;
+forces into the light whatever of the agitator and actor lurks in him.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It might be possible for a highly developed man, supposing him to degenerate
+and go to ruin, to acquire qualities thereby alone, for the sake of which he
+would have to be honoured as a saint in the lower world into which he had
+sunk.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;youth&#34;&gt;Youth&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Later on, when the young soul, tortured by continual disillusions, finally
+turns suspiciously against itself &amp;ndash; still ardent and savage even in its
+suspicion and remorse of conscience: how it upbraids itself, how impatiently
+it tears itself, how it revenges itself for its long self-blinding, as though
+it had been a voluntary blindness! In this transition one punishes oneself by
+distrust of one&amp;rsquo;s sentiments; one tortures one&amp;rsquo;s enthusiasm with doubt, one
+feels even the good conscience to be a danger, as if it were the
+self-concealment and lassitude of a more refined uprightness; and above all,
+one espouses upon principle the cause &lt;em&gt;against&lt;/em&gt; &amp;ldquo;youth.&amp;rdquo; &amp;ndash; A decade later,
+and one comprehends that all this was also still &amp;ndash; youth!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;revolt&#34;&gt;Revolt&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Enlightenment&amp;rdquo; causes revolt, for the slave desires the unconditioned, he
+understands nothing but the tyrannous, even in morals, he loves as he hates,
+without &lt;em&gt;nuance&lt;/em&gt;, to the very depths, to the point of pain, to the point of
+sickness &amp;ndash; his many &lt;em&gt;hidden&lt;/em&gt; sufferings make him revolt against the noble
+taste which seems to &lt;em&gt;deny&lt;/em&gt; suffering.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -161,601 +1084,76 @@ II  A limit of time is fixed for thee, which if thou dost not use for clearing a
       <pubDate>Wed, 18 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/career/startup_resources/</guid>
-      <description> Personal Finance (Will mostly apply to Canadians.)
-   Title Format Notes     Make Sure It&amp;rsquo;s Deductable BOOK Must-have saving and tax tips for Canadian freelancers and small business owners.   Reddit: Personal Finance Canada HTML     Self-Employment / Remote Work    Title Format Notes     Awesome Remote Job HTML ; Git Community curated list of useful links    Startup Stuff    Title Format Notes     What I Wish I&amp;rsquo;d Known Before Joining A Unicorn HTML     </description>
-    </item>
-    
-    <item>
-      <title>It Sort Of Alliterates</title>
-      <link>http://noamswebsite.com/w/it_sort_of_alliterates/</link>
-      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/it_sort_of_alliterates/</guid>
-      <description> I&#39;m a cheerful ball of clay See me rolling down the slope Tumbling forth stochastically Slowly gathering full shape My only maker gravity Molded of some dust and rain And salt and pressed to solid form Out of which grass blades cut through And another and more still Softening the tumble more They extend toward the sun Growing roots that soak and feed That chip and crack me outside in Turning clay to dust again  </description>
-    </item>
-    
-    <item>
-      <title>Blaise Pascal</title>
-      <link>http://noamswebsite.com/q/pascal/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/pascal/</guid>
-      <description> All of humanity&amp;rsquo;s problems stem from man&amp;rsquo;s inability to sit quietly in a room alone.
- </description>
-    </item>
-    
-    <item>
-      <title>Epictetus</title>
-      <link>http://noamswebsite.com/q/epictetus/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/epictetus/</guid>
-      <description>Enchiridion X  On the occasion of every accident (event) that befalls you, remember to turn to yourself and inquire what power you have for turning it to use. If you see a fair man or a fair woman, you will find that the power to resist is temperance (continence). If labour (pain) be presented to you, you will find that it is endurance. If it be abusive words, you will find it to be patience.</description>
-    </item>
-    
-    <item>
-      <title>Geoffrey Chaucer</title>
-      <link>http://noamswebsite.com/q/geoffrey_chaucer/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/geoffrey_chaucer/</guid>
-      <description>Advice   Whoso that nil be war by othere men, By him shal othere men corrected be.   &amp;ldquo;He who isn&amp;rsquo;t warned by other men&amp;rsquo;s example, will himself become an example for other men.&amp;rdquo;
-Truth   Flee fro the prees1, and dwelle with sothfastnesse, Suffyce unto thy good, though hit be smal; For hord hath hate, and climbing tikelnesse2, Prees hath envye, and wele blent3 overal; Savour no more than thee bihove shal; Werk wel thy-self, that other folk canst rede; And trouthe shal delivere, hit is no drede.</description>
-    </item>
-    
-    <item>
-      <title>Hannah Arendt</title>
-      <link>http://noamswebsite.com/q/hannah_arendt/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/hannah_arendt/</guid>
-      <description>Understanding  When I am working, I am not interested in how my work might affect people. [And when I am finished] I am finished. What is important to me is to understand. For me, writing is a matter of seeking this understanding … certain things get formulated. […] What is important to me is the process of thought itself.
-  You ask about the effects of my work on others.</description>
-    </item>
-    
-    <item>
-      <title>Henri Frédéric Amiel</title>
-      <link>http://noamswebsite.com/q/amiel/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/amiel/</guid>
-      <description>He who floats with the current, who does not guide himself according to higher principles, who has no ideal, no convictions, &amp;ndash; such a man is a mere article of the world&amp;rsquo;s furniture &amp;ndash; a thing moved, instead of a living and moving being &amp;ndash; an echo, not a voice. The man who has no inner life is the slave of his surroundings, as the barometer is the obedient servant of the air at rest, and the weathercock the humble servant of the air in motion.</description>
-    </item>
-    
-    <item>
-      <title>James Baldwin</title>
-      <link>http://noamswebsite.com/q/james_baldwin/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/james_baldwin/</guid>
-      <description>Spoken / Video Buckley Debate At Cambridge
- &amp;ldquo;Baldwin&amp;rsquo;s Nigger&amp;rdquo;
- Debate With Malcolm X (Audio Only (Can anyone find the full recording? It cuts out at the end.))
- Sentimentality  Sentimentality, the ostentatious parading of excessive and spurious emotion, is the mark of dishonesty, the inability to feel; the wet eyes of the sentimentalist betray his aversion to experience, his fear of life, his arid heart; and it is always, therefore, the signal of secret and violent inhumanity, the mark of cruelty.</description>
-    </item>
-    
-    <item>
-      <title>John Locke</title>
-      <link>http://noamswebsite.com/q/john_locke/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/john_locke/</guid>
-      <description>The Difference Of Wit And Judgement  Men who have a great deal of wit, and prompt memories, have not always the clearest judgment or deepest reason. For wit lying most in the assemblage of ideas, and putting those together with quickness and variety, wherein can be found any resemblance or congruity, thereby to make up pleasant pictures and agreeable visions in the fancy; judgment, on the contrary, lies quite on the other side, in separating carefully, one from another, ideas wherein can be found the least difference, thereby to avoid being misled by similitude, and by affinity to take one thing for another.</description>
-    </item>
-    
-    <item>
-      <title>John Stuart Mill</title>
-      <link>http://noamswebsite.com/q/john_stuart_mill/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/john_stuart_mill/</guid>
-      <description>On Freedom Of Speech  We have now recognised the necessity to the mental well-being of mankind (on which all their other well-being depends) of freedom of opinion, and freedom of the expression of opinion, on four distinct grounds; which we will now briefly recapitulate.
-First, if any opinion is compelled to silence, that opinion may, for aught we can certainly know, be true. To deny this is to assume our own infallibility.</description>
-    </item>
-    
-    <item>
-      <title>Old Norse Sayings (Vikings)</title>
-      <link>http://noamswebsite.com/q/vikings/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/vikings/</guid>
-      <description> From Hávamál  Praise no day until evening, no wife before cremation, no sword till tested, no maid before marriage, no ice till crossed, no ale till it&amp;rsquo;s drunk.
-  Only a fool lies awake all night and broods over his problems. When morning comes he is exhausted. And his troubles are the same as before.
- </description>
-    </item>
-    
-    <item>
-      <title>Stuff I REALLY Recommend</title>
-      <link>http://noamswebsite.com/r/recommended/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/recommended/</guid>
-      <description>Video Talks  Justice: What&amp;rsquo;s the Right Thing To Do?. Provocative Harvard lecture series on Ethics. Robert Sapolsky: The Biology of Human Behavior. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think. Everything is a Remix. &amp;ldquo;There be nothing new, but that which is Hath been before&amp;hellip;&amp;rdquo; (Free) documentary on the history of stealing ideas, and how the current reinterpretation of IP / copyright laws stand in the way of innovation, not help it.</description>
-    </item>
-    
-    <item>
-      <title>Sweep</title>
-      <link>http://noamswebsite.com/r/sweep/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/sweep/</guid>
-      <description>I was on my regular afternoon bike ride when I noticed a crowd of people sweeping the walkways. I leaned my bike on a tree and went to the first man and asked &amp;ldquo;Why do you sweep?&amp;rdquo;
-&amp;ldquo;I sweep because I resign,&amp;rdquo; he said to me.&amp;ldquo;I used to go blue in the face with how dirty these streets were. But it was no use, they paid no attention, and I would go mad each day when upon arriving I would dirty my carpet.</description>
-    </item>
-    
-    <item>
-      <title>Yutaka Taniyama</title>
-      <link>http://noamswebsite.com/q/yutaka_taniyama/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/yutaka_taniyama/</guid>
-      <description> About Him  He was not a very careful person as a mathematician. He made a lot of mistakes. But he made mistakes in a good direction. I tried to imitate him. But I’ve realized that it’s very difficult to make good mistakes.
- </description>
-    </item>
-    
-    <item>
-      <title>Adam Smith</title>
-      <link>http://noamswebsite.com/q/adam_smith/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/q/adam_smith/</guid>
-      <description>On Stoicism  Human life the Stoics appear to have considered as a game of great skill; in which, however, there was a mixture of chance [&amp;hellip;] In such games the stake is commonly a trifle, and the whole pleasure of the game arises from playing well, from playing fairly, and playing skilfully. If notwithstanding all his skill, however, the good player should, by the influence of chance, happen to lose, the loss ought to be a matter, rather of merriment, than of serious sorrow.</description>
-    </item>
-    
-    <item>
-      <title>Completely</title>
-      <link>http://noamswebsite.com/r/completely/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/completely/</guid>
-      <description>When I die, I hope it&amp;rsquo;s completely.</description>
-    </item>
-    
-    <item>
-      <title>Creative</title>
-      <link>http://noamswebsite.com/r/creative/</link>
-      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/creative/</guid>
-      <description>Is it courage to, or incapacity not-to?
- The creative person has the courage to experience opposites of his nature and to attempt some reconciliation of them in an individuated expression of himself.
-&amp;ndash; The Creative Architect
- </description>
-    </item>
-    
-    <item>
-      <title>Elixir/Erlang Resources</title>
-      <link>http://noamswebsite.com/wiki-main/computers/elixir_resources/</link>
-      <pubDate>Wed, 04 Jan 2017 16:11:51 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/elixir_resources/</guid>
-      <description>Learning    Title Notes     Elixir In Action (book) My go-to recommendation for getting started with Elixir.   Writing A Blog Engine in Phoenix Great first tutorial for Phoenix framework   Erlang In Anger Great guide for when stuff goes bad.    Memory / GC For articles on GC / compilers in general see compilers section.
-   Title Notes     Erlang Scheduler Details and Why It Matters    Erlang Garbage Collection Details and Why It Matters Simple introduction to Erlang GC concepts.</description>
-    </item>
-    
-    <item>
-      <title>React Resources</title>
-      <link>http://noamswebsite.com/wiki-main/computers/react_resources/</link>
-      <pubDate>Wed, 04 Jan 2017 14:41:18 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/react_resources/</guid>
-      <description>   Title Format Notes     A Comprehensive Guide to Test-First Development with Redux, React, and Immutable tutorial Great comprehensive introduction to the whole ecosystem.   Redux, Re-fram, Relay, Om/next, oh my! video    Setting Up Absinthe Relay In Elixir      </description>
-    </item>
-    
-    <item>
-      <title>Math/ML Resources</title>
-      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
-      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
-    </item>
-    
-    <item>
-      <title>Separate Ecto From Phoenix In Umbrella App</title>
-      <link>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</link>
-      <pubDate>Wed, 04 Jan 2017 00:52:25 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/phoenix_no_ecto/</guid>
-      <description>First, create umbrella application:
-$ mix new --umbrella my_app $ cd my_app/apps  Next create Phoenix app, excluding Ecto:
-$ mix phoenix.new web --no-ecto  Now we create a new mix project for Ecto, with supervision tree:
-$ mix new db --sup  Finally we need to set up some configuration files.
-Setting Up Db Project $ cd db  First in the db project (following the getting started docs for Ecto:</description>
-    </item>
-    
-    <item>
-      <title>Using The Same bashrc / zshrc Across Computers</title>
-      <link>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</link>
-      <pubDate>Wed, 04 Jan 2017 00:19:02 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/sync_bashrc/</guid>
-      <description>Here is a simple method I use to share the same .bashrc / .zshrc / .bash_profile on multiple computers, while still retaining unique settings where I need them.
-Suppose you want some special setting to apply only to your linux laptop, but not to your mac laptop.
-$ mkdir ~/configs $ touch ~/.is_linux  Next:
-if [ -f &#39;.is_linux&#39; ]; then echo &amp;quot;This message only shows on my Linux laptops!&amp;quot; fi  Now with different config files you can configure different environments from is single universal *rc file you keep in a dotfiles repo.</description>
-    </item>
-    
-    <item>
-      <title>My Dearest Zuckerberg #2</title>
-      <link>http://noamswebsite.com/w/zuck2/</link>
-      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/zuck2/</guid>
-      <description>My Dearest Zuckerberg,
-I think the elderly grocerystoreman has lost his mind. Why is it that whenever I visit his store so that I may purchase one of his goods (puddings by the pound and junk and spiced killgrinded cow in an addictively unsatisfying stale orange envelope made of, presumably, wheat, or corn? (The kind that when I bite on it it sticks to my teeth and stains my palate with thoughts of factory-cookeries somewhere in a third world country)) UP pops he like a wildly flankhaired coocoobird, sharp hairy ear and nosetendrils protruding at the dent of his upper lip reminding one of&amp;hellip; of, DEATH!</description>
-    </item>
-    
-    <item>
-      <title>Ecto Callbacks Macro</title>
-      <link>http://noamswebsite.com/wiki-main/computers/ecto_callbacks/</link>
-      <pubDate>Sat, 22 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/ecto_callbacks/</guid>
-      <description>Ecto callbacks (before/after) commit hooks have been deprecated, for a general good reason. Using callbacks is generally bad and you should never do it. But sometimes you need to do it because real life.
-I wrote this macro this afternoon that implements both atomic and non-atomic callbacks. Here it is in all its glory. I won&amp;rsquo;t make it a hex package because it&amp;rsquo;s probably a bad thing to do.</description>
-    </item>
-    
-    <item>
-      <title>Representative Democracies Are An Inevitable Optimum</title>
-      <link>http://noamswebsite.com/r/representative/</link>
-      <pubDate>Thu, 14 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/representative/</guid>
-      <description>The existence of power hierarchies is inevitable because of the existence of the will to power. This is not a moral statement, but an empirical one. However hard a collective may work at toppling power structures, and even if it is successful in doing so, new power hierarchies will emerge, because there will always be individuals who will seek to place themselves at the top. The only way to escape this would be to eliminate the desire or means of domination in those who possess them&amp;hellip; but here we reach an intractable contradiction: because to do so would require the exertion of power by one group on another (that is, those who seek to topple power must dominate those who seek that power, and further they would have to collude to retain the power to do so indefinitely&amp;hellip; but this dynamic is itself hierarchical!</description>
-    </item>
-    
-    <item>
-      <title>Books</title>
-      <link>http://noamswebsite.com/r/books/</link>
-      <pubDate>Sun, 17 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/books/</guid>
-      <description>There&amp;rsquo;s something about learning from a physical object that makes things &amp;ldquo;click&amp;rdquo; better in my head (it has volume, texture; a particular smell); and I doubt I&amp;rsquo;m an oddity in this respect &amp;ndash; the root of this effect may be biological: For example, when recalling some piece of information, often I can remember where &amp;ndash; within some textbook I read half a decade ago &amp;ndash; the subject is explained. And I do mean, a literal, physical &amp;ldquo;where&amp;rdquo;: a page, (a thing,) which at all times can be found tucked somewhere within a physical stack of bound paper, which I can touch and feel; I might even remember where I was sitting (or standing, or lying), as I held that particular book, open at that page, when I studied the subject, and what it felt like to the touch, and how the lighting in the room fell on the paper; maybe I jotted some note on the margin, maybe I spilled tea on the pages before, giving that &amp;ldquo;where&amp;rdquo; its own unique irregular texture and color &amp;ndash; all of which my brain will forever associate with that information.</description>
-    </item>
-    
-    <item>
-      <title>A Pair Of Dirty Shoes</title>
-      <link>http://noamswebsite.com/w/shoes/</link>
-      <pubDate>Tue, 05 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/shoes/</guid>
-      <description>A second pair stacked on top. Dirty socks. Dirty shirts. Piles of them. That chair I don&amp;rsquo;t even like. Too many cups. A clean bedroom, the bed made. Clean dishes, one of those pluggable scented candles. His records. My records. Too much space.</description>
-    </item>
-    
-    <item>
-      <title>Sorting By Relative Popularity</title>
-      <link>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</link>
-      <pubDate>Tue, 08 Dec 2015 17:45:08 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</guid>
-      <description>&lt;p&gt;Hey, looks like I&amp;rsquo;m sorting user content again! &lt;a href=&#34;https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/&#34;&gt;last time&lt;/a&gt;, I sorted user posts by &amp;ldquo;interestingness&amp;rdquo;; this time around I&amp;rsquo;ll be sorting players from a set of sports teams. Once again we&amp;rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&amp;rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.&lt;/p&gt;
-
-&lt;h3 id=&#34;the-task&#34;&gt;The Task&lt;/h3&gt;
-
-&lt;p&gt;To drive up user engagement at &lt;a href=&#34;http://www.thescore.com/&#34; target=&#34;_blank&#34;&gt;theScore&lt;/a&gt;, we introduced an onboarding screen that&amp;rsquo;s shown when you open the app for the first time.&lt;/p&gt;
-
-&lt;p&gt;First, you get a list of sports teams that are popular in your area, and the option to subscribe to some of them.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/team_select.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now based on the teams you choose, it would be nice to also recommend some players for you to follow. So how would one go about choosing which players to recommend out of all those teams?&lt;/p&gt;
-
-&lt;p&gt;Let&amp;rsquo;s assume we have three six-player teams, where each player has the following number of subscribers:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;big_team_1:
-
-  1. 100 000
-  2. 110 000
-  3. 90 000
-  4. 80 500
-  5. 140 000
-  6. 140 500
-
-
-big_team_2:
-
-  1. 120 000
-  2. 250 000
-  3. 180 000
-  4. 135 000
-  5. 157 000
-  6. 202 000
-
-
-small_team:
-
-  1. 3 000
-  2. 100
-  3. 234
-  4. 301
-  5. 250
-  6. 400
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now let&amp;rsquo;s consider some properties we want from our algorithm:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;A compute-once, static value:&lt;/strong&gt; we don&amp;rsquo;t want to run our algorithm on every user. We want to give each player in our database a static &lt;code&gt;recommendation_score&lt;/code&gt;; a numeric value that is cheap to index.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Simple:&lt;/strong&gt; the algorithm should be simple and use elementary methods. Recommending players is a small part of the app; there should be little code maintenance involved.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Variety:&lt;/strong&gt; The purpose of the onboarding process is to get you engaged, so we want to recommend a variety of players from different sports and leagues.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;the-naive-approach&#34;&gt;The Naive Approach&lt;/h3&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; I will be using the &lt;a href=&#34;http://julialang.org/&#34; target=&#34;_blank&#34;&gt;Julia programming language&lt;/a&gt; for all my examples. You can find the complete implementation at the bottom of this post.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The first obvious solution is to simply sort players by their &lt;code&gt;subscription_count&lt;/code&gt;. The more popular the player, the more recommendable he is. Here is our naive sorting function:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;function naive_sort(teams)
-  Base.sort(
-    [[team.players for team in teams]...],
-    by=x -&amp;gt; x.subscribers,
-    rev=true
-  )[1:5]
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Which yields:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;5-element Array{PlayerRecommender.Player,1}:
-  Big Team 2 Player | subscribers: 250000
-  Big Team 2 Player | subscribers: 202000
-  Big Team 2 Player | subscribers: 180000
-  Big Team 2 Player | subscribers: 157000
-  Big Team 1 Player | subscribers: 140500
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The problem with this approach is that we only get results from the most popular teams. So if you&amp;rsquo;re a fan of both a very popular NFL team and another team that is not as popular (your local basketball team, perhaps), even the least popular player from the NFL team will be recommended to you, whereas the most popular player from your favorite local basketball team will not show up in your list at all!&lt;/p&gt;
-
-&lt;h3 id=&#34;a-better-approach&#34;&gt;A Better Approach&lt;/h3&gt;
-
-&lt;p&gt;What are we really looking for?&lt;/p&gt;
-
-&lt;p&gt;Well, I think the players we want to recommend are the not necessarily the ones who are most famous, but rather, the ones who are most popular &lt;em&gt;compared to the rest of their team&lt;/em&gt;, regardless of how popular that teams is (we already know you&amp;rsquo;re a fan of the team or you wouldn&amp;rsquo;t have subscribed to it in the first place).&lt;/p&gt;
-
-&lt;p&gt;In other words, we want an algorithm that answers the following question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Which players &lt;em&gt;deviate&lt;/em&gt; the most in popularity from the rest of their team?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Luckily, there&amp;rsquo;s a mathematical tool for figuring out just this: &lt;a href=&#34;https://en.wikipedia.org/wiki/Standard_deviation&#34; target=&#34;_blank&#34;&gt;standard deviation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;h4 id=&#34;standard-deviation-tl-dr&#34;&gt;Standard Deviation tl;dr&lt;/h4&gt;
-
-&lt;p&gt;Standard deviation is a pretty straight-forward concept: Take a set of values, and figure out the average value for that set (also known as the &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arithmetic_mean&#34; target=&#34;_blank&#34;&gt;arithmetic mean&lt;/a&gt;&lt;/em&gt;). The standard deviation simply tells us by how much the value of the typical element in our set deviates from the average.&lt;/p&gt;
-
-&lt;p&gt;The mathematical representation of this calculation is:&lt;/p&gt;
-
-&lt;p&gt;$$ s_N = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \overline{x})^2} $$&lt;/p&gt;
-
-&lt;p&gt;Where $N$ is the population size, and $\overline{x}$ is the arithmetic mean, which itself is represented by:&lt;/p&gt;
-
-&lt;p&gt;$$ \overline{x}_N = \frac{1}{N}\sum_{i=1}^{N} a_i $$&lt;/p&gt;
-
-&lt;p&gt;For example, the following two sets have the same average value, but clearly the values are spread out differently:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;close_to_average = [11,8,9,12]
-spread_out = [0,1,19,20]
-
-average(close_to_average) == 10
-average(spread_out) == 10
-
-standard_deviation(close_to_average) == 1.59
-standard_deviation(spread_out) == 9.51
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;Thus we arrive at our simple scoring function. All we need to do is find players whose deviation from the average is substantially higher than that of their teammates:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;function recommend(player, team)
-  player_dev = player.subscribers - team.average
-  if player_dev == 0
-    player.recommendation_score = 0
-  else
-    player.recommendation_score = player_dev / team.std_dev
-  end
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Using this scoring function on our original teams, we get the following results:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;5-element Array{PlayerRecommender.Player,1}:
- Small Team Player | subscribers: 3000 | score: 2.2276261544470644
- Big Team 2 Player | subscribers: 250000 | score: 1.749555170961297
- Big Team 1 Player | subscribers: 140500 | score: 1.3134034577576315
- Big Team 1 Player | subscribers: 140000 | score: 1.291753950212176
- Big Team 2 Player | subscribers: 202000 | score: 0.6445729577225832
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Much better. This time around, our top player actually has the least number of subscribers, but this makes sense, because even though he belongs to a team that is not very popular, his subscription count is tenfold that of his teammates; clearly someone to keep an eye on! (perhaps a rising star in a college league? Certainly wouldn&amp;rsquo;t want our recommendation script to ignore that one.)&lt;/p&gt;
-
-&lt;h3 id=&#34;limitations&#34;&gt;Limitations&lt;/h3&gt;
-
-&lt;p&gt;This algorithm has many limitations.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;New players won&amp;rsquo;t be very well represented (they will by nature have low subscription counts).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;All-star teams might result in nobody being particularly recommendable. Though this one might be less of a problem: thanks to our good ol&amp;rsquo; friend the &lt;a href=&#34;https://en.wikipedia.org/wiki/Gaussian_function&#34;&gt;bell curve&lt;/a&gt;, even among rare anomalies, there are &lt;a href=&#34;http://fivethirtyeight.com/features/lionel-messi-is-impossible/&#34; target=&#34;_blank&#34;&gt;rare anomalies&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;While there are ways to address these limitations and improve the accuracy of the algorithm (for example, taking into account the rate of change in &lt;code&gt;subscription_count&lt;/code&gt;), one has to remember the purpose of this feature: to drive up user engagement during onboarding. Is the added complexity of such changes worth the minimal improvement in the recommendations?&lt;/p&gt;
-
-&lt;p&gt;Point is, it&amp;rsquo;s Friday night and I should go out for a beer now. I&amp;rsquo;m also looking forward to testing out the enormous Chinese fermentation jug I bought yesterday. It looks something like this, but a LOT bigger:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/ferm_crock.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And it was only \$30. What a bargain.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Here is the code used in these examples (working as of Julia 0.4.1). Our actual code at theScore is in Ruby.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Stones</title>
-      <link>http://noamswebsite.com/r/stones/</link>
-      <pubDate>Mon, 05 Jan 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/stones/</guid>
-      <description>I was at the lake last Summer. I picked a mossy old bench to sit, when a group of adolescents gathered to throw stones into the water. For an hour they busied around, making loud gestures and arguing over whose stone made the bigger splash. They would try every angle, and then bicker about which one spattered out the widest, or which one sent the water flying the highest, and how could they agree on what they&amp;rsquo;d seen if in a moment it was gone?</description>
-    </item>
-    
-    <item>
-      <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
-      <link>http://noamswebsite.com/wiki-main/ml/eigengoogle/</link>
-      <pubDate>Mon, 27 Jan 2014 18:06:24 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/eigengoogle/</guid>
-      <description>While we&amp;rsquo;re on the subject of sorting things online, we might as well talk about Google: the 93-billion dollar company whose main export is taking all the things ever and putting them in the right order. If there&amp;rsquo;s one thing Google knows best, it&amp;rsquo;s sorting stuff.
-I was curious how it all works, and it turned out really interesting, plus I got to learn a bit about Markov chains. It all starts with an algorithm called PageRank1.</description>
-    </item>
-    
-    <item>
-      <title>Sorting Posts by User Engagement Level</title>
-      <link>http://noamswebsite.com/wiki-main/computers/user_eng/</link>
-      <pubDate>Thu, 23 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/user_eng/</guid>
-      <description>At Functional Imperative we&amp;rsquo;re building the new CanLII Connects website (a social portal for Canada&amp;rsquo;s largest database of legal cases), and this week I was given the task of figuring out a sensible way of sorting posts.
-Figuring out how to sort user-generated content is a common problem that many social websites face.
-Here&amp;rsquo;s Reddit&amp;rsquo;s scoring equation for &amp;lsquo;Best&amp;rsquo; (source and explanation):
-Not all scoring equations are that hairy, here are a few more.</description>
-    </item>
-    
-    <item>
-      <title>Amdahl&#39;s Law</title>
-      <link>http://noamswebsite.com/wiki-main/computers/amdahls_law/</link>
-      <pubDate>Sat, 05 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/amdahls_law/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;As multicore computing becomes the norm (even my phone is dual core!), it&amp;rsquo;s important to understand the benefits and also the limitations of concurrency. Amdahl&amp;rsquo;s Law addresses the latter.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Let&amp;rsquo;s imagine a simple program. It prints &amp;ldquo;Hello World&amp;rdquo; 100 times, then quits.&lt;/p&gt;
-
-&lt;p&gt;Our first version of the program is written as a single sequential task: it prints one &amp;ldquo;Hello World&amp;rdquo;, then another, then another, 100 times, then quits.  This program takes some unit of time, $t$ to execute.&lt;/p&gt;
-
-&lt;p&gt;Now say we have a dual-core machine at hand. (My phone, perhaps).&lt;/p&gt;
-
-&lt;p&gt;Cool, now we can spawn &lt;em&gt;two&lt;/em&gt; tasks that print &amp;ldquo;Hello World&amp;rdquo; 50 times each. And, because our magical imaginary computer experiences no overhead, it takes us exactly $\frac{ t }{ 2 }$ units of time to run our second program.&lt;/p&gt;
-
-&lt;p&gt;So we keep adding more and more processors, until we have 100 concurrent threads printing one &amp;ldquo;Hello World&amp;rdquo; each, and our program runs 100 times faster.&lt;/p&gt;
-
-&lt;p&gt;At this point we stop: &amp;ldquo;Ah, the trend is clear: more processors equals more speed! No point in continuing this experiment.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;A naive (wrong) first guess:&lt;/strong&gt; Given $n$ processors executing a program, the maximum boost in speed is $n$. (That is, we can get our program to run $n$ times faster).&lt;/p&gt;
-
-&lt;p&gt;Cool! This means that, given enough processors, we could make &lt;em&gt;any&lt;/em&gt; program run almost instantly. Right?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/more_cores.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;(&lt;a href=&#34;http://forums.pureoverclock.com/amd/21809-rumor-mill-amd-iv-x12-170-12-cores-24mb-cache-6ghz-2.html#post169754&#34;&gt;Pic original source&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Of course this is not the case! Enough daydreaming. Let&amp;rsquo;s figure out a more  realistic estimate.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Rice&#39;s Theorem</title>
-      <link>http://noamswebsite.com/wiki-main/computers/rices_theorem/</link>
-      <pubDate>Tue, 16 Apr 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/computers/rices_theorem/</guid>
-      <description>Rice&amp;rsquo;s theorem can be stated thus:
- Every non-trivial semantic property of a program is undecidable.
- Before we prove the theorem, let&amp;rsquo;s break down that statement:
-&amp;ldquo;Semantic Property&amp;rdquo; A ssemantic property is a property of the language, not the machine that is computing it. For example, this is a semantic property of a language:
- All strings in language $L$ are of the form $1^n0^n$.  This is not a semantic property:</description>
-    </item>
-    
-    <item>
-      <title>Girl On A Train Asks About The Book In My Bag</title>
-      <link>http://noamswebsite.com/w/traingirl/</link>
-      <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/traingirl/</guid>
-      <description>&amp;ldquo;What&amp;rsquo;s that book you&amp;rsquo;re reading?&amp;rdquo; she asks.
-&amp;ldquo;Ernest Wattle: the story of a man who falls in love with the statue of an ancient goddess.&amp;rdquo;
-&amp;ldquo;Sounds strange.&amp;rdquo;
-&amp;ldquo;Depends how you read it. It&amp;rsquo;s also the story of Almendra, an ancient goddess who creates a man just so he would love her. But then, through prayer, he brings her statue to life, but she falls in love with someone else.&amp;rdquo;
-A quaint-looking pig farm, like something out of a picture book, whizzes across the window.</description>
-    </item>
-    
-    <item>
-      <title>Little Room</title>
-      <link>http://noamswebsite.com/w/little_room/</link>
-      <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/little_room/</guid>
-      <description>A set of boots halt just behind Little Room door, mark a pensive hollow in the casted light on Little Room floor, peak an inch or two, bringing with them an ounce of sunshine more, and Little Room croaks.
-The door shuts behind them; the sun is silenced again.
-Little Room is home to feathered insects; bonsai orchards spring out of cracks on the floor, on which they perch and feed.</description>
-    </item>
-    
-    <item>
-      <title>Bursts</title>
-      <link>http://noamswebsite.com/w/bursts/</link>
-      <pubDate>Mon, 05 Jan 2009 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/bursts/</guid>
-      <description>The first time he fell in love it was with a girl who always smelled like fresh laundry, and her name was Anna and it was love at first sight, or not quite so, because it wasn&amp;rsquo;t really all at once that he fell in love with her, but in little bursts rather, like the steps up a ladder, or grains of sand piling up at the bottom end of an hourglass, the first of which was him falling madly in love with her back, which was all he could see from where he sat, and all he wanted to see, entranced as he was at that moment by its smooth shape and tender flesh and by the contours of her spine and ribs, which traced sensuous grooves along the pink fabric of her tanktop whenever she took a deep breath, or spoke, or hunched over slightly in order to write something in her notebook, at which point long locks of black hair&amp;ndash;black like tree branches after a forest fire&amp;ndash;would fall and unravel, revealing for him, like curtains being fluttered by a morning breeze, which let slip a first ray of light into the room and wake the dreamer within from his slumber&amp;ndash; yes, exactly like that, they would fall and unravel and reveal to him her neck, her perfect neck, he thought, which was the next thing he fell in love with, followed by her dainty hands, and then the freckles on her face, which she hated, which he loved, adored, and, this is true, that very same winter he even fell in love with a certain bubbly noise her nose was making because she was trying to be as quiet as possible when sniffling every so often because she had had a cold and a runny nose, so he offered her a tissue, but really it was just so he could lean close enough to smell her, and to look into her eyes, which, he thought, gazing, small and dark and rounded, were like an infinitely dark abyss that gazed also into him, which he knew, of course, because the only reason he had read that damn book was because he had seen it poking out of her bag that one time.</description>
-    </item>
-    
-    <item>
-      <title>I Wouldn&#39;t Mind Floating Downstream</title>
-      <link>http://noamswebsite.com/w/downstream/</link>
-      <pubDate>Mon, 05 Jan 2009 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/downstream/</guid>
-      <description>&#34;I would not mind floating downstream; End up among the fish and whales. Of the ocean waters, dark and deep, I&#39;m not afraid, for I do know That, once you&#39;ve lived among the corals, The muddy currents, pebbles and rocks, And parlous contours of the stream Against whose tide you&#39;d rather swim Are banes you&#39;ll gladly leave behind; For deep at sea you&#39;re not confined By rocks and edges that grind and rasp-- The river&#39;s water may be sweet, But just as sweet, the river&#39;s shallow; I&#39;d rather down its torrent follow, Follow to the salted sea.</description>
-    </item>
-    
-    <item>
-      <title>A Bird By The Window</title>
-      <link>http://noamswebsite.com/w/bird/</link>
-      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/bird/</guid>
-      <description>acu riousblue li ttlewing i sawta pingon mywindow like asif onstrings sheelin gered glo wingsof tlyin thesun sowith myfin geri tappedtoo what afun andglad somejoy theli ttleblue birdsang asong tobuoy myheart andbring mecheer not thenlong shestar tedflying there andhere andca lingmee pla yingcir clesin thesky andsaid sheedlike toplay withme: oh penup andcome outside! oh penup and chaseme! idlike tojoin itlooks likefun but alas ican notopen: oh penup youwill enjoyit! and thebreeze isso inviting!</description>
-    </item>
-    
-    <item>
-      <title>Characters</title>
-      <link>http://noamswebsite.com/w/characters/</link>
-      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/characters/</guid>
-      <description>They tear up the room, they jest and joke around, and I&amp;rsquo;m that much closer to not being here anymore; but when you have no friends, everyone is your friend. They gist and jitter, like little bugs, they bump into me, sit by my side, lean on me, kiss me, and just as quickly they leave; when I hold one it feels fuzzy, like an idea. &amp;ldquo;Will you ever let me go?</description>
-    </item>
-    
-    <item>
-      <title>Roomly I Dejected Your Enter</title>
-      <link>http://noamswebsite.com/w/roomly/</link>
-      <pubDate>Sat, 05 Jan 2008 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/roomly/</guid>
-      <description>Roomly I dejected your enter. We bedded on your sit; Did you kiss to want me? I wanted to bad you kissly, sure. I loved you to make want to too. Real buttly, I felt near you just to get lucky. And your lovely open looked so wide, sweet eyes. Your sweet strawberry tastes like a juicy mouth. O, I&#39;m so long for you, I how in pain! And I want to proclaim my love for my pride, but you swallow.</description>
-    </item>
-    
-    <item>
-      <title>Words</title>
-      <link>http://noamswebsite.com/w/words/</link>
-      <pubDate>Thu, 05 Jan 2006 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/w/words/</guid>
-      <description> Words don&#39;t listen Words don&#39;t talk Don&#39;t do nothing You write them down They just kind of sit there  </description>
+      <description>
+
+&lt;h2 id=&#34;personal-finance&#34;&gt;Personal Finance&lt;/h2&gt;
+
+&lt;p&gt;(Will mostly apply to Canadians.)&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Make Sure It&amp;rsquo;s Deductable&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://a.co/h31tdDm&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Must-have saving and tax tips for Canadian freelancers and small business owners.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Reddit: Personal Finance Canada&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.reddit.com/r/PersonalFinanceCanada/&#34;&gt;HTML&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;self-employment-remote-work&#34;&gt;Self-Employment / Remote Work&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Awesome Remote Job&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/lukasz-madon/awesome-remote-job&#34;&gt;HTML&lt;/a&gt; ; Git&lt;/td&gt;
+&lt;td&gt;Community curated list of useful links&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;startup-stuff&#34;&gt;Startup Stuff&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Format&lt;/th&gt;
+&lt;th&gt;Notes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://gist.github.com/yossorion/4965df74fd6da6cdc280ec57e83a202d&#34;&gt;What I Wish I&amp;rsquo;d Known Before Joining A Unicorn&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;HTML&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
   </channel>
