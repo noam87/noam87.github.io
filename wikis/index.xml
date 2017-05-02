@@ -6,7 +6,7 @@
     <description>Recent content in Wikis on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wikis/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Biology</title>
       <link>http://noamswebsite.com/wikis/biology/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/biology/</guid>
       <description></description>
@@ -39,15 +39,6 @@
     </item>
     
     <item>
-      <title>Chemistry</title>
-      <link>http://noamswebsite.com/wikis/chemistry/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wikis/chemistry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Computers</title>
       <link>http://noamswebsite.com/wikis/computers/</link>
       <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
@@ -59,7 +50,7 @@
     <item>
       <title>Cs</title>
       <link>http://noamswebsite.com/wikis/cs/</link>
-      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wikis/cs/</guid>
       <description></description>
@@ -104,7 +95,7 @@
     <item>
       <title>Science</title>
       <link>http://noamswebsite.com/wikis/science/</link>
-      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/wikis/science/</guid>
       <description></description>

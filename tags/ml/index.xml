@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ml on Noam&#39;s Website About Software</title>
-    <link>http://noamswebsite.com/tags/ml/index.xml</link>
+    <link>http://noamswebsite.com/tags/ml/</link>
     <description>Recent content in Ml on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://noamswebsite.com/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2017 11:05:23 -0500</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Math/ML Resources</title>
@@ -14,80 +17,7 @@
       <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
       
       <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>
-
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Probability Through Problems&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://archive.org/details/springer_10.1007-978-0-387-21659-1&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/chcB92K&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Best introductory probability book out there. Learn by discovering!&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Principles And Techniques In Combinatorics&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://a.co/2gz4ZXD&#34;&gt;BOOK&lt;/a&gt; ; &lt;a href=&#34;http://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/26781/Principles%20and%20Techniques%20in%20Combinatorics.pdf&#34;&gt;PDF&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Beautiful book: simple, clear explanations, no filler, challenging problems&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;computer-science&#34;&gt;Computer Science&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Information Theory And Coding&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/UrefKMSEuAI?list=PLE125425EC837021F&#34;&gt;YouTube Lectures&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Elements Of Information Theory (2&lt;sup&gt;nd&lt;/sup&gt; Ed.)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://staff.ustc.edu.cn/~cgong821/Wiley.Interscience.Elements.of.Information.Theory.Jul.2006.eBook-DDU.pdf&#34;&gt;PDF&lt;/a&gt; ; &lt;a href=&#34;http://a.co/dHvNEwV&#34;&gt;BOOK&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Format&lt;/th&gt;
-&lt;th&gt;Notes&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;A Tutorial On Deep Learning (&lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial1.pdf&#34;&gt;Pt 1&lt;/a&gt;, &lt;a href=&#34;http://cs.stanford.edu/~quocle/tutorial2.pdf&#34;&gt;Pt 2&lt;/a&gt;)&lt;/td&gt;
-&lt;td&gt;PDF&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+      <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
     </item>
     
   </channel>
