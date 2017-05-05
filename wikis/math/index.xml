@@ -6,22 +6,10 @@
     <description>Recent content in Math on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Jan 2017 11:05:23 -0500</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wikis/math/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Calculus Cheat Sheet</title>
-      <link>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</guid>
-      <description>Gradient A vector field in the direction of steepest ascent.
-$$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\partial x_{1}} \\ \frac{\partial f}{\partial x_{2}} \\
-\vdots \\
-\frac{\partial f}{\partial x_{i}} \end{bmatrix} $$</description>
-    </item>
     
     <item>
       <title>Math/ML Resources</title>

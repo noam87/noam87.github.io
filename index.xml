@@ -6,22 +6,10 @@
     <description>Recent content on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Calculus Cheat Sheet</title>
-      <link>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</link>
-      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/calculus_cheat_sheet/</guid>
-      <description>Gradient A vector field in the direction of steepest ascent.
-$$ \nabla f( x_{1}, x_{2}, \dots x_{i}) = \begin{bmatrix} \frac{\partial f}{\partial x_{1}} \\ \frac{\partial f}{\partial x_{2}} \\
-\vdots \\
-\frac{\partial f}{\partial x_{i}} \end{bmatrix} $$</description>
-    </item>
     
     <item>
       <title>Memory Accessing Alignment</title>
@@ -365,15 +353,6 @@ I think the elderly grocerystoreman has lost his mind. Why is it that whenever I
       <guid>http://noamswebsite.com/wiki-main/computers/ecto_callbacks/</guid>
       <description>Ecto callbacks (before/after) commit hooks have been deprecated, for a general good reason. Using callbacks is generally bad and you should never do it. But sometimes you need to do it because real life.
 I wrote this macro this afternoon that implements both atomic and non-atomic callbacks. Here it is in all its glory. I won&amp;rsquo;t make it a hex package because it&amp;rsquo;s probably a bad thing to do.</description>
-    </item>
-    
-    <item>
-      <title>Representative Democracies Are An Inevitable Optimum</title>
-      <link>http://noamswebsite.com/r/representative/</link>
-      <pubDate>Thu, 14 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/representative/</guid>
-      <description>The existence of power hierarchies is inevitable because of the existence of the will to power. This is not a moral statement, but an empirical one. However hard a collective may work at toppling power structures, and even if it is successful in doing so, new power hierarchies will emerge, because there will always be individuals who will seek to place themselves at the top. The only way to escape this would be to eliminate the desire or means of domination in those who possess them&amp;hellip; but here we reach an intractable contradiction: because to do so would require the exertion of power by one group on another (that is, those who seek to topple power must dominate those who seek that power, and further they would have to collude to retain the power to do so indefinitely&amp;hellip; but this dynamic is itself hierarchical!</description>
     </item>
     
     <item>
