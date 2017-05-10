@@ -6,10 +6,19 @@
     <description>Recent content in Linearalgebra on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2014 18:06:24 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 27 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/tags/linearalgebra/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linear Algebra Cheat Sheet</title>
+      <link>http://noamswebsite.com/wiki-main/ml/linear_algebra/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/linear_algebra/</guid>
+      <description> Multiplying Matrices </description>
+    </item>
     
     <item>
       <title>Eigengoogle: How the Google PageRank Algorithm Works</title>
