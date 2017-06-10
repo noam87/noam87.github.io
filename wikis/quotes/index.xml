@@ -6,10 +6,20 @@
     <description>Recent content in Quotes on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wikis/quotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Random</title>
+      <link>http://noamswebsite.com/q/random/</link>
+      <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/q/random/</guid>
+      <description> If there&amp;rsquo;s one lawyer in town, they drive a Chevrolet. If there are two lawyers in town, they both drive Cadillacs.
+ </description>
+    </item>
     
     <item>
       <title>Napoleon Bonaparte</title>
