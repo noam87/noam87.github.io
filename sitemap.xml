@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/q/mlk/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/schopenhauer/</loc>
     <lastmod>2017-07-16T00:00:00+00:00</lastmod>
   </url>
@@ -283,6 +288,12 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/activism/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/adamsmith/</loc>
     <lastmod>2017-01-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -421,6 +432,12 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/freespeech/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/tags/garbagecollection/</loc>
     <lastmod>2017-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -464,6 +481,12 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/liberalism/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/liberty/</loc>
     <lastmod>2017-08-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -523,6 +546,12 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/mlk/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/napoleon/</loc>
     <lastmod>2017-04-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -536,6 +565,12 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/nonviolence/</loc>
     <lastmod>2017-08-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -602,7 +637,7 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
