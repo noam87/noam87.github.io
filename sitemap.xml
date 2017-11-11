@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://noamswebsite.com/q/chomsky/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/q/scott_alexander/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/q/susan_sontag/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/plato/</loc>
     <lastmod>2017-10-17T00:00:00+00:00</lastmod>
   </url>
@@ -311,14 +326,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/biology/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/biology/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/biology/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/biology/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -359,8 +374,14 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/rtags/chomsky/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/cognitive/</loc>
-    <lastmod>2017-07-16T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -377,14 +398,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/computers/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/computers/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/computers/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -427,6 +448,12 @@
   <url>
     <loc>http://noamswebsite.com/tags/erlang/</loc>
     <lastmod>2017-01-04T16:11:51-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/ethics/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -521,6 +548,12 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/math/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/rtags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -529,12 +562,6 @@
   <url>
     <loc>http://noamswebsite.com/wikis/math/</loc>
     <lastmod>2017-04-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/tags/math/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -570,7 +597,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -606,13 +633,13 @@
   
   <url>
     <loc>http://noamswebsite.com/q/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/wikis/quotes/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -653,14 +680,20 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/tags/science/</loc>
+    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/wikis/science/</loc>
     <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/science/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/rtags/scottalexander/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -672,7 +705,13 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/social/</loc>
-    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/rtags/sontag/</loc>
+    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

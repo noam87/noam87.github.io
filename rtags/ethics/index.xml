@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ethics on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/rtags/ethics/</link>
+    <description>Recent content in Ethics on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/rtags/ethics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Susan Sontag</title>
+      <link>http://noamswebsite.com/q/susan_sontag/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/q/susan_sontag/</guid>
+      <description> Ten percent of any population is cruel, no matter what, and ten percent is merciful, no matter what, and the remaining 80 percent can be moved in either direction.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

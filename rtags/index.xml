@@ -48,9 +48,18 @@
     </item>
     
     <item>
+      <title>Chomsky</title>
+      <link>http://noamswebsite.com/rtags/chomsky/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/rtags/chomsky/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cognitive</title>
       <link>http://noamswebsite.com/rtags/cognitive/</link>
-      <pubDate>Sun, 16 Jul 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/rtags/cognitive/</guid>
       <description></description>
@@ -62,6 +71,15 @@
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/rtags/epictetus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ethics</title>
+      <link>http://noamswebsite.com/rtags/ethics/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/rtags/ethics/</guid>
       <description></description>
     </item>
     
@@ -201,11 +219,29 @@
     </item>
     
     <item>
+      <title>Scottalexander</title>
+      <link>http://noamswebsite.com/rtags/scottalexander/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/rtags/scottalexander/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Social</title>
       <link>http://noamswebsite.com/rtags/social/</link>
-      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>http://noamswebsite.com/rtags/social/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sontag</title>
+      <link>http://noamswebsite.com/rtags/sontag/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/rtags/sontag/</guid>
       <description></description>
     </item>
     

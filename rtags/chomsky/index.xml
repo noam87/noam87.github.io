@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chomsky on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/rtags/chomsky/</link>
+    <description>Recent content in Chomsky on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/rtags/chomsky/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Noam Chomsky</title>
+      <link>http://noamswebsite.com/q/chomsky/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/q/chomsky/</guid>
+      <description> The smart way to keep people passive and obedient is to strictly limit the spectrum of acceptable opinion, but allow very lively debate within that spectrum.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

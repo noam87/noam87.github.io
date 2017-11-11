@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scottalexander on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/rtags/scottalexander/</link>
+    <description>Recent content in Scottalexander on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/rtags/scottalexander/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scott Alexander (Slate Star Codex)</title>
+      <link>http://noamswebsite.com/q/scott_alexander/</link>
+      <pubDate>Sat, 11 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/q/scott_alexander/</guid>
+      <description>Ask me what changed my mind, and I’ll shrug, tell you that I guess my priorities shifted. [&amp;hellip;] How sure am I that this is the right path? [&amp;hellip;]
+Sometimes I can almost feel this happening. First I believe something is true, and say so. Then I realize it’s considered low-status and cringeworthy. Then I make a principled decision to avoid saying it – or say it only in a very careful way – in order to protect my reputation and ability to participate in society.</description>
+    </item>
+    
+  </channel>
+</rss>
