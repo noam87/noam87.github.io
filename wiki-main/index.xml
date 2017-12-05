@@ -6,10 +6,19 @@
     <description>Recent content in Wiki-mains on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wiki-main/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Math/ML Resources</title>
+      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
+      <description>Math    Title Format Notes     What Is Mathematics BOOK    Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Essential Linear Algebra with Applications: A Problem-Solving Approach BOOK Learn linear algebra through problems.   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems   Putnam And Beyond BOOK Lots of challenging math problems from various competitions.</description>
+    </item>
     
     <item>
       <title>Information Theory Overview</title>
@@ -118,15 +127,6 @@ HST If you are operating as a freelancer or small business and are expecting to 
       
       <guid>http://noamswebsite.com/wiki-main/computers/react_resources/</guid>
       <description>   Title Format Notes     A Comprehensive Guide to Test-First Development with Redux, React, and Immutable tutorial Great comprehensive introduction to the whole ecosystem.   Redux, Re-fram, Relay, Om/next, oh my! video    Setting Up Absinthe Relay In Elixir      </description>
-    </item>
-    
-    <item>
-      <title>Math/ML Resources</title>
-      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
-      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
     </item>
     
     <item>

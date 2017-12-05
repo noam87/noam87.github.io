@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://noamswebsite.com/wiki-main/ml/ml_resources/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://noamswebsite.com/r/recommended/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/q/chomsky/</loc>
     <lastmod>2017-11-11T00:00:00+00:00</lastmod>
   </url>
@@ -163,12 +173,7 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/r/recommended/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/r/sweep/</loc>
+    <loc>http://noamswebsite.com/w/sweep/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -183,16 +188,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/r/completely/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/r/creative/</loc>
-    <lastmod>2017-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/wiki-main/computers/elixir_resources/</loc>
     <lastmod>2017-01-04T16:11:51-05:00</lastmod>
   </url>
@@ -200,11 +195,6 @@
   <url>
     <loc>http://noamswebsite.com/wiki-main/computers/react_resources/</loc>
     <lastmod>2017-01-04T14:41:18-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/wiki-main/ml/ml_resources/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
   </url>
   
   <url>
@@ -243,7 +233,7 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/r/stones/</loc>
+    <loc>http://noamswebsite.com/w/stones/</loc>
     <lastmod>2015-01-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -273,11 +263,6 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/w/little_room/</loc>
-    <lastmod>2012-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://noamswebsite.com/w/bursts/</loc>
     <lastmod>2009-01-05T00:00:00+00:00</lastmod>
   </url>
@@ -290,11 +275,6 @@
   <url>
     <loc>http://noamswebsite.com/w/bird/</loc>
     <lastmod>2009-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/w/characters/</loc>
-    <lastmod>2008-01-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -327,7 +307,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/biology/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -381,7 +361,7 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/cognitive/</loc>
-    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -399,7 +379,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/computers/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -423,13 +403,13 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/cs/</loc>
-    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/wikis/datascience/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -483,7 +463,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/informationtheory/</loc>
-    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -549,7 +529,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/math/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -561,7 +541,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/math/</loc>
-    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -573,7 +553,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/ml/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -597,7 +577,7 @@
   
   <url>
     <loc>http://noamswebsite.com/</loc>
-    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -627,7 +607,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/probability/</loc>
-    <lastmod>2017-01-04T11:05:23-05:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -645,7 +625,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wikis/random/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -657,13 +637,13 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/recommendations/</loc>
-    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://noamswebsite.com/r/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -681,7 +661,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/science/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -705,7 +685,7 @@
   
   <url>
     <loc>http://noamswebsite.com/rtags/social/</loc>
-    <lastmod>2017-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -741,7 +721,7 @@
   
   <url>
     <loc>http://noamswebsite.com/tags/</loc>
-    <lastmod>2017-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -765,7 +745,7 @@
   
   <url>
     <loc>http://noamswebsite.com/wiki-main/</loc>
-    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

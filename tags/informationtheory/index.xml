@@ -6,10 +6,19 @@
     <description>Recent content in Informationtheory on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/tags/informationtheory/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Math/ML Resources</title>
+      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
+      <description>Math    Title Format Notes     What Is Mathematics BOOK    Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Essential Linear Algebra with Applications: A Problem-Solving Approach BOOK Learn linear algebra through problems.   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems   Putnam And Beyond BOOK Lots of challenging math problems from various competitions.</description>
+    </item>
     
     <item>
       <title>Information Theory Overview</title>
@@ -19,15 +28,6 @@
       <guid>http://noamswebsite.com/wiki-main/ml/information_theory_overview/</guid>
       <description>Roadmap based on youtube introductory series.
     Compression (efficiency, source coding) Error Correction (reliability, channel coding)     Information Theory (Math) Losless: source coding theorem, Kraft-McMillan inequality     Lossy: rate distortion theorem    Coding Methods (algorithms) Symbol Code: Huffman codes Hamming codes, BCH codes, Turbocodes, Gallager codes    Stream Codes: arithmetic coding     Information How many bits are needed to encode information:</description>
-    </item>
-    
-    <item>
-      <title>Math/ML Resources</title>
-      <link>http://noamswebsite.com/wiki-main/ml/ml_resources/</link>
-      <pubDate>Wed, 04 Jan 2017 11:05:23 -0500</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/ml/ml_resources/</guid>
-      <description>Math    Title Format Notes     Probability Through Problems PDF ; BOOK Best introductory probability book out there. Learn by discovering!   Principles And Techniques In Combinatorics BOOK ; PDF Beautiful book: simple, clear explanations, no filler, challenging problems    Computer Science    Title Format Notes     Information Theory And Coding YouTube Lectures    Elements Of Information Theory (2nd Ed.</description>
     </item>
     
   </channel>

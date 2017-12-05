@@ -6,10 +6,19 @@
     <description>Recent content in Social on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/rtags/social/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stuff I Recommend</title>
+      <link>http://noamswebsite.com/r/recommended/</link>
+      <pubDate>Tue, 05 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/r/recommended/</guid>
+      <description>Video Talks  Justice: What&amp;rsquo;s the Right Thing To Do?. Amazing Harvard lecture series on Ethics that got me into the subject. Robert Sapolsky: The Biology of Human Behavior. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think. Everything is a Remix. &amp;ldquo;There be nothing new, but that which is Hath been before&amp;hellip;&amp;rdquo; (Free) documentary on the history of stealing ideas, and how the current reinterpretation of IP / copyright laws stand in the way of innovation, not help it.</description>
+    </item>
     
     <item>
       <title>Noam Chomsky</title>
@@ -155,20 +164,11 @@ II  A limit of time is fixed for thee, which if thou dost not use for clearing a
     </item>
     
     <item>
-      <title>Stuff I REALLY Recommend</title>
-      <link>http://noamswebsite.com/r/recommended/</link>
-      <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/r/recommended/</guid>
-      <description>Video Talks  Justice: What&amp;rsquo;s the Right Thing To Do?. Provocative Harvard lecture series on Ethics. Robert Sapolsky: The Biology of Human Behavior. Stanford lecture series. Are you in control of your decisions and personality? Maybe not as much as you think. Everything is a Remix. &amp;ldquo;There be nothing new, but that which is Hath been before&amp;hellip;&amp;rdquo; (Free) documentary on the history of stealing ideas, and how the current reinterpretation of IP / copyright laws stand in the way of innovation, not help it.</description>
-    </item>
-    
-    <item>
       <title>Sweep</title>
-      <link>http://noamswebsite.com/r/sweep/</link>
+      <link>http://noamswebsite.com/w/sweep/</link>
       <pubDate>Sat, 07 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://noamswebsite.com/r/sweep/</guid>
+      <guid>http://noamswebsite.com/w/sweep/</guid>
       <description>I was on my regular afternoon bike ride when I noticed a crowd of people sweeping the walkways. I leaned my bike on a tree and went to the first man and asked &amp;ldquo;Why do you sweep?&amp;rdquo;
 &amp;ldquo;I sweep because I resign,&amp;rdquo; he said to me.&amp;ldquo;I used to go blue in the face with how dirty these streets were. But it was no use, they paid no attention, and I would go mad each day when upon arriving I would dirty my carpet.</description>
     </item>
