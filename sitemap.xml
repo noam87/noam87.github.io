@@ -306,14 +306,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/biology/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/biology/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/biology/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/biology/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -378,14 +378,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/computers/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/computers/</loc>
+    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/computers/</loc>
-    <lastmod>2017-04-12T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/computers/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -528,6 +528,12 @@
   </url>
   
   <url>
+    <loc>http://noamswebsite.com/wikis/math/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://noamswebsite.com/tags/math/</loc>
     <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -536,12 +542,6 @@
   <url>
     <loc>http://noamswebsite.com/rtags/math/</loc>
     <lastmod>2017-01-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://noamswebsite.com/wikis/math/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -660,14 +660,14 @@
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/tags/science/</loc>
-    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/wikis/science/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://noamswebsite.com/wikis/science/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <loc>http://noamswebsite.com/tags/science/</loc>
+    <lastmod>2017-12-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
