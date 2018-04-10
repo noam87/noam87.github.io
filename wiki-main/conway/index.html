@@ -97,7 +97,6 @@ x=(l,o,t)-&gt;[r==o(c,1)||r==t(c,(l-1))?1:0 for r=1:l,c=1:l];U=x(d,-,+);D=x(d,+,
 for i=1:100;print(&quot;\e[2J&quot;)
 s=map(c-&gt;c==2||c==3?1:0,U*s+s*U+D*s+s*D+U*s*U+U*s*D+D*s*D+D*s*U);for i=1:d
 foldl((p,x)-&gt;p*(x==1?&quot;█&quot;:&quot; &quot;),&quot; &quot;,s[i, 1:d])|&gt;println;end;sleep(0.5);end
-D
 </code></pre>
 
 			</div>
