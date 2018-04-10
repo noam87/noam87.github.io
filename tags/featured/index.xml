@@ -6,10 +6,22 @@
     <description>Recent content in Featured on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/tags/featured/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Conway&#39;s Game Of Life In 304 Characters Of Julia</title>
+      <link>http://noamswebsite.com/wiki-main/conway/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/conway/</guid>
+      <description>Yesterday I got distracted playing around with Julia and ended up making this little Conway&amp;rsquo;s Game of Life. Would fit into a tweet if not for the pretty-printing / animation loop!.
+Works using matrix operations:
+ U = shift board up if left-multiplied, right if right-multiplied. D = down, left.  Starts with randomly generated board with parameters:
+ d = size of board. p = initial live cell density (the higher, the less dense).</description>
+    </item>
     
     <item>
       <title>Sweep</title>

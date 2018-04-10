@@ -6,10 +6,19 @@
     <description>Recent content in Science on Noam&#39;s Website About Software</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://noamswebsite.com/wikis/science/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Science Resources</title>
+      <link>http://noamswebsite.com/wiki-main/science/science_resources/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
+      <description>Biology    Title Format Notes     Robert Sapolsky: The Biology Of Human Behavior YouTube lecture series You are not in control.   Molecular Biology Of the Cell BOOK    Cellular And Molecular Immunology BOOK Great overview of ummunology at a reasonable price.    Cancer    Title Format Notes     The Biology Of Cancer BOOK Comprehensive review of basic cancer biology up to latest cancer research.</description>
+    </item>
     
     <item>
       <title>Chemistry Cheat Sheet</title>
@@ -19,15 +28,6 @@
       <guid>http://noamswebsite.com/wiki-main/science/chem_cheat_sheet/</guid>
       <description>TOC  How To Read The Squiggles Is A Chemical Bond Polar?  How To Read The Squiggles In order to make shorthand easier, chemists omit C and H atoms from its structural formula. There are two simple rules for adding them back in:
  All sharp corners represent carbon atoms. Hydrogen - carbon bonds are implied (so if a carbon atom has less than 4 bonds, the rest are H).</description>
-    </item>
-    
-    <item>
-      <title>Science Resources</title>
-      <link>http://noamswebsite.com/wiki-main/science/science_resources/</link>
-      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://noamswebsite.com/wiki-main/science/science_resources/</guid>
-      <description>Biology    Title Format Notes     Robert Sapolsky: The Biology Of Human Behavior YouTube lecture series You are not in control.   Molecular Biology Of the Cell BOOK     Cancer    Title Format Notes     The Biology Of Cancer BOOK Comprehensive review of basic cancer biology up to latest cancer research. Assumes some knowledge of cell biology.</description>
     </item>
     
   </channel>

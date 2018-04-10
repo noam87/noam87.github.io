@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julialang on Noam&#39;s Website About Software</title>
+    <link>http://noamswebsite.com/tags/julialang/</link>
+    <description>Recent content in Julialang on Noam&#39;s Website About Software</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://noamswebsite.com/tags/julialang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Conway&#39;s Game Of Life In 304 Characters Of Julia</title>
+      <link>http://noamswebsite.com/wiki-main/conway/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/conway/</guid>
+      <description>Yesterday I got distracted playing around with Julia and ended up making this little Conway&amp;rsquo;s Game of Life. Would fit into a tweet if not for the pretty-printing / animation loop!.
+Works using matrix operations:
+ U = shift board up if left-multiplied, right if right-multiplied. D = down, left.  Starts with randomly generated board with parameters:
+ d = size of board. p = initial live cell density (the higher, the less dense).</description>
+    </item>
+    
+    <item>
+      <title>Sorting By Relative Popularity</title>
+      <link>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</link>
+      <pubDate>Tue, 08 Dec 2015 17:45:08 -0500</pubDate>
+      
+      <guid>http://noamswebsite.com/wiki-main/ml/sorting_by_relative_popularity/</guid>
+      <description>&lt;p&gt;Hey, looks like I&amp;rsquo;m sorting user content again! &lt;a href=&#34;https://noamswebsite.wordpress.com/2014/01/23/sorting-posts-by-user-engagement-level-with-elasticsearch-implementation/&#34;&gt;last time&lt;/a&gt;, I sorted user posts by &amp;ldquo;interestingness&amp;rdquo;; this time around I&amp;rsquo;ll be sorting players from a set of sports teams. Once again we&amp;rsquo;ll look at why sorting things based on popularity alone is a bad idea, we&amp;rsquo;ll get a primer on standard deviation, and finally a bit of scripting to put it all together.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-task&#34;&gt;The Task&lt;/h3&gt;
+
+&lt;p&gt;To drive up user engagement at &lt;a href=&#34;http://www.thescore.com/&#34; target=&#34;_blank&#34;&gt;theScore&lt;/a&gt;, we introduced an onboarding screen that&amp;rsquo;s shown when you open the app for the first time.&lt;/p&gt;
+
+&lt;p&gt;First, you get a list of sports teams that are popular in your area, and the option to subscribe to some of them.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/team_select.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now based on the teams you choose, it would be nice to also recommend some players for you to follow. So how would one go about choosing which players to recommend out of all those teams?&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s assume we have three six-player teams, where each player has the following number of subscribers:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;big_team_1:
+
+  1. 100 000
+  2. 110 000
+  3. 90 000
+  4. 80 500
+  5. 140 000
+  6. 140 500
+
+
+big_team_2:
+
+  1. 120 000
+  2. 250 000
+  3. 180 000
+  4. 135 000
+  5. 157 000
+  6. 202 000
+
+
+small_team:
+
+  1. 3 000
+  2. 100
+  3. 234
+  4. 301
+  5. 250
+  6. 400
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let&amp;rsquo;s consider some properties we want from our algorithm:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A compute-once, static value:&lt;/strong&gt; we don&amp;rsquo;t want to run our algorithm on every user. We want to give each player in our database a static &lt;code&gt;recommendation_score&lt;/code&gt;; a numeric value that is cheap to index.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Simple:&lt;/strong&gt; the algorithm should be simple and use elementary methods. Recommending players is a small part of the app; there should be little code maintenance involved.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Variety:&lt;/strong&gt; The purpose of the onboarding process is to get you engaged, so we want to recommend a variety of players from different sports and leagues.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;the-naive-approach&#34;&gt;The Naive Approach&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; I will be using the &lt;a href=&#34;http://julialang.org/&#34; target=&#34;_blank&#34;&gt;Julia programming language&lt;/a&gt; for all my examples. You can find the complete implementation at the bottom of this post.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The first obvious solution is to simply sort players by their &lt;code&gt;subscription_count&lt;/code&gt;. The more popular the player, the more recommendable he is. Here is our naive sorting function:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function naive_sort(teams)
+  Base.sort(
+    [[team.players for team in teams]...],
+    by=x -&amp;gt; x.subscribers,
+    rev=true
+  )[1:5]
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Which yields:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;5-element Array{PlayerRecommender.Player,1}:
+  Big Team 2 Player | subscribers: 250000
+  Big Team 2 Player | subscribers: 202000
+  Big Team 2 Player | subscribers: 180000
+  Big Team 2 Player | subscribers: 157000
+  Big Team 1 Player | subscribers: 140500
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The problem with this approach is that we only get results from the most popular teams. So if you&amp;rsquo;re a fan of both a very popular NFL team and another team that is not as popular (your local basketball team, perhaps), even the least popular player from the NFL team will be recommended to you, whereas the most popular player from your favorite local basketball team will not show up in your list at all!&lt;/p&gt;
+
+&lt;h3 id=&#34;a-better-approach&#34;&gt;A Better Approach&lt;/h3&gt;
+
+&lt;p&gt;What are we really looking for?&lt;/p&gt;
+
+&lt;p&gt;Well, I think the players we want to recommend are the not necessarily the ones who are most famous, but rather, the ones who are most popular &lt;em&gt;compared to the rest of their team&lt;/em&gt;, regardless of how popular that teams is (we already know you&amp;rsquo;re a fan of the team or you wouldn&amp;rsquo;t have subscribed to it in the first place).&lt;/p&gt;
+
+&lt;p&gt;In other words, we want an algorithm that answers the following question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Which players &lt;em&gt;deviate&lt;/em&gt; the most in popularity from the rest of their team?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Luckily, there&amp;rsquo;s a mathematical tool for figuring out just this: &lt;a href=&#34;https://en.wikipedia.org/wiki/Standard_deviation&#34; target=&#34;_blank&#34;&gt;standard deviation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h4 id=&#34;standard-deviation-tl-dr&#34;&gt;Standard Deviation tl;dr&lt;/h4&gt;
+
+&lt;p&gt;Standard deviation is a pretty straight-forward concept: Take a set of values, and figure out the average value for that set (also known as the &lt;em&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arithmetic_mean&#34; target=&#34;_blank&#34;&gt;arithmetic mean&lt;/a&gt;&lt;/em&gt;). The standard deviation simply tells us by how much the value of the typical element in our set deviates from the average.&lt;/p&gt;
+
+&lt;p&gt;The mathematical representation of this calculation is:&lt;/p&gt;
+
+&lt;p&gt;$$ s_N = \sqrt{\frac{1}{N} \sum_{i=1}^N (x_i - \overline{x})^2} $$&lt;/p&gt;
+
+&lt;p&gt;Where $N$ is the population size, and $\overline{x}$ is the arithmetic mean, which itself is represented by:&lt;/p&gt;
+
+&lt;p&gt;$$ \overline{x}_N = \frac{1}{N}\sum_{i=1}^{N} a_i $$&lt;/p&gt;
+
+&lt;p&gt;For example, the following two sets have the same average value, but clearly the values are spread out differently:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;close_to_average = [11,8,9,12]
+spread_out = [0,1,19,20]
+
+average(close_to_average) == 10
+average(spread_out) == 10
+
+standard_deviation(close_to_average) == 1.59
+standard_deviation(spread_out) == 9.51
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Thus we arrive at our simple scoring function. All we need to do is find players whose deviation from the average is substantially higher than that of their teammates:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function recommend(player, team)
+  player_dev = player.subscribers - team.average
+  if player_dev == 0
+    player.recommendation_score = 0
+  else
+    player.recommendation_score = player_dev / team.std_dev
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using this scoring function on our original teams, we get the following results:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;5-element Array{PlayerRecommender.Player,1}:
+ Small Team Player | subscribers: 3000 | score: 2.2276261544470644
+ Big Team 2 Player | subscribers: 250000 | score: 1.749555170961297
+ Big Team 1 Player | subscribers: 140500 | score: 1.3134034577576315
+ Big Team 1 Player | subscribers: 140000 | score: 1.291753950212176
+ Big Team 2 Player | subscribers: 202000 | score: 0.6445729577225832
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Much better. This time around, our top player actually has the least number of subscribers, but this makes sense, because even though he belongs to a team that is not very popular, his subscription count is tenfold that of his teammates; clearly someone to keep an eye on! (perhaps a rising star in a college league? Certainly wouldn&amp;rsquo;t want our recommendation script to ignore that one.)&lt;/p&gt;
+
+&lt;h3 id=&#34;limitations&#34;&gt;Limitations&lt;/h3&gt;
+
+&lt;p&gt;This algorithm has many limitations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;New players won&amp;rsquo;t be very well represented (they will by nature have low subscription counts).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;All-star teams might result in nobody being particularly recommendable. Though this one might be less of a problem: thanks to our good ol&amp;rsquo; friend the &lt;a href=&#34;https://en.wikipedia.org/wiki/Gaussian_function&#34;&gt;bell curve&lt;/a&gt;, even among rare anomalies, there are &lt;a href=&#34;http://fivethirtyeight.com/features/lionel-messi-is-impossible/&#34; target=&#34;_blank&#34;&gt;rare anomalies&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While there are ways to address these limitations and improve the accuracy of the algorithm (for example, taking into account the rate of change in &lt;code&gt;subscription_count&lt;/code&gt;), one has to remember the purpose of this feature: to drive up user engagement during onboarding. Is the added complexity of such changes worth the minimal improvement in the recommendations?&lt;/p&gt;
+
+&lt;p&gt;Point is, it&amp;rsquo;s Friday night and I should go out for a beer now. I&amp;rsquo;m also looking forward to testing out the enormous Chinese fermentation jug I bought yesterday. It looks something like this, but a LOT bigger:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://noamswebsite.com/img/ferm_crock.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And it was only \$30. What a bargain.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Here is the code used in these examples (working as of Julia 0.4.1). Our actual code at theScore is in Ruby.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
