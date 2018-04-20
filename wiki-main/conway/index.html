@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Conway&#39;s Game Of Life In 317 Characters Of Julia</title>
+	<title>Conway&#39;s Game Of Life In 298 Characters Of Julia</title>
   
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -68,35 +68,35 @@ ga('send', 'pageview');
     <main>
   
 		<article>
-			<h1 class="article-title">Conway&#39;s Game Of Life In 317 Characters Of Julia</h1>
+			<h1 class="article-title">Conway&#39;s Game Of Life In 298 Characters Of Julia</h1>
       <div class="article-date">
         Published: <time>2018-04-10</time>
       </div>
 			<div>
 				<p>Yesterday I got distracted playing around with Julia and ended up making this
-little Conway&rsquo;s Game of Life. Would fit into a tweet if not for the pretty-printing / animation loop!.</p>
+little Conway&rsquo;s Game of Life. Would fit into a tweet if not for the
+pretty-printing / animation loop!.</p>
 
-<p>Works using matrix operations:</p>
+<p>Works using matrix operations. Parameters by line (uppercase are matrices):</p>
 
-<ul>
-<li><code>U</code> = shift board up if left-multiplied, right if right-multiplied.</li>
-<li><code>D</code> = down, left.</li>
-</ul>
+<ol>
+<li><code>d</code> = size of board <code>(dxd)</code>.</li>
+<li>S game / map state in 1 and 0 values for on/off.</li>
+<li><code>U</code> = shift board up if left-multiplied, right if right-multiplied. <code>D</code> =
+down, left.</li>
+<li>Clears screen between animation loops.</li>
+<li><code>c</code> = value of each cell is how many neighbors in <code>S</code>.</li>
+<li>Prettyprint each row in <code>S</code>.</li>
+</ol>
 
-<p>Starts with randomly generated board with parameters:</p>
+<p>You can also change how many generations it will go through (99 currently).</p>
 
-<ul>
-<li><code>d</code> = size of board.</li>
-<li><code>p</code> = initial live cell density (the higher, the less dense).</li>
-</ul>
-
-<p>You can also change how many generations it will go through (100 currently).</p>
-
-<pre><code>d=30;p=5;s=[rand(1:p)==1?1:0 for r=1:d,c=1:d]
-x=(l,o,t)-&gt;[r==o(c,1)||r==t(c,(l-1))?1:0 for r=1:l,c=1:l];U=x(d,-,+);D=x(d,+,-)
-for i=1:100;print(&quot;\e[2J&quot;)
-s=map((c,o)-&gt;(c==2&amp;&amp;o==1)||c==3?1:0,U*s+s*U+D*s+s*D+U*s*U+U*s*D+D*s*D+D*s*U,s);for i=1:d
-foldl((p,x)-&gt;p*(x==1?&quot;█&quot;:&quot;.&quot;),&quot; &quot;,s[i, 1:d])|&gt;println;end;sleep(0.5);end
+<pre><code>d=30
+a=1:d;S=[rand(1:5)==1?1:0 for r=a,c=a]
+x=(o,t)-&gt;[r==o(c,1)||r==t(c,d-1)?1:0 for r=a,c=a];U=x(-,+);D=x(+,-)
+for i=1:99;print(&quot;\e[2J&quot;)
+S=map((c,o)-&gt;(c==2&amp;&amp;o==1)||c==3?1:0,U*S+S*U+D*S+S*D+U*S*U+U*S*D+D*S*D+D*S*U,S);
+for i=a;foldl((p,x)-&gt;p*(x==1?&quot;█&quot;:&quot;.&quot;),&quot; &quot;,S[i,a])|&gt;println;end;sleep(0.5);end
 </code></pre>
 
 			</div>
