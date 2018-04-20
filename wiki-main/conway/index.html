@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Conway&#39;s Game Of Life In 304 Characters Of Julia</title>
+	<title>Conway&#39;s Game Of Life In 317 Characters Of Julia</title>
   
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -68,7 +68,7 @@ ga('send', 'pageview');
     <main>
   
 		<article>
-			<h1 class="article-title">Conway&#39;s Game Of Life In 304 Characters Of Julia</h1>
+			<h1 class="article-title">Conway&#39;s Game Of Life In 317 Characters Of Julia</h1>
       <div class="article-date">
         Published: <time>2018-04-10</time>
       </div>
@@ -92,11 +92,11 @@ little Conway&rsquo;s Game of Life. Would fit into a tweet if not for the pretty
 
 <p>You can also change how many generations it will go through (100 currently).</p>
 
-<pre><code>d=50;p=50;s=[rand(1:p)==1?1:0 for r=1:d,c=1:d]
+<pre><code>d=30;p=5;s=[rand(1:p)==1?1:0 for r=1:d,c=1:d]
 x=(l,o,t)-&gt;[r==o(c,1)||r==t(c,(l-1))?1:0 for r=1:l,c=1:l];U=x(d,-,+);D=x(d,+,-)
 for i=1:100;print(&quot;\e[2J&quot;)
-s=map(c-&gt;c==2||c==3?1:0,U*s+s*U+D*s+s*D+U*s*U+U*s*D+D*s*D+D*s*U);for i=1:d
-foldl((p,x)-&gt;p*(x==1?&quot;█&quot;:&quot; &quot;),&quot; &quot;,s[i, 1:d])|&gt;println;end;sleep(0.5);end
+s=map((c,o)-&gt;(c==2&amp;&amp;o==1)||c==3?1:0,U*s+s*U+D*s+s*D+U*s*U+U*s*D+D*s*D+D*s*U,s);for i=1:d
+foldl((p,x)-&gt;p*(x==1?&quot;█&quot;:&quot;.&quot;),&quot; &quot;,s[i, 1:d])|&gt;println;end;sleep(0.5);end
 </code></pre>
 
 			</div>
